@@ -165,6 +165,22 @@ const sureNames=[
 
 const listDiv = document.getElementById('sureList');
 
+function tumKuran() {
+    const num = 0;
+    const link = document.createElement("a");
+    link.className = "sure-item";
+
+    link.href = `kuran.html?sure=${num}`;
+
+    link.innerHTML = `
+        <span class="sure-number">-</span>
+        <span class="sure-name">Tüm Kur'an</span>
+    `;
+    listDiv.appendChild(link);
+}
+
+tumKuran();
+
 sureNames.forEach((name, i)=>{
     const num = i+1;
     const link = document.createElement('a');
