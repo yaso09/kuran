@@ -130,6 +130,7 @@ mark { background-color: yellow; }
 </div>
 </div>
 
+<script src="./print.min.js"></script>
 <script>
 const sureSelect = document.getElementById('sureSelect');
 const searchInput = document.getElementById('searchInput');
@@ -161,7 +162,21 @@ const navigationDiv = document.getElementById('navigationButtons');
 // Yazdırma butonu
 const printBtn = document.getElementById('printBtn');
 printBtn.addEventListener('click', () => {
-    window.print();
+    const pdfPath = `./pdf/${sureSelect.value}.pdf`;
+
+    printJS(pdfPath);
+
+    /* const win = window.open(pdfPath, "_blank");
+
+    if (!win) {
+        alert("Tarayıcı yeni sekme açmayı engelledi. Lütfen izin ver.");
+        return;
+    }
+
+    // PDF yüklenince otomatik yazdır
+    win.onload = () => {
+        win.print();
+    };*/
 });
 
 function updateNavigationButtons(chapter){
