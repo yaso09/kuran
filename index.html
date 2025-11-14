@@ -3,11 +3,11 @@
 <head>  
 <meta charset="utf-8" />  
 <meta name="viewport" content="width=device-width,initial-scale=1" />  
-<title>Kur'an — Tam Metin</title>  
+<title>Kur'an Okuyucu</title>  
 <style>  
   @font-face {  
-    font-family: 'Alshohadaa';  
-    src: url('/alshohadaa.ttf') format('truetype');  
+    font-family: 'Aqeeq';  
+    src: url('/Aqeeq-Bold.ttf') format('truetype');  
     font-weight: 700;  
     font-style: normal;  
     font-display: swap;  
@@ -33,23 +33,24 @@
     max-width: 900px;
     margin: auto;
     padding: 20px;
+    text-align: center;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2 {
     font-family: 'StackSansNotch', sans-serif;
   }
 
   .arabic-text {
-    font-family: 'Alshohadaa', 'Noto Naskh Arabic', serif;
-    font-size: 30px;
+    font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
+    font-size: 40px;
     font-weight: 700;
     direction: rtl;
     margin: 5px 0 5px 0;
   }
 
   .english-text {
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
   .verse-number {
@@ -58,31 +59,71 @@
     font-size: 12px;
   }
 
+  select, input[type="text"] {
+    font-size: 16px;
+    padding: 6px 12px;
+    margin: 10px 5px;
+  }
+
   @media (max-width: 600px) {
-    .arabic-text { font-size: 20px; }
-    .english-text { font-size: 12px; }
+    .arabic-text { font-size: 25px; }
+    .english-text { font-size: 14px; }
+    select, input[type="text"] { font-size: 14px; }
   }
 </style>  
 </head>  
 <body>  
-  <div class="content" id="ayetler">
-    <h1>Kur'an — Tam Metin</h1>
+  <div class="content">
+    <h1>Kur'an Okuyucu</h1>
+    <div>
+      <select id="sureSelect">
+        <option value="">Bir sure seçin</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Ayet ara..." />
+    </div>
+    <div id="ayetler"></div>
   </div>
 
 <script>
-async function loadAllVerses() {
-  const container = document.getElementById('ayetler');
+const sureSelect = document.getElementById('sureSelect');
+const searchInput = document.getElementById('searchInput');
+let allVerses = [];
 
-  for (let chapter = 1; chapter <= 114; chapter++) {
+// Dropdown oluştur
+for (let i = 1; i <= 114; i++) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = `Sure ${i}`;
+    sureSelect.appendChild(option);
+}
+
+// Sureyi yükle
+async function loadVerse(chapter) {
+    const container = document.getElementById('ayetler');
+    container.innerHTML = '';
+    allVerses = [];
+
+    if (!chapter) return;
+
     try {
-      const response = await fetch(`/data/verses/${chapter}.json`);
-      const data = await response.json();
+        const response = await fetch(`/data/verses/${chapter}.json`);
+        const data = await response.json();
+        allVerses = data.verses;
 
-      const chapterHeader = document.createElement('h2');
-      chapterHeader.textContent = `Sure ${chapter}`;
-      container.appendChild(chapterHeader);
+        renderVerses(allVerses);
 
-      data.verses.forEach(ayet => {
+    } catch (error) {
+        console.error(`Sure ${chapter} yüklenemedi:`, error);
+        container.textContent = 'Bu sure yüklenemedi.';
+    }
+}
+
+// Ayetleri render et
+function renderVerses(verses) {
+    const container = document.getElementById('ayetler');
+    container.innerHTML = '';
+
+    verses.forEach(ayet => {
         const verseDiv = document.createElement('div');
 
         const number = document.createElement('div');
@@ -102,16 +143,27 @@ async function loadAllVerses() {
         verseDiv.appendChild(english);
 
         container.appendChild(verseDiv);
-      });
-
-    } catch (error) {
-      console.error(`Sure ${chapter} yüklenemedi:`, error);
-    }
-  }
+    });
 }
 
-// Sayfa yüklendiğinde tüm sureleri yükle
-loadAllVerses();
+// Dropdown değiştiğinde sure yükle
+sureSelect.addEventListener('change', (e) => {
+    const chapter = e.target.value;
+    searchInput.value = '';
+    loadVerse(chapter);
+});
+
+// Arama fonksiyonu
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = allVerses.filter(ayet =>
+        ayet.arabic.toLowerCase().includes(query) ||
+        ayet.english.toLowerCase().includes(query) ||
+        ayet.verseNumber.toString().includes(query)
+    );
+    renderVerses(filtered);
+});
 </script>
+
 </body>  
 </html>
