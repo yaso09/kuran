@@ -55,8 +55,7 @@ h1 {
     color: #444;
     text-align: center;
 }
-.controls { margin-bottom: 20px; text-align: center; }
-.controls select, .controls input { font-size: 16px; padding: 6px 12px; margin: 5px; }
+select, input { font-size: 16px; padding: 6px 12px; margin: 5px; }
 .verse { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
 .arabic-text {
     font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
@@ -120,7 +119,9 @@ mark { background-color: yellow; }
     padding: 0.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: sticky;
-    top: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
 }
 </style>
@@ -131,15 +132,12 @@ mark { background-color: yellow; }
 <h1>Kur'an</h1><br>
 <div class="topbar">
     <button onclick="window.location.href='/'" class="nav-btn">←</button>
-</div><br><br>
-
-<div class="controls">
 <select id="sureSelect"><option value="">Tüm Kur'an</option></select>
 <input type="text" id="searchInput" placeholder="Ayet veya içerik ara...">
 
-<!-- Yazdırma Butonu --><br><br>
+<!-- Yazdırma Butonu -->
 <button id="printBtn" class="nav-btn">Yazdır</button>
-</div>
+</div><br><br>
 
 <div id="ayetler"><div class="loading">Yükleniyor...</div></div>
 
