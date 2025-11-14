@@ -3,287 +3,132 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kur'an Okuyucu</title>
+<title>Kur'an Fihristi</title>
+
 <style>
 @font-face {
     font-family: 'Aqeeq';
     src: url('/Aqeeq-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
 @font-face {
     font-family: 'StackSansNotch';
     src: url('/StackSansNotch-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
 @font-face {
     font-family: 'Alshohadaa';
     src: url('/alshohadaa.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
+
 body {
     margin: 0;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
     background: #fff;
     color: #000;
-    line-height: 1.5;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
 }
+
 .content {
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
 }
-.arabic {
+
+.arabic-title {
     font-family: 'Alshohadaa', serif;
     font-size: 72px;
     text-align: center;
     margin: 0;
 }
+
 h1 {
     font-family: 'StackSansNotch', sans-serif;
     font-size: 2rem;
     margin: 4px 0 20px;
-    font-weight: 600;
-    color: #444;
     text-align: center;
+    color: #444;
+    font-weight: 600;
 }
-.controls { margin-bottom: 20px; text-align: center; }
-.controls select, .controls input { font-size: 16px; padding: 6px 12px; margin: 5px; }
-.verse { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-.arabic-text {
-    font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
-    font-size: 32px;
+
+.sure-list {
+    margin-top: 30px;
+}
+
+.sure-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #000;
+    transition: background 0.2s;
+}
+
+.sure-item:hover {
+    background: #f5f5f5;
+}
+
+.sure-number {
+    font-family: 'StackSansNotch', sans-serif;
+    font-size: 18px;
     font-weight: 700;
-    margin: 5px 0;
-    text-align: right;
-}
-.english-text { font-size: 16px; margin-bottom: 10px; text-align: left; }
-.verse-number { font-size: 12px; font-weight: bold; color: #555; margin-bottom: 5px; text-align: center; }
-.loading { font-size: 18px; font-weight: bold; text-align: center; margin: 30px 0; }
-mark { background-color: yellow; }
-
-.nav-btn {
-  font-family: 'StackSansNotch', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  background: #fff;
-  border: 1px solid #000;
-  padding: 10px 16px;
-  margin: 5px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.nav-btn:hover:not(:disabled) {
-  background: #000;
-  color: #fff;
-}
-.nav-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
-@media(max-width:800px){
-    .arabic-text{font-size:25px;}
-    .english-text{font-size:14px;}
-    .controls select,.controls input{font-size:14px;}
-    .arabic{font-size:48px;}
-    .nav-btn{font-size:14px; padding:8px 12px;}
+.sure-name {
+    font-size: 18px;
+    font-weight: 500;
 }
 
-/* Yazdırma Modu */
-@media print {
-    .controls,
-    #navigationButtons,
-    h1,
-    .arabic {
-        display: none !important;
-    }
-    body { margin: 20px; }
+@media(max-width:700px){
+    .arabic-title{ font-size: 52px; }
+    .sure-item{ padding: 12px; }
+    .sure-number, .sure-name{ font-size: 16px; }
 }
 </style>
 </head>
 <body>
+
 <div class="content">
-<div class="arabic">ﻳﺎﺳﺮ</div>
-<h1>Yasir Eymen</h1>
 
-<div class="controls">
-<select id="sureSelect"><option value="">Tüm Kur'an</option></select>
-<input type="text" id="searchInput" placeholder="Ayet veya içerik ara...">
+<div class="arabic-title">الفهرست</div>
+<h1>Kur'an Fihristi</h1>
 
-<!-- Yazdırma Butonu --><br><br>
-<button id="printBtn" class="nav-btn">Yazdır</button>
+<div class="sure-list" id="sureList"></div>
+
 </div>
 
-<div id="ayetler"><div class="loading">Yükleniyor...</div></div>
-
-<div id="navigationButtons" style="text-align:center; margin-top:20px; display:none;">
-  <button id="prevSure" class="nav-btn">← Önceki Sure</button>
-  <button id="nextSure" class="nav-btn">Sonraki Sure →</button>
-</div>
-</div>
-
-<script src="./print.min.js"></script>
 <script>
-const sureSelect = document.getElementById('sureSelect');
-const searchInput = document.getElementById('searchInput');
-let allVerses = []; 
-
-const sureNames=[ /* ... liste aynı şekilde burada ... */ 
+const sureNames=[
 "Fatiha","Bakara","Al-i İmran","Nisa","Maide","En'am","A'raf","Enfal","Tevbe","Yunus","Hud","Yusuf","Rad","İbrahim",
 "Hicr","Nahl","İsra","Kehf","Meryem","Taha","Enbiya","Hac","Müminun","Nur","Furkan","Şuara","Neml","Kasas","Ankebut","Rum",
 "Lukman","Secde","Ahzab","Sebe","Fatır","Yasin","Saffat","Sad","Zümer","Mümin","Fussilet","Şura","Zuhruf","Duhan","Casiye","Ahkaf",
 "Muhammed","Fetih","Hucurat","Kaf","Zariyat","Tur","Necm","Kamer","Rahman","Vakıa","Hadid","Mücadele","Haşr","Mümtehine","Saf",
 "Cuma","Münafikun","Tegabun","Talak","Tahrim","Mülk","Kalem","Hakka","Mearic","Nuh","Cin","Müzzemmil","Müddessir","Kıyamet","İnsan","Mürselat",
 "Nebe","Naziat","Abese","Tekvir","İnfitar","Mutaffifin","İnşikak","Büruc","Tarık","A'la","Gaşiye","Fecr","Beled","Leyl","Duha",
-"İnşirah","Tin","Tarık","Alak","Kadir","Beyyine","Zilzal","Adiyat","Kari'a","Tekasür","Asr","Hümeze","Fil","Kureyş","Ma'un","Kevser","Kafirun","Nasr","Tebbet","İhlas","Felak","Nas"
+"İnşirah","Tin","Alak","Kadir","Beyyine","Zilzal","Adiyat","Kari'a","Tekasür","Asr","Hümeze","Fil","Kureyş","Ma'un","Kevser","Kafirun","Nasr","Tebbet","İhlas","Felak","Nas"
 ];
 
-// Dropdown oluştur
-for(let i=1;i<=114;i++){
-    const option=document.createElement('option');
-    option.value=i;
-    option.textContent=`${i}. ${sureNames[i-1] || 'Sure '+i}`;
-    sureSelect.appendChild(option);
-}
+const listDiv = document.getElementById('sureList');
 
-// Butonlar
-const prevSureBtn = document.getElementById('prevSure');
-const nextSureBtn = document.getElementById('nextSure');
-const navigationDiv = document.getElementById('navigationButtons');
-
-// Yazdırma butonu
-const printBtn = document.getElementById('printBtn');
-printBtn.addEventListener('click', () => {
-    const pdfPath = `./pdf/${sureSelect.value}.pdf`;
-
-    printJS(pdfPath);
+sureNames.forEach((name, i)=>{
+    const num = i+1;
+    const link = document.createElement('a');
+    link.className = 'sure-item';
+    
+    // tıklanınca okuyucu sayfasına gitsin
+    link.href = `kuran.html?sure=${num}`;
+    
+    link.innerHTML = `
+        <span class="sure-number">${num}</span>
+        <span class="sure-name">${name}</span>
+    `;
+    listDiv.appendChild(link);
 });
-
-function updateNavigationButtons(chapter){
-    if(!chapter) { navigationDiv.style.display='none'; return; }
-    navigationDiv.style.display='block';
-    prevSureBtn.disabled = (chapter <= 1);
-    nextSureBtn.disabled = (chapter >= 114);
-}
-
-prevSureBtn.addEventListener('click',()=>{
-    let chap = parseInt(sureSelect.value);
-    if(chap > 1){ chap--; sureSelect.value = chap; loadVerse(chap); localStorage.setItem('lastChapter', chap); }
-});
-
-nextSureBtn.addEventListener('click',()=>{
-    let chap = parseInt(sureSelect.value);
-    if(chap < 114){ chap++; sureSelect.value = chap; loadVerse(chap); localStorage.setItem('lastChapter', chap); }
-});
-
-// JSON yükleme
-async function loadVerse(chapter){
-    const container=document.getElementById('ayetler');
-    container.innerHTML='<div class="loading">Yükleniyor...</div>';
-    allVerses=[];
-    if(!chapter) return loadAllVerses(); 
-    try{
-        const response=await fetch(`/data/verses/${chapter}.json`);
-        const data=await response.json();
-        allVerses=data.verses;
-        renderVerses(allVerses);
-        updateNavigationButtons(parseInt(chapter));
-        const scrollTop = localStorage.getItem('scrollTop');
-        if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
-    }catch(e){
-        container.innerHTML='<div class="loading">Bu sure yüklenemedi.</div>'; 
-        console.error(e);
-        navigationDiv.style.display='none';
-    }
-}
-
-// Tüm Kur'an
-async function loadAllVerses(){
-    const container=document.getElementById('ayetler');
-    container.innerHTML='<div class="loading">Yükleniyor...</div>';
-    allVerses=[];
-    for(let i=1;i<=114;i++){
-        try{
-            const response=await fetch(`/data/verses/${i}.json`);
-            const data=await response.json();
-            allVerses.push(...data.verses);
-        }catch(e){console.error(`Sure ${i} yüklenemedi`,e);}
-    }
-    renderVerses(allVerses);
-    navigationDiv.style.display='none';
-    const scrollTop = localStorage.getItem('scrollTop');
-    if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
-}
-
-function renderVerses(verses, highlight=''){
-    const container=document.getElementById('ayetler');
-    container.innerHTML='';
-    verses.forEach(ayet=>{
-        const verseDiv=document.createElement('div');
-        const number=document.createElement('div');
-        number.classList.add('verse-number');
-        number.textContent=`Ayet ${ayet.verseNumber} (${ayet.verseKey})`;
-        const arabic=document.createElement('div');
-        arabic.classList.add('arabic-text');
-        arabic.innerHTML=highlightText(ayet.arabic,highlight);
-        const english=document.createElement('div');
-        english.classList.add('english-text');
-        english.innerHTML=highlightText(ayet.english,highlight);
-        verseDiv.classList.add('verse');
-        verseDiv.appendChild(number);
-        verseDiv.appendChild(arabic);
-        verseDiv.appendChild(english);
-        container.appendChild(verseDiv);
-    });
-}
-
-function highlightText(text, query){
-    if(!query) return text;
-    const escaped=query.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&');
-    const regex=new RegExp(escaped,'gi');
-    return text.replace(regex,match=>`<mark>${match}</mark>`);
-}
-
-sureSelect.addEventListener('change',(e)=>{
-    const chapter=e.target.value;
-    searchInput.value='';
-    loadVerse(chapter);
-    localStorage.setItem('lastChapter', chapter);
-});
-
-// Arama
-searchInput.addEventListener('input',(e)=>{
-    const query=e.target.value.toLowerCase();
-    if(!query) return renderVerses(allVerses);
-    const filtered=allVerses.filter(ayet=>
-        ayet.arabic.toLowerCase().includes(query) ||
-        ayet.english.toLowerCase().includes(query) ||
-        ayet.verseNumber.toString().includes(query)
-    );
-    renderVerses(filtered,query);
-});
-
-// Scroll pozisyonu kaydet
-window.addEventListener('beforeunload',()=>{
-    localStorage.setItem('scrollTop', window.scrollY);
-});
-
-// Kaldığı yerden devam
-const lastChapter = localStorage.getItem('lastChapter');
-if(lastChapter){
-    sureSelect.value = lastChapter;
-    loadVerse(lastChapter);
-}else{
-    loadAllVerses();
-}
 </script>
+
 </body>
 </html>
