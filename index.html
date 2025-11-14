@@ -165,18 +165,6 @@ printBtn.addEventListener('click', () => {
     const pdfPath = `./pdf/${sureSelect.value}.pdf`;
 
     printJS(pdfPath);
-
-    /* const win = window.open(pdfPath, "_blank");
-
-    if (!win) {
-        alert("Tarayıcı yeni sekme açmayı engelledi. Lütfen izin ver.");
-        return;
-    }
-
-    // PDF yüklenince otomatik yazdır
-    win.onload = () => {
-        win.print();
-    };*/
 });
 
 function updateNavigationButtons(chapter){
