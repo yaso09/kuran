@@ -30,33 +30,47 @@
   }
 
   .content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
-    text-align: center;
   }
 
   h1, h2 {
     font-family: 'StackSansNotch', sans-serif;
+    text-align: center;
+  }
+
+  .verse {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
   }
 
   .arabic-text {
     font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     direction: rtl;
-    margin: 5px 0 5px 0;
+    text-align: right;
+    flex: 1;
   }
 
   .english-text {
     font-size: 16px;
-    margin-bottom: 20px;
+    text-align: left;
+    flex: 1;
+    padding-right: 20px;
   }
 
   .verse-number {
     font-weight: bold;
     color: #555;
     font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
   }
 
   select, input[type="text"] {
@@ -65,9 +79,14 @@
     margin: 10px 5px;
   }
 
-  @media (max-width: 600px) {
+  mark {
+    background-color: yellow;
+  }
+
+  @media (max-width: 800px) {
+    .verse { flex-direction: column; }
     .arabic-text { font-size: 25px; }
-    .english-text { font-size: 14px; }
+    .english-text { font-size: 14px; padding-right: 0; }
     select, input[type="text"] { font-size: 14px; }
   }
 </style>  
@@ -75,11 +94,11 @@
 <body>  
   <div class="content">
     <h1>Kur'an Okuyucu</h1>
-    <div>
+    <div style="text-align:center;">
       <select id="sureSelect">
-        <option value="">Bir sure seçin</option>
+        <option value="">Tüm Kur’an</option>
       </select>
-      <input type="text" id="searchInput" placeholder="Ayet ara..." />
+      <input type="text" id="searchInput" placeholder="Ayet veya içerik ara..." />
     </div>
     <div id="ayetler"></div>
   </div>
@@ -97,13 +116,13 @@ for (let i = 1; i <= 114; i++) {
     sureSelect.appendChild(option);
 }
 
-// Sureyi yükle
+// Belirli bir sureyi yükle
 async function loadVerse(chapter) {
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
     allVerses = [];
 
-    if (!chapter) return;
+    if (!chapter) return loadAllVerses(); // Seçim yoksa tüm Kur'an
 
     try {
         const response = await fetch(`/data/verses/${chapter}.json`);
@@ -118,8 +137,27 @@ async function loadVerse(chapter) {
     }
 }
 
+// Tüm Kur’an'ı yükle
+async function loadAllVerses() {
+    const container = document.getElementById('ayetler');
+    container.innerHTML = '';
+    allVerses = [];
+
+    for (let chapter = 1; chapter <= 114; chapter++) {
+        try {
+            const response = await fetch(`/data/verses/${chapter}.json`);
+            const data = await response.json();
+            allVerses.push(...data.verses);
+        } catch (error) {
+            console.error(`Sure ${chapter} yüklenemedi:`, error);
+        }
+    }
+
+    renderVerses(allVerses);
+}
+
 // Ayetleri render et
-function renderVerses(verses) {
+function renderVerses(verses, highlight='') {
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
 
@@ -132,12 +170,13 @@ function renderVerses(verses) {
 
         const arabic = document.createElement('div');
         arabic.classList.add('arabic-text');
-        arabic.innerHTML = ayet.arabic;
+        arabic.innerHTML = highlightText(ayet.arabic, highlight);
 
         const english = document.createElement('div');
         english.classList.add('english-text');
-        english.innerHTML = ayet.english;
+        english.innerHTML = highlightText(ayet.english, highlight);
 
+        verseDiv.classList.add('verse');
         verseDiv.appendChild(number);
         verseDiv.appendChild(arabic);
         verseDiv.appendChild(english);
@@ -146,23 +185,38 @@ function renderVerses(verses) {
     });
 }
 
-// Dropdown değiştiğinde sure yükle
+// Metni highlight et
+function highlightText(text, query) {
+    if (!query) return text;
+    const escaped = query.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const regex = new RegExp(escaped, 'gi');
+    return text.replace(regex, match => `<mark>${match}</mark>`);
+}
+
+// Dropdown değişince
 sureSelect.addEventListener('change', (e) => {
     const chapter = e.target.value;
     searchInput.value = '';
     loadVerse(chapter);
 });
 
-// Arama fonksiyonu
+// Arama
 searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase();
+    if (!query) {
+        renderVerses(allVerses);
+        return;
+    }
     const filtered = allVerses.filter(ayet =>
         ayet.arabic.toLowerCase().includes(query) ||
         ayet.english.toLowerCase().includes(query) ||
         ayet.verseNumber.toString().includes(query)
     );
-    renderVerses(filtered);
+    renderVerses(filtered, query);
 });
+
+// Sayfa açıldığında tüm Kur’an'ı göster
+loadAllVerses();
 </script>
 
 </body>  
