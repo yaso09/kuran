@@ -254,79 +254,81 @@ function renderVerses(verses, highlight=''){
         shareBtn.style.marginTop = '5px';
 
         shareBtn.addEventListener('click', async () => {
-            const width = 1080; // 1:1 kare
+            const width = 1080; 
             const height = 1080;
             const canvas = document.createElement('canvas');
             canvas.width = width;
             canvas.height = height;
             const ctx = canvas.getContext('2d');
 
-            // Arka plan gradient
+            // Arka plan gradient + soft ışık
             const gradient = ctx.createLinearGradient(0, 0, 0, height);
             gradient.addColorStop(0, '#0f2027');
             gradient.addColorStop(1, '#2c5364');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
-            // Arapça ayet (üstte)
+            const lightGradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/1.5);
+            lightGradient.addColorStop(0, 'rgba(255,255,255,0.05)');
+            lightGradient.addColorStop(1, 'rgba(255,255,255,0)');
+            ctx.fillStyle = lightGradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Ayeti ortala
             ctx.fillStyle = '#fff';
             ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // Arapça ayet
             ctx.font = 'bold 60px Aqeeq, serif';
             ctx.shadowColor = 'rgba(0,0,0,0.3)';
             ctx.shadowBlur = 8;
             ctx.shadowOffsetX = 2;
             ctx.shadowOffsetY = 2;
 
-            const maxArabicWidth = width - 100;
-            let y = 120;
-            ayet.arabic.split(' ').reduce((line, word, idx, arr) => {
-                const testLine = line + (line ? ' ' : '') + word;
-                const metrics = ctx.measureText(testLine);
-                if (metrics.width > maxArabicWidth) {
-                    ctx.fillText(line, width/2, y);
-                    y += 70;
-                    return word;
-                }
-                if(idx === arr.length-1){
-                    ctx.fillText(testLine, width/2, y);
-                    y += 70;
-                }
-                return testLine;
-            }, '');
+            const arabicLines = ayet.arabic.split(/\n/);
+            const arabicLineHeight = 70;
+            let arabicHeight = arabicLines.length * arabicLineHeight;
+            let y = (height - arabicHeight) / 2 - 50; // biraz yukarı kaydır
 
-            // İngilizce çeviri (orta)
+            arabicLines.forEach(line => {
+                ctx.fillText(line, width / 2, y);
+                y += arabicLineHeight;
+            });
+
+            // İngilizce çeviri + ayet numarası
             ctx.shadowColor = 'transparent';
             ctx.fillStyle = '#fff';
             ctx.font = '28px Arial, sans-serif';
-            ctx.textAlign = 'center';
 
-            const maxEnglishWidth = width - 100;
             const englishText = ayet.english + ` [${ayet.verseKey}]`;
             const words = englishText.split(' ');
-            let line = '';
-            y += 20;
+            const maxWidth = width - 100;
             const lineHeight = 36;
-            let lineCount = 0;
-            const maxLines = 15;
+            let line = '';
+            let englishLines = [];
 
-            for(let n=0; n<words.length && lineCount < maxLines; n++){
-                const testLine = line + (line ? ' ' : '') + words[n];
+            words.forEach((word, idx) => {
+                const testLine = line + (line ? ' ' : '') + word;
                 const metrics = ctx.measureText(testLine);
-                if(metrics.width > maxEnglishWidth){
-                    ctx.fillText(line, width/2, y);
-                    line = words[n];
-                    y += lineHeight;
-                    lineCount++;
+                if(metrics.width > maxWidth){
+                    englishLines.push(line);
+                    line = word;
                 } else {
                     line = testLine;
                 }
-            }
-            if(lineCount < maxLines) ctx.fillText(line, width/2, y);
+                if(idx === words.length - 1) englishLines.push(line);
+            });
+
+            y += 20;
+            englishLines.forEach(el => {
+                ctx.fillText(el, width/2, y);
+                y += lineHeight;
+            });
 
             // Alt site adı
             ctx.font = '20px Arial, sans-serif';
             ctx.fillStyle = 'rgba(255,255,255,0.7)';
-            ctx.textAlign = 'center';
             ctx.fillText('kuran.yasireymen.com', width/2, height - 40);
 
             // Görseli paylaş
