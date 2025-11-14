@@ -230,6 +230,11 @@ function renderVerses(verses, highlight=''){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
 
+    function randomColor() {
+        const colors = ['#ff6b6b', '#fbc531', '#4cd137', '#00a8ff', '#9c88ff', '#ff9ff3', '#f5f6fa', '#ff4757'];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
     verses.forEach(ayet => {
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
@@ -261,11 +266,11 @@ function renderVerses(verses, highlight=''){
             canvas.height = height;
             const ctx = canvas.getContext('2d');
 
-            // Gradient arka plan (mor → pembe → turuncu)
+            // Rastgele gradient arka plan
             const gradient = ctx.createLinearGradient(0, 0, 0, height);
-            gradient.addColorStop(0, '#5a3f9f'); // mor
-            gradient.addColorStop(0.5, '#d46dff'); // açık mor
-            gradient.addColorStop(1, '#ff6eb4'); // pembe
+            gradient.addColorStop(0, randomColor());
+            gradient.addColorStop(0.5, randomColor());
+            gradient.addColorStop(1, randomColor());
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
@@ -295,12 +300,9 @@ function renderVerses(verses, highlight=''){
             // Ayeti ortala
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#ffffff'; // Beyaz metin
 
-            // Arapça ayet - açık tonlar
-            const arabicGradient = ctx.createLinearGradient(0, height/2 - 100, width, height/2 + 100);
-            arabicGradient.addColorStop(0, '#ffb6ff'); // açık pembe
-            arabicGradient.addColorStop(1, '#d1c4e9'); // açık mor
-            ctx.fillStyle = arabicGradient;
+            // Arapça ayet
             ctx.font = 'bold 80px Aqeeq, serif';
             ctx.shadowColor = 'rgba(0,0,0,0.3)';
             ctx.shadowBlur = 10;
@@ -317,12 +319,9 @@ function renderVerses(verses, highlight=''){
                 y += arabicLineHeight;
             });
 
-            // İngilizce çeviri + ayet numarası - açık mavi/turkuaz
-            const engGradient = ctx.createLinearGradient(0, y, width, y + 200);
-            engGradient.addColorStop(0, '#a0e7ff'); // açık mavi
-            engGradient.addColorStop(1, '#00e5ff'); // turkuaz
-            ctx.fillStyle = engGradient;
+            // İngilizce çeviri + ayet numarası
             ctx.shadowColor = 'transparent';
+            ctx.fillStyle = '#ffffff';
             ctx.font = '36px Arial, sans-serif';
 
             const englishText = ayet.english + ` [${ayet.verseKey}]`;
