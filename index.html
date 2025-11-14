@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kur'an - Fatiha</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fefefe;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .ayet {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .arabic {
+        font-size: 1.5em;
+        text-align: right;
+        direction: rtl;
+        margin-bottom: 10px;
+    }
+    .english {
+        font-size: 1.1em;
+        color: #333;
+    }
+    .verse-number {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<h1>Fatiha Suresi</h1>
+<div id="ayetler"></div>
+
+<script>
+async function loadVerses() {
+    try {
+        // Local JSON dosyasını fetch ile oku
+        const response = await fetch('./data/verses/1.json');
+        const data = await response.json();
+
+        const container = document.getElementById('ayetler');
+
+        data.verses.forEach(ayet => {
+            const ayetDiv = document.createElement('div');
+            ayetDiv.classList.add('ayet');
+
+            const number = document.createElement('div');
+            number.classList.add('verse-number');
+            number.textContent = `Ayet ${ayet.verseNumber} (${ayet.verseKey})`;
+
+            const arabic = document.createElement('div');
+            arabic.classList.add('arabic');
+            arabic.innerHTML = ayet.arabic; // HTML içeriği olabilir (sup tag)
+
+            const english = document.createElement('div');
+            english.classList.add('english');
+            english.innerHTML = ayet.english; // footnote olabilir
+
+            ayetDiv.appendChild(number);
+            ayetDiv.appendChild(arabic);
+            ayetDiv.appendChild(english);
+
+            container.appendChild(ayetDiv);
+        });
+
+    } catch (error) {
+        console.error("JSON dosyası okunamadı:", error);
+    }
+}
+
+// Sayfa yüklendiğinde ayetleri yükle
+loadVerses();
+</script>
+
+</body>
+</html>
