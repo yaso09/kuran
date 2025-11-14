@@ -245,7 +245,7 @@ function renderVerses(verses, highlight=''){
         english.classList.add('english-text');
         english.innerHTML=highlightText(ayet.english,highlight);
 
-        // Paylaş butonu (resim olarak)
+        // Paylaş butonu (Instagram Story estetik)
         const shareBtn = document.createElement('button');
         shareBtn.textContent = '📤 Paylaş';
         shareBtn.classList.add('nav-btn');
@@ -254,57 +254,65 @@ function renderVerses(verses, highlight=''){
         shareBtn.style.marginTop = '5px';
 
         shareBtn.addEventListener('click', async () => {
-            const width = 720;  // 9:16 oranı
-            const height = 1280;
-
-            // Geçici canvas
+            const width = 1080;   // Insta story
+            const height = 1920;
             const canvas = document.createElement('canvas');
             canvas.width = width;
             canvas.height = height;
             const ctx = canvas.getContext('2d');
 
-            // Beyaz arkaplan
-            ctx.fillStyle = '#ffffff';
+            // Gradient arka plan
+            const gradient = ctx.createLinearGradient(0, 0, 0, height);
+            gradient.addColorStop(0, '#0f2027');
+            gradient.addColorStop(1, '#2c5364');
+            ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
-            // Arapça ayet (üstte)
-            ctx.fillStyle = '#000000';
-            ctx.textAlign = 'right';
-            ctx.font = 'bold 50px Aqeeq, serif';
+            // Arapça ayet
+            ctx.fillStyle = '#fff';
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 80px Aqeeq, serif';
+            ctx.shadowColor = 'rgba(0,0,0,0.3)';
+            ctx.shadowBlur = 10;
+            ctx.shadowOffsetX = 3;
+            ctx.shadowOffsetY = 3;
+
             const arabicLines = ayet.arabic.split(/\n/);
-            let y = 80;
+            let y = 250;
             arabicLines.forEach(line => {
-                ctx.fillText(line, width - 40, y);
-                y += 60;
+                ctx.fillText(line, width/2, y);
+                y += 90;
             });
 
-            // İngilizce çeviri (orta)
-            ctx.fillStyle = '#000';
-            ctx.textAlign = 'left';
-            ctx.font = '24px Arial, sans-serif';
+            // İngilizce çeviri + ayet numarası
+            ctx.shadowColor = 'transparent';
+            ctx.fillStyle = '#fff';
+            ctx.font = '36px Arial, sans-serif';
+            ctx.textAlign = 'center';
+
             const englishText = ayet.english + ` [${ayet.verseKey}]`;
             const words = englishText.split(' ');
             let line = '';
-            y += 20;
-            const lineHeight = 30;
+            y += 50;
+            const lineHeight = 45;
             for(let n=0; n<words.length; n++){
                 const testLine = line + words[n] + ' ';
                 const metrics = ctx.measureText(testLine);
-                if(metrics.width > width - 80){
-                    ctx.fillText(line, 40, y);
+                if(metrics.width > width - 160){
+                    ctx.fillText(line, width/2, y);
                     line = words[n] + ' ';
                     y += lineHeight;
                 } else {
                     line = testLine;
                 }
             }
-            ctx.fillText(line, 40, y);
+            ctx.fillText(line, width/2, y);
 
-            // Alt bağlantı
+            // Alt site adı
+            ctx.font = '28px Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255,255,255,0.7)';
             ctx.textAlign = 'center';
-            ctx.font = '20px Arial, sans-serif';
-            ctx.fillStyle = '#555';
-            ctx.fillText('kuran.yasireymen.com', width/2, height - 40);
+            ctx.fillText('kuran.yasireymen.com', width/2, height - 80);
 
             // Görseli paylaş
             canvas.toBlob(blob => {
@@ -332,6 +340,7 @@ function renderVerses(verses, highlight=''){
 
 
 
+
 function highlightText(text, query){
     if(!query) return text;
     const escaped=query.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&');
@@ -344,6 +353,7 @@ sureSelect.addEventListener('change',(e)=>{
     searchInput.value='';
     loadVerse(chapter);
     localStorage.setItem('lastChapter', chapter);
+    window.location.href = "/kuran"
 });
 
 // Arama
