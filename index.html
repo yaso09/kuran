@@ -1,223 +1,168 @@
 <!doctype html>
-<html lang="tr">  
-<head>  
-<meta charset="utf-8" />  
-<meta name="viewport" content="width=device-width,initial-scale=1" />  
-<title>Kur'an Okuyucu</title>  
-<style>  
-  @font-face {  
-    font-family: 'Aqeeq';  
-    src: url('/Aqeeq-Bold.ttf') format('truetype');  
-    font-weight: 700;  
-    font-style: normal;  
-    font-display: swap;  
-  }  
-  @font-face {  
-    font-family: 'StackSansNotch';  
-    src: url('/StackSansNotch-Bold.ttf') format('truetype');  
-    font-weight: 700;  
-    font-style: normal;  
-    font-display: swap;  
-  }  
-
-  * { box-sizing: border-box; }
-  body {
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kur'an Okuyucu</title>
+<style>
+@font-face {
+    font-family: 'Aqeeq';
+    src: url('/Aqeeq-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'StackSansNotch';
+    src: url('/StackSansNotch-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body {
     margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
     background: #fff;
     color: #000;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
     line-height: 1.4;
-  }
-
-  .content {
+}
+.content {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-  }
-
-  h1, h2 {
-    font-family: 'StackSansNotch', sans-serif;
-    text-align: center;
-  }
-
-  .verse {
+}
+h1, h2 { font-family: 'StackSansNotch', sans-serif; text-align: center; }
+.controls { text-align: center; margin-bottom: 20px; }
+.controls select, .controls input { font-size: 16px; padding: 6px 12px; margin: 5px; }
+.verse {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
     border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
     padding-bottom: 5px;
-  }
-
-  .arabic-text {
+}
+.arabic-text {
     font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
     font-size: 32px;
     font-weight: 700;
     direction: rtl;
     text-align: right;
     flex: 1;
-  }
-
-  .english-text {
+}
+.english-text {
     font-size: 16px;
     text-align: left;
     flex: 1;
     padding-right: 20px;
-  }
-
-  .verse-number {
-    font-weight: bold;
-    color: #555;
-    font-size: 12px;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-
-  select, input[type="text"] {
-    font-size: 16px;
-    padding: 6px 12px;
-    margin: 10px 5px;
-  }
-
-  mark {
-    background-color: yellow;
-  }
-
-  @media (max-width: 800px) {
-    .verse { flex-direction: column; }
-    .arabic-text { font-size: 25px; }
-    .english-text { font-size: 14px; padding-right: 0; }
-    select, input[type="text"] { font-size: 14px; }
-  }
-</style>  
-</head>  
-<body>  
-  <div class="content">
-    <h1>Kur'an Okuyucu</h1>
-    <div style="text-align:center;">
-      <select id="sureSelect">
-        <option value="">Tüm Kur’an</option>
-      </select>
-      <input type="text" id="searchInput" placeholder="Ayet veya içerik ara..." />
-    </div>
-    <div id="ayetler"></div>
-  </div>
-
+}
+.verse-number { font-size: 12px; font-weight: bold; color: #555; width: 100%; text-align: center; margin-bottom: 5px; }
+mark { background-color: yellow; }
+@media(max-width:800px){.verse{flex-direction:column;}.arabic-text{font-size:25px;}.english-text{font-size:14px;padding-right:0;}.controls select,.controls input{font-size:14px;}}
+</style>
+</head>
+<body>
+<div class="content">
+<h1>Kur'an Okuyucu</h1>
+<div class="controls">
+<select id="sureSelect"><option value="">Tüm Kur'an</option></select>
+<input type="text" id="searchInput" placeholder="Ayet veya içerik ara...">
+</div>
+<div id="ayetler"></div>
+</div>
 <script>
 const sureSelect = document.getElementById('sureSelect');
 const searchInput = document.getElementById('searchInput');
-let allVerses = [];
+let allVerses = []; 
 
 // Dropdown oluştur
-for (let i = 1; i <= 114; i++) {
-    const option = document.createElement('option');
-    option.value = i;
-    option.textContent = `Sure ${i}`;
+for(let i=1;i<=114;i++){
+    const option=document.createElement('option');
+    option.value=i;
+    option.textContent=`Sure ${i}`;
     sureSelect.appendChild(option);
 }
 
-// Belirli bir sureyi yükle
-async function loadVerse(chapter) {
-    const container = document.getElementById('ayetler');
-    container.innerHTML = '';
-    allVerses = [];
-
-    if (!chapter) return loadAllVerses(); // Seçim yoksa tüm Kur'an
-
-    try {
-        const response = await fetch(`/data/verses/${chapter}.json`);
-        const data = await response.json();
-        allVerses = data.verses;
-
+// JSON dosyasından sure yükle
+async function loadVerse(chapter){
+    const container=document.getElementById('ayetler');
+    container.innerHTML='';
+    allVerses=[];
+    if(!chapter) return loadAllVerses(); // Tüm Kur'an
+    try{
+        const response=await fetch(`/data/verses/${chapter}.json`);
+        const data=await response.json();
+        allVerses=data.verses;
         renderVerses(allVerses);
-
-    } catch (error) {
-        console.error(`Sure ${chapter} yüklenemedi:`, error);
-        container.textContent = 'Bu sure yüklenemedi.';
-    }
+    }catch(e){container.textContent='Bu sure yüklenemedi.';console.error(e);}
 }
 
-// Tüm Kur’an'ı yükle
-async function loadAllVerses() {
-    const container = document.getElementById('ayetler');
-    container.innerHTML = '';
-    allVerses = [];
-
-    for (let chapter = 1; chapter <= 114; chapter++) {
-        try {
-            const response = await fetch(`/data/verses/${chapter}.json`);
-            const data = await response.json();
+// Tüm Kur'an'ı yükle
+async function loadAllVerses(){
+    const container=document.getElementById('ayetler');
+    container.innerHTML='';
+    allVerses=[];
+    for(let i=1;i<=114;i++){
+        try{
+            const response=await fetch(`/data/verses/${i}.json`);
+            const data=await response.json();
             allVerses.push(...data.verses);
-        } catch (error) {
-            console.error(`Sure ${chapter} yüklenemedi:`, error);
-        }
+        }catch(e){console.error(`Sure ${i} yüklenemedi`,e);}
     }
-
     renderVerses(allVerses);
 }
 
 // Ayetleri render et
-function renderVerses(verses, highlight='') {
-    const container = document.getElementById('ayetler');
-    container.innerHTML = '';
-
-    verses.forEach(ayet => {
-        const verseDiv = document.createElement('div');
-
-        const number = document.createElement('div');
+function renderVerses(verses, highlight=''){
+    const container=document.getElementById('ayetler');
+    container.innerHTML='';
+    verses.forEach(ayet=>{
+        const verseDiv=document.createElement('div');
+        const number=document.createElement('div');
         number.classList.add('verse-number');
-        number.textContent = `Ayet ${ayet.verseNumber} (${ayet.verseKey})`;
-
-        const arabic = document.createElement('div');
+        number.textContent=`Ayet ${ayet.verseNumber} (${ayet.verseKey})`;
+        const arabic=document.createElement('div');
         arabic.classList.add('arabic-text');
-        arabic.innerHTML = highlightText(ayet.arabic, highlight);
-
-        const english = document.createElement('div');
+        arabic.innerHTML=highlightText(ayet.arabic,highlight);
+        const english=document.createElement('div');
         english.classList.add('english-text');
-        english.innerHTML = highlightText(ayet.english, highlight);
-
+        english.innerHTML=highlightText(ayet.english,highlight);
         verseDiv.classList.add('verse');
         verseDiv.appendChild(number);
         verseDiv.appendChild(arabic);
         verseDiv.appendChild(english);
-
         container.appendChild(verseDiv);
     });
 }
 
 // Metni highlight et
-function highlightText(text, query) {
-    if (!query) return text;
-    const escaped = query.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
-    const regex = new RegExp(escaped, 'gi');
-    return text.replace(regex, match => `<mark>${match}</mark>`);
+function highlightText(text, query){
+    if(!query) return text;
+    const escaped=query.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&');
+    const regex=new RegExp(escaped,'gi');
+    return text.replace(regex,match=>`<mark>${match}</mark>`);
 }
 
 // Dropdown değişince
-sureSelect.addEventListener('change', (e) => {
-    const chapter = e.target.value;
-    searchInput.value = '';
+sureSelect.addEventListener('change',(e)=>{
+    const chapter=e.target.value;
+    searchInput.value='';
     loadVerse(chapter);
 });
 
 // Arama
-searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    if (!query) {
-        renderVerses(allVerses);
-        return;
-    }
-    const filtered = allVerses.filter(ayet =>
+searchInput.addEventListener('input',(e)=>{
+    const query=e.target.value.toLowerCase();
+    if(!query) return renderVerses(allVerses);
+    const filtered=allVerses.filter(ayet=>
         ayet.arabic.toLowerCase().includes(query) ||
         ayet.english.toLowerCase().includes(query) ||
         ayet.verseNumber.toString().includes(query)
     );
-    renderVerses(filtered, query);
+    renderVerses(filtered,query);
 });
 
-// Sayfa açıldığında tüm Kur’an'ı göster
+// Sayfa açıldığında tüm Kur'an'ı göster
 loadAllVerses();
 </script>
-
-</body>  
+</body>
 </html>
