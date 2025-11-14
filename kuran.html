@@ -120,18 +120,18 @@ mark { background-color: yellow; }
     padding: 0.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: sticky;
-    top: 0;
+    top: 10px;
     z-index: 999;
 }
 </style>
 </head>
 <body>
-<div class="topbar">
-    <button onclick="window.location.href='/'" class="nav-btn">←</button>
-</div>
 <div class="content">
 <div class="arabic">القرآن</div>  <!-- Arapça Kur'an -->
-<h1>Kur'an</h1>
+<h1>Kur'an</h1><br>
+<div class="topbar">
+    <button onclick="window.location.href='/'" class="nav-btn">←</button>
+</div><br><br>
 
 <div class="controls">
 <select id="sureSelect"><option value="">Tüm Kur'an</option></select>
