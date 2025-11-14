@@ -198,7 +198,7 @@ async function loadVerse(chapter){
         allVerses=data.verses;
         renderVerses(allVerses);
         updateNavigationButtons(parseInt(chapter));
-        const scrollTop = localStorage.getItem('scrollTop');
+        const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
         if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
     }catch(e){
         container.innerHTML='<div class="loading">Bu sure yüklenemedi.</div>'; 
@@ -221,7 +221,7 @@ async function loadAllVerses(){
     }
     renderVerses(allVerses);
     navigationDiv.style.display='none';
-    const scrollTop = localStorage.getItem('scrollTop');
+    const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
     if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
 }
 
@@ -275,7 +275,7 @@ searchInput.addEventListener('input',(e)=>{
 
 // Scroll pozisyonu kaydet
 window.addEventListener('beforeunload',()=>{
-    localStorage.setItem('scrollTop', window.scrollY);
+    localStorage.setItem(`${sureSelect.value}.scrollTop`, window.scrollY);
 });
 
 // Kaldığı yerden devam
