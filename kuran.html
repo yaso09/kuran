@@ -253,8 +253,8 @@ function renderVerses(verses, highlight=''){
         const shareBtn = document.createElement('button');
         shareBtn.textContent = '📤 Paylaş';
         shareBtn.classList.add('nav-btn');
-        shareBtn.style.fontSize = '14px';
-        shareBtn.style.padding = '4px 8px';
+        shareBtn.style.fontSize = '16px';
+        shareBtn.style.padding = '6px 12px';
         shareBtn.style.marginTop = '5px';
 
         shareBtn.addEventListener('click', async () => {
@@ -265,14 +265,13 @@ function renderVerses(verses, highlight=''){
             canvas.height = height;
             const ctx = canvas.getContext('2d');
 
-            // Gradient arka plan
+            // Arka plan gradient + soft ışık
             const gradient = ctx.createLinearGradient(0, 0, 0, height);
             gradient.addColorStop(0, '#0f2027');
             gradient.addColorStop(1, '#2c5364');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
-            // Soft ışık patlamaları
             for(let i=0;i<3;i++){
                 const radius = Math.random()*400 + 200;
                 const x = Math.random()*width;
@@ -300,15 +299,15 @@ function renderVerses(verses, highlight=''){
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // Arapça ayet
-            ctx.font = 'bold 60px Aqeeq, serif';
+            // Arapça ayet (font boyutu büyütüldü)
+            ctx.font = 'bold 80px Aqeeq, serif';
             ctx.shadowColor = 'rgba(0,0,0,0.3)';
             ctx.shadowBlur = 8;
             ctx.shadowOffsetX = 2;
             ctx.shadowOffsetY = 2;
 
             const arabicLines = ayet.arabic.split(/\n/);
-            const arabicLineHeight = 70;
+            const arabicLineHeight = 90;
             let arabicHeight = arabicLines.length * arabicLineHeight;
             let y = (height - arabicHeight) / 2 - 50;
 
@@ -317,15 +316,15 @@ function renderVerses(verses, highlight=''){
                 y += arabicLineHeight;
             });
 
-            // İngilizce çeviri + ayet numarası
+            // İngilizce çeviri + ayet numarası (font büyütüldü)
             ctx.shadowColor = 'transparent';
             ctx.fillStyle = '#fff';
-            ctx.font = '28px Arial, sans-serif';
+            ctx.font = '36px Arial, sans-serif';
 
             const englishText = ayet.english + ` [${ayet.verseKey}]`;
             const words = englishText.split(' ');
             const maxWidth = width - 100;
-            const lineHeight = 36;
+            const lineHeight = 44;
             let line = '';
             let englishLines = [];
 
@@ -347,8 +346,8 @@ function renderVerses(verses, highlight=''){
                 y += lineHeight;
             });
 
-            // Alt site adı
-            ctx.font = '20px Arial, sans-serif';
+            // Alt site adı (font büyütüldü)
+            ctx.font = '24px Arial, sans-serif';
             ctx.fillStyle = 'rgba(255,255,255,0.7)';
             ctx.fillText('kuran.yasireymen.com', width/2, height - 40);
 
