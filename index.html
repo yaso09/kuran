@@ -24,7 +24,7 @@ body {
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
     background: #fff;
     color: #000;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 .content {
     max-width: 1000px;
@@ -32,32 +32,19 @@ body {
     padding: 20px;
 }
 h1, h2 { font-family: 'StackSansNotch', sans-serif; text-align: center; }
-.controls { text-align: center; margin-bottom: 20px; }
+.controls { margin-bottom: 20px; text-align: center; }
 .controls select, .controls input { font-size: 16px; padding: 6px 12px; margin: 5px; }
-.verse {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-}
+.verse { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
 .arabic-text {
     font-family: 'Aqeeq', 'Noto Naskh Arabic', serif;
     font-size: 32px;
     font-weight: 700;
-    direction: rtl;
-    text-align: right;
-    flex: 1;
+    margin: 5px 0;
 }
-.english-text {
-    font-size: 16px;
-    text-align: left;
-    flex: 1;
-    padding-right: 20px;
-}
-.verse-number { font-size: 12px; font-weight: bold; color: #555; width: 100%; text-align: center; margin-bottom: 5px; }
+.english-text { font-size: 16px; margin-bottom: 10px; }
+.verse-number { font-size: 12px; font-weight: bold; color: #555; margin-bottom: 5px; }
 mark { background-color: yellow; }
-@media(max-width:800px){.verse{flex-direction:column;}.arabic-text{font-size:25px;}.english-text{font-size:14px;padding-right:0;}.controls select,.controls input{font-size:14px;}}
+@media(max-width:800px){.arabic-text{font-size:25px;}.english-text{font-size:14px;}.controls select,.controls input{font-size:14px;}}
 </style>
 </head>
 <body>
