@@ -273,11 +273,11 @@ async function renderVerses(verses, highlight=''){
     for (let i = 0; i < verses.length; i++) {
         const ayet = verses[i];
 
-        if (ayah === ayet) {
+        if (ayet.verseKey === ayah) {
             continue;
         }
 
-        changeAyah(ayet);
+        changeAyah(ayet.verseKey);
         
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
