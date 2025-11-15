@@ -510,7 +510,10 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
         verseDiv.id = `verse${ayet.verseKey}`;
 
         container.appendChild(verseDiv);
+
+        removeDuplicateIds();
     }
+    removeDuplicateIds();
 }
 
 
