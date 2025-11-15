@@ -270,7 +270,7 @@ async function renderVerses(verses, highlight=''){
     }
 
     for (let i = 0; i < verses.length; i++) {
-        const ayet = verses[i];
+        const ayet = await verses[i];
 
         console.log(`Ayet: ${ayet}`);
         console.log(`Ayah: ${ayah}`);
