@@ -157,6 +157,23 @@ mark { background-color: yellow; }
 <script src="./print.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script>
+function removeDuplicateIds() {
+  const allElements = document.querySelectorAll('[id]');
+  const seenIds = new Set();
+  let removedCount = 0;
+
+  allElements.forEach(el => {
+    if (seenIds.has(el.id)) {
+      el.remove();
+      removedCount++;
+    } else {
+      seenIds.add(el.id);
+    }
+  });
+
+  console.log(`${removedCount} duplicate element(s) removed.`);
+}
+
 const sureSelect = document.getElementById('sureSelect');
 const searchInput = document.getElementById('searchInput');
 const mealSelect = document.getElementById("mealSelect");
@@ -229,6 +246,8 @@ async function loadVerse(chapter, meal){
         console.error(e);
         navigationDiv.style.display='none';
     }
+
+    removeDuplicateIds();
 }
 
 // Tüm Kur'an
@@ -562,23 +581,6 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
     } else {
         window.location.href = "/";
     }
-}
-
-function removeDuplicateIds() {
-  const allElements = document.querySelectorAll('[id]');
-  const seenIds = new Set();
-  let removedCount = 0;
-
-  allElements.forEach(el => {
-    if (seenIds.has(el.id)) {
-      el.remove();
-      removedCount++;
-    } else {
-      seenIds.add(el.id);
-    }
-  });
-
-  console.log(`${removedCount} duplicate element(s) removed.`);
 }
 
 removeDuplicateIds();
