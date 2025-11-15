@@ -121,6 +121,35 @@ h2 {
     .sure-item{ padding: 12px; }
     .sure-number, .sure-name{ font-size: 16px; }
 }
+
+#toTopBtn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+#toTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 </style>
 </head>
 <body>
@@ -131,9 +160,6 @@ h2 {
 <h1>Kur'an</h1>
 <center>
     <button id="devamEt" class="nav-btn" onclick="window.location.href='/kuran.html'">Kaldığın Yerden Devam Et</button>
-    <button class="nav-btn" onclick="window.location.href = 'https://yasireymen.com'">
-        yasireymen.com
-    </button>
     <button class="nav-btn" onclick="
         document.getElementById('surelerHeader').scrollIntoView({
             behavior: 'smooth',
@@ -187,6 +213,8 @@ window.addEventListener("message", function(e) {
 </footer><br>
 
 </div>
+
+<button id="toTopBtn" aria-label="En üste çık">☝️</button>
 
 <script>
 if (!localStorage.getItem("lastChapter")) {
@@ -248,6 +276,26 @@ sureNames.forEach((name, i)=>{
 
     listDiv.appendChild(link);
 });
+
+const toTopBtn = document.getElementById("toTopBtn");
+
+// Tıklayınca yukarı kaydır
+toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// Scroll takip — belli bir mesafeden sonra butonu göster
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 250) {
+        toTopBtn.classList.add("show");
+    } else {
+        toTopBtn.classList.remove("show");
+    }
+});
+
 </script>
 
 </body>
