@@ -440,8 +440,9 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
 
         embedBtn.addEventListener("click", function() {
             const embedCode = `
-            <iframe width="100%" style="overflow: hidden;"
-            src="/embed.html?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}"
+            <iframe scrolling="no" width="485" height="100%" frameborder=0
+            allowtransparency="true"
+            src="https://kuran.yasireymen.com/embed.html?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}"
             frameborder="0"></iframe>
             `;
             /*const embedCode = `<div class="embedded-verse"><style>
