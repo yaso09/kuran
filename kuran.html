@@ -435,9 +435,25 @@ async function renderVerses(verses, highlight=''){
 
         embedBtn.addEventListener("click", function() {
             const embedCode = `<div class="embedded-verse">
-                <div class="arabic-text">${ayet.arabic}</div>
-                <div class="english-text">${result}</div>
-                <div class="verse-number">Ayet ${ayet.verseNumber} (${ayet.verseKey})</div>
+                <div style="{
+                    font-family: 'Kitab', 'Noto Naskh Arabic', serif;
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin: 5px 0;
+                    text-align: center;
+                }">${ayet.arabic}</div>
+                <div style="{
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }">${result}</div>
+                <div style="{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #555;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }">Ayet ${ayet.verseNumber} (${ayet.verseKey})</div>
             </div>`;
             
             navigator.clipboard.writeText(embedCode)
