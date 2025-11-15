@@ -7,21 +7,21 @@
 <style>
 @font-face {
     font-family: 'Kitab';
-    src: url('/Kitab-Bold.ttf') format('truetype');
+    src: url('./Kitab-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'StackSansNotch';
-    src: url('/StackSansNotch-Bold.ttf') format('truetype');
+    src: url('./StackSansNotch-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Alshohadaa';
-    src: url('/alshohadaa.ttf') format('truetype');
+    src: url('./alshohadaa.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -134,7 +134,7 @@ mark { background-color: yellow; }
 <div class="arabic">القرآن</div>  <!-- Arapça Kur'an -->
 <h1>Kur'an</h1><br>
 <div class="topbar"><center>
-    <button onclick="window.location.href='/'" class="nav-btn">←</button>
+    <button onclick="window.location.href='./'" class="nav-btn">←</button>
 <select id="sureSelect"></select>
 <input type="text" id="searchInput" placeholder="Ayet veya içerik ara...">
 
@@ -244,6 +244,15 @@ async function loadAllVerses(){
     if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
 }
 
+async function meal(name, sure, ayet) {
+    const response = await fetch(`/data/mealler/${name}.json`);
+    const data = await response.json();
+
+    const result = data.sures[sure].ayetler[ayet][1];
+
+    return result;
+}
+
 function renderVerses(verses, highlight=''){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
@@ -266,9 +275,13 @@ function renderVerses(verses, highlight=''){
         arabic.classList.add('arabic-text');
         arabic.innerHTML = highlightText(ayet.arabic, highlight);
 
-        const english = document.createElement('div');
-        english.classList.add('english-text');
-        english.innerHTML = highlightText(ayet.english, highlight);
+        const tevil = document.createElement('div');
+        tevil.classList.add('english-text');
+        tevil.innerHTML = highlightText(meal(
+            "omer-nasuhi-bilmen",
+            verses.indexOf(ayet).verseKey.split(":")[0] - 1,
+            verses.indexOf(ayet).verseNumber - 1
+        ), highlight);
 
         const shareBtn = document.createElement('button');
         shareBtn.textContent = '📤 Paylaş';
