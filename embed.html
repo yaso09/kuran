@@ -144,6 +144,12 @@
     // İçerik değişince gönder
     window.addEventListener("resize", sendHeight);
 
-    setInterval(sendHeight, 1000);
+    let i = 1;
+
+    const si = setInterval(function() {
+        if (i == 10) clearInterval(si);
+        sendHeight();
+        i++;
+    }, 1000);
 
 </script>
