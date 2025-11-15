@@ -266,12 +266,10 @@ async function renderVerses(verses, highlight=''){
     let ayah = "";
 
     for (const ayet of verses) {
-        if (ayah == ayet) {
-            console.log(ayah);
-            console.log(0)
-            console.log(ayet);
-            console.log(Boolean(ayah == ayet));
-        }
+        console.log(ayah);
+        console.log(0)
+        console.log(ayet);
+        console.log(Boolean(ayah == ayet));
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
 
