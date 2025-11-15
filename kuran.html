@@ -135,7 +135,7 @@ mark { background-color: yellow; }
 <h1>Kur'an</h1><br>
 <div class="topbar"><center>
     <button onclick="window.location.href='/'" class="nav-btn">←</button>
-<select id="sureSelect"><option value="">Tüm Kur'an</option></select>
+<select id="sureSelect"></select>
 <input type="text" id="searchInput" placeholder="Ayet veya içerik ara...">
 
 <!-- Yazdırma Butonu -->
@@ -210,7 +210,7 @@ async function loadVerse(chapter){
     const container=document.getElementById('ayetler');
     container.innerHTML='<div class="loading">Yükleniyor...</div>';
     allVerses=[];
-    if(!chapter) return loadAllVerses(); 
+    if(!chapter) return window.location.href = "/"; 
     try{
         const response=await fetch(`/data/verses/${chapter}.json`);
         const data=await response.json();
@@ -438,7 +438,7 @@ if(lastChapter){
     sureSelect.value = lastChapter;
     loadVerse(lastChapter);
 }else{
-    loadAllVerses();
+    window.location.href = "/";
 }
 
 // URL parametresinden sure kontrolü
@@ -458,7 +458,7 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
         sureSelect.value = lastChapter;
         loadVerse(lastChapter);
     } else {
-        loadAllVerses();
+        window.location.href = "/";
     }
 }
 

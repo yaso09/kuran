@@ -179,6 +179,7 @@ function tumKuran() {
     listDiv.appendChild(link);
 }
 
+// if (localStorage.getItem("lastChapter")) window.location.href = "/kuran.html";
 
 sureNames.forEach((name, i)=>{
     const num = i+1;
@@ -192,6 +193,11 @@ sureNames.forEach((name, i)=>{
         <span class="sure-number">${num}</span>
         <span class="sure-name">${name}</span>
     `;
+
+    link.onclick = function() {
+        localStorage.setItem("lastChapter", num);
+    }
+
     listDiv.appendChild(link);
 });
 </script>
