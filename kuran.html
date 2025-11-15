@@ -265,12 +265,13 @@ async function renderVerses(verses, highlight=''){
 
     let ayah = "";
 
-    for (const ayet of verses) {
-        console.log(ayah);
-        console.log(0)
-        ayah = ayet;
-        console.log(ayet);
-        console.log(Boolean(ayah == ayet));
+    for (let i = 0; i < verses.length; i++) {
+        const ayet = verses[i];
+
+        if (i > 0 && ayet.verseKey === verses[i - 1].verseKey) {
+            continue;
+        }
+        
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
 
