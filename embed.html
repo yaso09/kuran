@@ -14,28 +14,69 @@
             font-style: normal;
             font-display: swap;
         }
+
+        .embedded-verse {
+            padding: 10px;
+            box-sizing: border-box;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        #arabic {
+            font-family: 'Kitab', 'Noto Naskh Arabic', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 5px 0;
+            text-align: center;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        #meal {
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #num {
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        /* Mobil uyumlu ayarlar */
+        @media (max-width: 480px) {
+            #arabic {
+                font-size: 24px;
+            }
+            #meal {
+                font-size: 14px;
+            }
+            #num {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            #arabic {
+                font-size: 20px;
+            }
+            #meal {
+                font-size: 12px;
+            }
+            #num {
+                font-size: 10px;
+            }
+        }
     </style>
-    <div id="arabic" style="
-        font-family: 'Kitab', 'Noto Naskh Arabic', serif;
-        font-size: 32px;
-        font-weight: 700;
-        margin: 5px 0;
-        text-align: center;
-    "></div>
-    <div id="meal" style="
-        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-        font-size: 16px;
-        margin-bottom: 10px;
-        text-align: center;
-    "></div>
-    <div id="num" style="
-        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        color: #555;
-        margin-bottom: 5px;
-        text-align: center;
-    "></div>
+
+    <div id="arabic"></div>
+    <div id="meal"></div>
+    <div id="num"></div>
 </div>
 <script>
     function getQueryParam(param) {
@@ -57,26 +98,22 @@
             document.querySelector("#arabic").innerHTML = verse.arabic;
             document.querySelector("#num").innerHTML =
                 `Ayet ${verse.verseNumber} (${verse.verseKey})`;
-        }
-        catch {
+        } catch {
             window.location.href = "/";
         }
+
         try {
             const response = await fetch(`./data/mealler/${meal}.json`);
             const data = await response.json();
             const verse = data.sures[sure - 1].ayetler[ayet - 1][1];
 
             document.querySelector("#meal").innerHTML = verse;
-        }
-        catch {
+        } catch {
             window.location.href = "/";
         }
     }
 
     if (sure && !isNaN(sure) && sure >= 1 && sure <= 114) {
-        try {loadVerse();}
-        catch {
-            window.location.href = "/";
-        }
+        try { loadVerse(); } catch { window.location.href = "/"; }
     } else window.location.href = "/";
 </script>
