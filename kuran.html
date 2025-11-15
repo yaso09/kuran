@@ -268,12 +268,13 @@ async function renderVerses(verses, highlight=''){
     function changeAyah(a) {
         console.log(a);
         ayah = a;
+        console.log(ayah);
     }
 
     for (let i = 0; i < verses.length; i++) {
         const ayet = verses[i];
 
-        if (ayet.verseKey === ayah) {
+        if (!ayet.verseKey === ayah) {
             console.log(Aynı);
             continue;
         }
