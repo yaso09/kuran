@@ -279,8 +279,8 @@ function renderVerses(verses, highlight=''){
         tevil.classList.add('english-text');
         tevil.innerHTML = highlightText(meal(
             "omer-nasuhi-bilmen",
-            verses.indexOf(ayet).verseKey.split(":")[0] - 1,
-            verses.indexOf(ayet).verseNumber - 1
+            ayet.verseKey.split(":")[0] - 1,
+            ayet.verseNumber - 1
         ), highlight);
 
         const shareBtn = document.createElement('button');
