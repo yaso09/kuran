@@ -359,7 +359,7 @@ async function renderVerses(verses, highlight=''){
             ctx.fillStyle = '#ffffff';
             ctx.font = '36px Arial, sans-serif';
 
-            const englishText = ayet.english + ` [${ayet.verseKey}]`;
+            const englishText = result + ` [${ayet.verseKey}]`;
             const words = englishText.split(' ');
             const maxWidth = width - 100;
             const lineHeight = 44;
