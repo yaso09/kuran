@@ -268,25 +268,9 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
-    let ayah = "";
-
-    function changeAyah(a) {
-        ayah = a;
-    }
-
     for (let i = 0; i < verses.length; i++) {
         const ayet = await verses[i];
 
-        console.log(`Ayet: ${ayet.verseKey}`);
-        console.log(`Ayah: ${ayah}`);
-
-        if (ayet.verseKey === ayah) {
-            console.log(Aynı);
-            continue;
-        }
-
-        changeAyah(ayet.verseKey);
-        
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
 
@@ -578,7 +562,24 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
     }
 }
 
+function removeDuplicateIds() {
+  const allElements = document.querySelectorAll('[id]');
+  const seenIds = new Set();
+  let removedCount = 0;
 
+  allElements.forEach(el => {
+    if (seenIds.has(el.id)) {
+      el.remove();
+      removedCount++;
+    } else {
+      seenIds.add(el.id);
+    }
+  });
+
+  console.log(`${removedCount} duplicate element(s) removed.`);
+}
+
+removeDuplicateIds();
 
 </script>
 </body>
