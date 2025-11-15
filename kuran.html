@@ -474,7 +474,7 @@ async function renderVerses(verses, highlight=''){
             navigator.clipboard.writeText(embedCode)
                 .then(() => {
                     embedBtn.textContent = "👍 Gömme Kodu Kopyalandı";
-                    setTimeout(embedBtn.textContent = "🔗 Göm", 3000);
+                    setTimeout(function(){embedBtn.textContent = "🔗 Göm"}, 3000);
                 })
                 .catch(err => alert('Kopyalama hatası: ' + err));
         })
