@@ -267,7 +267,7 @@ async function renderVerses(verses, highlight=''){
 
     for (const ayet of verses) {
         if (ayah == ayet) continue;
-        ayah = ayet;
+        else ayah = ayet;
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
 
