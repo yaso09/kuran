@@ -123,7 +123,7 @@ h1 {
 <div class="arabic-title">الفهرست</div>
 <h1>Kur'an Fihristi</h1>
 <center>
-    <button class="nav-btn" onclick="window.location.href='/kuran.html'">Kaldığın Yerden Devam Et</button>
+    <button id="devamEt" class="nav-btn" onclick="window.location.href='/kuran.html'">Kaldığın Yerden Devam Et</button>
     <button class="nav-btn" onclick="window.location.href = 'https://yasireymen.com'">
         yasireymen.com
     </button>
@@ -145,6 +145,10 @@ h1 {
 </div>
 
 <script>
+if (!localStorage.getItem("lastChapter")) {
+    document.querySelector("button#devamEt").style.display = "none";
+}
+
 function resetData() {
     if (confirm("Veriler temizlendiği takdirde en son nerede kaldığınız bilgisi de silinecektir, emin misiniz?")) {
         localStorage.clear();
