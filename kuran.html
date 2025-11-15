@@ -248,12 +248,12 @@ async function meal(name, sure, ayet) {
     const response = await fetch(`/data/mealler/${name}.json`);
     const data = await response.json();
 
-    const result = data.sures[sure].ayetler[ayet][1];
+    const result = await data.sures[sure].ayetler[ayet][1];
 
     return result;
 }
 
-async function renderVerses(verses, highlight=''){
+function renderVerses(verses, highlight=''){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
 
@@ -277,7 +277,7 @@ async function renderVerses(verses, highlight=''){
 
         const tevil = document.createElement('div');
         tevil.classList.add('english-text');
-        tevil.innerHTML = highlightText(await meal(
+        tevil.innerHTML = highlightText(meal(
             "omer-nasuhi-bilmen",
             ayet.verseKey.split(":")[0] - 1,
             ayet.verseNumber - 1
