@@ -211,7 +211,7 @@ nextSureBtn.addEventListener('click',()=>{
 });
 
 // JSON yükleme
-async function loadVerse(chapter){
+async function loadVerse(chapter, meal){
     const container=document.getElementById('ayetler');
     container.innerHTML='<div class="loading">Yükleniyor...</div>';
     allVerses=[];
@@ -220,7 +220,7 @@ async function loadVerse(chapter){
         const response=await fetch(`./data/verses/${chapter}.json`);
         const data=await response.json();
         allVerses=data.verses;
-        renderVerses(allVerses);
+        renderVerses(allVerses, "", meal);
         updateNavigationButtons(parseInt(chapter));
         const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
         if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
@@ -258,7 +258,7 @@ async function meal(name, sure, ayet) {
     return result;
 }
 
-async function renderVerses(verses, highlight=''){
+async function renderVerses(verses, highlight='', meal){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
 
@@ -302,7 +302,7 @@ async function renderVerses(verses, highlight=''){
         tevil.classList.add('english-text');
 
         const result = await meal(
-            "omer-nasuhi-bilmen",
+            meal,
             ayet.verseKey.split(":")[0] - 1,
             ayet.verseNumber - 1
         )
@@ -525,6 +525,11 @@ sureSelect.addEventListener('change',(e)=>{
     localStorage.setItem('lastChapter', chapter);
     window.location.href = "/kuran"
 });
+
+mealSelect.addEventListener("change",(e)=> {
+    const meal = e.target.value;
+    loadVerse(sureSelect.value, meal);
+})
 
 // Arama
 searchInput.addEventListener('input',(e)=>{
