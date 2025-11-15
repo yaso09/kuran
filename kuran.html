@@ -154,24 +154,31 @@ mark { background-color: yellow; }
 </div>
 </div>
 
+<button id="toTopBtn" aria-label="En üste çık">☝️</button>
+
 <script src="./print.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script>
 function removeDuplicateIds() {
   const allElements = document.querySelectorAll('[id]');
-  const seenIds = new Set();
+  const idCount = {};
   let removedCount = 0;
 
   allElements.forEach(el => {
-    if (seenIds.has(el.id)) {
+    const id = el.id;
+
+    if (!idCount[id]) {
+      // ID ilk kez görülüyor: ilkini sil
+      idCount[id] = 1;
       el.remove();
       removedCount++;
     } else {
-      seenIds.add(el.id);
+      // ID daha önce görülmüş: bunu koru
+      idCount[id]++;
     }
   });
 
-  console.log(`${removedCount} duplicate element(s) removed.`);
+  console.log(`${removedCount} first-occurrence element(s) removed.`);
 }
 
 const sureSelect = document.getElementById('sureSelect');
@@ -601,6 +608,25 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
 }
 
 removeDuplicateIds();
+
+const toTopBtn = document.getElementById("toTopBtn");
+
+// Tıklayınca yukarı kaydır
+toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// Scroll takip — belli bir mesafeden sonra butonu göster
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 250) {
+        toTopBtn.classList.add("show");
+    } else {
+        toTopBtn.classList.remove("show");
+    }
+});
 
 </script>
 </body>
