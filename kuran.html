@@ -422,6 +422,29 @@ async function renderVerses(verses, highlight=''){
             });
         });
 
+        const embedBtn = document.createElement("button");
+        embedBtn.textContent = "🔗 Göm"
+        embedBtn.classList.add("nav-btn");
+        embedBtn.style.fontSize = "16px";
+        embedBtn.style.padding = '6px 12px';
+        embedBtn.style.marginTop = '5px';
+        embedBtn.style.marginLeft = '5px';
+
+        embedBtn.addEventListener("click", function() {
+            const embedCode = `<div class="embedded-verse">
+                <div class="arabic-text">${ayet.arabic}</div>
+                <div class="english-text">${result}</div>
+                <div class="verse-number">Ayet ${ayet.verseNumber} (${ayet.verseKey})</div>
+            </div>`;
+            
+            navigator.clipboard.writeText(embedCode)
+                .then(() => alert('Embed kodu kopyalandı!'))
+                .catch(err => alert('Kopyalama hatası: ' + err));
+
+            embedBtn.textContent = "👍 Gömme Kodu Kopyalandı";
+            setTimeout(embedBtn.textContent = "🔗 Göm", 3000);
+        })
+
         verseDiv.appendChild(number);
         verseDiv.appendChild(arabic);
         verseDiv.appendChild(tevil);

@@ -12,19 +12,19 @@
 <style>
 @font-face {
     font-family: 'Aqeeq';
-    src: url('/Aqeeq-Bold.ttf') format('truetype');
+    src: url('./Aqeeq-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'StackSansNotch';
-    src: url('/StackSansNotch-Bold.ttf') format('truetype');
+    src: url('./StackSansNotch-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Alshohadaa';
-    src: url('/alshohadaa.ttf') format('truetype');
+    src: url('./alshohadaa.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -56,6 +56,13 @@ h1 {
     text-align: center;
     color: #444;
     font-weight: 600;
+}
+
+h2 {
+    font-family: 'StackSansNotch', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
 }
 
 .sure-list {
@@ -120,14 +127,18 @@ h1 {
 
 <div class="content">
 
-<div class="arabic-title">الفهرست</div>
-<h1>Kur'an Fihristi</h1>
+<div class="arabic-title">القرآن</div>
+<h1>Kur'an</h1>
 <center>
     <button id="devamEt" class="nav-btn" onclick="window.location.href='/kuran.html'">Kaldığın Yerden Devam Et</button>
     <button class="nav-btn" onclick="window.location.href = 'https://yasireymen.com'">
         yasireymen.com
     </button>
 </center>
+
+<br><div><h2><i>
+    "Sizin en hayırlılarınız Kur'an'ı öğrenen ve öğretenlerinizdir." —Hz. Peygamber
+</i></h2></div><br>
 
 <div class="sure-list" id="sureList"></div>
 
