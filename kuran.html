@@ -191,6 +191,7 @@ mark { background-color: yellow; }
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script>
 function removeDuplicateIds(root = document) {
+    document.querySelector("#ayetler").style.display = "none";
     const elements = root.querySelectorAll('[id]'); // NodeList (belge sırasına göre)
     const seen = new Set();
     let removed = 0;
@@ -208,6 +209,7 @@ function removeDuplicateIds(root = document) {
         seen.add(id);
         }
     }
+    document.querySelector("#ayetler").style.display = "block";
     return { removed, kept: seen.size };
 }
 
