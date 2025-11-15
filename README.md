@@ -26,4 +26,4 @@
  - [ ] Abdulbaki Gölpınarlı meali
  - [ ] Sure yazdırma özelliği
  - [ ] Ayet yazdırma özelliği
- - [] Fihrist
+ - [ ] Fihrist
