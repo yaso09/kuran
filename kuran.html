@@ -263,8 +263,11 @@ async function renderVerses(verses, highlight=''){
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
+    let ayah = "";
+
     for (const ayet of verses) {
-        console.log(ayet);
+        if (ayah == ayet) continue;
+        ayah = ayet;
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
 
