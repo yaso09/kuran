@@ -457,11 +457,11 @@ async function renderVerses(verses, highlight=''){
             </div>`;
             
             navigator.clipboard.writeText(embedCode)
-                .then(() => alert('Embed kodu kopyalandı!'))
+                .then(() => {
+                    embedBtn.textContent = "👍 Gömme Kodu Kopyalandı";
+                    setTimeout(embedBtn.textContent = "🔗 Göm", 3000);
+                })
                 .catch(err => alert('Kopyalama hatası: ' + err));
-
-            embedBtn.textContent = "👍 Gömme Kodu Kopyalandı";
-            setTimeout(embedBtn.textContent = "🔗 Göm", 3000);
         })
 
         verseDiv.appendChild(number);
