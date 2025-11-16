@@ -12,7 +12,7 @@ if (window.location.hash == "#devmode") {
         // ctrlKey: CTRL basılı mı?
         // e.code === "Space": boşluk tuşu mu?
         if (e.ctrlKey && e.code === "Enter") {
-            console.log("CTRL + SPACE algılandı!");
+            console.log("CTRL + ENTER algılandı!");
 
             // localStorage'deki tüm değerleri çek
             const tumVeriler = {};
@@ -22,8 +22,19 @@ if (window.location.hash == "#devmode") {
                 tumVeriler[key] = localStorage.getItem(key);
             }
 
-            console.log("localStorage içeriği:", tumVeriler);
-            document.querySelector("#devmodemonitor").innerHTML = JSON.stringify(tumVeriler);
+            console.log("localStorage:", tumVeriler);
+
+            document.querySelector("#devmodemonitor").innerHTML = "";
+
+            for (key in tumVeriler) {
+                document.querySelector("#devmodemonitor").innerHTML +=
+                    `${key}: ${tumVeriler[key]}<br>`;
+            }
+
+            document.querySelector("#devmodemonitor").innerHTML += `
+            <button onclick="localStorage.clear();">Reset</button>`;
+
+            
         }
     });
 

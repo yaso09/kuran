@@ -316,6 +316,33 @@ async function meal(name, sure, ayet) {
     return result;
 }
 
+function mark(verseKey) {
+    if (!localStorage.getItem("markeds"))
+        localStorage.setItem("markeds", "[]");
+    if (localStorage.getItem("markeds").search(verseKey) > 0) {
+        localStorage.setItem("markeds",
+            JSON.stringify(
+                JSON.parse(localStorage.getItem("markeds")).filter(
+                    n => n !== verseKey
+                )
+            )
+        )
+    } else {
+        let markeds = JSON.parse(localStorage.getItem("markeds"));
+        markeds.push(verseKey);
+        localStorage.setItem("markeds", JSON.stringify(markeds));
+    }
+}
+
+function isMarked(verseKey) {
+    if (localStorage.getItem("markeds"))
+        return localStorage.getItem("markeds").search(verseKey) > 0;
+    else {
+        localStorage.setItem("markeds", "[]");
+        return false;
+    };
+}
+
 async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen"){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
@@ -354,15 +381,12 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
 
         const markBtn = document.createElement("button");
         markBtn.classList.add("nav-btn");
-        markBtn.style.display = "none";
+        //markBtn.style.display = "none";
         markBtn.style.fontSize = "16px";
         markBtn.style.padding = "6px 12px";
         markBtn.style.marginTop = "5px";
 
-        // 1) Önce localStorage'daki listeyi güvenli şekilde al
-        let markeds = JSON.parse(localStorage.getItem("markeds") || "[]");
-
-        if (markeds.includes(ayet.verseKey)) {
+        if (isMarked(ayet.verseKey)) {
             verseDiv.style.backgroundColor = "#ffe9c9";
             verseDiv.style.borderRadius = "14px";
             verseDiv.style.border = "10px #ffe9c9 solid";
@@ -373,22 +397,19 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
         }
 
         markBtn.addEventListener("click", function() {
-            if (markeds.includes(ayet.verseKey)) {
-                markeds = markeds.filter(n => n !== ayet.verseKey);
-                localStorage.setItem("markeds", JSON.stringify(markeds));
+            if (isMarked(ayet.verseKey)) {
                 markBtn.textContent = "⭐ İşaretle";
                 verseDiv.style.backgroundColor = "#fff";
                 verseDiv.style.borderRadius = "0";
                 verseDiv.style.border = "0";
             } else {
-                markeds.push(ayet.verseKey);
-                console.log(markeds);
-                localStorage.setItem("markeds", JSON.stringify(markeds));
                 markBtn.textContent = "🤩 İşaretlemeyi Kaldır";
                 verseDiv.style.backgroundColor = "#ffe9c9";
                 verseDiv.style.borderRadius = "14px";
                 verseDiv.style.border = "10px #ffe9c9 solid";
             }
+            
+            mark(ayet.verseKey)
         })
 
         const shareBtn = document.createElement('button');
