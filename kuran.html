@@ -213,6 +213,22 @@ function removeDuplicateIds(root = document) {
     return { removed, kept: seen.size };
 }
 
+function removeZiyade() {
+    const allVerses = document.querySelectorAll('[id^="verse"]');
+
+    allVerses.forEach(verse => {
+        const verseId = verse.id;
+        const verseSure = parseInt(verseId.split(":")[0].replace("verse", ""), 10);
+        console.log(verseSure);
+        console.log(!(verseSure == sureSelect.value));
+        console.log(sureSelect.value)
+
+        if (!(verseSure == sureSelect.value)) {
+            verse.remove();
+        }
+    })
+}
+
 const sureSelect = document.getElementById('sureSelect');
 const searchInput = document.getElementById('searchInput');
 const mealSelect = document.getElementById("mealSelect");
@@ -287,6 +303,7 @@ async function loadVerse(chapter, meal){
     }
 
     removeDuplicateIds();
+    removeZiyade();
 }
 
 // Tüm Kur'an
@@ -628,8 +645,10 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
         container.appendChild(verseDiv);
 
         removeDuplicateIds();
+        removeZiyade();
     }
     removeDuplicateIds();
+    removeZiyade();
 
     container.style.display = "block";
 
@@ -712,6 +731,7 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
 }
 
 removeDuplicateIds();
+removeZiyade();
 
 const toTopBtn = document.getElementById("toTopBtn");
 
