@@ -542,7 +542,7 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
             const embedCode = `
             <iframe onload="
             window.addEventListener('message', function(e) {
-                if (e.data.embedHeight) {
+                if (e.data.embedHeight && e.data.name == '${ayet.verseKey}') {
                     document.getElementById('kuranEmbed${ayet.verseKey}').style.height =
                         e.data.embedHeight + 'px';
                 }

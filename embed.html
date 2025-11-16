@@ -138,7 +138,10 @@
 
     function sendHeight() {
         const height = document.body.scrollHeight;
-        parent.postMessage({ embedHeight: height }, "*");
+        parent.postMessage({
+            embedHeight: height,
+            name: `${sure}:${ayet}`
+        }, "*");
     }
 
     // İlk yüklemede gönder
