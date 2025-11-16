@@ -271,7 +271,7 @@ async function loadVerse(chapter, meal){
     const container=document.getElementById('ayetler');
     container.innerHTML='<div class="loading">Yükleniyor...</div>';
     allVerses=[];
-    if(!chapter) return window.location.href = "/"; 
+    if(!chapter) return window.location.href = "./"; 
     try{
         const response=await fetch(`./data/verses/${chapter}.json`);
         const data=await response.json();
@@ -585,7 +585,7 @@ sureSelect.addEventListener('change',(e)=>{
     searchInput.value='';
     loadVerse(chapter, mealSelect.value);
     localStorage.setItem('lastChapter', chapter);
-    window.location.href = "/kuran"
+    window.location.href = "./kuran.html"
 });
 
 mealSelect.addEventListener("change",(e)=> {
@@ -616,7 +616,7 @@ if(lastChapter){
     sureSelect.value = lastChapter;
     loadVerse(lastChapter, mealSelect.value);
 }else{
-    window.location.href = "/";
+    window.location.href = "./";
 }
 
 // URL parametresinden sure kontrolü
@@ -636,7 +636,7 @@ if (urlSure && !isNaN(urlSure) && urlSure >= 1 && urlSure <= 114) {
         sureSelect.value = lastChapter;
         loadVerse(lastChapter, mealSelect.value);
     } else {
-        window.location.href = "/";
+        window.location.href = "./";
     }
 }
 
@@ -660,6 +660,37 @@ window.addEventListener("scroll", () => {
         toTopBtn.classList.remove("show");
     }
 });
+
+function updateStreak() {
+    const today = new Date().toISOString().split("T")[0];
+    const lastDate = localStorage.getItem("lastDate");
+    let streak = parseInt(localStorage.getItem("streak") || "0", 10);
+
+    if (!lastDate) {
+        // İlk gün
+        streak = 1;
+        localStorage.setItem("streak", streak);
+        localStorage.setItem("lastDate", today);
+        return;
+    }
+
+    const diffDays = (new Date(today) - new Date(lastDate)) / 86400000;
+
+    if (diffDays === 1) {
+        streak++;
+        localStorage.setItem("streak", streak);
+        localStorage.setItem("lastDate", today);
+    } else if (diffDays > 1) {
+        // Gün atlandıysa istersen sıfırlamak yerine yine 1'den başlatabilirsin
+        streak = 1;
+        localStorage.setItem("streak", streak);
+        localStorage.setItem("lastDate", today);
+    }
+}
+
+updateStreak();
+
+
 
 </script>
 </body>
