@@ -1,11 +1,10 @@
 {
-  "name": "Kur'an Okuyucu",
-  "short_name": "Kur'an",
-  "description": "Kur'an ayetlerini okuyun, arayın ve paylaşın",
+  "name": "Kur'an Oku",
+  "short_name": "quran",
+  "icons": [],
+  "theme_color": "#ffffff",
+  "background_color": "#1f1f1f",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2c3e50",
-  "theme_color": "#6a1b9a",
-  "orientation": "portrait",
-  "icons": []
+  "orientation": "portrait"
 }

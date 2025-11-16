@@ -5,9 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kur'an-ı Kerîm Oku</title>
 
-<link rel="manifest" href="https://kuran.yasireymen.com/manifest.json">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kur'an Oku">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+        	navigator.serviceWorker.register('/sw.js?v=3');
+        });
+    }
+</script>
 
 <style>
 @font-face {
@@ -18,13 +27,13 @@
 }
 @font-face {
     font-family: 'StackSansNotch';
-    src: url('./StackSansNotch-Bold.ttf') format('truetype');
+    src: url('./assets/fonts/StackSansNotch-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Alshohadaa';
-    src: url('./alshohadaa.ttf') format('truetype');
+    src: url('./assets/fonts/alshohadaa.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -225,6 +234,23 @@ a {
             block: 'start'
         })
     ">Hakkında</button>
+    <button class="nav-btn" id="install-app" style="display: none">Uygulamayı Yükle</button>
+<script>
+    const installButton = document.getElementById('install-app');
+    let beforeInstallPromptEvent
+    window.addEventListener("beforeinstallprompt", function(e) {
+        e.preventDefault();
+        beforeInstallPromptEvent = e
+        installButton.style.display = 'block'
+        installButton.addEventListener("click", function() {
+            e.prompt();
+        });
+        installButton.hidden = false;
+    });
+    installButton.addEventListener("click", function() {
+        beforeInstallPromptEvent.prompt();
+    });
+</script>
 </center>
 
 <br><div><h2><i>
@@ -385,6 +411,7 @@ window.addEventListener("scroll", () => {
 });
 
 </script>
+
 
 </body>
 </html>
