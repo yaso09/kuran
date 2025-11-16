@@ -120,6 +120,13 @@ h2 {
     .arabic-title{ font-size: 52px; }
     .sure-item{ padding: 12px; }
     .sure-number, .sure-name{ font-size: 16px; }
+    #streakIcon { display: none; }
+    #devamEt #left {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    #devamEt #left h1, #devamEt #left h2 { text-align: center; }
 }
 
 #toTopBtn {
@@ -153,7 +160,11 @@ a {
     color: #000;
 }
 #devamEt {
-    background-color: #ff9600;
+    background: linear-gradient(
+        to top,
+        #ff9600 0%,
+        #c95e00 100%
+    );
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     width: 100%;
@@ -291,7 +302,7 @@ window.addEventListener("message", function(e) {
 <button id="toTopBtn" aria-label="En üste çık">☝️</button>
 
 <script>
-if (!localStorage.getItem("lastChapter")) {
+if (!localStorage.getItem("streak")) {
     document.querySelector("#devamEt").style.display = "none";
 } else {
     document.querySelector("#streakCounter").innerText =
