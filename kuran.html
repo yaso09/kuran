@@ -319,6 +319,7 @@ async function meal(name, sure, ayet) {
 async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen"){
     const container = document.getElementById('ayetler');
     container.innerHTML = '';
+    container.style.display = "none";
 
     function randomColor() {
         // Beyazı tamamen çıkarıyoruz
@@ -568,6 +569,15 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
         removeDuplicateIds();
     }
     removeDuplicateIds();
+
+    container.style.display = "block";
+
+    // Sonunda scrollu uygula
+    const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
+    if(scrollTop) window.scrollTo({
+        top: parseInt(scrollTop),
+        behavior: "smooth"
+    });
 }
 
 
