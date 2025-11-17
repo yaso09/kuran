@@ -219,9 +219,6 @@ function removeZiyade() {
     allVerses.forEach(verse => {
         const verseId = verse.id;
         const verseSure = parseInt(verseId.split(":")[0].replace("verse", ""), 10);
-        console.log(verseSure);
-        console.log(!(verseSure == sureSelect.value));
-        console.log(sureSelect.value)
 
         if (!(verseSure == sureSelect.value)) {
             verse.remove();
@@ -308,7 +305,7 @@ async function loadVerse(chapter, meal){
         renderVerses(allVerses, "", meal);
         updateNavigationButtons(parseInt(chapter));
         const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
-        if (window.location.hash) {
+        if (getQueryParam("ayet")) {
             scrollToAyet();
         } else if(scrollTop) {window.scrollTo(0, parseInt(scrollTop));}
     }catch(e){
@@ -336,7 +333,7 @@ async function loadAllVerses(){
     renderVerses(allVerses);
     navigationDiv.style.display='none';
     const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
-    if (window.location.hash) {
+    if (getQueryParam("ayet")) {
         scrollToAyet();
     } else if(scrollTop) window.scrollTo(0, parseInt(scrollTop));
 }
@@ -370,7 +367,7 @@ function mark(verseKey) {
 
 function isMarked(verseKey) {
     if (localStorage.getItem("markeds"))
-        return JSON.parse(localStorage.getItem("markeds")).search(verseKey) > 0;
+        return JSON.parse(localStorage.getItem("markeds")).indexOf(verseKey) >= 0;
     else {
         localStorage.setItem("markeds", "[]");
         return false;
@@ -671,7 +668,7 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
 
     // Sonunda scrollu uygula
     const scrollTop = localStorage.getItem(`${sureSelect.value}.scrollTop`);
-    if (window.location.hash) {
+    if (getQueryParam("ayet")) {
         scrollToAyet();
     } else if(scrollTop) window.scrollTo({
         top: parseInt(scrollTop),
