@@ -232,7 +232,7 @@ a {
     <div class="left">
         <h1>Okumaya Devam Et</h1>
         <h2 id="streakCounter"></h2><br>
-        <button class="btn" onclick="window.location.href='./kuran.html'">Kaldığın Yerden Devam Et</button>
+        <button class="btn" onclick="window.location.href='./kuran'">Kaldığın Yerden Devam Et</button>
     </div>
     <img class="streakIcon" id="streakIcon" src="/assets/img/fire.svg">
 </div><br>
@@ -240,12 +240,12 @@ a {
     <div class="left">
         <h1>Okumaya Devam Et</h1>
         <h2 id="streakCounterFreeze"></h2><br>
-        <button class="btn" onclick="window.location.href='./kuran.html?sure=1'">Yeni Seriye Başla</button>
+        <button class="btn" onclick="window.location.href='./kuran?sure=1'">Yeni Seriye Başla</button>
     </div>
     <img class="streakIcon" src="/assets/img/freeze.svg">
 </div><br>
 
-<form action="/kuran.html">
+<form action="/kuran">
     <center class="goToAyah">
         <h1>Ayete Git</h1>
         <input name="sure" type="number" min="1" max="114" step="1" required> : 
@@ -276,7 +276,7 @@ id="isaretliler" class="iframe-container"></div><br>
             style="width: 500px; border: 0; overflox: hidden"
             id="kuranEmbed${verseKey}"
             allowtransparency="true"
-            src="./embed.html?sure=${verseKey.split(":")[0]}&ayet=${verseKey.split(":")[1]}&meal=diyanet-vakfi"></iframe>
+            src="./embed?sure=${verseKey.split(":")[0]}&ayet=${verseKey.split(":")[1]}&meal=diyanet-vakfi"></iframe>
             `;
         })
     } else {
@@ -296,7 +296,7 @@ window.addEventListener("message", function(e) {
 </script>
 
 <iframe id="bakara67"
-        src="./embed.html?sure=2&ayet=67&meal=diyanet-vakfi"
+        src="./embed?sure=2&ayet=67&meal=diyanet-vakfi"
         style="width: 500px; border:0; overflow:hidden;"
         scrolling="no"></iframe>
 
@@ -311,7 +311,7 @@ window.addEventListener("message", function(e) {
 </script>
 
 <iframe id="bakara127"
-        src="./embed.html?sure=2&ayet=127&meal=diyanet-vakfi"
+        src="./embed?sure=2&ayet=127&meal=diyanet-vakfi"
         style="width: 500px; border:0; overflow:hidden;"
         scrolling="no"></iframe>
 
@@ -326,7 +326,7 @@ window.addEventListener("message", function(e) {
 </script>
 
 <iframe id="bakara128"
-        src="./embed.html?sure=2&ayet=128&meal=diyanet-vakfi"
+        src="./embed?sure=2&ayet=128&meal=diyanet-vakfi"
         style="width: 500px; border:0; overflow:hidden;"
         scrolling="no"></iframe>
 
@@ -341,7 +341,7 @@ window.addEventListener("message", function(e) {
 </script>
 
 <iframe id="bakara201"
-        src="./embed.html?sure=2&ayet=201&meal=diyanet-vakfi"
+        src="./embed?sure=2&ayet=201&meal=diyanet-vakfi"
         style="width: 500px; border:0; overflow:hidden;"
         scrolling="no"></iframe>
 
@@ -356,7 +356,7 @@ window.addEventListener("message", function(e) {
 </script>
 
 <iframe id="aliimran8"
-        src="./embed.html?sure=3&ayet=8&meal=diyanet-vakfi"
+        src="./embed?sure=3&ayet=8&meal=diyanet-vakfi"
         style="width: 500px; border:0; overflow:hidden;"
         scrolling="no"></iframe>
 
@@ -446,7 +446,7 @@ function tumKuran() {
     listDiv.appendChild(link);
 }
 
-// if (localStorage.getItem("lastChapter")) window.location.href = "/kuran.html";
+// if (localStorage.getItem("lastChapter")) window.location.href = "/kuran";
 
 sureNames.forEach((name, i)=>{
     const num = i+1;
