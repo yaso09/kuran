@@ -9,20 +9,35 @@
 İnternetten ücretsiz mealli Kur'an-ı Kerîm okuyun. Tam anlamıyla Allah rızası için babamın hayrına yapıyorum. Mealleri [buradan](https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu) ve Arapça aslı ile İngilizce meali de [buradan](https://github.com/subaanqasim/quran-to-obsidian) aldım.
 
 
-![](/images/streak-ss.png)
+![](/public/images/streak-ss.png)
 
-## iFrame İçinde Ayet Gösterme
+## Ayet Gömme
 
-[`/embed`](https://kuran.yasireymen.com/embed)
+![](/public/images/vid1.gif)
+
+Kopyalanan kod:
+
+```html
+<iframe onload="
+window.addEventListener('message', function(e) {
+if (e.data.embedHeight && e.data.name == '1:1') {
+document.getElementById('kuranEmbed1:1').style.height =
+e.data.embedHeight + 'px';
+}})" scrolling="no" width="100%" frameborder=0
+id="kuranEmbed1:1"
+allowtransparency="true"
+src="https://kuran.yasireymen.com/embed.html?sure=1&ayet=1&meal=diyanet-vakfi"
+frameborder="0"></iframe>            
+```
 
 ## API Kullanımı
 
 #### Ayet Çekmek İçin
 
 <details>
-    <summary>
-        <code>GET</code> <code>/api/ayet/{sure_no}:{ayet_no}</code>
-    </summary>
+<summary>
+<code>GET</code> <code>/api/ayet/{sure_no}:{ayet_no}</code>
+</summary>
 
 <br>Örnek Çıktı:
 
