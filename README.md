@@ -1,7 +1,4 @@
-
-![](/images/logo-dark.png)
-
-![](/images/logo-white.png)
+![](/public/images/logo-white.png)
 
   
 
@@ -16,7 +13,7 @@
 
 ## iFrame İçinde Ayet Gösterme
 
-[`/embed.html`](https://kuran.yasireymen.com/embed.html)
+[`/embed`](https://kuran.yasireymen.com/embed)
 
 ## API Kullanımı
 
@@ -27,7 +24,7 @@
         <code>GET</code> <code>/api/ayet/{sure_no}:{ayet_no}</code>
     </summary>
 
-Örnek Çıktı:
+<br>Örnek Çıktı:
 
 ```json
 {
