@@ -20,10 +20,14 @@
 
 ## API Kullanımı
 
+#### Ayet Çekmek İçin
+
 <details>
     <summary>
-        Ayet çekmek için: <code>/api/ayet/{sure_no}:{ayet_no}</code>
+        <code>GET</code> <code>/api/ayet/{sure_no}:{ayet_no}</code>
     </summary>
+
+Örnek Çıktı:
 
 ```json
 {
