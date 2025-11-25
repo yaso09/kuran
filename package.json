@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/yaso09/quran#readme",
   "dependencies": {
+    "@clerk/express": "^1.7.53",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0"
   }
 }

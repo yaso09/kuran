@@ -1,11 +1,14 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const dotenv = require("dotenv");
+// const ClerkExpressRequireAuth = require("@clerk/express");
 
 const app = express();
 
 const PUBLIC_DIR = path.join(__dirname, "public");
 
+// app.use(ClerkExpressRequireAuth.clerkMiddleware);
 app.use(express.static(PUBLIC_DIR));
 
 app.get("/", (req, res) => {

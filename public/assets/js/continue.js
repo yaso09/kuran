@@ -16,11 +16,30 @@ class Continue {
 
         return `${y}-${m}-${d}`;
     }
-    cmp(a, b=this.todayYMD) {
-        const da = new Date(a);
-        const db = new Date(b);
+    daysBetween(a, b) {
+    const re = /^(\d{4})-(\d{1,2})-(\d{1,2})$/;
 
-        return da - db;
+    const parse = (s) => {
+        const m = s.match(re);
+        if (!m) throw new Error(`Geçersiz format: "${s}". Beklenen: YYYY-MM-DD`);
+        const year = Number(m[1]);
+        const month = Number(m[2]); // 1-12
+        const day = Number(m[3]);   // 1-31
+
+        // basit geçerlilik kontrolleri
+        if (month < 1 || month > 12) throw new Error(`Geçersiz ay: ${month}`);
+        if (day < 1 || day > 31) throw new Error(`Geçersiz gün: ${day}`);
+
+        // UTC midnight üret (zaman dilimi problemi olmasın diye)
+        return Date.UTC(year, month - 1, day);
+    };
+
+    const msA = parse(a);
+    const msB = parse(b);
+
+    const MS_PER_DAY = 24 * 60 * 60 * 1000;
+    const diffMs = Math.abs(msA - msB);
+    return Math.floor(diffMs / MS_PER_DAY);
     }
     constructor() {
         if (!localStorage.getItem("streak")) {
@@ -28,9 +47,9 @@ class Continue {
             document.querySelector("#continueFreeze").style.display = "none";
         }
         else {
-            if (this.cmp(
-                this.todayYMD(),
-                localStorage.getItem("lastDate")
+            if (this.daysBetween(
+                localStorage.getItem("lastDate"),
+                this.todayYMD()
             ) > 1) {
                 document.querySelector("#continue").style.display = "none";
                 document.querySelector("#streakCounterFreeze").innerText = 
