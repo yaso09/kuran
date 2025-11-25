@@ -18,6 +18,29 @@
 
 [`/embed.html`](https://kuran.yasireymen.com/embed.html)
 
+## API Kullanımı
+
+<details>
+    <summary>
+        Ayet çekmek için: <code>/api/ayet/{sure_no}:{ayet_no}</code>
+    </summary>
+
+```json
+{
+    "id": 1,
+    "verseNumber": 1,
+    "verseKey": "1:1",
+    "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+    "english": "In the Name of Allah—the Most Compassionate, Most Merciful.",
+    "turkish": {
+        "omer_nasuhi_bilmen": "Rahmân ve Rahîm olan Allah Teâlâ’nın ismiyle (tilâvete başlarım).",
+        "hayrat_nesriyat": "Rahmân, Rahîm olan Allah`ın ismiyle.",
+        "diyanet_vakfi": "Rahmân ve rahîm olan Allah’ın adıyla."
+    }
+}
+```
+</details>
+
 ## Özellikler
 
  - [x] Okuma serisi

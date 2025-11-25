@@ -6,13 +6,14 @@ const { get } = require("http");
 class API {
     api(req, res) {
         res.send({
-            "api": "closed"
+            "ayet": "/api/ayet/{sure_no}:{ayet_no}",
+            "sure": "/api/sure/{sure_no}"
         })
     }
 
     user(req, res) {}
 
-    async ayayh(req, res) {
+    async ayah(req, res) {
         let ayetKey = req.params.ayah;
         let sure = ayetKey.split(":")[0];
         let ayet = ayetKey.split(":")[1];
