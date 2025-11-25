@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kur'an-ı Kerîm</title>
+
+    <link rel="stylesheet" href="/assets/css/continue.css">
+    <link rel="stylesheet" href="/assets/css/btn.css">
+    <link rel="stylesheet" href="/assets/css/goToAyah.css">
+    <link rel="stylesheet" href="/assets/css/index.html.css">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Kur'an Oku">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="/pwa/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js?v=3');
+            });
+        }
+    </script>
 </head>
 <body>
     
