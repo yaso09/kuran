@@ -564,7 +564,7 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
             " scrolling="no" width="100%" frameborder=0
             id="kuranEmbed${ayet.verseKey}"
             allowtransparency="true"
-            src="https://kuran.yasireymen.com/embed.html?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}"
+            src="https://kuran.yasireymen.com/embed?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}"
             frameborder="0"></iframe>
             `;
             /*const embedCode = `<div class="embedded-verse"><style>
@@ -625,7 +625,7 @@ async function renderVerses(verses, highlight='', mealName="omer-nasuhi-bilmen")
 
         openNewTabBtn.addEventListener('click', () => {
             const mealName = mealSelect.value; // veya seçtiğin meal değişkeni
-            const url = `/embed.html?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}`;
+            const url = `/embed?sure=${ayet.verseKey.split(":")[0]}&ayet=${ayet.verseNumber}&meal=${mealName}`;
             window.open(url, '_blank'); // Yeni sekmede aç
         });
 

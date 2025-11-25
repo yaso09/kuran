@@ -26,7 +26,7 @@ e.data.embedHeight + 'px';
 }})" scrolling="no" width="100%" frameborder=0
 id="kuranEmbed1:1"
 allowtransparency="true"
-src="https://kuran.yasireymen.com/embed.html?sure=1&ayet=1&meal=diyanet-vakfi"
+src="https://kuran.yasireymen.com/embed?sure=1&ayet=1&meal=diyanet-vakfi"
 frameborder="0"></iframe>            
 ```
 
