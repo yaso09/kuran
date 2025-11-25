@@ -1,7 +1,6 @@
 const app = require("./links");
 const path = require("path");
 const fs = require("fs");
-const { get } = require("http");
 
 class API {
     api(req, res) {
@@ -67,13 +66,6 @@ class API {
                 req.params.sure
             }.json`)
         )
-    }
-
-    constructor() {
-        app.get("/api", this.api);
-        app.get("/api/user/:param", this.user);
-        app.get("/api/ayet/:ayah", this.ayah);
-        app.get("/api/sure/:sure", this.sure);
     }
 }
 
