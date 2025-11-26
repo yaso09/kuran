@@ -60,11 +60,40 @@ class API {
     }
 
     sure(req, res) {
-        res.sendFile(
+        const x = JSON.parse(fs.readFileSync(
             path.join(__dirname, "public", "data", "verses", `${
                 req.params.sure
             }.json`)
-        )
+        ))
+
+
+
+        x.verses.forEach(y => {
+            y.turkish = {};
+
+            let omer = JSON.parse(fs.readFileSync(
+                path.join(__dirname, "public", "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
+            ))
+
+            y.turkish.omer_nasuhi_bilmen =
+                omer.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
+                
+            let hayrat = JSON.parse(fs.readFileSync(
+                path.join(__dirname, "public", "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
+            ))
+
+            y.turkish.hayrat_nesriyat =
+                hayrat.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
+
+            let diyanet = JSON.parse(fs.readFileSync(
+                path.join(__dirname, "public", "data", "mealler", "diyanet-vakfi.json"), "utf-8"
+            ))
+
+            y.turkish.diyanet_vakfi =
+                diyanet.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
+        })
+
+        res.json(x);
     }
 }
 

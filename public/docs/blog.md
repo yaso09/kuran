@@ -1,4 +1,4 @@
-![](/public/images/logo-white.png)
+![](/images/logo-dark.png)
 
   
 
@@ -6,7 +6,7 @@
 
 Mealleri [buradan](https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu) ve Arapça aslı ile İngilizce meali de [buradan](https://github.com/subaanqasim/quran-to-obsidian) aldım.
 
-![](/public/images/streak-ss.png)
+![](/images/streak-ss.png)
 
 ## Geliştirici Modu
 
@@ -17,7 +17,7 @@ Geliştirici modu ile localStorage'e kaydedilen verileri ekranın sol üst köş
 
 Ayetlerin altındaki "🔗 Göm" tuşuna basarak gömme kodunu kopyalayabilirsiniz.
 
-![](/public/images/vid1.gif)
+![](/images/vid1.gif)
 
 Örnek olarak besmeleyi kopyaladığınızda şu HTML kodunu kopyalar:
 
