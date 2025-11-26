@@ -1,7 +1,5 @@
 Mealleri [buradan](https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu) ve Arapça aslı ile İngilizce meali de [buradan](https://github.com/subaanqasim/quran-to-obsidian) aldım.
 
-![](/images/streak-ss.png)
-
 ## Geliştirici Modu
 
 Geliştirici modu ile localStorage'e kaydedilen verileri ekranın sol üst köşesinden takip edebilirsiniz.
