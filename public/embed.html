@@ -103,29 +103,21 @@
     const meal = getQueryParam("meal");
 
     async function loadVerse() {
-        if (!ayet || isNaN(ayet)) window.location.href = "/";
-        try {
-            const response = await fetch(`./data/verses/${sure}.json`);
-            const data = await response.json();
-            const verse = data.verses[ayet - 1];
+        fetch(`/api/ayet/${sure}:${ayet}`)
+            .then(dat => dat.json())
+            .then(json => {
+                document.querySelector("#arabic").innerText = json.arabic;
 
-            document.querySelector("#arabic").innerHTML = verse.arabic;
-            document.querySelector("#num").innerHTML =
-                `Ayet ${verse.verseNumber} (${verse.verseKey})`;
-        } catch {
-            window.location.href = "/";
-        }
+                if (!meal)
+                    document.querySelector("#meal").innerText = json.turkish.diyanet_vakfi;
+                else document.querySelector("#meal").innerText = json.turkish[meal];
+                
+                if (!meal)
+                    document.querySelector("#mealName").innerText = "Diyanet Vakfı";
+                else document.querySelector("#mealName").innerText = "".join(meal.split("_"));
 
-        try {
-            const response = await fetch(`./data/mealler/${meal}.json`);
-            const data = await response.json();
-            const verse = data.sures[sure - 1].ayetler[ayet - 1][1];
-
-            document.querySelector("#meal").innerHTML = verse;
-            document.querySelector("#mealName").innerHTML = `${data.name} meali`;
-        } catch {
-            window.location.href = "/";
-        }
+                document.querySelector("#num").innerText = json.verseKey;
+            })
     }
 
     if (sure && !isNaN(sure) && sure >= 1 && sure <= 114) {

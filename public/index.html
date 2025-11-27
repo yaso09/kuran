@@ -1,494 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kur'an-ı Kerîm Oku</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kur'an-ı Kerîm</title>
 
-<link rel="stylesheet" href="/assets/css/continue.css">
-<link rel="stylesheet" href="/assets/css/btn.css">
-<link rel="stylesheet" href="/assets/css/goToAyah.css">
+    <link rel="stylesheet" href="/assets/css/continue.css">
+    <link rel="stylesheet" href="/assets/css/btn.css">
+    <link rel="stylesheet" href="/assets/css/goToAyah.css">
+    <link rel="stylesheet" href="/assets/css/index.html.css">
+    <link rel="stylesheet" href="/assets/css/toTopBtn.css">
 
-<link rel="manifest" href="/manifest.json">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Kur'an Oku">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link href="/pwa/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Kur'an Oku">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="/pwa/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-        	navigator.serviceWorker.register('/sw.js?v=3');
-        });
-    }
-</script>
-
-<style>
-@font-face {
-    font-family: 'Aqeeq';
-    src: url('./Aqeeq-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'StackSansNotch';
-    src: url('./assets/fonts/StackSansNotch-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Alshohadaa';
-    src: url('./assets/fonts/alshohadaa.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-body {
-    margin: 0;
-    background: #fff;
-    color: #000;
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-}
-
-.content {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-.arabic-title {
-    font-family: 'Alshohadaa', serif;
-    font-size: 72px;
-    text-align: center;
-    margin: 0;
-}
-
-h1 {
-    font-family: 'StackSansNotch', sans-serif;
-    font-size: 2rem;
-    margin: 4px 0 20px;
-    text-align: center;
-    color: #444;
-    font-weight: 600;
-}
-
-h2 {
-    font-family: 'StackSansNotch', sans-serif;
-    font-size: 1rem;
-    color: #444;
-    text-align: center;
-}
-
-.sure-list {
-    margin-top: 30px;
-}
-
-.sure-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid #eee;
-    text-decoration: none;
-    color: #000;
-    transition: background 0.2s;
-}
-
-.sure-item:hover {
-    background: #f5f5f5;
-}
-
-.sure-number {
-    font-family: 'StackSansNotch', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.sure-name {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-@media(max-width:700px){
-    .arabic-title{ font-size: 52px; }
-    .sure-item{ padding: 12px; }
-    .sure-number, .sure-name{ font-size: 16px; }
-    .streakIcon { display: none; }
-    .left {
-        align-items: center;
-        width: 100%;
-        text-align: center;
-    }
-    .left h1, .left h2 { text-align: center; }
-}
-
-#toTopBtn {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    font-size: 22px;
-    cursor: pointer;
-    background: #ffffff;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-}
-
-#toTopBtn.show {
-    opacity: 1;
-    pointer-events: auto;
-}
-a {
-    color: #000;
-}
-
-.iframe-container {
-  display: flex;           /* iframe'leri yatay sırala */
-  overflow-x: auto;        /* yatay kaydırma */
-  gap: 10px;               /* iframe aralarındaki boşluk */
-  padding: 10px;           /* isteğe bağlı padding */
-}
-
-.iframe-container iframe {
-  flex: 0 0 auto;          /* iframe'lerin boyutu değişmesin */
-  width: 300px;             /* iframe genişliği */
-  height: 200px;            /* iframe yüksekliği */
-  border: 1px solid #ccc;   /* isteğe bağlı çerçeve */
-  border-radius: 8px;       /* isteğe bağlı yuvarlak köşe */
-}
-
-
-</style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js?v=3');
+            });
+        }
+    </script>
 </head>
 <body>
+    <div class="content">
+        <div id="kuranText">
+            <div class="arabic-title">القرآن</div>
+            <h1>Kur'an</h1>
+        </div>
 
-<div class="content">
+        <center style="width: 100%;">
+            <button class="btn" onclick="
+                document.querySelector('#dualarHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Dualar</button>
+            <button class="btn" onclick="
+                document.querySelector('#surelerHeaer').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Sureler</button>
+            <button class="btn" onclick="
+                document.querySelector('#fihristHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Fihrist</button>
+            <button class="btn" disabled>Forum</button>
+            <button class="btn" disabled>Blog</button>
+            <button class="btn" onclick="
+                document.querySelector('hakkındaHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Hakkında</button>
+            <button class="btn" id="install-app" style="display: none;">Uygulamayı Yükle</button>
+        </center>
 
-<div id="kuranText"><div class="arabic-title">القرآن</div>
-<h1>Kur'an</h1></div>
+        <div>
+            <br><h2><i>
+                "Sizin en hayırlılarınız Kur'an'ı öğrenen ve öğretenlerinizdir." —Hz. Peygamber
+            </i></h2>
+        </div>
 
-<center style="width: 100%;">
-    <button class="btn" onclick="
-        document.getElementById('dualarHeader').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    ">Dualar</button>
-    <button class="btn" onclick="
-        document.getElementById('surelerHeader').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    ">Sureler</button>
-    <button class="btn" onclick="
-        document.getElementById('fihristHeader').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    ">Fihrist</button>
-    <button class="btn" disabled>Forum</button>
-    <button class="btn" disabled>Blog</button>
-    <button class="btn" onclick="
-        document.getElementById('hakkındaHeader').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    ">Hakkında</button>
-    <button class="btn" id="install-app" style="display: none">Uygulamayı Yükle</button>
-<script>
-    const installButton = document.getElementById('install-app');
-    let beforeInstallPromptEvent
-    window.addEventListener("beforeinstallprompt", function(e) {
-        e.preventDefault();
-        beforeInstallPromptEvent = e
-        installButton.style.display = 'block'
-        installButton.addEventListener("click", function() {
-            e.prompt();
-        });
-        installButton.hidden = false;
-    });
-    installButton.addEventListener("click", function() {
-        beforeInstallPromptEvent.prompt();
-        installButton.style.display = "none";
-    });
-</script>
-</center>
+        <div id="continue">
+            <div class="left">
+                <h2>Okumaya Devam Et</h2>
+                <h2 id="streakCounter"></h2><br>
+                <button class="btn" onclick="
+                    window.location.href = './kuran'
+                ">Kaldığın Yerden Devam Et</button>
+            </div>
 
-<br><div><h2><i>
-    "Sizin en hayırlılarınız Kur'an'ı öğrenen ve öğretenlerinizdir." —Hz. Peygamber
-</i></h2></div><br>
+            <img src="/assets/img/fire.svg" class="streakIcon">
+        </div><br>
 
-<div id="continue">
-    <div class="left">
-        <h1>Okumaya Devam Et</h1>
-        <h2 id="streakCounter"></h2><br>
-        <button class="btn" onclick="window.location.href='./kuran'">Kaldığın Yerden Devam Et</button>
+        <div id="continueFreeze">
+            <div class="left">
+                <h1>Okumaya Devam Et</h1>
+                <h2 id="streakCounterFreeze"></h2><br>
+                <button class="btn" onclick="
+                    window.location.href = './kuran'
+                ">Yeni Seriye Başla</button>
+            </div>
+
+            <img src="/assets/img/fire.svg" class="streakIcon">
+        </div><br>
+
+        <form action="/kuran">
+            <center class="goToAyah">
+                <h1>Ayete Git</h1>
+                <input type="number" name="sure" min="1" max="114" step="1" required>
+                <span>:</span>
+                <input type="number" name="ayet" min="1" max="286" required><br><br>
+                <button class="btn">Ayete Git</button>
+            </center>
+        </form><br>
+
+        <h1 id="isaretliAyetler">İşaretlenmiş Ayetler</h1>
+        <div id="isaretliler" class="iframe-container"></div><br><br>
+        
+        <h1 id="dualarHeader">Kur'an'dan Dualar</h1>
+        <h2>Şimdilik Burayı Kapattık</h2><br>
+
+        <h1 id="surelerHeader">Sureler</h1>
+
+        <div class="sure-list" id="sureList"></div><br>
+
+        <h1 id="fihristHeader">Fihrist</h1>
+        <h2>Pek Yakında</h2><br>
+
+        <h1 id="hakkındaHeader">Hakkında</h1>
+        <h2>Ben Kimim?</h2>
+        <p>
+            Ve aleyküm selam, ben Yasir, bu web sitesinin sahibi ve geliştiricisi olan nâçiz lise talebesi. Hem meşgalelerim arasında dinî ebhas üzerine tefekkür etmek bulunduğundan hem de Kur'an-ı Kerîm'i tilâvet etmek ibâdet olduğundan mütevellit Kur'an-ı Kerîm'e yolum çok defa düşmekteydi. Ben de bu ihtiyacâtımı gidermek maksatlı şuan bulunduğunuz web sitesini geliştirmeye başladım. Elhamdülillah iki gün gibi bir sürede kullanılabilir hâle getirdim.
+        </p>
+        <h2>Önemli Nokta</h2>
+        <p>
+            Dikkatinizi çekerim ki murâd-ı ilâhîyi tamamıyla kuşatmak nâçiz insanoğlu için muhaldir. Bunun aklî delili kelâmullahın kadîm lâkin insanoğlunun hâdis olmasıdır. Öyleyse bir kimseye murâd-ı ilâhînin mutlak kâşifi nazarıyla bakmak hatalıdır. Bundan ötürü verdiğim mealleri o âyetin mutlak mânâsı olarak kabul etmek gibi bir hataya düşerek beni de günaha sokmayınız.
+        </p>
+        <h2>Reklam Politikası</h2>
+        <p>
+            Bu siteyi (<a href="https://kuran.yasireymen.com">kuran.yasireymen.com</a>) Allah rızası için, babamın hayrına açtım. Bundan ötürü siteyi ticarî maksatlarla reklam yuvasına çevirmeyecek, bilakis ücretsiz daha kaliteli Kur'an erişimi sağlamak için çaba sarf edeceğim. Ancak kendi web sitemde (<a href="https://yasireymen.com">yasireymen.com</a>) aynı hassâsiyet söz konusu olmayacaktır.
+        </p>
+        <h2>Mealler Hakkında</h2>
+        <p>
+            Mealleri ben seçerek yüklemekteyim. Ehl-i Sünnet'e uygun olduğu kanaatinde bulunduğum mealleri seçiyorum, diğer mealleri isteyen arkadaşlar başka sitelere müracaat edebilir veyahut matbû nüshalarını edinebilirler. Mealleri <a href="https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu">buradan</a> ve Arapça aslını <a href="https://github.com/subaanqasim/quran-to-obsidian">buradan</a> aldım. Allah iki sayfanın sahibinden de razı olsun.  Meal önermek isteyenler iletişim kısmından iletişime geçebilirler.
+        </p>
+        <h2>İletişim</h2>
+        <p>
+            Kendi web sitem açıldığında oradaki iletişim seçeneğini buraya bağlayacağım.
+        </p><br>
+
+        <footer>
+            <center>
+                <button class="btn" onclick="
+                    resetData()
+                ">Verileri Temizle</button>
+                <button class="btn" onclick="
+                    window.location.href = 'https://yasireymen.com'
+                ">yasireymen.com</button>
+                <button class="btn" onclick="
+                    window.location.href = 'https://instagram.com/yekayabasi'
+                ">İnstagram</button><br><br>
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-200w_c.png?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+            </center>
+        </footer><br>
     </div>
-    <img class="streakIcon" id="streakIcon" src="/assets/img/fire.svg">
-</div><br>
-<div id="continueFreeze">
-    <div class="left">
-        <h1>Okumaya Devam Et</h1>
-        <h2 id="streakCounterFreeze"></h2><br>
-        <button class="btn" onclick="window.location.href='./kuran?sure=1'">Yeni Seriye Başla</button>
-    </div>
-    <img class="streakIcon" src="/assets/img/freeze.svg">
-</div><br>
 
-<form action="/kuran">
-    <center class="goToAyah">
-        <h1>Ayete Git</h1>
-        <input name="sure" type="number" min="1" max="114" step="1" required> : 
-        <input name="ayet" type="number" min="1" max="286" required><br><br>
-        <button class="btn">Ayete Git</button>
-    </center>
-</form>
+    <button id="toTopBtn" aria-label="En üste çık">☝️</button>
 
-<br><h1 id="isaretliAyetler">İşaretlenmiş Ayetler</h1><div
-id="isaretliler" class="iframe-container"></div><br>
-
-<script>
-    if (
-        JSON.parse(localStorage.getItem("markeds")) &&
-        localStorage.getItem("markeds") !== "[]"
-    ) {
-        JSON.parse(localStorage.getItem("markeds")).forEach(verseKey => {
-            console.log(verseKey);
-            document.querySelector("#isaretliler").innerHTML += `
-            <iframe onload="
-            window.addEventListener('message', function(e) {
-                if (e.data.embedHeight && e.data.name == '${verseKey}') {
-                    document.getElementById('kuranEmbed${verseKey}').style.height =
-                        e.data.embedHeight + 'px';
-                }
-            })
-            " scrolling="no"
-            style="width: 500px; border: 0; overflox: hidden"
-            id="kuranEmbed${verseKey}"
-            allowtransparency="true"
-            src="./embed?sure=${verseKey.split(":")[0]}&ayet=${verseKey.split(":")[1]}&meal=diyanet-vakfi"></iframe>
-            `;
-        })
-    } else {
-        document.querySelector("#isaretliAyetler").style.display = "none";
-        document.querySelector("#isaretliler").style.display = "none";
-    }
-</script>
-
-<br><h1 id="dualarHeader">Kur'an'dan Dualar</h1><br><div class="iframe-container">
-<div>
-    <script>
-window.addEventListener("message", function(e) {
-    if (e.data.embedHeight && e.data.name == "2:67") {
-        document.getElementById("bakara67").style.height = e.data.embedHeight + "px";
-    }
-});
-</script>
-
-<iframe id="bakara67"
-        src="./embed?sure=2&ayet=67&meal=diyanet-vakfi"
-        style="width: 500px; border:0; overflow:hidden;"
-        scrolling="no"></iframe>
-
-</div>
-<div>
-    <script>
-window.addEventListener("message", function(e) {
-    if (e.data.embedHeight && e.data.name == "2:127") {
-        document.getElementById("bakara127").style.height = e.data.embedHeight + "px";
-    }
-});
-</script>
-
-<iframe id="bakara127"
-        src="./embed?sure=2&ayet=127&meal=diyanet-vakfi"
-        style="width: 500px; border:0; overflow:hidden;"
-        scrolling="no"></iframe>
-
-</div>
-<div>
-    <script>
-window.addEventListener("message", function(e) {
-    if (e.data.embedHeight && e.data.name == "2:128") {
-        document.getElementById("bakara128").style.height = e.data.embedHeight + "px";
-    }
-});
-</script>
-
-<iframe id="bakara128"
-        src="./embed?sure=2&ayet=128&meal=diyanet-vakfi"
-        style="width: 500px; border:0; overflow:hidden;"
-        scrolling="no"></iframe>
-
-</div>
-<div>
-    <script>
-window.addEventListener("message", function(e) {
-    if (e.data.embedHeight && e.data.name == "2:201") {
-        document.getElementById("bakara201").style.height = e.data.embedHeight + "px";
-    }
-});
-</script>
-
-<iframe id="bakara201"
-        src="./embed?sure=2&ayet=201&meal=diyanet-vakfi"
-        style="width: 500px; border:0; overflow:hidden;"
-        scrolling="no"></iframe>
-
-</div>
-<div>
-    <script>
-window.addEventListener("message", function(e) {
-    if (e.data.embedHeight && e.data.name == "3:8") {
-        document.getElementById("aliimran8").style.height = e.data.embedHeight + "px";
-    }
-});
-</script>
-
-<iframe id="aliimran8"
-        src="./embed?sure=3&ayet=8&meal=diyanet-vakfi"
-        style="width: 500px; border:0; overflow:hidden;"
-        scrolling="no"></iframe>
-
-</div></div><br>
-
-<h1 id="surelerHeader">Sureler</h1>
-
-<div class="sure-list" id="sureList"></div>
-
-<br><h1 id="fihristHeader">Fihrist</h1>
-<h2>Pek Yakında</h2>
-
-<br><h1 id="hakkındaHeader">Hakkında</h1>
-<h2>Ben Kimim?</h2>
-<p>
-    Ve aleyküm selam, ben Yasir, bu web sitesinin sahibi ve geliştiricisi olan nâçiz lise talebesi. Hem meşgalelerim arasında dinî ebhas üzerine tefekkür etmek bulunduğundan hem de Kur'an-ı Kerîm'i tilâvet etmek ibâdet olduğundan mütevellit Kur'an-ı Kerîm'e yolum çok defa düşmekteydi. Ben de bu ihtiyacâtımı gidermek maksatlı şuan bulunduğunuz web sitesini geliştirmeye başladım. Elhamdülillah iki gün gibi bir sürede kullanılabilir hâle getirdim.
-</p>
-<h2>Önemli Nokta</h2>
-<p>
-    Dikkatinizi çekerim ki murâd-ı ilâhîyi tamamıyla kuşatmak nâçiz insanoğlu için muhaldir. Bunun aklî delili kelâmullahın kadîm lâkin insanoğlunun hâdis olmasıdır. Öyleyse bir kimseye murâd-ı ilâhînin mutlak kâşifi nazarıyla bakmak hatalıdır. Bundan ötürü verdiğim mealleri o âyetin mutlak mânâsı olarak kabul etmek gibi bir hataya düşerek beni de günaha sokmayınız.
-</p>
-<h2>Reklam Politikası</h2>
-<p>
-    Bu siteyi (<a href="https://kuran.yasireymen.com">kuran.yasireymen.com</a>) Allah rızası için, babamın hayrına açtım. Bundan ötürü siteyi ticarî maksatlarla reklam yuvasına çevirmeyecek, bilakis ücretsiz daha kaliteli Kur'an erişimi sağlamak için çaba sarf edeceğim. Ancak kendi web sitemde (<a href="https://yasireymen.com">yasireymen.com</a>) aynı hassâsiyet söz konusu olmayacaktır.
-</p>
-<h2>Mealler Hakkında</h2>
-<p>
-    Mealleri ben seçerek yüklemekteyim. Ehl-i Sünnet'e uygun olduğu kanaatinde bulunduğum mealleri seçiyorum, diğer mealleri isteyen arkadaşlar başka sitelere müracaat edebilir veyahut matbû nüshalarını edinebilirler. Mealleri <a href="https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu">buradan</a> ve Arapça aslını <a href="https://github.com/subaanqasim/quran-to-obsidian">buradan</a> aldım. Allah iki sayfanın sahibinden de razı olsun.  Meal önermek isteyenler iletişim kısmından iletişime geçebilirler.
-</p>
-<h2>İletişim</h2>
-<p>Kendi web sitem açıldığında oradaki iletişim seçeneğini buraya bağlayacağım.</p>
-
-<br><footer>
-    <center>
-        <button class="btn" onclick="resetData()">
-            Verileri Temizle
-        </button>
-        <button class="btn" onclick="window.location.href = 'https://yasireymen.com'">
-            yasireymen.com
-        </button>
-        <button class="btn" onclick="window.location.href = 'https://www.instagram.com/yekayabasi'">
-            İnstagram
-        </button><br><br>
-        <a href="//www.dmca.com/Protection/Status.aspx?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-200w_c.png?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-    </center>
-</footer><br>
-
-</div>
-
-<button id="toTopBtn" aria-label="En üste çık">☝️</button>
-
-<script src="/assets/js/continue.js"></script>
-
-<script>
-
-function resetData() {
-    if (confirm("Veriler temizlendiği takdirde en son nerede kaldığınız bilgisi de silinecektir, emin misiniz?")) {
-        localStorage.clear();
-        alert("Veriler temizlendi!");
-        window.location.reload();
-    }
-}
-
-const sureNames=[
-"Fatiha","Bakara","Al-i İmran","Nisa","Maide","En'am","A'raf","Enfal","Tevbe","Yunus","Hud","Yusuf","Rad","İbrahim",
-"Hicr","Nahl","İsra","Kehf","Meryem","Taha","Enbiya","Hac","Müminun","Nur","Furkan","Şuara","Neml","Kasas","Ankebut","Rum",
-"Lukman","Secde","Ahzab","Sebe","Fatır","Yasin","Saffat","Sad","Zümer","Mümin","Fussilet","Şura","Zuhruf","Duhan","Casiye","Ahkaf",
-"Muhammed","Fetih","Hucurat","Kaf","Zariyat","Tur","Necm","Kamer","Rahman","Vakıa","Hadid","Mücadele","Haşr","Mümtehine","Saf",
-"Cuma","Münafikun","Tegabun","Talak","Tahrim","Mülk","Kalem","Hakka","Mearic","Nuh","Cin","Müzzemmil","Müddessir","Kıyamet","İnsan","Mürselat",
-"Nebe","Naziat","Abese","Tekvir","İnfitar","Mutaffifin","İnşikak","Büruc","Tarık","A'la","Gaşiye","Fecr","Beled","Leyl","Duha",
-"İnşirah","Tin","Tarık","Alak","Kadir","Beyyine","Zilzal","Adiyat","Kari'a","Tekasür","Asr","Hümeze","Fil","Kureyş","Ma'un","Kevser","Kafirun","Nasr","Tebbet","İhlas","Felak","Nas"
-];
-
-const listDiv = document.getElementById('sureList');
-
-function tumKuran() {
-    const num = 0;
-    const link = document.createElement("a");
-    link.className = "sure-item";
-
-    link.href = `kuran.html?sure=${num}`;
-
-    link.innerHTML = `
-        <span class="sure-number">-</span>
-        <span class="sure-name">Tüm Kur'an</span>
-    `;
-    listDiv.appendChild(link);
-}
-
-// if (localStorage.getItem("lastChapter")) window.location.href = "/kuran";
-
-sureNames.forEach((name, i)=>{
-    const num = i+1;
-    const link = document.createElement('a');
-    link.className = 'sure-item';
-    
-    // tıklanınca okuyucu sayfasına gitsin
-    link.href = `kuran.html?sure=${num}`;
-    
-    link.innerHTML = `
-        <span class="sure-number">${num}</span>
-        <span class="sure-name">${name}</span>
-    `;
-
-    link.onclick = function() {
-        localStorage.setItem("lastChapter", num);
-    }
-
-    listDiv.appendChild(link);
-});
-
-const toTopBtn = document.getElementById("toTopBtn");
-
-// Tıklayınca yukarı kaydır
-toTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-// Scroll takip — belli bir mesafeden sonra butonu göster
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 250) {
-        toTopBtn.classList.add("show");
-    } else {
-        toTopBtn.classList.remove("show");
-    }
-});
-
-</script>
-
-<script src="devmode.js"></script>
+    <script src="/assets/js/continue.js"></script>
+    <script src="/assets/js/index.html/installButton.js"></script>
+    <script src="/assets/js/index.html/loadSureler.js"></script>
+    <script src="/assets/js/index.html/isaretliAyetler.js"></script>
+    <script src="/assets/js/toTopBtn.js"></script>
+    <script src="/assets/js/devmode.js"></script>
 </body>
 </html>

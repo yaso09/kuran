@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/btn.css">
     <link rel="stylesheet" href="/assets/css/goToAyah.css">
     <link rel="stylesheet" href="/assets/css/index.html.css">
+    <link rel="stylesheet" href="/assets/css/toTopBtn.css">
 
     <link rel="manifest" href="/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
@@ -25,6 +26,139 @@
     </script>
 </head>
 <body>
-    
+    <div class="content">
+        <div id="kuranText">
+            <div class="arabic-title">القرآن</div>
+            <h1>Kur'an</h1>
+        </div>
+
+        <center style="width: 100%;">
+            <button class="btn" onclick="
+                document.querySelector('#dualarHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Dualar</button>
+            <button class="btn" onclick="
+                document.querySelector('#surelerHeaer').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Sureler</button>
+            <button class="btn" onclick="
+                document.querySelector('#fihristHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Fihrist</button>
+            <button class="btn" disabled>Forum</button>
+            <button class="btn" disabled>Blog</button>
+            <button class="btn" onclick="
+                document.querySelector('hakkındaHeader').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            ">Hakkında</button>
+            <button class="btn" id="install-app" style="display: none;">Uygulamayı Yükle</button>
+        </center>
+
+        <div>
+            <br><h2><i>
+                "Sizin en hayırlılarınız Kur'an'ı öğrenen ve öğretenlerinizdir." —Hz. Peygamber
+            </i></h2>
+        </div>
+
+        <div id="continue">
+            <div class="left">
+                <h2>Okumaya Devam Et</h2>
+                <h2 id="streakCounter"></h2><br>
+                <button class="btn" onclick="
+                    window.location.href = './kuran'
+                ">Kaldığın Yerden Devam Et</button>
+            </div>
+
+            <img src="/assets/img/fire.svg" class="streakIcon">
+        </div><br>
+
+        <div id="continueFreeze">
+            <div class="left">
+                <h1>Okumaya Devam Et</h1>
+                <h2 id="streakCounterFreeze"></h2><br>
+                <button class="btn" onclick="
+                    window.location.href = './kuran'
+                ">Yeni Seriye Başla</button>
+            </div>
+
+            <img src="/assets/img/fire.svg" class="streakIcon">
+        </div><br>
+
+        <form action="/kuran">
+            <center class="goToAyah">
+                <h1>Ayete Git</h1>
+                <input type="number" name="sure" min="1" max="114" step="1" required>
+                <span>:</span>
+                <input type="number" name="ayet" min="1" max="286" required><br><br>
+                <button class="btn">Ayete Git</button>
+            </center>
+        </form><br>
+
+        <h1 id="isaretliAyetler">İşaretlenmiş Ayetler</h1>
+        <div id="isaretliler" class="iframe-container"></div><br><br>
+        
+        <h1 id="dualarHeader">Kur'an'dan Dualar</h1>
+        <h2>Şimdilik Burayı Kapattık</h2>
+
+        <h1 id="surelerHeader">Sureler</h1>
+
+        <div class="sure-list" id="sureList"></div><br>
+
+        <h1 id="fihristHeader">Fihrist</h1>
+        <h2>Pek Yakında</h2><br>
+
+        <h1 id="hakkındaHeader">Hakkında</h1>
+        <h2>Ben Kimim?</h2>
+        <p>
+            Ve aleyküm selam, ben Yasir, bu web sitesinin sahibi ve geliştiricisi olan nâçiz lise talebesi. Hem meşgalelerim arasında dinî ebhas üzerine tefekkür etmek bulunduğundan hem de Kur'an-ı Kerîm'i tilâvet etmek ibâdet olduğundan mütevellit Kur'an-ı Kerîm'e yolum çok defa düşmekteydi. Ben de bu ihtiyacâtımı gidermek maksatlı şuan bulunduğunuz web sitesini geliştirmeye başladım. Elhamdülillah iki gün gibi bir sürede kullanılabilir hâle getirdim.
+        </p>
+        <h2>Önemli Nokta</h2>
+        <p>
+            Dikkatinizi çekerim ki murâd-ı ilâhîyi tamamıyla kuşatmak nâçiz insanoğlu için muhaldir. Bunun aklî delili kelâmullahın kadîm lâkin insanoğlunun hâdis olmasıdır. Öyleyse bir kimseye murâd-ı ilâhînin mutlak kâşifi nazarıyla bakmak hatalıdır. Bundan ötürü verdiğim mealleri o âyetin mutlak mânâsı olarak kabul etmek gibi bir hataya düşerek beni de günaha sokmayınız.
+        </p>
+        <h2>Reklam Politikası</h2>
+        <p>
+            Bu siteyi (<a href="https://kuran.yasireymen.com">kuran.yasireymen.com</a>) Allah rızası için, babamın hayrına açtım. Bundan ötürü siteyi ticarî maksatlarla reklam yuvasına çevirmeyecek, bilakis ücretsiz daha kaliteli Kur'an erişimi sağlamak için çaba sarf edeceğim. Ancak kendi web sitemde (<a href="https://yasireymen.com">yasireymen.com</a>) aynı hassâsiyet söz konusu olmayacaktır.
+        </p>
+        <h2>Mealler Hakkında</h2>
+        <p>
+            Mealleri ben seçerek yüklemekteyim. Ehl-i Sünnet'e uygun olduğu kanaatinde bulunduğum mealleri seçiyorum, diğer mealleri isteyen arkadaşlar başka sitelere müracaat edebilir veyahut matbû nüshalarını edinebilirler. Mealleri <a href="https://github.com/alialparslan/Kuran-Meali-Ebook-Olusturucu">buradan</a> ve Arapça aslını <a href="https://github.com/subaanqasim/quran-to-obsidian">buradan</a> aldım. Allah iki sayfanın sahibinden de razı olsun.  Meal önermek isteyenler iletişim kısmından iletişime geçebilirler.
+        </p>
+        <h2>İletişim</h2>
+        <p>
+            Kendi web sitem açıldığında oradaki iletişim seçeneğini buraya bağlayacağım.
+        </p><br>
+
+        <footer>
+            <center>
+                <button class="btn" onclick="
+                    resetData()
+                ">Verileri Temizle</button>
+                <button class="btn" onclick="
+                    window.location.href = 'https://yasireymen.com'
+                ">yasireymen.com</button>
+                <button class="btn" onclick="
+                    window.location.href = 'https://instagram.com/yekayabasi'
+                ">İnstagram</button><br><br>
+                <a href="//www.dmca.com/Protection/Status.aspx?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-200w_c.png?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+            </center>
+        </footer><br>
+    </div>
+
+    <button id="toTopBtn" aria-label="En üste çık">☝️</button>
+
+    <script src="/assets/js/continue.js"></script>
+    <script src="/assets/js/index.html/installButton.js"></script>
+    <script src="/assets/js/index.html/loadSureler.js"></script>
+    <script src="/assets/js/toTopBtn.js"></script>
+    <script src="/assets/js/devmode.js"></script>
 </body>
 </html>
