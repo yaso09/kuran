@@ -6,14 +6,14 @@ if (
             <iframe onload="
                 window.addEventListener('message', function(e) {
                     if (e.data.embedHeight && e.data.name == '${verseKey}') {
-                        document.querySelector('#kuranEmbed${"".join(verseKey.split(":"))}').style.height = e.data.embedHeight + 'px';
+                        document.querySelector('#kuranEmbed${verseKey.split(":").join("")}').style.height = e.data.embedHeight + 'px';
                     }
                 })
             " scrolling="no" style="
                 width: 500px;
                 border: 0;
                 overflovx:hidden
-            " id="kuranEmbed${"".join(verseKey.split(":"))}"
+            " id="kuranEmbed${verseKey.split(":").join("")}"
             allowtransparency="true"
             src="/embed.html?sure=${
                 verseKey.split(":")[0]
