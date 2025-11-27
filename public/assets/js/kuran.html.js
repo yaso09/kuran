@@ -462,7 +462,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#navigationButtons").style.display = "block";
 
-    const scrollTop = localStorage.getItem(`${selectedSure.value}.scrollTop`);
+    const scrollTop = localStorage.getItem(`${selectedSure}.scrollTop`);
     if (getQueryParam("ayet")) {
         scrollToAyet();
     } else if(scrollTop) window.scrollTo({
@@ -475,7 +475,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
     updateNavigationButtons(parseInt(selectedSure));
 }
 
-document.addEventListener("scroll", function() {
+window.addEventListener("beforeunload", function() {
     localStorage.setItem(`${selectedSure}.scrollTop`, window.scrollY)
 })
 
