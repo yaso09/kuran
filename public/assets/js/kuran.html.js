@@ -10,6 +10,8 @@ let selectedSure = sureSelect.value;
 if (getQueryParam("sure")) {
     selectedSure = getQueryParam("sure");
     sureSelect.value = selectedSure;
+} else {
+    selectedSure = localStorage.getItem("lastChapter");
 }
 
 function scrollToAyet(num = getQueryParam("ayet")) {
@@ -213,6 +215,8 @@ function highlightText(text, query){
 }
 
 async function renderVersesFromAPI(sureNo, highlight='', mealName) {
+    localStorage.setItem("lastChapter", sureNo);
+
     if (!mealName) mealName = "diyanet_vakfi";
     const container = document.getElementById('ayetler');
     container.innerHTML = "";
