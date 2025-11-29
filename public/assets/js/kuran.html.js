@@ -214,7 +214,15 @@ function highlightText(text, query){
     return text.replace(regex,match=>`<mark>${match}</mark>`);
 }
 
+function removeAllAudios() {
+    const audios = document.querySelectorAll('audio');
+    audios.forEach(audio => audio.remove());
+}
+
+
 async function renderVersesFromAPI(sureNo, highlight='', mealName) {
+    removeAllAudios();
+
     localStorage.setItem("lastChapter", sureNo);
 
     if (!mealName) mealName = "diyanet_vakfi";
@@ -279,14 +287,15 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
 
         const audio = document.createElement("audio");
         audio.style.display = "none";
-        audio.src = `/data/audio/${formatNumber(sureNo)}/${formatNumber(ayet.versenNumber)}.mp3`;
-        audio.id = ayet.verseKey.split(":").join("");
+        audio.src = `/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
+        audio.id = ayet.verseNumber;
+        audio.setAttribute("data-scroll-to", "verse" + ayet.verseKey);
 
         document.body.appendChild(audio);
 
         playBtn.addEventListener("click", function() {
-            document.getElementById(ayet.verseKey.split(":").join("")).currentTime = 0;
-            document.getElementById(ayet.verseKey.split(":").join("")).play();
+            document.getElementById(ayet.verseNumber).currentTime = 0;
+            document.getElementById(ayet.verseNumber).play();
         })
 
         // ---------------------------
