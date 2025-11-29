@@ -95,6 +95,9 @@ class API {
 
         res.json(x);
     }
+    dontShowAgain(req, res) {
+        res.send("0");
+    }
 }
 
 module.exports = API;

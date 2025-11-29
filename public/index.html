@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/css/goToAyah.css">
     <link rel="stylesheet" href="/assets/css/index.html.css">
     <link rel="stylesheet" href="/assets/css/toTopBtn.css">
+    <link rel="stylesheet" href="/assets/css/popup.css">
 
     <link rel="manifest" href="/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
@@ -153,6 +154,23 @@
         </footer><br>
     </div>
 
+    <div id="popupArkaPlan" class="popup-arka">
+        <div id="popup" class="popup">
+            <center>
+                <img src="/assets/img/popups/kehf-suresi-okumalari.png"><br><br>
+                <form>
+                    <input type="checkbox" id="dontShowAgain">
+                    <label for="dontShowAgain">Bir daha gösterme</label><br><br>
+                    <button onclick="
+                        window.location.href = '/kuran?sure=18'
+                    "
+                    class="btn" id="git" type="submit">Git</button>
+                    <button type="submit" id="popupKapat" class="btn">Kapat</button>
+                </form>
+            </center>
+        </div>
+    </div>
+
     <button id="toTopBtn" aria-label="En üste çık">☝️</button>
 
     <script src="/assets/js/continue.js"></script>
@@ -161,6 +179,7 @@
     <script src="/assets/js/index.html/isaretliAyetler.js"></script>
     <script src="/assets/js/index.html/goToAyah.js"></script>
     <script src="/assets/js/toTopBtn.js"></script>
+    <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/devmode.js"></script>
 </body>
 </html>
