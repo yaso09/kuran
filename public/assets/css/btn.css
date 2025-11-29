@@ -10,6 +10,7 @@
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: inline;
 }
 
 .btn:hover:not(:disabled) {

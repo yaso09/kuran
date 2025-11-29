@@ -172,12 +172,26 @@ function updateNavigationButtons(chapter){
 
 prevSureBtn.addEventListener('click',()=>{
     let chap = parseInt(selectedSure);
-    if(chap > 1){ chap--; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap); }
+    if(chap > 1){ 
+        const url = new URL(window.location.href);
+        url.searchParams.set("sure", chap - 1);
+
+        window.history.replaceState({}, "", url);
+
+        window.location.reload();
+        /*chap--; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap);*/ }
 });
 
 nextSureBtn.addEventListener('click',()=>{
     let chap = parseInt(selectedSure);
-    if(chap < 114){ chap++; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap); }
+    if(chap < 114){ 
+        const url = new URL(window.location.href);
+        url.searchParams.set("sure", chap + 1);
+
+        window.history.replaceState({}, "", url);
+
+        window.location.reload();
+        /*chap++; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap);*/ }
 });
 
 function mark(verseKey) {
