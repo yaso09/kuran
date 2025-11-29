@@ -256,6 +256,38 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
         // API'deki meal: ayet.turkish[mealName]
         const mealText = ayet.turkish?.[mealName] || "Meâl bulunamadı.";
         tevil.innerHTML = highlightText(mealText, highlight);
+        
+        // ---------------------------
+        // Çalma butonu
+        // ---------------------------
+        const playBtn = document.createElement("button");
+        playBtn.classList.add("btn");
+        playBtn.style.fontSize = "16px";
+        playBtn.style.padding = "6px 12px";
+        playBtn.style.marginTop = "5px";
+        playBtn.textContent = "🎧 Dinle";
+
+        function formatNumber(n) {
+            if (n < 10) {
+                return '00' + n;
+            } else if (n < 100) {
+                return '0' + n;
+            } else {
+                return String(n);
+            }
+        }
+
+        const audio = document.createElement("audio");
+        audio.style.display = "none";
+        audio.src = `/data/audio/${formatNumber(sureNo)}/${formatNumber(ayet.versenNumber)}.mp3`;
+        audio.id = ayet.verseKey.split(":").join("");
+
+        document.body.appendChild(audio);
+
+        playBtn.addEventListener("click", function() {
+            document.getElementById(ayet.verseKey.split(":").join("")).currentTime = 0;
+            document.getElementById(ayet.verseKey.split(":").join("")).play();
+        })
 
         // ---------------------------
         // İşaretleme butonu
@@ -448,6 +480,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
         verseDiv.appendChild(number);
         verseDiv.appendChild(arabic);
         verseDiv.appendChild(tevil);
+        verseDiv.appendChild(playBtn);
         verseDiv.appendChild(markBtn);
         verseDiv.appendChild(shareBtn);
         verseDiv.appendChild(embedBtn);

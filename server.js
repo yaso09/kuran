@@ -31,6 +31,10 @@ app.get("/api/ayet/:ayah", api.ayah);
 app.get("/api/sure/:sure", api.sure);
 app.get("/api/dontShowAgain", api.dontShowAgain);
 
+app.get("/audio/:sure/:ayet", (req, res) => {
+    res.sendFile(path.join(__dirname, "data", "audio", req.params.sure, req.params.ayet));
+})
+
 app.get("/docs", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIR, "docs", "index.html"));
 })

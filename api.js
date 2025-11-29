@@ -34,21 +34,21 @@ class API {
                 result.turkish = {};
 
                 let omer = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "public", "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
+                    path.join(__dirname, "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
                 ))
 
                 result.turkish.omer_nasuhi_bilmen =
                     omer.sures[sure - 1].ayetler[ayet - 1][1];
                 
                 let hayrat = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "public", "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
+                    path.join(__dirname, "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
                 ))
 
                 result.turkish.hayrat_nesriyat =
                     hayrat.sures[sure - 1].ayetler[ayet - 1][1];
 
                 let diyanet = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "public", "data", "mealler", "diyanet-vakfi.json"), "utf-8"
+                    path.join(__dirname, "data", "mealler", "diyanet-vakfi.json"), "utf-8"
                 ))
 
                 result.turkish.diyanet_vakfi =
@@ -61,7 +61,7 @@ class API {
 
     sure(req, res) {
         const x = JSON.parse(fs.readFileSync(
-            path.join(__dirname, "public", "data", "verses", `${
+            path.join(__dirname, "data", "verses", `${
                 req.params.sure
             }.json`)
         ))
@@ -72,21 +72,21 @@ class API {
             y.turkish = {};
 
             let omer = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "public", "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
+                path.join(__dirname, "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
             ))
 
             y.turkish.omer_nasuhi_bilmen =
                 omer.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
                 
             let hayrat = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "public", "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
+                path.join(__dirname, "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
             ))
 
             y.turkish.hayrat_nesriyat =
                 hayrat.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
 
             let diyanet = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "public", "data", "mealler", "diyanet-vakfi.json"), "utf-8"
+                path.join(__dirname, "data", "mealler", "diyanet-vakfi.json"), "utf-8"
             ))
 
             y.turkish.diyanet_vakfi =
