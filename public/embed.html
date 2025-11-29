@@ -114,7 +114,7 @@
                 
                 if (!meal)
                     document.querySelector("#mealName").innerText = "Diyanet Vakfı";
-                else document.querySelector("#mealName").innerText = "".join(meal.split("_"));
+                else document.querySelector("#mealName").innerText = meal.split("_").join("");
 
                 document.querySelector("#num").innerText = json.verseKey;
             })
