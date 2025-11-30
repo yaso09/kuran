@@ -31,8 +31,29 @@ app.get("/api/ayet/:ayah", api.ayah);
 app.get("/api/sure/:sure", api.sure);
 app.get("/api/dontShowAgain", api.dontShowAgain);
 
-app.get("/audio/:sure/:ayet", (req, res) => {
-    res.sendFile(path.join(__dirname, "data", "audio", req.params.sure, req.params.ayet));
+app.get("/audio/:sure/:ayet", async (req, res) => {
+    try {
+        const remoteUrl = `https://yaso09.github.io/kuranaudio/audio/${req.params.sure}/${req.params.ayet}.mp3`;
+        
+        const response = await fetch(remoteUrl);
+
+        if (!response.ok) {
+            res.status(500).send('Uzak dosya alınamadı');
+        }
+
+        // İçerik tipini uzak sunucudan kopyala
+        res.set('Content-Type', response.headers.get('content-type'));
+        
+        // Gerekirse dosya ismi
+        const dispo = response.headers.get('content-disposition');
+        if (dispo) res.set('Content-Disposition', dispo);
+
+        // Stream olarak ilet — en sağlıklısı
+        response.body.pipe(res);
+        
+    } catch (err) {
+        res.status(500).send('Hata oluştu: ' + err.message);
+    }
 })
 
 app.get("/docs", (req, res) => {
