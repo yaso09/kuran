@@ -38,7 +38,7 @@ app.get("/audio/:sure/:ayet", async (req, res) => {
         const response = await fetch(remoteUrl);
 
         if (!response.ok) {
-            res.status(500).send('Uzak dosya alınamadı');
+            return res.status(500).send('Uzak dosya alınamadı');
         }
 
         // İçerik tipini uzak sunucudan kopyala

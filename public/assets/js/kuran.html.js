@@ -301,7 +301,8 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
 
         const audio = document.createElement("audio");
         audio.style.display = "none";
-        audio.src = `/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
+        audio.src = `https://raw.githubusercontent.com/semarketir/quranjson/refs/heads/master/source/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
+        // audio.src = `/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
         audio.id = ayet.verseNumber;
         audio.setAttribute("data-scroll-to", "verse" + ayet.verseKey);
 
