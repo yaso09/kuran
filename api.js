@@ -17,7 +17,7 @@ class API {
         let ayet = ayetKey.split(":")[1];
 
         fs.readFile(
-            path.join(__dirname, "public", "data", "verses", `${
+            path.join(__dirname, "data", "verses", `${
                 sure
             }.json`), "utf-8", (err, data) => {
                 if (err) {
