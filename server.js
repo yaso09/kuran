@@ -33,7 +33,7 @@ app.get("/api/dontShowAgain", api.dontShowAgain);
 
 app.get("/audio/:sure/:ayet", async (req, res) => {
     try {
-        const remoteUrl = `https://yaso09.github.io/kuranaudio/audio/${req.params.sure}/${req.params.ayet}.mp3`;
+        const remoteUrl = `https://kurancilar.github.io/audio/${req.params.sure}/${req.params.ayet}.mp3`;
         
         const response = await fetch(remoteUrl);
 
