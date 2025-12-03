@@ -234,7 +234,7 @@ function removeAllAudios() {
 }
 
 
-async function renderVersesFromAPI(sureNo, highlight='', mealName) {
+async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
     removeAllAudios();
 
     localStorage.setItem("lastChapter", sureNo);
@@ -251,13 +251,30 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
-    // --- API'den veriyi çek ---
-    const apiRes = await fetch(`/api/sure/${sureNo}`);
-    const apiData = await apiRes.json();
+    let verses;
 
-    const verses = apiData.verses;
+    if (sureNo < 115 && 0 < sureNo) {
+        // --- API'den veriyi çek ---
+        const apiRes = await fetch(`/api/sure/${sureNo}`);
+        const apiData = await apiRes.json();
+
+        verses = apiData.verses;
+
+        allVerses = apiData.verses;
+    } else {
+        verses = filter;
+    }
+
+    if (!(sureNo == 1)) {
+        const besmele = document.createElement("audio");
+        besmele.src = "https://kurancilar.github.io/json/audio/ghamadi/001/001.mp3";
+        besmele.id = "besmele";
+
+        document.body.appendChild(besmele);
+    }
 
     for (let i = 0; i < verses.length; i++) {
+        document.querySelector("#start").style.display = "none";
 
         const ayet = verses[i];
 
@@ -301,7 +318,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
 
         const audio = document.createElement("audio");
         audio.style.display = "none";
-        audio.src = `https://raw.githubusercontent.com/semarketir/quranjson/refs/heads/master/source/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
+        audio.src = ayet.audio.ghamadi;
         // audio.src = `/audio/${formatNumber(sureNo)}/${formatNumber(ayet.verseNumber)}.mp3`;
         audio.id = ayet.verseNumber;
         audio.setAttribute("data-scroll-to", "verse" + ayet.verseKey);
@@ -325,9 +342,10 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
         const key = ayet.verseKey; // 1:1 gibi
 
         if (isMarked(key)) {
-            verseDiv.style.backgroundColor = "#ffe9c9";
+            verseDiv.style.backgroundColor = "#755400ff";
+            verseDiv.style.color = "#fff";
             verseDiv.style.borderRadius = "14px";
-            verseDiv.style.border = "10px #ffe9c9 solid";
+            verseDiv.style.border = "10px #755400ff solid";
             markBtn.textContent = "🤩 İşaretlemeyi Kaldır";
         }
         else {
@@ -337,13 +355,17 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
         markBtn.addEventListener("click", function () {
             if (isMarked(key)) {
                 markBtn.textContent = "⭐ İşaretle";
-                verseDiv.style.backgroundColor = "#fff";
+                verseDiv.style.backgroundColor = "#242424";
+                verseDiv.style.color = "#fff";
                 verseDiv.style.border = "0";
+                verseDiv.style.borderBottom = "1px solid #ccc";
+                verseDiv.style.borderRadius = "0";
             } else {
                 markBtn.textContent = "🤩 İşaretlemeyi Kaldır";
-                verseDiv.style.backgroundColor = "#ffe9c9";
+                verseDiv.style.backgroundColor = "#755400ff";
+                verseDiv.style.color = "#fff";
                 verseDiv.style.borderRadius = "14px";
-                verseDiv.style.border = "10px #ffe9c9 solid";
+                verseDiv.style.border = "10px #755400ff solid";
             }
             mark(key);
         });
@@ -516,6 +538,8 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName) {
 
     }
 
+    document.querySelector("#start").style.display = "inline";
+
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#navigationButtons").style.display = "block";
 
@@ -570,3 +594,15 @@ function updateStreak() {
 }
 
 updateStreak();
+
+searchInput.addEventListener('input',(e)=>{
+    const query=e.target.value.toLowerCase();
+    if(!query) return renderVersesFromAPI("", "", mealSelect.value, allVerses);
+    const filtered=allVerses.filter(ayet=>
+        ayet.arabic.toLowerCase().includes(query) ||
+        ayet.turkish[mealSelect.value].toLowerCase().includes(query) ||
+        ayet.verseNumber.toString().includes(query)
+    );
+    renderVersesFromAPI("", query, mealSelect.value, filtered);
+    console.log(query, filtered);
+});

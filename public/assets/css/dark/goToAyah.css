@@ -1,0 +1,14 @@
+.goToAyah {
+    font-size: 1rem;
+}
+.goToAyah input {
+    text-align: center;
+}
+select, input { font-size: 16px; padding: 6px 12px; margin: 5px; }
+.goToAyah input:invalid {
+    border-color: red;
+}
+
+.goToAyah input:valid {
+    border-color: green;
+}

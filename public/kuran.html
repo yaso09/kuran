@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kur'an Okuyucu</title>
 
-    <link rel="stylesheet" href="/assets/css/btn.css">
-    <link rel="stylesheet" href="/assets/css/loadScreen.css">
-    <link rel="stylesheet" href="/assets/css/kuran.html.css">
+    <link rel="stylesheet" href="/assets/css/dark/btn.css">
+    <link rel="stylesheet" href="/assets/css/dark/loadScreen.css">
+    <link rel="stylesheet" href="/assets/css/dark/kuran.html.css">
+    <link rel="stylesheet" href="/assets/css/dark/toTopBtn.css">
 </head>
 <body>
     <div class="content">
@@ -25,11 +26,14 @@
                 </select>
 
                 <select id="sureSelect"></select>
+                <select id="kariSelect">
+                    <option value="ghamadi">Ghamadî</option>
+                </select>
+
+                <input type="text" id="searchInput" placeholder="Ayet ara">
 
                 <button id="start" onclick="playSure()" class="btn">🎧 Dinle</button>
                 <button id="stop" onclick="stopSure()" class="btn" style="display: none;">🎧 Durdur</button>
-
-                <input type="text" id="searchInput" placeholder="Ayet ara" style="display: none;">
             </center>
         </div><br><br>
 

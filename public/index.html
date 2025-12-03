@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kur'an-ı Kerîm</title>
 
-    <link rel="stylesheet" href="/assets/css/continue.css">
-    <link rel="stylesheet" href="/assets/css/btn.css">
-    <link rel="stylesheet" href="/assets/css/goToAyah.css">
-    <link rel="stylesheet" href="/assets/css/index.html.css">
-    <link rel="stylesheet" href="/assets/css/toTopBtn.css">
-    <link rel="stylesheet" href="/assets/css/popup.css">
+    <link rel="stylesheet" href="/assets/css/dark/continue.css">
+    <link rel="stylesheet" href="/assets/css/dark/btn.css">
+    <link rel="stylesheet" href="/assets/css/dark/goToAyah.css">
+    <link rel="stylesheet" href="/assets/css/dark/index.html.css">
+    <link rel="stylesheet" href="/assets/css/dark/toTopBtn.css">
+    <link rel="stylesheet" href="/assets/css/dark/popup.css">
 
     <link rel="manifest" href="/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
@@ -66,7 +66,7 @@
         <div>
             <br><h2><i>
                 "Sizin en hayırlılarınız Kur'an'ı öğrenen ve öğretenlerinizdir." —Hz. Peygamber
-            </i></h2>
+            </i></h2><br>
         </div>
 
         <div id="continue">
@@ -98,7 +98,7 @@
                 <h1>Ayete Git</h1>
                 <select name="sure" id="sure"></select>
                 <span>:</span>
-                <input type="number" name="ayet" min="1" max="286" required><br><br>
+                <input type="number" name="ayet" min="1" max="286" placeholder="Ayet no" required><br><br>
                 <button class="btn">Ayete Git</button>
             </center>
         </form><br>
@@ -107,11 +107,21 @@
         <div id="isaretliler" class="iframe-container"></div><br><br>
         
         <h1 id="dualarHeader">Kur'an'dan Dualar</h1>
-        <h2>Şimdilik Burayı Kapattık</h2><br>
+        <h2>Bu Özelliği Yeni Bir Sayfaya Taşıyoruz</h2><br>
 
         <h1 id="surelerHeader">Sureler</h1>
 
-        <div class="sure-list" id="sureList"></div><br>
+        <div class="tabs" style="display: none;">
+            <center>
+                <button class="tab-btn active" data-tab="meal">Meal</button>
+                <button class="tab-btn" data-tab="tefsir">Elmalılı Hamdi Yazır Tefsiri</button>
+            </center>
+        </div><br>
+        
+        <input type="search" name="" id="sureSearch" placeholder="Sure aratın"><br>
+
+        <div class="tab-content active" id="meal"></div>
+        <div class="tab-content" id="tefsir"></div><br>
 
         <h1 id="fihristHeader">Fihrist</h1>
         <h2>Pek Yakında</h2><br>
@@ -141,22 +151,22 @@
         <p>
             Kendi web sitem açıldığında oradaki iletişim seçeneğini buraya bağlayacağım.
         </p><br>
-
-        <footer>
-            <center>
-                <button class="btn" onclick="
-                    resetData()
-                ">Verileri Temizle</button>
-                <button class="btn" onclick="
-                    window.location.href = 'https://yasireymen.com'
-                ">yasireymen.com</button>
-                <button class="btn" onclick="
-                    window.location.href = 'https://instagram.com/yekayabasi'
-                ">İnstagram</button><br><br>
-                <a href="//www.dmca.com/Protection/Status.aspx?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-200w_c.png?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-            </center>
-        </footer><br>
     </div>
+
+    <footer><br>
+        <center>
+            <button class="btn" onclick="
+                resetData()
+            ">Verileri Temizle</button>
+            <button class="btn" onclick="
+                window.location.href = 'https://yasireymen.com'
+            ">yasireymen.com</button>
+            <button class="btn" onclick="
+                window.location.href = 'https://instagram.com/yekayabasi'
+            ">İnstagram</button><br><br>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/DMCA_logo-200w_c.png?ID=2ffb4b5d-6932-45b4-becd-7cd91ad3ed4e"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+        </center><br>
+    </footer>
 
     <div id="popupArkaPlan" class="popup-arka">
         <div id="popup" class="popup">
@@ -182,6 +192,8 @@
     <script src="/assets/js/index.html/goToAyah.js"></script>
     <script src="/assets/js/toTopBtn.js"></script>
     <script src="/assets/js/popup.js"></script>
+    <script src="/assets/js/index.html/tabs.js"></script>
+    <script src="/assets/js/index.html/searchSure.js"></script>
     <script src="/assets/js/devmode.js"></script>
 </body>
 </html>

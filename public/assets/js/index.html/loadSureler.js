@@ -115,7 +115,8 @@ const sureNames = [
     "Nas"
 ]
 
-const listDiv = document.querySelector("#sureList");
+const mealDiv = document.querySelector("#meal");
+const tefsirDiv = document.querySelector("#tefsir");
 
 sureNames.forEach((name, i) => {
     const num = i + 1;
@@ -125,12 +126,30 @@ sureNames.forEach((name, i) => {
     link.href = `kuran?sure=${num}`;
     link.innerHTML = `
         <span class="sure-number">${num}</span>
-        <span class sure-name>${name}</span>
+        <span class="sure-name">${name}</span>
     `;
 
     link.onclick = function() {
         localStorage.setItem("lastChapter", num);
     }
 
-    listDiv.appendChild(link);
+    mealDiv.appendChild(link);
+})
+
+sureNames.forEach((name, i) => {
+    const num = i + 1;
+    const link = document.createElement("a");
+    link.className = "sure-item";
+
+    link.href = `tefsir/${num}`;
+    link.innerHTML = `
+        <span class="sure-number">${num}</span>
+        <span class="sure-name">${name} Suresi Tefsiri</span>
+    `;
+
+    link.onclick = function() {
+        localStorage.setItem("lastChapter", num);
+    }
+
+    tefsirDiv.appendChild(link);
 })

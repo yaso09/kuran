@@ -18,6 +18,14 @@ app.get("/kuran", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIR, "kuran.html"));
 })
 
+app.get("/tefsir/:sure", (req, res) => {
+    res.sendFile(path.join(__dirname, "data", "elmalili_tefsir", "tefsir.html"));
+})
+
+app.get("/tefsirMD/:sure", (req, res) => {
+    res.sendFile(path.join(__dirname, "data", "elmalili_tefsir", "md", `${req.params.sure}.md`));
+})
+
 app.get("/embed", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIR, "embed.html"));
 })
@@ -28,6 +36,7 @@ const api = new API();
 app.get("/api", api.api);
 app.get("/api/user/:param", api.user);
 app.get("/api/ayet/:ayah", api.ayah);
+app.get("/api/sure/:sure/ayet/:ayet", api.ayah2);
 app.get("/api/sure/:sure", api.sure);
 app.get("/api/dontShowAgain", api.dontShowAgain);
 

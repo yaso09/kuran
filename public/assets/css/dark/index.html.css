@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Aqeeq';
+    src: url('/assets/fonts/Aqeeq-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StackSansNotch';
+    src: url('/assets/fonts/StackSansNotch-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Alshohadaa';
+    src: url('/assets/fonts/alshohadaa.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: #242424;
+    color: #fff;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.arabic-title {
+    font-family: 'Alshohadaa', serif;
+    font-size: 72px;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'StackSansNotch', sans-serif;
+    font-size: 2rem;
+    margin: 4px 0 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'StackSansNotch', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.sure-list {
+    margin-top: 30px;
+}
+
+.sure-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.sure-item:hover {
+    background: #181818;
+}
+
+.sure-number {
+    font-family: 'StackSansNotch', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sure-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media(max-width:700px){
+    .arabic-title{ font-size: 52px; }
+    .sure-item{ padding: 12px; }
+    .sure-number, .sure-name{ font-size: 16px; }
+    .streakIcon { display: none; }
+    .left {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .left h1, .left h2 { text-align: center; }
+}
+
+a {
+    color: #fff;
+}
+
+.iframe-container {
+  display: flex;           /* iframe'leri yatay sırala */
+  overflow-x: auto;        /* yatay kaydırma */
+  gap: 10px;               /* iframe aralarındaki boşluk */
+  padding: 10px;           /* isteğe bağlı padding */
+}
+
+.iframe-container iframe {
+  flex: 0 0 auto;          /* iframe'lerin boyutu değişmesin */
+  width: 300px;             /* iframe genişliği */
+  height: 200px;            /* iframe yüksekliği */
+  border: 1px solid #ccc;   /* isteğe bağlı çerçeve */
+  border-radius: 8px;       /* isteğe bağlı yuvarlak köşe */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;   /* Ortaya hizalar */
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+.tab-btn.active {
+    background: rgb(0, 0, 0);
+    border: #fff 1px solid;
+    color: #fff;
+    font-weight: 100;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#sureSearch {
+    width: 100%;
+    margin-left: -2px;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #eee;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#sureSearch {
+    background: #242424;
+    color: #fff;
+    border: none;
+    border-bottom: 2px #fff solid;
+}
+
+#sureSearch:focus {
+    border: none;
+    outline: none !important;
+    border-bottom: 2px #ccc solid;
+}
+
+form center.goToAyah input, form center.goToAyah select {
+    background-color: #242424;
+    color: #fff;
+    border: none;
+    border-bottom: 2px #fff solid;
+}
+
+form center.goToAyah input:focus, form center.goToAyah select:focus {
+    outline: none !important;
+}

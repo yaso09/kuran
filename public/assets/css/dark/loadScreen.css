@@ -1,0 +1,10 @@
+.loadScreen {
+    height: 100%;
+    z-index: 999;
+    text-align: center;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}

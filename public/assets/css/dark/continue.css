@@ -1,0 +1,79 @@
+#continue {
+    background: linear-gradient(
+        to top,
+        #ff9600 0%,
+        #c95e00 100%
+    );
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.08);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#continue h1, #continue h2 {
+    margin: 2rem;
+    color: #fff;
+    text-align: left;
+}
+
+#continue h2 {font-size: 1.5rem;}
+
+#continue button {
+    margin: 2rem;
+    margin-top: -2rem;
+    background: transparent;
+    border: #fff solid 2px;
+    color: #fff;
+}
+
+#continue button:hover {
+    background-color: #fbff00;
+    color: #000;
+    border: #fbff00 solid 2px;
+}
+
+#continueFreeze {
+    background: linear-gradient(
+        to top,
+        #00b3ff 0%,
+        #0075c9 100%
+    );
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.08);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#continueFreeze h1, #continueFreeze h2 {
+    margin: 2rem;
+    color: #fff;
+    text-align: left;
+}
+
+#continueFreeze h2 {font-size: 1.5rem;}
+
+.streakIcon {
+    margin: 2rem;
+    height: 15%;
+    width: 15%;
+    text-align: right;
+    overflow: visible;
+}
+
+#continueFreeze button {
+    margin: 2rem;
+    margin-top: -2rem;
+    background: transparent;
+    border: #fff solid 2px;
+    color: #fff;
+}
+
+#continueFreeze button:hover {
+    background-color: #00eeff;
+    color: #000;
+    border: #00eeff solid 2px;
+}

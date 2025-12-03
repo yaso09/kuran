@@ -12,89 +12,135 @@ class API {
     user(req, res) {}
 
     async ayah(req, res) {
-        let ayetKey = req.params.ayah;
-        let sure = ayetKey.split(":")[0];
-        let ayet = ayetKey.split(":")[1];
+        try {
+            const sureNo = req.params.ayah.split(":")[0];
+            const ayetNo = req.params.ayah.split(":")[1];
 
-        fs.readFile(
-            path.join(__dirname, "data", "verses", `${
-                sure
-            }.json`), "utf-8", (err, data) => {
-                if (err) {
-                    console.error("File not found: ", err);
-                    res.send({
-                        "error": "Sure not found"
-                    })
-                    return;
-                }
+            const remoteUrl = `https://kurancilar.github.io/json/sure/${sureNo}.json`;
+            const response = await fetch(remoteUrl);
 
-                let dat = JSON.parse(data);
-                let result = dat.verses[ayet - 1];
-
-                result.turkish = {};
-
-                let omer = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
-                ))
-
-                result.turkish.omer_nasuhi_bilmen =
-                    omer.sures[sure - 1].ayetler[ayet - 1][1];
-                
-                let hayrat = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
-                ))
-
-                result.turkish.hayrat_nesriyat =
-                    hayrat.sures[sure - 1].ayetler[ayet - 1][1];
-
-                let diyanet = JSON.parse(fs.readFileSync(
-                    path.join(__dirname, "data", "mealler", "diyanet-vakfi.json"), "utf-8"
-                ))
-
-                result.turkish.diyanet_vakfi =
-                    diyanet.sures[sure - 1].ayetler[ayet - 1][1];
-
-                res.json(result);
+            if (!response.ok) {
+                return res.status(500).send("Sûre alınamadı");
             }
-        )
+
+            const sureData = await response.json();
+
+            // JSON yapısı: sureData.verses[]
+            if (!sureData.verses || !Array.isArray(sureData.verses)) {
+                return res.status(500).send("Bu sûrede 'verses' listesi yok");
+            }
+
+            // Ayeti bul
+            const ayetObj = sureData.verses.find(v => 
+                String(v.verseNumber) === String(ayetNo)
+            );
+
+            if (!ayetObj) {
+                return res.status(404).send("Ayet bulunamadı");
+            }
+
+            // Kullanışlı bir çıktı modeline dönüştür
+            return res.json({
+                id: ayetObj.id,
+                sureNo: Number(sureNo),
+                verseNumber: ayetObj.verseNumber,
+                verseKey: ayetObj.verseKey,
+                arabic: ayetObj.arabic,
+                english: ayetObj.english,
+                turkish: ayetObj.turkish,
+                audio: ayetObj.audio
+            });
+
+        } catch (err) {
+            res.status(500).send("Hata: " + err.message);
+        }
     }
 
-    sure(req, res) {
-        const x = JSON.parse(fs.readFileSync(
-            path.join(__dirname, "data", "verses", `${
-                req.params.sure
-            }.json`)
-        ))
+    async ayah2(req, res) {
+        try {
+            const sureNo = req.params.sure;
+            const ayetNo = req.params.ayet;
 
+            const remoteUrl = `https://kurancilar.github.io/json/sure/${sureNo}.json`;
+            const response = await fetch(remoteUrl);
 
+            if (!response.ok) {
+                return res.status(500).send("Sûre alınamadı");
+            }
 
-        x.verses.forEach(y => {
-            y.turkish = {};
+            const sureData = await response.json();
 
-            let omer = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "data", "mealler", "omer-nasuhi-bilmen.json"), "utf-8"
-            ))
+            // JSON yapısı: sureData.verses[]
+            if (!sureData.verses || !Array.isArray(sureData.verses)) {
+                return res.status(500).send("Bu sûrede 'verses' listesi yok");
+            }
 
-            y.turkish.omer_nasuhi_bilmen =
-                omer.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
-                
-            let hayrat = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "data", "mealler", "hayrat-nesriyat.json"), "utf-8"
-            ))
+            // Ayeti bul
+            const ayetObj = sureData.verses.find(v => 
+                String(v.verseNumber) === String(ayetNo)
+            );
 
-            y.turkish.hayrat_nesriyat =
-                hayrat.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
+            if (!ayetObj) {
+                return res.status(404).send("Ayet bulunamadı");
+            }
 
-            let diyanet = JSON.parse(fs.readFileSync(
-                path.join(__dirname, "data", "mealler", "diyanet-vakfi.json"), "utf-8"
-            ))
+            // Kullanışlı bir çıktı modeline dönüştür
+            return res.json({
+                id: ayetObj.id,
+                sureNo: Number(sureNo),
+                verseNumber: ayetObj.verseNumber,
+                verseKey: ayetObj.verseKey,
+                arabic: ayetObj.arabic,
+                english: ayetObj.english,
+                turkish: ayetObj.turkish,
+                audio: ayetObj.audio
+            });
 
-            y.turkish.diyanet_vakfi =
-                diyanet.sures[req.params.sure - 1].ayetler[x.verses.indexOf(y)][1];
-        })
-
-        res.json(x);
+        } catch (err) {
+            res.status(500).send("Hata: " + err.message);
+        }
     }
+
+
+
+    async sure(req, res) {
+        try {
+            const remoteUrl = `https://kurancilar.github.io/json/sure/${req.params.sure}.json`;
+            const response = await fetch(remoteUrl);
+
+            if (!response.ok) {
+                return res.status(500).send('Uzak dosya alınamadı');
+            }
+
+            // Header kopyala
+            res.set('Content-Type', response.headers.get('content-type') || 'application/json');
+
+            const dispo = response.headers.get('content-disposition');
+            if (dispo) res.set('Content-Disposition', dispo);
+
+            // Web ReadableStream → Reader
+            const reader = response.body.getReader();
+
+            // Web stream'i manuel olarak Node response'a akıtıyoruz
+            const pump = async () => {
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    res.write(Buffer.from(value));
+                }
+                res.end();
+            };
+
+            pump().catch(err => {
+                console.error(err);
+                res.status(500).end("Stream hatası");
+            });
+
+        } catch (err) {
+            res.status(500).send('Hata oluştu: ' + err.message);
+        }
+    }
+
     dontShowAgain(req, res) {
         res.send("0");
     }

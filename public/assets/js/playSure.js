@@ -27,7 +27,7 @@ async function playSure() {
             let x = targetId.split(":");
             if (Number(x[1]) !== 1) {
                 x[1] = Number(x[1]) - 1;
-                document.getElementById(x.join(":")).style.color = "black";
+                document.getElementById(x.join(":")).style.color = "white";
             }
             stopFlag = false;
             break;
@@ -42,14 +42,18 @@ async function playSure() {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                targetElement.style.color = "blue";
+                targetElement.style.color = "#00e1ffff";
                 let x = targetId.split(":");
                 if (Number(x[1]) !== 1) {
                     x[1] = Number(x[1]) - 1;
-                    document.getElementById(x.join(":")).style.color = "black";
+                    document.getElementById(x.join(":")).style.color = "white";
                 }
             }
         }
+
+        source.addEventListener("ended", () => {
+            document.getElementById(targetId).style.color = "#fff";
+        })
 
         await new Promise(resolve => {
             source.onended = resolve;

@@ -113,3 +113,39 @@ a {
   border: 1px solid #ccc;   /* isteğe bağlı çerçeve */
   border-radius: 8px;       /* isteğe bağlı yuvarlak köşe */
 }
+
+.tabs {
+    display: flex;
+    justify-content: center;   /* Ortaya hizalar */
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+.tab-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#sureSearch {
+    width: 100%;
+    margin-left: -2px;
+    padding: 1rem;
+}
