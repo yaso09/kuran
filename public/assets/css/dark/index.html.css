@@ -99,6 +99,7 @@ h2 {
         text-align: center;
     }
     .left h1, .left h2 { text-align: center; }
+    .tab-content.active.sure-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 a {
