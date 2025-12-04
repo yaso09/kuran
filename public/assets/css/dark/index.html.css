@@ -28,6 +28,7 @@ body {
     max-width: 900px;
     margin: auto;
     padding: 20px;
+    max-width: 1100px;
 }
 
 .arabic-title {
@@ -53,22 +54,27 @@ h2 {
     text-align: center;
 }
 
-.sure-list {
+.tab-content.active.sure-list {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    box-sizing: border-box;
 }
 
 .sure-item {
     display: flex;
     justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid #fff;
+    padding: 2rem;
+    border: 1px solid #fff;
     text-decoration: none;
     color: #fff;
-    transition: background 0.2s;
+    transition: 0.1s;
 }
 
 .sure-item:hover {
-    background: #181818;
+    color: #00e1ffff;
+    background: #172e35;
 }
 
 .sure-number {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/dark/index.html.css">
     <link rel="stylesheet" href="/assets/css/dark/toTopBtn.css">
     <link rel="stylesheet" href="/assets/css/dark/popup.css">
+    <link rel="stylesheet" href="/assets/css/cool.css">
 
     <link rel="manifest" href="/manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
@@ -111,6 +112,7 @@
 
         <h1 id="surelerHeader">Sureler</h1>
 
+        
         <div class="tabs" style="display: none;">
             <center>
                 <button class="tab-btn active" data-tab="meal">Meal</button>
@@ -118,10 +120,12 @@
             </center>
         </div><br>
         
-        <input type="search" name="" id="sureSearch" placeholder="Sure aratın"><br>
+        <input type="search" name="" id="sureSearch" placeholder="Sure aratın">
 
-        <div class="tab-content active" id="meal"></div>
-        <div class="tab-content" id="tefsir"></div><br>
+        <div class="tilt-wrap">
+            <div class="tab-content active sure-list" id="meal"></div>
+        </div>
+        <div class="tab-content sure-list" id="tefsir"></div><br>
 
         <h1 id="fihristHeader">Fihrist</h1>
         <h2>Pek Yakında</h2><br>
@@ -194,6 +198,7 @@
     <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/index.html/tabs.js"></script>
     <script src="/assets/js/index.html/searchSure.js"></script>
+    <script src="/assets/js/cool.js"></script>
     <script src="/assets/js/devmode.js"></script>
 </body>
 </html>

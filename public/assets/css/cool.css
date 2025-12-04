@@ -1,0 +1,21 @@
+.tilt-wrap {
+    transition: 
+        margin 0.18s ease-out,
+        transform 0.18s ease-out,
+        filter 0.22s ease-out,
+        box-shadow 0.22s ease-out;
+    will-change: transform, margin, filter, box-shadow;
+    position: relative;
+}
+
+.tilt-wrap.tilt-active {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    filter: brightness(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.tilt-wrap > .tab-content {
+    position: relative;
+    z-index: 2;
+}
