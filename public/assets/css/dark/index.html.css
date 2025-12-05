@@ -196,7 +196,6 @@ form center.goToAyah input:focus, form center.goToAyah select:focus {
 
 #isaretliler {
     position: relative;
-    overflow: hidden;
     border-radius: 14px;
 }
 
