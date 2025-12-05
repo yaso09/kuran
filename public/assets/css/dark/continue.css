@@ -5,7 +5,7 @@
         #c95e00 100%
     );
     border-radius: 14px;
-    box-shadow: 0 0 140px rgb(255, 64, 0);
+    box-shadow: rgb(255, 64, 0) 0px 0px 140px -20px, rgb(255, 64, 0) 0px 0px 140px -30px, rgb(255, 64, 0) 0px -5px 6px 0px inset, rgb(255, 64, 0) 0px 30px 60px -12px inset, rgb(255, 64, 0) 0px 18px 36px -18px inset;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -42,6 +42,7 @@
     );
     border-radius: 14px;
     box-shadow: 0 0 140px rgb(0, 221, 255);
+    box-shadow: rgb(0, 221, 255) 0px 0px 140px -20px, rgb(0, 221, 255) 0px 0px 140px -30px, rgb(0, 221, 255) 0px -5px 6px 0px inset, rgb(0, 221, 255) 0px 30px 60px -12px inset, rgb(0, 221, 255) 0px 18px 36px -18px inset;
     width: 100%;
     display: flex;
     justify-content: space-between;

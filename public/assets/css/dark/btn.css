@@ -47,3 +47,11 @@ footer .btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+@media(max-width:700px){
+  .btn:hover:not(:disabled), footer .btn:hover:not(:disabled) {
+    background: #242424;
+    color: #fff;
+    border: #fff 1px solid;
+  }
+}

@@ -196,31 +196,4 @@ form center.goToAyah input:focus, form center.goToAyah select:focus {
 
 #isaretliler {
     position: relative;
-    border-radius: 14px;
-}
-
-#isaretliler::before, #isaretliler::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 60px;
-    pointer-events: none;
-    z-index: 3;
-}
-
-#isaretliler::before {
-    left: 0;
-    background: linear-gradient(to right,
-        #242424,
-        rgba(0,0,0,0)
-    );
-}
-
-#isaretliler::after {
-    right: 0;
-    background: linear-gradient(to left,
-        #242424,
-        rgba(0,0,0,0)
-    );
 }
