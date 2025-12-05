@@ -4,6 +4,7 @@ const panelList = document.querySelectorAll(".tilt-wrap");
 if (!isMobile) {
     document.addEventListener("mousemove", (e) => {
         document.getElementById("sureSearch").style.marginBottom = "7rem";
+        document.getElementById("fihristHeader").style.marginTop = "7rem";
         panelList.forEach(box => {
             const rect = box.getBoundingClientRect();
 
@@ -16,6 +17,7 @@ if (!isMobile) {
             if (!inside) {
                 box.classList.remove("tilt-active");
                 document.getElementById("sureSearch").style.marginBottom = null;
+                document.getElementById("fihristHeader").style.marginTop = null;
                 box.style.transform = "none";
                 return;
             }

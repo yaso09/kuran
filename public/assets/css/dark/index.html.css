@@ -100,6 +100,10 @@ h2 {
     }
     .left h1, .left h2 { text-align: center; }
     .tab-content.active.sure-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sure-item:hover {
+        color: #fff;
+        background-color: #242424;
+    }
 }
 
 a {
@@ -188,4 +192,36 @@ form center.goToAyah input, form center.goToAyah select {
 
 form center.goToAyah input:focus, form center.goToAyah select:focus {
     outline: none !important;
+}
+
+#isaretliler {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+#isaretliler::before, #isaretliler::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+#isaretliler::before {
+    left: 0;
+    background: linear-gradient(to right,
+        #242424,
+        rgba(0,0,0,0)
+    );
+}
+
+#isaretliler::after {
+    right: 0;
+    background: linear-gradient(to left,
+        #242424,
+        rgba(0,0,0,0)
+    );
 }
