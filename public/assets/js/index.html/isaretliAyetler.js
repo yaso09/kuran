@@ -2,7 +2,7 @@ if (
     JSON.parse(localStorage.getItem("markeds")) && localStorage.getItem("markeds") !== "[]"
 ) {
     JSON.parse(localStorage.getItem("markeds")).forEach(verseKey => {
-        document.querySelector("#isaretlilerCenter").innerHTML += `
+        document.querySelector("#isaretliler").innerHTML += `
             <iframe onload="
                 window.addEventListener('message', function(e) {
                     if (e.data.embedHeight && e.data.name == '${verseKey}') {
