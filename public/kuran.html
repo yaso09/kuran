@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/dark/loadScreen.css">
     <link rel="stylesheet" href="/assets/css/dark/kuran.html.css">
     <link rel="stylesheet" href="/assets/css/dark/toTopBtn.css">
+    <link rel="stylesheet" href="/assets/css/mediaPlayer.css">
 </head>
 <body>
     <div class="content">
@@ -42,8 +43,8 @@
 
                 <input type="text" id="searchInput" placeholder="Ayet ara">
 
-                <button id="start" onclick="playSure()" class="btn">🎧 Dinle</button>
-                <button id="stop" onclick="stopSure()" class="btn" style="display: none;">🎧 Durdur</button>
+                <button id="start" onclick="mp_start()" class="btn">🎧 Dinle</button>
+                <button id="stop" onclick="mp_stop()" class="btn" style="display: none;">🎧 Durdur</button>
             </center>
         </div><br><br>
 
@@ -63,14 +64,36 @@
             <button id="nextSure" class="btn">Sonraki Sure →</button>
         </div>
 
+        <div id="mediaPlayer" class="media-player hidden">
+
+    <div class="mp-top">
+        <div id="mpTitle" class="mp-title">Seçili Sure</div>
+    </div>
+
+    <div class="mp-controls">
+        <button id="mpPlayPause" class="mp-btn">▶</button>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrapper">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+</div>
+
+        <div class="progress-wrapper">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+
         <button id="toTopBtn" aria-label="En üste çık">☝️</button>
 
         <script src="/assets/js/print.min.js"></script>
         <script src="/assets/js/html2canvas.min.js"></script>
         <script src="/assets/js/toTopBtn.js"></script>
         <script src="/assets/js/kuran.html.js"></script>
-        <script src="/assets/js/playSure.js"></script>
         <script src="/assets/js/devmode.js"></script>
+        <script src="/assets/js/mediaPlayer.js"></script>
     </div>
 </body>
 </html>
