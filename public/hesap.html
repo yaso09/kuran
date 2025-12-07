@@ -56,8 +56,10 @@
             <div id="emails"></div>
             <button class="btn" onclick="Clerk.signOut()">Oturumu Kapat</button>
             <button class="btn" onclick="{
-                Clerk.user.delete();
-                window.location.href = '/';
+                if (prompt('Hesabınız silinecektir, emin misiniz?')){
+                    Clerk.user.delete();
+                    window.location.href = '/';
+                }
             }" style="color: red;">Hesabı Sil</button><br><br>
         </center>
     </div>
