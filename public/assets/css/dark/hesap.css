@@ -1,0 +1,14 @@
+input {
+    background-color: #242424;
+    color: #fff;
+    border: none;
+    border-bottom: 2px #fff solid;
+    outline: none;
+}
+
+#profile-image {
+    border-radius: 14px;
+    cursor: pointer;
+    height: 170px;
+    width: 170px;
+}

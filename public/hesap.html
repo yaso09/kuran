@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kur'an-ı Kerîm</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVWM506F0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PVWM506F0M');
+</script>
+
+    <link rel="stylesheet" href="/assets/css/dark/continue.css">
+    <link rel="stylesheet" href="/assets/css/dark/btn.css">
+    <link rel="stylesheet" href="/assets/css/dark/goToAyah.css">
+    <link rel="stylesheet" href="/assets/css/dark/index.html.css">
+    <link rel="stylesheet" href="/assets/css/dark/toTopBtn.css">
+    <link rel="stylesheet" href="/assets/css/dark/popup.css">
+    <link rel="stylesheet" href="/assets/css/cool.css">
+    <link rel="stylesheet" href="/assets/css/dark/hesap.css">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Kur'an Oku">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="/pwa/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js?v=3');
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        
+        <center>
+            <button class="btn" onclick="window.location.href = '/'">Kapat</button>
+            <input id="filePicker" type="file" accept="image/*" style="display:none;"><br><br>
+            <img id="profile-image">
+            <h1>Hoş Geldin <span id="name"></span> !</h1>
+            <div>
+                <label for="firstName">İsim</label><br>
+                <input type="text" id="firstName" placeholder="İsim"><br><br>
+                <label for="lastName">Soy İsim</label><br>
+                <input type="text" id="lastName" placeholder="Soy isim">
+            </div><br>
+            <h1>E-Posta Adresleri</h1>
+            <div id="emails"></div>
+            <button class="btn" onclick="Clerk.signOut()">Oturumu Kapat</button>
+            <button class="btn" onclick="{
+                Clerk.user.delete();
+                window.location.href = '/';
+            }" style="color: red;">Hesabı Sil</button><br><br>
+        </center>
+    </div>
+
+    <button id="toTopBtn" aria-label="En üste çık">☝️</button>
+
+    <script src="/assets/js/continue.js"></script>
+    <script src="/assets/js/index.html/installButton.js"></script>
+    <script src="/assets/js/index.html/loadSureler.js"></script>
+    <script src="/assets/js/index.html/isaretliAyetler.js"></script>
+    <script src="/assets/js/index.html/goToAyah.js"></script>
+    <script src="/assets/js/toTopBtn.js"></script>
+    <script src="/assets/js/popup.js"></script>
+    <script src="/assets/js/index.html/tabs.js"></script>
+    <script src="/assets/js/index.html/searchSure.js"></script>
+    <script src="/assets/js/index.html/resetData.js"></script>
+    <script src="/assets/js/cool.js"></script>
+    <script src="/assets/js/devmode.js"></script>
+    <script src="/assets/js/hesap.js"></script>
+    <script onload="loadClerk()"
+    async
+    crossorigin="anonymous"
+    data-clerk-publishable-key="pk_test_aGVhbHRoeS1oZXJyaW5nLTg2LmNsZXJrLmFjY291bnRzLmRldiQ"
+    src="https://healthy-herring-86.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+    type="text/javascript">
+    </script>
+</body>
+</html>

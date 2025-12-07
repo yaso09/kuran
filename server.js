@@ -1,17 +1,35 @@
 const express = require("express");
 const path = require("path");
-const dotenv = require("dotenv");
-// const ClerkExpressRequireAuth = require("@clerk/express");
+const dotenv = require("dotenv/config");
+const clerk = require("@clerk/express");
 
 const app = express();
 
 const PUBLIC_DIR = path.join(__dirname, "public");
 
-// app.use(ClerkExpressRequireAuth.clerkMiddleware);
+// app.use(clerk.clerkMiddleware);
 app.use(express.static(PUBLIC_DIR));
+
+app.get("/user", clerk.requireAuth(), async (req, res) => {
+    const { isAuthenticated, userId } = clerk.getAuth(req);
+
+    if (!isAuthenticated) {
+        return res.status(401).json({
+            error: "User not authenticated"
+        })
+    }
+
+    const user = await clerk.clerkClient.users.getUser(userId);
+
+    res.json(user);
+})
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIR, "index.html"));
+})
+
+app.get("/hesap", (req, res) => {
+    res.sendFile(path.join(PUBLIC_DIR, "hesap.html"));
 })
 
 app.get("/kuran", (req, res) => {
@@ -31,6 +49,8 @@ app.get("/embed", (req, res) => {
 })
 
 const API = require("./api");
+const { runInNewContext } = require("vm");
+const { asyncWrapProviders } = require("async_hooks");
 const api = new API();
 
 app.get("/api", api.api);
