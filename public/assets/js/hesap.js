@@ -10,6 +10,14 @@ async function loadClerk() {
     
     document.getElementById("firstName").value = Clerk.user.firstName;
     document.getElementById("lastName").value = Clerk.user.lastName;
+    
+    document.getElementById("updatePassword").addEventListener("click", function() {
+        Clerk.user.updatePassword({
+            new_password: document.getElementById("password").value
+        }).then(e => {window.location.reload()}).catch(res => {
+            alert(res.message);
+        });
+    })
 
     Clerk.user.emailAddresses.forEach(email => {
         document.getElementById("emails").innerHTML +=

@@ -3,5 +3,9 @@ async function loadClerk() {
 
     if (Clerk.isSignedIn)
         document.getElementById("sign-in").style.display = "none";
-    if (!Clerk.isSignedIn) document.getElementById("profile").style.display = "none";
+    if (!Clerk.isSignedIn) {
+        document.getElementById("profile").style.display = "none";
+    }
+
+    const cont = new Continue();
 }

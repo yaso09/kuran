@@ -21,7 +21,40 @@ app.get("/user", clerk.requireAuth(), async (req, res) => {
 
     const user = await clerk.clerkClient.users.getUser(userId);
 
+    clerk.clerkClient.users.updateUserMetadata(userId)
+
     res.json(user);
+})
+
+app.get("/user/set/:key/:value", clerk.requireAuth(), async (req, res) => {
+    const { isAuthenticated, userId } = clerk.getAuth(req);
+
+    if (!isAuthenticated) {
+        return res.status(401).json({
+            error: "User not authenticated"
+        })
+    }
+
+    let publicMetadata = {};
+    publicMetadata[req.params.key] = req.params.value;
+
+    await clerk.clerkClient.users.updateUserMetadata(userId, {
+        publicMetadata: publicMetadata
+    })
+
+    res.status(200).json({ success: true });
+})
+
+app.get("/user/get/:key", clerk.requireAuth(), async (req, res) => {
+    const { isAuthenticated, userId } = clerk.getAuth(req);
+
+    if (!isAuthenticated) {
+        return res.status(401).json({
+            error: "User not authenticated"
+        })
+    }
+
+    res.status(200).json((await clerk.clerkClient.users.getUser(userId)).publicMetadata);
 })
 
 app.get("/", (req, res) => {
@@ -30,6 +63,10 @@ app.get("/", (req, res) => {
 
 app.get("/hesap", (req, res) => {
     res.sendFile(path.join(PUBLIC_DIR, "hesap.html"));
+})
+
+app.get("/giris", (req, res) => {
+    res.sendFile(path.join(PUBLIC_DIR, "giris.html"));
 })
 
 app.get("/kuran", (req, res) => {
@@ -51,6 +88,7 @@ app.get("/embed", (req, res) => {
 const API = require("./api");
 const { runInNewContext } = require("vm");
 const { asyncWrapProviders } = require("async_hooks");
+const { getActiveResourcesInfo } = require("process");
 const api = new API();
 
 app.get("/api", api.api);

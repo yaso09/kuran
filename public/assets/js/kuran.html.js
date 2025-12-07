@@ -3,6 +3,7 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
+
 const sureSelect = document.getElementById('sureSelect');
 
 let selectedSure = sureSelect.value;
@@ -11,6 +12,7 @@ if (getQueryParam("sure")) {
     selectedSure = getQueryParam("sure");
     sureSelect.value = selectedSure;
 } else {
+    localStorage.setItem("lastChapter", Clerk.user.publicMetadata["lastChapter"]);
     selectedSure = localStorage.getItem("lastChapter");
 }
 
@@ -179,7 +181,7 @@ prevSureBtn.addEventListener('click',()=>{
         window.history.replaceState({}, "", url);
 
         window.location.reload();
-        /*chap--; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap);*/ }
+        /*chap--; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); setItem('lastChapter', chap);*/ }
 });
 
 nextSureBtn.addEventListener('click',()=>{
@@ -191,14 +193,15 @@ nextSureBtn.addEventListener('click',()=>{
         window.history.replaceState({}, "", url);
 
         window.location.reload();
-        /*chap++; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); localStorage.setItem('lastChapter', chap);*/ }
+        /*chap++; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); setItem('lastChapter', chap);*/ }
 });
 
 function mark(verseKey) {
+    localStorage.setItem("markeds", Clerk.user.publicMetadata["markeds"]);
     if (!localStorage.getItem("markeds"))
-        localStorage.setItem("markeds", "[]");
+        setItem("markeds", "[]");
     if (localStorage.getItem("markeds").search(verseKey) > 0) {
-        localStorage.setItem("markeds",
+        setItem("markeds",
             JSON.stringify(
                 JSON.parse(localStorage.getItem("markeds")).filter(
                     n => n !== verseKey
@@ -208,7 +211,7 @@ function mark(verseKey) {
     } else {
         let markeds = JSON.parse(localStorage.getItem("markeds"));
         markeds.push(verseKey);
-        localStorage.setItem("markeds", JSON.stringify(markeds));
+        setItem("markeds", JSON.stringify(markeds));
     }
 }
 
@@ -216,7 +219,7 @@ function isMarked(verseKey) {
     if (localStorage.getItem("markeds"))
         return JSON.parse(localStorage.getItem("markeds")).indexOf(verseKey) >= 0;
     else {
-        localStorage.setItem("markeds", "[]");
+        setItem("markeds", "[]");
         return false;
     };
 }
@@ -237,7 +240,7 @@ function removeAllAudios() {
 async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
     removeAllAudios();
 
-    localStorage.setItem("lastChapter", sureNo);
+    setItem("lastChapter", sureNo);
 
     if (!mealName) mealName = "diyanet_vakfi";
     const container = document.getElementById('ayetler');
@@ -543,6 +546,8 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#navigationButtons").style.display = "block";
 
+    localStorage.setItem(`${selectedSure}.scrollTop`, Clerk.user.publicMetadata[`${selectedSure}.scrollTop`])
+
     const scrollTop = localStorage.getItem(`${selectedSure}.scrollTop`);
     if (getQueryParam("ayet")) {
         scrollToAyet();
@@ -557,7 +562,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
 }
 
 window.addEventListener("beforeunload", function() {
-    localStorage.setItem(`${selectedSure}.scrollTop`, window.scrollY)
+    setItem(`${selectedSure}.scrollTop`, window.scrollY)
 })
 
 mealSelect.addEventListener("change",(e)=> {
@@ -566,16 +571,25 @@ mealSelect.addEventListener("change",(e)=> {
 
 renderVersesFromAPI(selectedSure);
 
-function updateStreak() {
+async function updateStreak() {
+    localStorage.setItem("lastDate", Clerk.user.publicMetadata["lastDate"]);
+    localStorage.setItem("streak", Clerk.user.publicMetadata["streak"]);
+    
     const today = new Date().toISOString().split("T")[0];
-    const lastDate = localStorage.getItem("lastDate");
+    let lastDate = localStorage.getItem("lastDate");
     let streak = parseInt(localStorage.getItem("streak") || "0", 10);
 
-    if (!lastDate) {
+    if (lastDate == "undefined") {
         // İlk gün
         streak = 1;
-        localStorage.setItem("streak", streak);
-        localStorage.setItem("lastDate", today);
+
+        if (!getItem("streak"))
+            await setItem("streak", streak);
+        
+        await setItem("lastDate", today);
+
+        lastDate = today;
+
         return;
     }
 
@@ -583,13 +597,13 @@ function updateStreak() {
 
     if (diffDays === 1) {
         streak++;
-        localStorage.setItem("streak", streak);
-        localStorage.setItem("lastDate", today);
+        await setItem("streak", streak);
+        await setItem("lastDate", today);
     } else if (diffDays > 1) {
         // Gün atlandıysa istersen sıfırlamak yerine yine 1'den başlatabilirsin
         streak = 1;
-        localStorage.setItem("streak", streak);
-        localStorage.setItem("lastDate", today);
+        await setItem("streak", streak);
+        await setItem("lastDate", today);
     }
 }
 

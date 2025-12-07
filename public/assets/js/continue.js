@@ -1,11 +1,3 @@
-/*if (!localStorage.getItem("streak")) {
-    document.querySelector("#devamEt").style.display = "none";
-} else {
-    if (Date.now())
-    document.querySelector("#streakCounter").innerText =
-        `${localStorage.getItem("streak")} Günlük Serin Var`
-}*/
-
 class Continue {
     todayYMD() {
         const now = new Date();
@@ -42,26 +34,30 @@ class Continue {
     return Math.floor(diffMs / MS_PER_DAY);
     }
     constructor() {
-        if (!localStorage.getItem("streak")) {
+        if (!Clerk.user) {
+            document.querySelector("#continue").style.display = "none";
+            document.querySelector("#continueFreeze").style.display = "none";
+        }
+        if (!Clerk.user.publicMetadata.streak) {
             document.querySelector("#continue").style.display = "none";
             document.querySelector("#continueFreeze").style.display = "none";
         }
         else {
+            if (localStorage.getItem("lastDate") == "undefined")
+                localStorage.setItem("lastDate", this.todayYMD());
             if (this.daysBetween(
                 localStorage.getItem("lastDate"),
                 this.todayYMD()
             ) > 1) {
                 document.querySelector("#continue").style.display = "none";
                 document.querySelector("#streakCounterFreeze").innerText = 
-                    `${localStorage.getItem("streak")} Günlük Serin Vardı`;
+                    `${Clerk.user.publicMetadata.streak} Günlük Serin Vardı`;
             }
             else {
                 document.querySelector("#continueFreeze").style.display = "none";
                 document.querySelector("#streakCounter").innerHTML =
-                    `${localStorage.getItem("streak")} Günlük Serin Var`;
+                    `${Clerk.user.publicMetadata.streak} Günlük Serin Var`;
             }
         }
     }
 }
-
-const cont = new Continue();
