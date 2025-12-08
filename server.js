@@ -7,10 +7,13 @@ const app = express();
 
 const PUBLIC_DIR = path.join(__dirname, "public");
 
-// app.use(clerk.clerkMiddleware);
 app.use(express.static(PUBLIC_DIR));
+app.use(express.json());
 
 app.get("/user", clerk.requireAuth(), async (req, res) => {
+    clerk.clerkClient.authenticateRequest(req, {
+        authorizedParties: ['https://kuran.yasireymen.com'],
+    })
     const { isAuthenticated, userId } = clerk.getAuth(req);
 
     if (!isAuthenticated) {
@@ -26,8 +29,31 @@ app.get("/user", clerk.requireAuth(), async (req, res) => {
     res.json(user);
 })
 
-app.get("/user/set/:key/:value", clerk.requireAuth(), async (req, res) => {
+app.get("/user/get", clerk.requireAuth(), async (req, res) => {
     const { isAuthenticated, userId } = clerk.getAuth(req);
+    clerk.clerkClient.authenticateRequest(req, {
+        authorizedParties: ['https://kuran.yasireymen.com'],
+    })
+
+    if (!isAuthenticated) {
+        return res.status(401).json({
+            error: "User not authenticated"
+        })
+    }
+
+    const user = await clerk.clerkClient.users.getUser(userId);
+
+    clerk.clerkClient.users.updateUserMetadata(userId);
+
+    res.json(user.publicMetadata);
+})
+
+app.post("/user/set", clerk.requireAuth(), async (req, res) => {
+    const { isAuthenticated, userId } = clerk.getAuth(req);
+    clerk.clerkClient.authenticateRequest(req, {
+        authorizedParties: ['https://kuran.yasireymen.com'],
+    })
+    const response = req.body;
 
     if (!isAuthenticated) {
         return res.status(401).json({
@@ -36,7 +62,7 @@ app.get("/user/set/:key/:value", clerk.requireAuth(), async (req, res) => {
     }
 
     let publicMetadata = {};
-    publicMetadata[req.params.key] = req.params.value;
+    publicMetadata[response.key] = response.value;
 
     await clerk.clerkClient.users.updateUserMetadata(userId, {
         publicMetadata: publicMetadata
@@ -47,6 +73,9 @@ app.get("/user/set/:key/:value", clerk.requireAuth(), async (req, res) => {
 
 app.get("/user/get/:key", clerk.requireAuth(), async (req, res) => {
     const { isAuthenticated, userId } = clerk.getAuth(req);
+    clerk.clerkClient.authenticateRequest(req, {
+        authorizedParties: ['https://kuran.yasireymen.com'],
+    })
 
     if (!isAuthenticated) {
         return res.status(401).json({

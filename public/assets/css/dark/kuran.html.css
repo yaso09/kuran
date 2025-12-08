@@ -57,6 +57,18 @@ select, input { font-size: 16px; padding: 6px 12px; margin: 5px; }
     margin: 5px 0;
     text-align: right;
 }
+.mealsiz {
+    text-align: center;
+    align-items: center;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.center {
+    justify-content: center;
+    text-align: center;
+    display:flexbox;
+    gap: 1rem;
+}
 .english-text { font-size: 16px; margin-bottom: 10px; text-align: left; }
 .verse-number { font-size: 12px; font-weight: bold; color: #cacaca; margin-bottom: 5px; text-align: center; }
 .loading { font-size: 18px; font-weight: bold; text-align: center; margin: 30px 0; }

@@ -1,7 +1,7 @@
 if (
-    JSON.parse(localStorage.getItem("markeds")) && localStorage.getItem("markeds") !== "[]"
+    JSON.parse(Clerk.user.publicMetadata.markeds) && (Clerk.user.publicMetadata.markeds !== "[]" && Clerk.user.publicMetadata.markeds !== "undefined")
 ) {
-    JSON.parse(localStorage.getItem("markeds")).forEach(verseKey => {
+    JSON.parse(Clerk.user.publicMetadata.markeds).forEach(verseKey => {
         document.querySelector("#isaretliler").innerHTML += `
             <iframe onload="
                 window.addEventListener('message', function(e) {

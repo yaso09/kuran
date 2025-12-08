@@ -1,3 +1,14 @@
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.body.appendChild(s);
+  });
+}
+
 async function loadClerk() {
     await Clerk.load();
 
@@ -8,4 +19,6 @@ async function loadClerk() {
     }
 
     const cont = new Continue();
+
+    loadScript("/assets/js/index.html/isaretliAyetler.js")
 }

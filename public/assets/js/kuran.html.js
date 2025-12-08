@@ -196,30 +196,29 @@ nextSureBtn.addEventListener('click',()=>{
         /*chap++; selectedSure = chap; renderVersesFromAPI(chap, mealSelect.value); setItem('lastChapter', chap);*/ }
 });
 
-function mark(verseKey) {
-    localStorage.setItem("markeds", Clerk.user.publicMetadata["markeds"]);
-    if (!localStorage.getItem("markeds"))
-        setItem("markeds", "[]");
+async function mark(verseKey) {
+    localStorage.setItem("markeds", await getItem("markeds"));
+    if (localStorage.getItem("markeds") == "undefined")
+        setItem("markeds", "");
     if (localStorage.getItem("markeds").search(verseKey) > 0) {
         setItem("markeds",
-            JSON.stringify(
-                JSON.parse(localStorage.getItem("markeds")).filter(
-                    n => n !== verseKey
-                )
-            )
+            localStorage.getItem("markeds").split(", ").filter(
+                n => n !== verseKey
+            ).join(", ")
         )
     } else {
-        let markeds = JSON.parse(localStorage.getItem("markeds"));
+        let markeds = localStorage.getItem("markeds").split(", ");
         markeds.push(verseKey);
-        setItem("markeds", JSON.stringify(markeds));
+        setItem("markeds", markeds.join(", "));
     }
 }
 
-function isMarked(verseKey) {
-    if (localStorage.getItem("markeds"))
-        return JSON.parse(localStorage.getItem("markeds")).indexOf(verseKey) >= 0;
+async function isMarked(verseKey) {
+    localStorage.setItem("markeds", await getItem("markeds"));
+    if (localStorage.getItem("markeds") !== "undefined")
+        return localStorage.getItem("markeds").split(", ").indexOf(verseKey) >= 0;
     else {
-        setItem("markeds", "[]");
+        setItem("markeds", "");
         return false;
     };
 }
@@ -283,20 +282,30 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
 
         const verseDiv = document.createElement('div');
         verseDiv.classList.add('verse');
+        if (getQueryParam("mealsiz") == "true")
+            verseDiv.classList.add("mealsiz");
 
         const number = document.createElement('div');
         number.classList.add('verse-number');
         number.textContent = `Ayet ${ayet.verseNumber}`;
 
         const arabic = document.createElement('div');
+
+        if (getQueryParam("mealsiz") == "true")
+            arabic.classList.add("mealsiz");
+
         arabic.classList.add('arabic-text');
         arabic.innerHTML = highlightText(ayet.arabic, highlight);
+        arabic.dir = "rtl";
+
+        if (getQueryParam("mealsiz") == "true")
+            arabic.innerHTML += "✵";
 
         const tevil = document.createElement('div');
         tevil.classList.add('english-text');
 
         // API'deki meal: ayet.turkish[mealName]
-        const mealText = ayet.turkish?.[mealName] || "Meâl bulunamadı.";
+        const mealText = ayet.turkish?.[mealName] || "Meal bulunamadı.";
         tevil.innerHTML = highlightText(mealText, highlight);
         
         // ---------------------------
@@ -344,7 +353,7 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
 
         const key = ayet.verseKey; // 1:1 gibi
 
-        if (isMarked(key)) {
+        if (await isMarked(key)) {
             verseDiv.style.backgroundColor = "#755400ff";
             verseDiv.style.color = "#fff";
             verseDiv.style.borderRadius = "14px";
@@ -355,8 +364,8 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
             markBtn.textContent = "⭐ İşaretle";
         }
 
-        markBtn.addEventListener("click", function () {
-            if (isMarked(key)) {
+        markBtn.addEventListener("click", async function () {
+            if (await isMarked(key)) {
                 markBtn.textContent = "⭐ İşaretle";
                 verseDiv.style.backgroundColor = "#242424";
                 verseDiv.style.color = "#fff";
@@ -525,15 +534,16 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
         });
 
         // ---------------------------
-
-        verseDiv.appendChild(number);
         verseDiv.appendChild(arabic);
-        verseDiv.appendChild(tevil);
-        verseDiv.appendChild(playBtn);
-        verseDiv.appendChild(markBtn);
-        verseDiv.appendChild(shareBtn);
-        verseDiv.appendChild(embedBtn);
-        verseDiv.appendChild(openNewTabBtn);
+        if (getQueryParam("mealsiz") !== "true") {
+            verseDiv.appendChild(number);
+            verseDiv.appendChild(tevil);
+            verseDiv.appendChild(playBtn);
+            verseDiv.appendChild(markBtn);
+            verseDiv.appendChild(shareBtn);
+            verseDiv.appendChild(embedBtn);
+            verseDiv.appendChild(openNewTabBtn);
+        } else container.classList.add("center");
 
         verseDiv.id = `verse${key}`;
 
