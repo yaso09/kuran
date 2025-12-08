@@ -1,8 +1,18 @@
-if (
-    JSON.parse(Clerk.user.publicMetadata.markeds) && (Clerk.user.publicMetadata.markeds !== "[]" && Clerk.user.publicMetadata.markeds !== "undefined")
+(async function() {
+    async function getItem(key) { 
+        return await fetch("/user/get")
+            .then(dat => dat.json())
+            .then(json => {
+                localStorage.setItem(key, JSON.stringify(json[key]));
+                return json[key];
+            })
+    }
+    
+    if (
+     (await getItem("markeds")) && (await getItem("markeds")) !== ""
 ) {
-    JSON.parse(Clerk.user.publicMetadata.markeds).forEach(verseKey => {
-        document.querySelector("#isaretliler").innerHTML += `
+    (await getItem("markeds")).split(", ").forEach(verseKey => {
+        if (verseKey  !== "") document.querySelector("#isaretliler").innerHTML += `
             <iframe onload="
                 window.addEventListener('message', function(e) {
                     if (e.data.embedHeight && e.data.name == '${verseKey}') {
@@ -26,4 +36,4 @@ if (
     document.querySelector("#isaretliAyetler").style.display = "none";
 
     document.querySelector("#isaretliler").style.display = "none";
-}
+}})();

@@ -130,15 +130,20 @@
         <h1 id="surelerHeader">Sureler</h1>
 
         
-        <div class="tabs" style="display: none;">
+        <div class="tabs">
             <center>
+                <button class="tab-btn" data-tab="mealsiz">Arapça</button>
                 <button class="tab-btn active" data-tab="meal">Meal</button>
-                <button class="tab-btn" data-tab="tefsir">Elmalılı Hamdi Yazır Tefsiri</button>
+                <button class="tab-btn" data-tab="tefsir"
+                style="display: none;">Elmalılı Hamdi Yazır Tefsiri</button>
             </center>
         </div><br>
         
         <input type="search" name="" id="sureSearch" placeholder="Sure aratın">
 
+        <div class="tilt-wrap">
+            <div class="tab-content sure-list" id="mealsiz"></div>
+        </div>
         <div class="tilt-wrap">
             <div class="tab-content active sure-list" id="meal"></div>
         </div>

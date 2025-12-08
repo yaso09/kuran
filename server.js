@@ -11,9 +11,6 @@ app.use(express.static(PUBLIC_DIR));
 app.use(express.json());
 
 app.get("/user", clerk.requireAuth(), async (req, res) => {
-    clerk.clerkClient.authenticateRequest(req, {
-        authorizedParties: ['https://kuran.yasireymen.com'],
-    })
     const { isAuthenticated, userId } = clerk.getAuth(req);
 
     if (!isAuthenticated) {
@@ -31,9 +28,6 @@ app.get("/user", clerk.requireAuth(), async (req, res) => {
 
 app.get("/user/get", clerk.requireAuth(), async (req, res) => {
     const { isAuthenticated, userId } = clerk.getAuth(req);
-    clerk.clerkClient.authenticateRequest(req, {
-        authorizedParties: ['https://kuran.yasireymen.com'],
-    })
 
     if (!isAuthenticated) {
         return res.status(401).json({
@@ -50,9 +44,6 @@ app.get("/user/get", clerk.requireAuth(), async (req, res) => {
 
 app.post("/user/set", clerk.requireAuth(), async (req, res) => {
     const { isAuthenticated, userId } = clerk.getAuth(req);
-    clerk.clerkClient.authenticateRequest(req, {
-        authorizedParties: ['https://kuran.yasireymen.com'],
-    })
     const response = req.body;
 
     if (!isAuthenticated) {
@@ -73,9 +64,6 @@ app.post("/user/set", clerk.requireAuth(), async (req, res) => {
 
 app.get("/user/get/:key", clerk.requireAuth(), async (req, res) => {
     const { isAuthenticated, userId } = clerk.getAuth(req);
-    clerk.clerkClient.authenticateRequest(req, {
-        authorizedParties: ['https://kuran.yasireymen.com'],
-    })
 
     if (!isAuthenticated) {
         return res.status(401).json({

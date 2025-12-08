@@ -116,6 +116,7 @@ const sureNames = [
 ]
 
 const mealDiv = document.querySelector("#meal");
+const mealsizDiv = document.querySelector("#mealsiz");
 const tefsirDiv = document.querySelector("#tefsir");
 
 
@@ -135,6 +136,24 @@ sureNames.forEach((name, i) => {
     }
 
     mealDiv.appendChild(link);
+})
+
+sureNames.forEach((name, i) => {
+    const num = i + 1;
+    const link = document.createElement("a");
+    link.className = "sure-item";
+
+    link.href = `kuran?sure=${num}&mealsiz=true`;
+    link.innerHTML = `
+        <span class="sure-number">${num}</span>
+        <span class="sure-name">${name}</span>
+    `;
+
+    link.onclick = function() {
+        localStorage.setItem("lastChapter", num);
+    }
+
+    mealsizDiv.appendChild(link);
 })
 
 sureNames.forEach((name, i) => {
