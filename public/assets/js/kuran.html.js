@@ -539,10 +539,11 @@ async function renderVersesFromAPI(sureNo, highlight='', mealName, filter) {
             verseDiv.appendChild(number);
             verseDiv.appendChild(tevil);
             verseDiv.appendChild(playBtn);
-            verseDiv.appendChild(markBtn);
             verseDiv.appendChild(shareBtn);
             verseDiv.appendChild(embedBtn);
             verseDiv.appendChild(openNewTabBtn);
+            if (await Clerk.user)
+                verseDiv.appendChild(markBtn);
         } else container.classList.add("center");
 
         verseDiv.id = `verse${key}`;
@@ -582,8 +583,9 @@ mealSelect.addEventListener("change",(e)=> {
 renderVersesFromAPI(selectedSure);
 
 async function updateStreak() {
-    localStorage.setItem("lastDate", Clerk.user.publicMetadata["lastDate"]);
-    localStorage.setItem("streak", Clerk.user.publicMetadata["streak"]);
+    if (!(await Clerk.user)) return;
+    localStorage.setItem("lastDate", await Clerk.user.publicMetadata["lastDate"]);
+    localStorage.setItem("streak", await Clerk.user.publicMetadata["streak"]);
     
     const today = new Date().toISOString().split("T")[0];
     let lastDate = localStorage.getItem("lastDate");
