@@ -1,28 +1,31 @@
 {
   "name": "quran",
   "version": "1.0.0",
-  "description": "Kur'an Okuyucu",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yaso09/quran.git"
-  },
-  "keywords": [
-    "quran"
-  ],
-  "author": "Yasir Eymen",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/yaso09/quran/issues"
-  },
-  "homepage": "https://github.com/yaso09/quran#readme",
   "dependencies": {
-    "@clerk/express": "^1.7.53",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "@clerk/nextjs": "^5.0.0",
+    "crypto-js": "^4.2.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.300.0",
+    "next": "^14.2.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.0.0"
   }
 }

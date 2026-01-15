@@ -1,0 +1,28 @@
+{
+  "name": "quran",
+  "version": "1.0.0",
+  "description": "Kur'an Okuyucu",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaso09/quran.git"
+  },
+  "keywords": [
+    "quran"
+  ],
+  "author": "Yasir Eymen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/yaso09/quran/issues"
+  },
+  "homepage": "https://github.com/yaso09/quran#readme",
+  "dependencies": {
+    "@clerk/express": "^1.7.53",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
