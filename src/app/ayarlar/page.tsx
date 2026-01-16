@@ -16,6 +16,12 @@ import {
     hasAnalyticsConsent,
     setAnalyticsConsent,
 } from '@/lib/analytics';
+import { TURKISH_CITIES } from '@/lib/cities';
+import { supabase } from '@/lib/supabase';
+import {
+    MapPin,
+    Sunrise,
+} from 'lucide-react';
 import {
     User,
     Mail,
@@ -51,7 +57,29 @@ export default function SettingsPage() {
     const [formData, setFormData] = useState({
         firstName: user?.firstName || '',
         lastName: user?.lastName || '',
+        city: '',
+        namazNotifications: false,
     });
+
+    useEffect(() => {
+        const fetchProfile = async () => {
+            if (!user) return;
+            const { data: profile } = await supabase
+                .from('profiles')
+                .select('city, notifications_enabled')
+                .eq('id', user.id)
+                .single();
+
+            if (profile) {
+                setFormData(prev => ({
+                    ...prev,
+                    city: profile.city || '',
+                    namazNotifications: profile.notifications_enabled || false
+                }));
+            }
+        };
+        fetchProfile();
+    }, [user]);
 
     const [newEmail, setNewEmail] = useState('');
     const [newPhone, setNewPhone] = useState('');
@@ -121,6 +149,15 @@ export default function SettingsPage() {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
             });
+
+            // Update Supabase profile
+            await supabase
+                .from('profiles')
+                .upsert({
+                    id: user.id,
+                    city: formData.city,
+                    notifications_enabled: formData.namazNotifications
+                });
 
             setSaveSuccess(true);
             setTimeout(() => setSaveSuccess(false), 3000);
@@ -620,6 +657,51 @@ export default function SettingsPage() {
                                     <input type="checkbox" className="sr-only peer" defaultChecked />
                                     <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-amber-500/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-600"></div>
                                 </label>
+                            </div>
+
+                            {/* Namaz Vakitleri Bildirimleri */}
+                            <div className="p-4 bg-slate-800/30 rounded-xl space-y-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-amber-500/10 rounded-lg">
+                                            <Sunrise className="text-amber-500" size={18} />
+                                        </div>
+                                        <div>
+                                            <p className="text-white font-bold">Namaz Vakti Bildirimleri</p>
+                                            <p className="text-slate-500 text-sm">Vakitlerde ve 45 dk kala bildirim al</p>
+                                        </div>
+                                    </div>
+                                    <label className="relative inline-flex items-center cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            className="sr-only peer"
+                                            checked={formData.namazNotifications}
+                                            onChange={(e) => setFormData({ ...formData, namazNotifications: e.target.checked })}
+                                        />
+                                        <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-amber-500/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-600"></div>
+                                    </label>
+                                </div>
+
+                                {formData.namazNotifications && (
+                                    <div className="flex flex-col gap-4 pt-3 border-t border-slate-700">
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                                <MapPin size={12} />
+                                                Şehir Seçimi
+                                            </label>
+                                            <select
+                                                value={formData.city}
+                                                onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                                                className="w-full bg-[#0b0c0f] border border-slate-800 rounded-xl py-3 px-4 text-white outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all appearance-none cursor-pointer"
+                                            >
+                                                <option value="">Şehir Seçin</option>
+                                                {TURKISH_CITIES.map(city => (
+                                                    <option key={city} value={city}>{city}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

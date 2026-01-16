@@ -24,6 +24,9 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
+                        <Link href="/namaz-vakitleri" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Namaz Vakitleri
+                        </Link>
                         <Link href="/kuran" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Oku
                         </Link>
@@ -99,6 +102,12 @@ export default function Navbar() {
                             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
                         >
                             Analizler
+                        </Link>
+                        <Link
+                            href="/namaz-vakitleri"
+                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                        >
+                            Namaz Vakitleri
                         </Link>
                         <SignedIn>
                             <Link

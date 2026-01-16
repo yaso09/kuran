@@ -14,6 +14,8 @@ CREATE TABLE public.profiles (
     streak INTEGER DEFAULT 0,
     coins INTEGER DEFAULT 0,
     freezes INTEGER DEFAULT 2,
+    city TEXT,
+    notifications_enabled BOOLEAN DEFAULT false,
     last_read_date TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
@@ -71,6 +73,16 @@ CREATE TABLE public.forum_comment_likes (
     PRIMARY KEY (comment_id, user_id)
 );
 
+-- 6. Push Subscriptions Table
+CREATE TABLE public.push_subscriptions (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id TEXT REFERENCES public.profiles(id) ON DELETE CASCADE,
+    endpoint TEXT UNIQUE NOT NULL,
+    p256dh TEXT NOT NULL,
+    auth TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
 -- Row Level Security (RLS)
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.comments ENABLE ROW LEVEL SECURITY;
@@ -79,6 +91,7 @@ ALTER TABLE public.forum_comments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.post_likes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.comment_likes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.forum_comment_likes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.push_subscriptions ENABLE ROW LEVEL SECURITY;
 
 -- Permissive Policies for development with Clerk
 CREATE POLICY "Public profile access" ON public.profiles FOR ALL USING (true);
@@ -88,6 +101,7 @@ CREATE POLICY "Public forum comments access" ON public.forum_comments FOR ALL US
 CREATE POLICY "Public post likes access" ON public.post_likes FOR ALL USING (true);
 CREATE POLICY "Public comment likes access" ON public.comment_likes FOR ALL USING (true);
 CREATE POLICY "Public forum comment likes access" ON public.forum_comment_likes FOR ALL USING (true);
+CREATE POLICY "Public push subscriptions access" ON public.push_subscriptions FOR ALL USING (true);
 
 -- Functions to Toggle Likes
 CREATE OR REPLACE FUNCTION public.toggle_post_like(target_post_id UUID, target_user_id TEXT)

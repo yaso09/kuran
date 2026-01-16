@@ -236,29 +236,7 @@ export default function Home() {
             </div>
           )}
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4">
-            <div className="flex items-center justify-center gap-x-6">
-              {user?.unsafeMetadata?.lastRead ? (
-                <Link
-                  href={(user.unsafeMetadata.lastRead as string) || "/kuran"}
-                  className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
-                >
-                  <Book size={18} />
-                  Kaldığın Yerden Devam Et
-                </Link>
-              ) : (
-                <Link
-                  href="/kuran"
-                  className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
-                >
-                  Hemen Başla <ArrowRight size={18} />
-                </Link>
-              )}
-              <Link href="/kuran" className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors">
-                Sureler <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-
+          <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
             {canInstall && (
               <button
                 onClick={install}
@@ -272,6 +250,27 @@ export default function Home() {
                 </span>
               </button>
             )}
+
+            {user?.unsafeMetadata?.lastRead ? (
+              <Link
+                href={(user.unsafeMetadata.lastRead as string) || "/kuran"}
+                className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
+              >
+                <Book size={18} />
+                Kaldığın Yerden Devam Et
+              </Link>
+            ) : (
+              <Link
+                href="/kuran"
+                className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
+              >
+                Hemen Başla <ArrowRight size={18} />
+              </Link>
+            )}
+
+            <Link href="/kuran" className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors">
+              Sureler <span aria-hidden="true">→</span>
+            </Link>
           </div>
 
           <SignedIn>
@@ -344,7 +343,7 @@ export default function Home() {
               {savedVerses.map((verse) => (
                 <Link
                   key={verse.verseKey}
-                  href={`/kuran/${verse.surahId}?u=${Date.now()}#ayet-${verse.verseNumber}`}
+                  href={`/kuran/${verse.surahId}/${verse.verseNumber}`}
                   className="bg-[#15171c] p-6 rounded-2xl border border-slate-800 hover:border-amber-900/50 hover:bg-[#1a1c23] transition-all group"
                 >
                   <div className="flex justify-between items-start mb-4">

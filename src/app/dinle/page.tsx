@@ -5,6 +5,7 @@ import { usePageTracking } from "@/hooks/usePageTracking";
 import { Headphones, PlayCircle, Play } from "lucide-react";
 import Link from "next/link";
 import { SURAHS } from "@/lib/constants";
+import QuranRadio from "@/components/QuranRadio";
 
 export default function DinlePage() {
     // Track page visit
@@ -26,6 +27,9 @@ export default function DinlePage() {
                         <p className="text-slate-400">Seçkin hafızlardan sureleri dinleyin.</p>
                     </div>
                 </div>
+
+                {/* Radio Section */}
+                <QuranRadio />
 
                 {/* Featured Section */}
                 <h2 className="text-xl font-bold text-slate-200 mb-6 flex items-center gap-2">
