@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Amiri } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
+import PWARegistration from "@/components/PWARegistration";
 
 const inter = Inter({ subsets: ["latin"] });
 const amiri = Amiri({
@@ -13,6 +14,14 @@ const amiri = Amiri({
 export const metadata: Metadata = {
   title: "Kur'ancılar",
   description: "Kur'an Okuyucu ve Takip Uygulaması",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Kur'ancılar",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +45,7 @@ export default function RootLayout({
         <body
           className={`${inter.className} ${amiri.variable} antialiased`}
         >
+          <PWARegistration />
           {children}
         </body>
       </html>

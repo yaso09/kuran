@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
-import { Flame, Check } from "lucide-react";
+import { Flame, Check, Snowflake } from "lucide-react";
 import Link from "next/link";
 
 export default function StreakDisplay() {
@@ -26,6 +26,7 @@ export default function StreakDisplay() {
     if (!isLoaded || !user || streak === 0) return null;
 
     const history = (user.unsafeMetadata.readingHistory as string[]) || [];
+    const freezes = user.unsafeMetadata.freezes !== undefined ? (user.unsafeMetadata.freezes as number) : 2;
 
     // Last 7 days generation
     const getLast7Days = () => {
@@ -98,8 +99,15 @@ export default function StreakDisplay() {
                         })}
                     </div>
 
-                    <div className="mt-4 pt-4 border-t border-slate-800/50">
-                        <p className="text-[10px] text-slate-500 text-center font-medium leading-relaxed">
+                    <div className="mt-4 pt-4 border-t border-slate-800/50 flex flex-col gap-2">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                                <Snowflake size={14} className="text-blue-500" />
+                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Seri Dondurma</span>
+                            </div>
+                            <span className="text-[10px] font-black text-white">{freezes} Adet</span>
+                        </div>
+                        <p className="text-[10px] text-slate-500 text-center font-medium leading-relaxed mt-1">
                             Detaylı takvim için tıkla ✨
                         </p>
                     </div>

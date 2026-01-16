@@ -3,16 +3,37 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import { useUser, SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import { Flame, Calendar, Trophy, Target, BookOpen, Check } from "lucide-react";
+import { Flame, Calendar, Trophy, Target, BookOpen, Check, Coins, Snowflake, Loader2 } from "lucide-react";
 import Link from "next/link";
 
 export default function ActivityPage() {
     const { user, isLoaded } = useUser();
+    const [buying, setBuying] = React.useState(false);
 
     if (!isLoaded) return null;
 
     const streak = (user?.unsafeMetadata.streak as number) || 0;
     const history = (user?.unsafeMetadata.readingHistory as string[]) || [];
+    const coins = (user?.unsafeMetadata.coins as number) || 0;
+    const freezes = user?.unsafeMetadata.freezes !== undefined ? (user.unsafeMetadata.freezes as number) : 2;
+
+    const buyFreeze = async () => {
+        if (!user || coins < 50 || buying) return;
+        setBuying(true);
+        try {
+            await user.update({
+                unsafeMetadata: {
+                    ...user.unsafeMetadata,
+                    coins: coins - 50,
+                    freezes: freezes + 1
+                }
+            });
+        } catch (error) {
+            console.error("Satın alma hatası:", error);
+        } finally {
+            setBuying(false);
+        }
+    };
 
     // Full Month Calendar Generation
     const getCalendarDays = () => {
@@ -87,6 +108,42 @@ export default function ActivityPage() {
                                         <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Aktif Ay</p>
                                         <p className="text-lg font-black text-white">{history.filter(d => d.includes(new Date().getFullYear().toString())).length} Gün</p>
                                     </div>
+                                </div>
+                            </div>
+
+                            {/* Shop Card */}
+                            <div className="bg-[#15171c] p-6 rounded-3xl border border-slate-800 space-y-4">
+                                <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] px-2">MARKET</h3>
+                                <div className="flex items-center justify-between p-4 rounded-2xl bg-amber-500/5 border border-amber-500/10">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500">
+                                            <Coins size={20} />
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Coin Bakiyen</p>
+                                            <p className="text-lg font-black text-white">{coins}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="p-4 rounded-2xl bg-blue-500/5 border border-blue-500/10 flex flex-col gap-4">
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500">
+                                                <Snowflake size={20} />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Dondurma Hakkı</p>
+                                                <p className="text-lg font-black text-white">{freezes}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={buyFreeze}
+                                        disabled={coins < 50 || buying}
+                                        className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-600 text-white rounded-xl text-xs font-black transition-all active:scale-95 flex items-center justify-center gap-2 uppercase tracking-wider"
+                                    >
+                                        {buying ? <Loader2 className="animate-spin" size={14} /> : <>50 COIN İLE SATIN AL</>}
+                                    </button>
                                 </div>
                             </div>
                         </div>

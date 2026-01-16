@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import { ArrowRight, Book, Headphones, Heart, Bookmark, Loader2, ArrowUpRight, Sparkles, Flame, Check } from "lucide-react";
+import { ArrowRight, Book, Headphones, Heart, Bookmark, Loader2, ArrowUpRight, Sparkles, Flame, Check, Download } from "lucide-react";
+import { usePWAInstall } from "@/hooks/usePWAInstall";
 import { useUser, SignedIn } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { SURAHS } from "@/lib/constants";
@@ -22,6 +23,9 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [searching, setSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
+
+  // PWA Install
+  const { canInstall, install } = usePWAInstall();
 
   useEffect(() => {
     const fetchBookmarks = async () => {
@@ -76,13 +80,23 @@ export default function Home() {
     setSearchResults([]);
 
     try {
-      // 1. Client-side AI request using g4f.dev dist
-      // We use a dynamic import or fetch to get the AI response similar to the script provided
-      const aiResponse = await fetch("https://g4f.dev/api/auto/chat/completions", {
+      // 1. Call Cerebras AI API
+      const cerebrasApiKey = process.env.NEXT_PUBLIC_CEREBRAS_API_KEY;
+
+      if (!cerebrasApiKey) {
+        console.error('Cerebras API key not found');
+        setSearchResults([]);
+        return;
+      }
+
+      const aiResponse = await fetch("https://api.cerebras.ai/v1/chat/completions", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${cerebrasApiKey}`
+        },
         body: JSON.stringify({
-          model: "gpt-4.1",
+          model: "llama3.1-8b",
           messages: [
             {
               role: "system",
@@ -93,7 +107,9 @@ export default function Home() {
               content: `Şu konuyla ilgili en alakalı ayetleri bul: ${searchQuery}`
             }
           ],
-          stream: false
+          stream: false,
+          max_completion_tokens: 150,
+          temperature: 0.7
         })
       });
 
@@ -217,26 +233,42 @@ export default function Home() {
             </div>
           )}
 
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            {user?.unsafeMetadata?.lastRead ? (
-              <Link
-                href={(user.unsafeMetadata.lastRead as string) || "/kuran"}
-                className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
-              >
-                <Book size={18} />
-                Kaldığın Yerden Devam Et
+          <div className="mt-10 flex flex-col items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-x-6">
+              {user?.unsafeMetadata?.lastRead ? (
+                <Link
+                  href={(user.unsafeMetadata.lastRead as string) || "/kuran"}
+                  className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
+                >
+                  <Book size={18} />
+                  Kaldığın Yerden Devam Et
+                </Link>
+              ) : (
+                <Link
+                  href="/kuran"
+                  className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
+                >
+                  Hemen Başla <ArrowRight size={18} />
+                </Link>
+              )}
+              <Link href="/kuran" className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors">
+                Sureler <span aria-hidden="true">→</span>
               </Link>
-            ) : (
-              <Link
-                href="/kuran"
-                className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-600/20 hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 flex items-center gap-2 transition-all"
+            </div>
+
+            {canInstall && (
+              <button
+                onClick={install}
+                className="group relative inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold rounded-lg shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition-all hover:scale-105"
               >
-                Hemen Başla <ArrowRight size={18} />
-              </Link>
+                <Download size={18} className="group-hover:animate-bounce" />
+                Uygulamayı İndir
+                <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+                </span>
+              </button>
             )}
-            <Link href="/kuran" className="text-sm font-semibold leading-6 text-white hover:text-amber-400 transition-colors">
-              Sureler <span aria-hidden="true">→</span>
-            </Link>
           </div>
 
           <SignedIn>

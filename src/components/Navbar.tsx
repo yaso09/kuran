@@ -29,6 +29,9 @@ export default function Navbar() {
                         <Link href="/dinle" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Dinle
                         </Link>
+                        <Link href="/forum" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Forum
+                        </Link>
 
                         <div className="ml-4 flex items-center gap-4">
                             <SignedIn>
@@ -71,6 +74,12 @@ export default function Navbar() {
                             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
                         >
                             Dinle
+                        </Link>
+                        <Link
+                            href="/forum"
+                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                        >
+                            Forum
                         </Link>
                         <div className="pl-3 pr-4 py-2">
                             <SignedIn>

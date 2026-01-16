@@ -8,6 +8,100 @@ import { SurahData, Verse } from "@/types/quran";
 import { Loader2, Play, Pause, ChevronLeft, ChevronRight, Volume2, ArrowLeft, Bookmark, MessageCircle, Heart, Image, Flame } from "lucide-react";
 import Link from "next/link";
 import { SURAHS } from "@/lib/constants";
+import { supabase } from "@/lib/supabase";
+import { X, MessageSquare, Quote, CornerDownRight } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
+// Social Media Style Comment Component
+const CommentItem = ({
+    comment,
+    verseKey,
+    onReply,
+    onDelete,
+    onLike,
+    likedComments,
+    currentUserId,
+    depth = 0
+}: {
+    comment: any,
+    verseKey: string,
+    onReply: (id: string, name: string) => void,
+    onDelete: (id: string) => void,
+    onLike: (id: string) => void,
+    likedComments: Set<string>,
+    currentUserId?: string,
+    depth?: number
+}) => {
+    return (
+        <div className={`flex gap-4 ${depth > 0 ? 'ml-8 sm:ml-12 mt-4' : 'mt-6'}`}>
+            <div className={`shrink-0 ${depth > 0 ? 'w-8 h-8' : 'w-10 h-10'} rounded-full bg-slate-800 border border-slate-700 overflow-hidden`}>
+                {comment.userImage ? (
+                    <img src={comment.userImage} alt="" className="w-full h-full object-cover" />
+                ) : (
+                    <div className="w-full h-full flex items-center justify-center text-amber-500 font-bold text-xs uppercase">
+                        {comment.userName?.[0]}
+                    </div>
+                )}
+            </div>
+            <div className="flex-1 space-y-1">
+                <div className="flex items-center gap-2">
+                    <span className="text-sm font-bold text-slate-200">{comment.userName}</span>
+                    <span className="text-[10px] text-slate-500 font-medium">
+                        {new Date(comment.timestamp).toLocaleDateString([], { day: '2-digit', month: 'short' })}
+                    </span>
+                </div>
+                <div className="bg-[#1a1c23] p-3 rounded-2xl rounded-tl-none border border-slate-800 text-sm text-slate-300 leading-relaxed prose prose-invert prose-sm max-w-none">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {comment.text}
+                    </ReactMarkdown>
+                </div>
+                <div className="flex items-center gap-4 px-1">
+                    <button
+                        onClick={() => onReply(comment.id, comment.userName)}
+                        className="text-[10px] font-bold text-slate-500 hover:text-amber-500 uppercase tracking-wider transition-colors"
+                    >
+                        Yanıtla
+                    </button>
+                    <button
+                        onClick={() => onLike(comment.id)}
+                        className={`text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-1 ${likedComments.has(comment.id) ? 'text-red-500' : 'text-slate-500 hover:text-red-500'}`}
+                    >
+                        <Heart size={10} className={likedComments.has(comment.id) ? "fill-red-500" : ""} />
+                        <span>{comment.likes || 0} Beğeni</span>
+                    </button>
+                    {currentUserId === comment.userId && (
+                        <button
+                            onClick={() => { if (confirm('Silmek istediğine emin misin?')) onDelete(comment.id); }}
+                            className="text-[10px] font-bold text-slate-600 hover:text-red-500 uppercase tracking-wider transition-colors"
+                        >
+                            Sil
+                        </button>
+                    )}
+                </div>
+
+                {/* Render Replies Recursive */}
+                {comment.replies && comment.replies.length > 0 && (
+                    <div className="space-y-4">
+                        {comment.replies.map((reply: any) => (
+                            <CommentItem
+                                key={reply.id}
+                                comment={reply}
+                                verseKey={verseKey}
+                                onReply={onReply}
+                                onDelete={onDelete}
+                                onLike={onLike}
+                                likedComments={likedComments}
+                                currentUserId={currentUserId}
+                                depth={depth + 1}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
 
 export default function SurahPage() {
     const params = useParams();
@@ -20,7 +114,7 @@ export default function SurahPage() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [bookmarks, setBookmarks] = useState<string[]>([]); // Local state for optimistic updates
 
-    // Type definition for a Comment
+    // Type definition for a Comment (Supabase Style)
     type Comment = {
         id: string;
         text: string;
@@ -28,6 +122,9 @@ export default function SurahPage() {
         userId: string;
         userName: string;
         userImage?: string;
+        parentId?: string | null;
+        replies?: Comment[];
+        likes?: number;
     };
 
     const [comments, setComments] = useState<Record<string, Comment[]>>({}); // Updated to store array of comments
@@ -35,6 +132,8 @@ export default function SurahPage() {
     const [gifSearchOpen, setGifSearchOpen] = useState<string | null>(null);
     const [reputations, setReputations] = useState<Record<string, number>>({}); // Mock reputation state for "Like"
     const [showCelebration, setShowCelebration] = useState(false);
+    const [replyingTo, setReplyingTo] = useState<{ commentId: string, userName: string } | null>(null);
+    const [likedComments, setLikedComments] = useState<Set<string>>(new Set());
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const verseRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -44,37 +143,80 @@ export default function SurahPage() {
     const surahId = parseInt(idUnwrapped);
     const surahInfo = SURAHS.find(s => s.id === surahId);
 
-    // Sync bookmarks and comments with user metadata on load
+    // Sync Profile and Fetch Comments from Supabase
     useEffect(() => {
         if (user) {
             if (user.unsafeMetadata.bookmarks) {
                 setBookmarks(user.unsafeMetadata.bookmarks as string[]);
             }
-            if (user.unsafeMetadata.comments) {
-                // Migration: If old string format, convert to array
-                const rawComments = user.unsafeMetadata.comments as Record<string, any>;
-                const normalizedComments: Record<string, Comment[]> = {};
 
-                Object.keys(rawComments).forEach(key => {
-                    const value = rawComments[key];
-                    if (typeof value === 'string') {
-                        normalizedComments[key] = [{
-                            id: Date.now().toString(),
-                            text: value,
-                            timestamp: Date.now(),
-                            userId: user.id,
-                            userName: user.fullName || "Kullanıcı",
-                            userImage: user.imageUrl
-                        }];
-                    } else if (Array.isArray(value)) {
-                        normalizedComments[key] = value;
-                    }
+            const syncAndFetch = async () => {
+                // 1. Sync Profile
+                await supabase.from('profiles').upsert({
+                    id: user.id,
+                    full_name: user.fullName,
+                    avatar_url: user.imageUrl,
+                    streak: (user.unsafeMetadata.streak as number) || 0,
+                    coins: (user.unsafeMetadata.coins as number) || 0,
+                    freezes: user.unsafeMetadata.freezes !== undefined ? (user.unsafeMetadata.freezes as number) : 2,
+                    last_read_date: user.unsafeMetadata.lastReadDate as string || null
                 });
 
-                setComments(normalizedComments);
-            }
+                // 2. Fetch Comments for this Surah
+                const { data: dbComments, error } = await supabase
+                    .from('comments')
+                    .select('*, profiles!user_id(full_name, avatar_url)')
+                    .filter('verse_key', 'ilike', `${idUnwrapped}:%`)
+                    .order('created_at', { ascending: true });
+
+                if (!error && dbComments) {
+                    const normalized: Record<string, Comment[]> = {};
+                    dbComments.forEach((c: any) => {
+                        const vKey = c.verse_key;
+                        if (!normalized[vKey]) normalized[vKey] = [];
+
+                        const commentObj: Comment = {
+                            id: c.id,
+                            text: c.content,
+                            timestamp: new Date(c.created_at).getTime(),
+                            userId: c.user_id,
+                            userName: c.profiles?.full_name || "Kullanıcı",
+                            userImage: c.profiles?.avatar_url,
+                            parentId: c.parent_id,
+                            likes: c.likes_count,
+                            replies: []
+                        };
+
+                        if (c.parent_id) {
+                            // Find parent and append
+                            const parent = normalized[vKey].find(p => p.id === c.parent_id);
+                            if (parent) {
+                                if (!parent.replies) parent.replies = [];
+                                parent.replies.push(commentObj);
+                            }
+                        } else {
+                            normalized[vKey].push(commentObj);
+                        }
+                    });
+                    setComments(normalized);
+
+                    // 3. Fetch Comment Likes Status
+                    if (user) {
+                        const { data: likes } = await supabase
+                            .from('comment_likes')
+                            .select('comment_id')
+                            .eq('user_id', user.id);
+
+                        if (likes) {
+                            setLikedComments(new Set(likes.map(l => l.comment_id)));
+                        }
+                    }
+                }
+            };
+
+            syncAndFetch();
         }
-    }, [user]);
+    }, [user, idUnwrapped]);
 
     useEffect(() => {
         async function fetchData() {
@@ -91,10 +233,19 @@ export default function SurahPage() {
                     const today = new Date().toDateString();
                     const lastReadDate = user.unsafeMetadata.lastReadDate as string | undefined;
                     const currentStreak = (user.unsafeMetadata.streak as number) || 0;
+                    const currentCoins = (user.unsafeMetadata.coins as number) || 0;
+                    const currentFreezes = user.unsafeMetadata.freezes !== undefined
+                        ? (user.unsafeMetadata.freezes as number)
+                        : 2;
 
                     let newStreak = currentStreak;
+                    let newCoins = currentCoins;
+                    let newFreezes = currentFreezes;
 
                     if (lastReadDate !== today) {
+                        // Earn coins for first read of the day
+                        newCoins += 10;
+
                         const yesterday = new Date();
                         yesterday.setDate(yesterday.getDate() - 1);
 
@@ -102,6 +253,18 @@ export default function SurahPage() {
                             newStreak += 1;
                             setShowCelebration(true);
                             setTimeout(() => setShowCelebration(false), 4000);
+                        } else if (lastReadDate) {
+                            // Missed day(s)
+                            if (newFreezes > 0) {
+                                newFreezes -= 1;
+                                // Streak stays as is (frozen)
+                                // Increment streak for today's read as well? 
+                                // Usually freeze protects it, then today's action increments it.
+                                // Logic: (Pre-missed streak) + 1
+                                newStreak += 1;
+                            } else {
+                                newStreak = 1;
+                            }
                         } else {
                             newStreak = 1;
                         }
@@ -113,7 +276,9 @@ export default function SurahPage() {
                             ...user.unsafeMetadata,
                             lastRead: `/kuran/${idUnwrapped}`,
                             lastReadDate: today,
-                            streak: newStreak
+                            streak: newStreak,
+                            coins: newCoins,
+                            freezes: newFreezes
                         }
                     }).catch(e => console.error("Streak sync failed", e));
                 }
@@ -229,53 +394,129 @@ export default function SurahPage() {
     const handleSaveComment = async (verseKey: string, text: string) => {
         if (!user || text.trim() === "") return;
 
-        const newComment: Comment = {
-            id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
-            text: text,
-            timestamp: Date.now(),
-            userId: user.id,
-            userName: user.fullName || "Kullanıcı",
-            userImage: user.imageUrl
-        };
-
-        const existingComments = comments[verseKey] || [];
-        const updatedVerseComments = [...existingComments, newComment];
-
-        const newCommentsState = {
-            ...comments,
-            [verseKey]: updatedVerseComments
-        };
-
-        setComments(newCommentsState);
+        const parentId = replyingTo?.commentId || null;
 
         try {
-            await fetch("/api/user/comment", {
-                method: "POST",
-                body: JSON.stringify({ verseKey, comments: updatedVerseComments }), // Send full array
+            const { data: newComment, error } = await supabase
+                .from('comments')
+                .insert({
+                    user_id: user.id,
+                    verse_key: verseKey,
+                    content: text,
+                    parent_id: parentId
+                })
+                .select('*, profiles!user_id(full_name, avatar_url)')
+                .single();
+
+            if (error) throw error;
+
+            const commentObj: Comment = {
+                id: newComment.id,
+                text: newComment.content,
+                timestamp: new Date(newComment.created_at).getTime(),
+                userId: newComment.user_id,
+                userName: newComment.profiles?.full_name || "Kullanıcı",
+                userImage: newComment.profiles?.avatar_url,
+                parentId: newComment.parent_id,
+                likes: 0,
+                replies: []
+            };
+
+            setComments(prev => {
+                const verseComments = prev[verseKey] || [];
+                if (parentId) {
+                    // Update parent's replies
+                    return {
+                        ...prev,
+                        [verseKey]: verseComments.map(p =>
+                            p.id === parentId
+                                ? { ...p, replies: [...(p.replies || []), commentObj] }
+                                : p
+                        )
+                    };
+                } else {
+                    return {
+                        ...prev,
+                        [verseKey]: [...verseComments, commentObj]
+                    };
+                }
             });
+
+            setReplyingTo(null);
+            // Clear input
+            const input = document.getElementById(`comment-input-${verseKey}`) as HTMLTextAreaElement;
+            if (input) input.value = '';
+
         } catch (error) {
             console.error("Comment error", error);
-            setComments(comments); // Revert? Ideally reload
         }
+    };
+
+    const handleLikeComment = async (commentId: string, verseKey: string) => {
+        if (!user) return;
+
+        const isLiked = likedComments.has(commentId);
+
+        // Optimistic UI updates
+        setLikedComments(prev => {
+            const next = new Set(prev);
+            if (isLiked) next.delete(commentId);
+            else next.add(commentId);
+            return next;
+        });
+
+        const updateLikesRecursive = (list: Comment[]): Comment[] => {
+            return list.map(c => {
+                if (c.id === commentId) {
+                    return { ...c, likes: isLiked ? (c.likes || 1) - 1 : (c.likes || 0) + 1 };
+                }
+                if (c.replies && c.replies.length > 0) {
+                    return { ...c, replies: updateLikesRecursive(c.replies) };
+                }
+                return c;
+            });
+        };
+
+        setComments(prev => ({
+            ...prev,
+            [verseKey]: updateLikesRecursive(prev[verseKey] || [])
+        }));
+
+        await supabase.rpc('toggle_comment_like', {
+            target_comment_id: commentId,
+            target_user_id: user.id
+        });
     };
 
     const handleDeleteComment = async (verseKey: string, commentId: string) => {
         if (!user) return;
 
-        const existingComments = comments[verseKey] || [];
-        const updatedVerseComments = existingComments.filter(c => c.id !== commentId);
-
-        const newCommentsState = {
-            ...comments,
-            [verseKey]: updatedVerseComments
-        };
-
-        setComments(newCommentsState);
-
         try {
-            await fetch("/api/user/comment", {
-                method: "POST",
-                body: JSON.stringify({ verseKey, comments: updatedVerseComments }),
+            const { error } = await supabase
+                .from('comments')
+                .delete()
+                .eq('id', commentId)
+                .eq('user_id', user.id);
+
+            if (error) throw error;
+
+            setComments(prev => {
+                const verseComments = prev[verseKey] || [];
+                // Check if it's a top-level comment
+                if (verseComments.some(c => c.id === commentId)) {
+                    return {
+                        ...prev,
+                        [verseKey]: verseComments.filter(c => c.id !== commentId)
+                    };
+                }
+                // Check if it's a reply
+                return {
+                    ...prev,
+                    [verseKey]: verseComments.map(p => ({
+                        ...p,
+                        replies: p.replies?.filter(r => r.id !== commentId)
+                    }))
+                };
             });
         } catch (error) {
             console.error("Delete error", error);
@@ -527,137 +768,57 @@ export default function SurahPage() {
                                 {(isExpanded || hasComment) && (
                                     <div className={`mt-6 pt-6 border-t border-slate-800/50 ${!isExpanded && !hasComment && "hidden"}`}>
 
-                                        {/* Existing Comments Thread */}
-                                        {verseComments.map((comment, index) => (
-                                            <div key={comment.id} className="bg-[#1a1c23] rounded-sm overflow-hidden border border-slate-800 flex flex-col md:flex-row mb-6 shadow-sm">
-                                                {/* User Sidebar (Classic Forum Style) */}
-                                                <div className="bg-[#15171c] md:w-48 p-4 border-b md:border-b-0 md:border-r border-slate-800 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-2 shrink-0">
-                                                    <div className="w-12 h-12 md:w-24 md:h-24 bg-slate-800 border border-slate-700 shadow-inner flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-amber-500/50 transition-all">
-                                                        {comment.userImage ? (
-                                                            <img src={comment.userImage} alt="User" className="w-full h-full object-cover" />
-                                                        ) : (
-                                                            <div className="text-amber-500 font-bold text-lg">{comment.userName?.[0] || "U"}</div>
-                                                        )}
-                                                    </div>
-
-                                                    <div className="text-left md:text-center w-full">
-                                                        <div className="text-slate-200 font-bold text-sm hover:underline cursor-pointer truncate">
-                                                            {comment.userName}
-                                                        </div>
-                                                        <div className="text-[10px] text-amber-500 font-bold uppercase mt-1 tracking-wider">
-                                                            Talip
-                                                        </div>
-
-                                                        {/* User Stats - Static for now */}
-                                                        <div className="hidden md:block mt-4 space-y-1 text-[10px] text-slate-500 border-t border-slate-800 pt-2 w-full text-left">
-                                                            <div className="flex justify-between">
-                                                                <span>Kayıt:</span>
-                                                                <span className="text-slate-400">Ocak 2026</span>
-                                                            </div>
-                                                            <div className="flex justify-between">
-                                                                <span>Mesajlar:</span>
-                                                                <span className="text-slate-400 text-amber-500/80 font-bold">{(verseComments.length * 5) + 42}</span>
-                                                            </div>
-                                                            <div className="flex justify-between">
-                                                                <span>Puan:</span>
-                                                                <span className="text-slate-400">{reputations[comment.id] || 0}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                {/* Main Content Area */}
-                                                <div className="flex-1 flex flex-col min-w-0">
-                                                    {/* Post Header */}
-                                                    <div className="bg-[#1f2229] px-4 py-2 border-b border-slate-800 flex items-center justify-between text-xs text-slate-500">
-                                                        <div className="flex items-center gap-2">
-                                                            <span className="font-bold text-slate-400">#{verse.verseNumber}</span>
-                                                            <span>•</span>
-                                                            <span>{new Date(comment.timestamp).toLocaleDateString()} {new Date(comment.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
-                                                        </div>
-                                                        <div className="flex gap-2">
-                                                            <span className="hover:text-slate-300 cursor-pointer">#{index + 1}</span>
-                                                        </div>
-                                                    </div>
-
-                                                    {/* Post Body (Read-only) */}
-                                                    <div className="p-4 flex-1 text-slate-300 text-sm leading-relaxed font-sans">
-                                                        {comment.text.split(" ").map((word, i) => {
-                                                            if (word.startsWith("![gif](") && word.endsWith(")")) {
-                                                                const url = word.slice(7, -1);
-                                                                return <img key={i} src={url} className="my-2 max-h-48 block border border-slate-700" alt="GIF" />;
-                                                            }
-                                                            return <span key={i}>{word} </span>;
-                                                        })}
-                                                    </div>
-
-                                                    {/* Signature */}
-                                                    <div className="px-4 pb-4">
-                                                        <div className="w-full h-px bg-slate-800 mb-2"></div>
-                                                        <div className="text-[10px] text-slate-600 italic">
-                                                            "Sizin en hayırlınız Kur'an'ı öğrenen ve öğretendir."
-                                                        </div>
-                                                    </div>
-
-                                                    {/* Action Bar */}
-                                                    <div className="bg-[#1f2229] px-4 py-2 border-t border-slate-800 flex justify-end gap-2 text-xs">
-                                                        <button
-                                                            onClick={() => handleLike(comment.id)}
-                                                            className="flex items-center gap-1 text-slate-400 hover:text-red-500 px-2 py-1 transition-colors"
-                                                        >
-                                                            <Heart size={12} fill={reputations[comment.id] ? "currentColor" : "none"} />
-                                                            {reputations[comment.id] ? `Beğendin (${reputations[comment.id]})` : "Beğen"}
-                                                        </button>
-                                                        <button
-                                                            onClick={() => {
-                                                                const el = document.getElementById(`comment-input-${verse.verseKey}`) as HTMLTextAreaElement;
-                                                                if (el) {
-                                                                    el.value = `> ${comment.text.substring(0, 50)}...\n\n`;
-                                                                    el.focus();
-                                                                    setExpandedCommentVerse(verse.verseKey);
-                                                                }
-                                                            }}
-                                                            className="flex items-center gap-1 text-slate-400 hover:text-white px-2 py-1 border-l border-slate-700 pl-2 transition-colors"
-                                                        >
-                                                            <MessageCircle size={12} /> Alıntı Yap
-                                                        </button>
-                                                        <button
-                                                            onClick={() => alert("Bu yorum rapor edildi. Moderatörler inceleyecektir.")}
-                                                            className="flex items-center gap-1 text-slate-400 hover:text-white px-2 py-1 border-l border-slate-700 pl-2 transition-colors"
-                                                        >
-                                                            Rapor Et
-                                                        </button>
-                                                        {user?.id === comment.userId && (
-                                                            <button
-                                                                onClick={() => {
-                                                                    if (confirm('Bu yorumu silmek istediğinize emin misiniz?')) {
-                                                                        handleDeleteComment(verse.verseKey, comment.id);
-                                                                    }
-                                                                }}
-                                                                className="flex items-center gap-1 text-slate-600 hover:text-red-500 px-2 py-1 border-l border-slate-700 pl-2 transition-colors ml-2"
-                                                            >
-                                                                Sil
-                                                            </button>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
+                                        {/* Existing Comments Thread (Social Style) */}
+                                        <div className="space-y-4">
+                                            {verseComments.map((comment) => (
+                                                <CommentItem
+                                                    key={comment.id}
+                                                    comment={comment}
+                                                    verseKey={verse.verseKey}
+                                                    onReply={(id, name) => setReplyingTo({ commentId: id, userName: name })}
+                                                    onDelete={(id) => handleDeleteComment(verse.verseKey, id)}
+                                                    onLike={(id) => handleLikeComment(id, verse.verseKey)}
+                                                    likedComments={likedComments}
+                                                    currentUserId={user?.id}
+                                                />
+                                            ))}
+                                        </div>
 
                                         {/* New Comment Form (Only if expanded) */}
                                         {isExpanded && (
-                                            <div className="bg-[#1a1c23] rounded-sm border border-slate-800 p-4 mt-6">
-                                                <div className="mb-2 text-xs font-bold text-slate-400 uppercase tracking-widest">Cevap Yaz</div>
-                                                <div className="space-y-3">
+                                            <div className="bg-[#1a1c23] rounded-3xl border border-slate-800 p-6 mt-8 shadow-xl">
+                                                <div className="flex items-center justify-between mb-4">
+                                                    <div className="text-xs font-black text-slate-500 uppercase tracking-[0.2em]">
+                                                        {replyingTo ? (
+                                                            <div className="flex items-center gap-2 text-amber-500">
+                                                                <MessageCircle size={14} />
+                                                                {replyingTo.userName} ADLI KULLANICIYA YANIT VERİLİYOR
+                                                            </div>
+                                                        ) : (
+                                                            "BİR NOT BIRAK"
+                                                        )}
+                                                    </div>
+                                                    {replyingTo && (
+                                                        <button
+                                                            onClick={() => setReplyingTo(null)}
+                                                            className="text-slate-500 hover:text-white transition-colors"
+                                                            title="Yanıtı iptal et"
+                                                        >
+                                                            <X size={16} />
+                                                        </button>
+                                                    )}
+                                                </div>
+                                                <div className="space-y-4">
                                                     <textarea
-                                                        className="w-full bg-[#0b0c0f] text-slate-300 p-3 border border-slate-700 focus:border-amber-600 outline-none transition-all resize-y text-sm font-sans min-h-[120px]"
-                                                        placeholder="Düşüncelerinizi paylaşın..."
+                                                        className="w-full bg-[#0b0c0f] text-slate-200 p-4 rounded-2xl border border-slate-800 focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 outline-none transition-all resize-none shadow-inner text-sm leading-relaxed"
+                                                        placeholder={replyingTo ? "Yanıtınızı buraya yazın..." : "Bu ayet hakkında ne düşünüyorsunuz?"}
                                                         id={`comment-input-${verse.verseKey}`}
+                                                        rows={3}
                                                     />
 
                                                     {/* GIF Search Results */}
                                                     {gifSearchOpen === verse.verseKey && (
-                                                        <div className="bg-[#15171c] p-2 border border-slate-700 h-48 overflow-y-auto grid grid-cols-3 gap-2">
+                                                        <div className="bg-[#15171c] p-2 border border-slate-800 h-48 overflow-y-auto grid grid-cols-3 gap-2 rounded-xl">
                                                             {[
                                                                 "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zg/3o7TKr3nzbh5WgCFxe/giphy.gif",
                                                                 "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zmx6Zg/l0HlHFRbmaZtBRhXG/giphy.gif",
@@ -667,7 +828,7 @@ export default function SurahPage() {
                                                                 <img
                                                                     key={i}
                                                                     src={url}
-                                                                    className="w-full h-auto cursor-pointer hover:opacity-80 border border-slate-800"
+                                                                    className="w-full h-auto cursor-pointer hover:opacity-80 border border-slate-800 rounded-lg"
                                                                     onClick={() => {
                                                                         const el = document.getElementById(`comment-input-${verse.verseKey}`) as HTMLTextAreaElement;
                                                                         if (el) el.value += ` ![gif](${url}) `;
@@ -678,25 +839,23 @@ export default function SurahPage() {
                                                         </div>
                                                     )}
 
-                                                    <div className="flex justify-between items-center pt-2">
+                                                    <div className="flex justify-between items-center px-1">
                                                         <button
                                                             onClick={() => setGifSearchOpen(gifSearchOpen === verse.verseKey ? null : verse.verseKey)}
-                                                            className="px-3 py-1 bg-slate-700 text-slate-300 hover:bg-slate-600 rounded text-xs font-bold"
+                                                            className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl text-xs font-bold transition-all"
                                                         >
-                                                            + GIF Ekle
+                                                            <Image size={14} /> GIF Ekle
                                                         </button>
                                                         <button
                                                             onClick={() => {
                                                                 const el = document.getElementById(`comment-input-${verse.verseKey}`) as HTMLTextAreaElement;
                                                                 if (el && el.value.trim()) {
                                                                     handleSaveComment(verse.verseKey, el.value);
-                                                                    el.value = ""; // Clear input
-                                                                    // Do not collapse, allowing multiple comments
                                                                 }
                                                             }}
-                                                            className="px-6 py-2 bg-amber-600 text-white font-bold hover:bg-amber-700 rounded text-xs transition-transform active:scale-95"
+                                                            className="px-8 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs font-black shadow-lg shadow-amber-600/20 active:scale-95 transition-all uppercase tracking-widest"
                                                         >
-                                                            Cevabı Gönder
+                                                            {replyingTo ? "PANELİ KAPAT VE YANITLA" : "PAYLAŞ"}
                                                         </button>
                                                     </div>
                                                 </div>
