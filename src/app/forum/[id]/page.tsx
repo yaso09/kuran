@@ -117,6 +117,15 @@ export default function ForumPostDetailPage() {
     const [replyingTo, setReplyingTo] = useState<{ commentId: string, userName: string } | null>(null);
     const [likedPost, setLikedPost] = useState(false);
     const [likedComments, setLikedComments] = useState<Set<string>>(new Set());
+    const commentFormRef = useRef<HTMLDivElement>(null);
+
+    const scrollToCommentForm = () => {
+        if (commentFormRef.current) {
+            commentFormRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const input = document.getElementById('comment-input');
+            if (input) input.focus();
+        }
+    };
 
     useEffect(() => {
         if (postId) {
@@ -202,30 +211,34 @@ export default function ForumPostDetailPage() {
     };
 
     const handleSaveComment = async () => {
+        if (!user) {
+            alert('Yorum yapmak için giriş yapmalısınız.');
+            return;
+        }
+
         const textEl = document.getElementById('comment-input') as HTMLTextAreaElement;
         const text = textEl?.value;
-        if (!user || !text?.trim()) return;
+        if (!text?.trim()) return;
 
         setSubmitting(true);
         try {
-            const { data: newComment, error } = await supabase
+            const { error } = await supabase
                 .from('forum_comments')
                 .insert({
                     post_id: postId,
                     user_id: user.id,
                     content: text,
                     parent_id: replyingTo?.commentId || null
-                })
-                .select('*, profiles!user_id(full_name, avatar_url)')
-                .single();
+                });
 
             if (error) throw error;
 
             if (textEl) textEl.value = '';
             setReplyingTo(null);
-            fetchPostAndComments(); // Refresh for simplicity
+            fetchPostAndComments();
         } catch (err) {
             console.error(err);
+            alert('Yorum gönderilirken bir hata oluştu.');
         } finally {
             setSubmitting(false);
         }
@@ -434,7 +447,7 @@ export default function ForumPostDetailPage() {
                     </h2>
 
                     {/* Comment Form */}
-                    <div className="bg-[#15171c] rounded-3xl border border-slate-800 p-6 shadow-xl relative overflow-hidden">
+                    <div ref={commentFormRef} className="bg-[#15171c] rounded-3xl border border-slate-800 p-6 shadow-xl relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-1 h-full bg-amber-600" />
                         <div className="flex items-center justify-between mb-4">
                             <div className="text-xs font-black text-slate-500 uppercase tracking-[0.2em]">
@@ -485,7 +498,10 @@ export default function ForumPostDetailPage() {
                                     key={c.id}
                                     comment={c}
                                     postId={postId}
-                                    onReply={(id, name) => setReplyingTo({ commentId: id, userName: name })}
+                                    onReply={(id, name) => {
+                                        setReplyingTo({ commentId: id, userName: name });
+                                        scrollToCommentForm();
+                                    }}
                                     onDelete={handleDeleteComment}
                                     onLike={handleLikeComment}
                                     likedComments={likedComments}

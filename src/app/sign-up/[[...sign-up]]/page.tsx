@@ -6,8 +6,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
-import SocialButton from '@/components/auth/SocialButton';
-import { Mail, Lock, User, Loader2, Chrome, Check, X } from 'lucide-react';
+import { Mail, Lock, User, Loader2, Check, X } from 'lucide-react';
 
 export default function SignUpPage() {
     const { isLoaded, signUp, setActive } = useSignUp();
@@ -132,20 +131,6 @@ export default function SignUpPage() {
         }
     };
 
-    const handleSocialSignUp = async (strategy: 'oauth_google' | 'oauth_github') => {
-        if (!isLoaded) return;
-
-        try {
-            await signUp.authenticateWithRedirect({
-                strategy,
-                redirectUrl: '/sso-callback',
-                redirectUrlComplete: '/',
-            });
-        } catch (err) {
-            console.error('Social sign up error:', err);
-            setErrors({ general: 'Sosyal kayıt başarısız oldu. Lütfen tekrar deneyin.' });
-        }
-    };
 
     if (pendingVerification) {
         return (
@@ -277,7 +262,7 @@ export default function SignUpPage() {
                         value={formData.confirmPassword}
                         onChange={handleChange}
                         error={errors.confirmPassword}
-                        success={formData.confirmPassword && formData.password === formData.confirmPassword}
+                        success={!!formData.confirmPassword && formData.password === formData.confirmPassword}
                         required
                     />
 
@@ -297,26 +282,6 @@ export default function SignUpPage() {
                         )}
                     </button>
 
-                    {/* Divider */}
-                    <div className="relative">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t border-slate-800"></div>
-                        </div>
-                        <div className="relative flex justify-center text-xs uppercase">
-                            <span className="bg-[#15171c] px-4 text-slate-500 font-bold tracking-wider">
-                                veya
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Social Sign Up */}
-                    <div className="space-y-3">
-                        <SocialButton
-                            provider="google"
-                            icon={Chrome}
-                            onClick={() => handleSocialSignUp('oauth_google')}
-                        />
-                    </div>
 
                     {/* Sign In Link */}
                     <div className="text-center pt-4 border-t border-slate-800">
