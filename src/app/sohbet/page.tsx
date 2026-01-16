@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { ArrowRight, Loader2, ArrowUpRight, Sparkles, Trash2, Download, MessageSquare, Plus, History } from "lucide-react";
 import Link from "next/link";
 import { SURAHS } from "@/lib/constants";
@@ -28,6 +29,9 @@ export default function ChatPage() {
     const [currentConversationId, setCurrentConversationId] = useState<string | null>(null);
     const [showHistory, setShowHistory] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    // Track page visit
+    usePageTracking('/sohbet', 'Sohbet');
 
     // Load conversations from localStorage on mount
     useEffect(() => {

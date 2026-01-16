@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { ArrowRight, Book, Headphones, Heart, Bookmark, Loader2, ArrowUpRight, Sparkles, Flame, Check, Download } from "lucide-react";
 import { usePWAInstall } from "@/hooks/usePWAInstall";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { useUser, SignedIn } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { SURAHS } from "@/lib/constants";
@@ -26,6 +27,9 @@ export default function Home() {
 
   // PWA Install
   const { canInstall, install } = usePWAInstall();
+
+  // Track page visit
+  usePageTracking('/', 'Ana Sayfa');
 
   useEffect(() => {
     const fetchBookmarks = async () => {

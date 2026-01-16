@@ -4,10 +4,14 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { SURAHS } from "@/lib/constants";
 import { useUser } from "@clerk/nextjs";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { Check } from "lucide-react";
 
 export default function KuranPage() {
     const { user, isLoaded } = useUser();
+
+    // Track page visit
+    usePageTracking('/kuran', 'Sureler');
 
     if (!isLoaded) return null;
 

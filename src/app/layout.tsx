@@ -3,6 +3,7 @@ import { Inter, Amiri } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
 import PWARegistration from "@/components/PWARegistration";
+import NotificationInitializer from "@/components/NotificationInitializer";
 
 const inter = Inter({ subsets: ["latin"] });
 const amiri = Amiri({
@@ -46,6 +47,7 @@ export default function RootLayout({
           className={`${inter.className} ${amiri.variable} antialiased`}
         >
           <PWARegistration />
+          <NotificationInitializer />
           {children}
         </body>
       </html>

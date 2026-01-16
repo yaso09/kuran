@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { UserButton, SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { Menu, X, BookOpen } from "lucide-react";
 import { useState } from "react";
 import StreakDisplay from "./StreakDisplay";
+import ProfileDropdown from "./ProfileDropdown";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,18 +36,21 @@ export default function Navbar() {
                         <Link href="/forum" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Forum
                         </Link>
+                        <Link href="/analizler" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Analizler
+                        </Link>
 
                         <div className="ml-4 flex items-center gap-4">
                             <SignedIn>
                                 <StreakDisplay />
-                                <UserButton afterSignOutUrl="/" />
+                                <ProfileDropdown />
                             </SignedIn>
                             <SignedOut>
-                                <SignInButton mode="modal">
+                                <Link href="/sign-in">
                                     <button className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-700 transition-colors shadow-sm hover:shadow-md hover:shadow-amber-600/20">
                                         Giriş Yap
                                     </button>
-                                </SignInButton>
+                                </Link>
                             </SignedOut>
                         </div>
                     </div>
@@ -90,14 +94,28 @@ export default function Navbar() {
                         >
                             Forum
                         </Link>
+                        <Link
+                            href="/analizler"
+                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                        >
+                            Analizler
+                        </Link>
+                        <SignedIn>
+                            <Link
+                                href="/ayarlar"
+                                className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                            >
+                                Ayarlar
+                            </Link>
+                        </SignedIn>
                         <div className="pl-3 pr-4 py-2">
                             <SignedIn>
                                 <UserButton afterSignOutUrl="/" />
                             </SignedIn>
                             <SignedOut>
-                                <SignInButton mode="modal">
+                                <Link href="/sign-in">
                                     <button className="w-full text-left font-medium text-amber-500">Giriş Yap</button>
-                                </SignInButton>
+                                </Link>
                             </SignedOut>
                         </div>
                     </div>

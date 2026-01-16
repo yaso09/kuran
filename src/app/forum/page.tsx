@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import {
     Loader2, MessageCircle, Heart, User, ArrowRight, BookOpen,
     Flame, Plus, Search, Tag, Filter, Send, X, ChevronDown,
@@ -32,6 +33,9 @@ type ForumPost = {
 export default function ForumPage() {
     const { user, isLoaded: userLoaded } = useUser();
     const [posts, setPosts] = useState<ForumPost[]>([]);
+
+    // Track page visit
+    usePageTracking('/forum', 'Forum');
     const [loading, setLoading] = useState(true);
     const [isCreating, setIsCreating] = useState(false);
     const [filter, setFilter] = useState("Hepsi");

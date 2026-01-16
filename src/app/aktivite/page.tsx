@@ -2,6 +2,7 @@
 
 import React from "react";
 import Navbar from "@/components/Navbar";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { useUser, SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { Flame, Calendar, Trophy, Target, BookOpen, Check, Coins, Snowflake, Loader2 } from "lucide-react";
 import Link from "next/link";
@@ -9,6 +10,9 @@ import Link from "next/link";
 export default function ActivityPage() {
     const { user, isLoaded } = useUser();
     const [buying, setBuying] = React.useState(false);
+
+    // Track page visit
+    usePageTracking('/aktivite', 'Aktivite');
 
     if (!isLoaded) return null;
 

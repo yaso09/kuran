@@ -1,9 +1,15 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
+import { usePageTracking } from "@/hooks/usePageTracking";
 import { Headphones, PlayCircle, Play } from "lucide-react";
 import Link from "next/link";
 import { SURAHS } from "@/lib/constants";
 
 export default function DinlePage() {
+    // Track page visit
+    usePageTracking('/dinle', 'Dinle');
+
     const popularSurahs = [1, 18, 36, 67, 78]; // Fatiha, Kehf, Yasin, Mulk, Nebe
 
     return (
