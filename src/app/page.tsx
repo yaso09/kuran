@@ -80,7 +80,6 @@ export default function Home() {
     setSearchResults([]);
 
     try {
-      // 1. Call Cerebras AI API
       const cerebrasApiKey = process.env.NEXT_PUBLIC_CEREBRAS_API_KEY;
 
       if (!cerebrasApiKey) {
@@ -117,10 +116,10 @@ export default function Home() {
       const aiData = await aiResponse.json();
       const content = aiData.choices?.[0]?.message?.content || "";
 
-      // 2. Parse references (e.g., "2:153, 3:10")
+      // Parse references
       const refs = content.split(",").map((s: string) => s.trim()).filter((s: string) => s.includes(":"));
 
-      // 3. Fetch detailed data for each reference from our API
+      // Fetch detailed data
       const detailedResults = await Promise.all(refs.map(async (ref: string) => {
         try {
           const res = await fetch(`/api/ayet/${ref}`);
@@ -128,7 +127,7 @@ export default function Home() {
           const data = await res.json();
           return {
             surahId: data.sureNo,
-            surahName: SURAHS.find(s => s.id === data.sureNo)?.name || `Sure ${data.sureNo}`,
+            surahName: SURAHS.find((s: any) => s.id === data.sureNo)?.name || `Sure ${data.sureNo}`,
             verseNumber: data.verseNumber,
             text: data.turkish?.diyanet_vakfi,
             arabic: data.arabic
@@ -208,7 +207,7 @@ export default function Home() {
                 </div>
               ) : searchResults.length > 0 ? (
                 <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
-                  {searchResults.map((result, i) => (
+                  {searchResults.map((result: any, i: number) => (
                     <Link
                       key={i}
                       href={`/kuran/${result.surahId}#ayet-${result.verseNumber}`}
