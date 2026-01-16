@@ -136,6 +136,7 @@ export default function SurahPage() {
     const [likedComments, setLikedComments] = useState<Set<string>>(new Set());
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
+    const wakeLockRef = useRef<any>(null);
     const verseRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
     const metadataUpdatedRef = useRef(false); // Ref to prevent infinite loops
     const lastSavedVerseRef = useRef<string | null>(null); // Ref to throttle metadata updates
@@ -530,15 +531,41 @@ export default function SurahPage() {
         }));
     };
 
+    // Wake Lock Management
+    const requestWakeLock = async () => {
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLockRef.current = await (navigator as any).wakeLock.request('screen');
+                console.log('Wake Lock activated');
+            }
+        } catch (err) {
+            console.error('Wake Lock error:', err);
+        }
+    };
+
+    const releaseWakeLock = async () => {
+        try {
+            if (wakeLockRef.current) {
+                await wakeLockRef.current.release();
+                wakeLockRef.current = null;
+                console.log('Wake Lock released');
+            }
+        } catch (err) {
+            console.error('Wake Lock release error:', err);
+        }
+    };
+
     // Audio Playback Handler
     const playVerse = (verse: Verse) => {
         if (playingVerse === verse.verseKey) {
             if (isPlaying) {
                 audioRef.current?.pause();
                 setIsPlaying(false);
+                releaseWakeLock();
             } else {
                 audioRef.current?.play();
                 setIsPlaying(true);
+                requestWakeLock();
             }
         } else {
             const url = verse.audio?.ghamadi;
@@ -547,6 +574,7 @@ export default function SurahPage() {
                 audioRef.current.play().then(() => {
                     setPlayingVerse(verse.verseKey);
                     setIsPlaying(true);
+                    requestWakeLock();
                 }).catch(e => console.error("Audio Error:", e));
             }
         }
@@ -566,6 +594,7 @@ export default function SurahPage() {
             } else {
                 setPlayingVerse(null);
                 setIsPlaying(false);
+                releaseWakeLock();
             }
         }
     };
