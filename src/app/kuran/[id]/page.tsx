@@ -382,56 +382,59 @@ export default function SurahPage() {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
                         {/* View Mode Toggle */}
-                        <div className="flex bg-slate-800/50 p-1 rounded-full border border-slate-700 mx-2 hidden lg:flex">
+                        <div className="flex bg-slate-800/50 p-1 rounded-full border border-slate-700">
                             <button
                                 onClick={() => setViewMode('full')}
-                                className={`px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${viewMode === 'full' ? 'bg-amber-600 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
+                                className={`px-3 sm:px-4 py-1 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-all ${viewMode === 'full' ? 'bg-amber-600 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
                             >
                                 Mealli
                             </button>
                             <button
                                 onClick={() => setViewMode('reading')}
-                                className={`px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${viewMode === 'reading' ? 'bg-amber-600 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
+                                className={`px-3 sm:px-4 py-1 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-widest transition-all ${viewMode === 'reading' ? 'bg-amber-600 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
                             >
                                 İbadet
                             </button>
                         </div>
 
-                        {/* Meal Selection (Mobile friendly dropdown) */}
+                        {/* Meal Selection */}
                         {viewMode === 'full' && (
                             <select
                                 value={selectedMeal}
                                 onChange={(e) => setSelectedMeal(e.target.value as any)}
-                                className="bg-slate-800 text-slate-300 text-[10px] font-black uppercase py-1.5 px-3 rounded-full border border-slate-700 outline-none focus:border-amber-500/50 transition-colors cursor-pointer hidden sm:block"
+                                className="bg-slate-800 text-slate-300 text-[9px] sm:text-[10px] font-black uppercase py-1.5 px-2 sm:px-3 rounded-full border border-slate-700 outline-none focus:border-amber-500/50 transition-colors cursor-pointer"
                             >
                                 <option value="diyanet_vakfi">Diyanet</option>
-                                <option value="omer_nasuhi_bilmen">Ö. Nasuhi Bilmen</option>
-                                <option value="hayrat_nesriyat">Hayrat Neşriyat</option>
+                                <option value="omer_nasuhi_bilmen">Ö. Nasuhi</option>
+                                <option value="hayrat_nesriyat">Hayrat</option>
                             </select>
                         )}
 
                         <button
                             onClick={playFullSurah}
-                            className="hidden sm:flex items-center gap-2 bg-amber-600 text-white px-4 py-1.5 rounded-full text-sm font-medium hover:bg-amber-700 transition-colors shadow-sm hover:shadow-md hover:shadow-amber-600/20"
+                            className="flex items-center gap-2 bg-amber-600 text-white p-1.5 sm:px-4 sm:py-1.5 rounded-full text-sm font-medium hover:bg-amber-700 transition-colors shadow-sm hover:shadow-md hover:shadow-amber-600/20"
+                            title="Sureyi Dinle"
                         >
                             <Play size={14} fill="currentColor" />
-                            Sureyi Dinle
+                            <span className="hidden sm:inline">Sureyi Dinle</span>
                         </button>
 
-                        <div className="h-6 w-px bg-slate-800 mx-2 hidden sm:block"></div>
+                        <div className="h-6 w-px bg-slate-800 mx-1 hidden sm:block"></div>
 
-                        {surahId > 1 && (
-                            <Link href={`/kuran/${surahId - 1}`} className="p-2 text-slate-400 hover:bg-slate-800 hover:text-amber-500 hover:shadow-sm rounded-full transition-all border border-transparent hover:border-slate-800" title="Önceki">
-                                <ChevronLeft size={20} />
-                            </Link>
-                        )}
-                        {surahId < 114 && (
-                            <Link href={`/kuran/${surahId + 1}`} className="p-2 text-slate-400 hover:bg-slate-800 hover:text-amber-500 hover:shadow-sm rounded-full transition-all border border-transparent hover:border-slate-800" title="Sonraki">
-                                <ChevronRight size={20} />
-                            </Link>
-                        )}
+                        <div className="flex items-center gap-1">
+                            {surahId > 1 && (
+                                <Link href={`/kuran/${surahId - 1}`} className="p-1.5 sm:p-2 text-slate-400 hover:bg-slate-800 hover:text-amber-500 hover:shadow-sm rounded-full transition-all border border-transparent hover:border-slate-800" title="Önceki">
+                                    <ChevronLeft size={20} />
+                                </Link>
+                            )}
+                            {surahId < 114 && (
+                                <Link href={`/kuran/${surahId + 1}`} className="p-1.5 sm:p-2 text-slate-400 hover:bg-slate-800 hover:text-amber-500 hover:shadow-sm rounded-full transition-all border border-transparent hover:border-slate-800" title="Sonraki">
+                                    <ChevronRight size={20} />
+                                </Link>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

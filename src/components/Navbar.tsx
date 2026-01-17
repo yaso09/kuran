@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X, BookOpen, Bell } from "lucide-react";
 import { useState } from "react";
 import StreakDisplay from "./StreakDisplay";
 import ProfileDropdown from "./ProfileDropdown";
@@ -42,6 +42,10 @@ export default function Navbar() {
                         <Link href="/analizler" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Analizler
                         </Link>
+                        <Link href="/bildirimler" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
+                            <Bell size={16} />
+                            Bildirimler
+                        </Link>
 
                         <div className="ml-4 flex items-center gap-4">
                             <SignedIn>
@@ -74,6 +78,12 @@ export default function Navbar() {
                 <div className="sm:hidden bg-[#15171c] border-b border-slate-800">
                     <div className="pt-2 pb-3 space-y-1">
                         <Link
+                            href="/namaz-vakitleri"
+                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                        >
+                            Namaz Vakitleri
+                        </Link>
+                        <Link
                             href="/kuran"
                             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
                         >
@@ -104,10 +114,11 @@ export default function Navbar() {
                             Analizler
                         </Link>
                         <Link
-                            href="/namaz-vakitleri"
-                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
+                            href="/bildirimler"
+                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500 flex items-center gap-2"
                         >
-                            Namaz Vakitleri
+                            <Bell size={18} />
+                            Bildirimler
                         </Link>
                         <SignedIn>
                             <Link

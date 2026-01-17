@@ -233,6 +233,45 @@ export default function ForumPostDetailPage() {
 
             if (error) throw error;
 
+            // Push Notification Logic
+            try {
+                if (replyingTo && replyingTo.commentId) {
+                    // It's a reply to a comment
+                    const { data: parentComment } = await supabase
+                        .from('forum_comments')
+                        .select('user_id')
+                        .eq('id', replyingTo.commentId)
+                        .single();
+
+                    if (parentComment && parentComment.user_id !== user.id) {
+                        await fetch("/api/notifications/send", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                userId: parentComment.user_id,
+                                title: "Yorumuna Yanıt Geldi",
+                                body: `${user.fullName} forumdaki yorumuna yanıt verdi: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`,
+                                url: `/forum/${postId}`
+                            })
+                        });
+                    }
+                } else if (post && post.user_id !== user.id) {
+                    // It's a direct comment on a post
+                    await fetch("/api/notifications/send", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            userId: post.user_id,
+                            title: "Gönderine Yorum Yapıldı",
+                            body: `${user.fullName} forum gönderine yorum yaptı: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`,
+                            url: `/forum/${postId}`
+                        })
+                    });
+                }
+            } catch (pushErr) {
+                console.error("Forum push notification failed:", pushErr);
+            }
+
             if (textEl) textEl.value = '';
             setReplyingTo(null);
             fetchPostAndComments();

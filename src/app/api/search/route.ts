@@ -77,7 +77,21 @@ export async function GET(request: NextRequest) {
 
     } catch (error: any) {
         console.error("Search API Error:", error);
-        // Fallback to simple keyword search if AI fails
-        return NextResponse.json({ error: "Arama sırasında bir hata oluştu" }, { status: 500 });
+
+        // Simple Fallback: Search in Surah Names
+        const matchedSurahs = SURAHS.filter(s =>
+            s.name.toLowerCase().includes(query.toLowerCase()) ||
+            s.slug.toLowerCase().includes(query.toLowerCase())
+        ).slice(0, 5);
+
+        const results = matchedSurahs.map(s => ({
+            surahId: s.id,
+            surahName: s.name,
+            verseNumber: 1,
+            text: "Sureye gitmek için tıklayın.",
+            arabic: "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ"
+        }));
+
+        return NextResponse.json({ results });
     }
 }

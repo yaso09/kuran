@@ -120,6 +120,34 @@ export default function VersePage() {
 
             if (error) throw error;
 
+            // Push Notification for Replies
+            if (replyingTo && replyingTo.commentId) {
+                try {
+                    // Find the parent comment to get the user_id
+                    const { data: parentComment } = await supabase
+                        .from('comments')
+                        .select('user_id')
+                        .eq('id', replyingTo.commentId)
+                        .single();
+
+                    if (parentComment && parentComment.user_id !== user.id) {
+                        await fetch("/api/notifications/send", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                userId: parentComment.user_id,
+                                title: "Yorumuna Yanıt Geldi",
+                                body: `${user.fullName} bir yorumuna yanıt verdi: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`,
+                                url: `/kuran/${surahId}/${verseId}`
+                            })
+                        });
+                    }
+                } catch (pushErr) {
+                    console.error("Push notification failed:", pushErr);
+                    // Don't throw, just log. We don't want to break the comment save flow.
+                }
+            }
+
             if (textEl) textEl.value = '';
             setReplyingTo(null);
 

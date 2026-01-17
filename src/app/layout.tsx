@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Amiri } from "next/font/google";
 import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
-import PWARegistration from "@/components/PWARegistration";
 import NotificationInitializer from "@/components/NotificationInitializer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,9 +11,18 @@ const amiri = Amiri({
   variable: "--font-amiri"
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0b0c0f",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   title: "Kur'ancılar",
   description: "Kur'an Okuyucu ve Takip Uygulaması",
+  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -46,7 +54,6 @@ export default function RootLayout({
         <body
           className={`${inter.className} ${amiri.variable} antialiased`}
         >
-          <PWARegistration />
           <NotificationInitializer />
           {children}
         </body>

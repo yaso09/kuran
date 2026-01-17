@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.0.0",
+    "@ducanh2912/next-pwa": "^10.2.9",
     "@supabase/supabase-js": "^2.90.1",
     "@tailwindcss/typography": "^0.5.19",
     "crypto-js": "^4.2.0",
