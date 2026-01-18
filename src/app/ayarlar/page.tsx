@@ -139,6 +139,36 @@ export default function SettingsPage() {
         setAnalyticsConsent(enabled);
     };
 
+    const handleNamazNotificationToggle = async (enabled: boolean) => {
+        setFormData(prev => ({ ...prev, namazNotifications: enabled }));
+
+        if (!user) return;
+
+        // Optimistically update UI
+        try {
+            // Request permission if enabling
+            if (enabled) {
+                const granted = await requestNotificationPermission();
+                if (!granted) {
+                    alert('Bildirim izni verilmedi. Lütfen tarayıcı ayarlarından bildirimleri etkinleştirin.');
+                    setFormData(prev => ({ ...prev, namazNotifications: false }));
+                    return;
+                }
+            }
+
+            // Save to Supabase immediately
+            await supabase
+                .from('profiles')
+                .update({ notifications_enabled: enabled })
+                .eq('id', user.id);
+
+        } catch (error) {
+            console.error('Error saving notification setting:', error);
+            // Revert on error
+            setFormData(prev => ({ ...prev, namazNotifications: !enabled }));
+        }
+    };
+
     const handleSave = async () => {
         if (!user) return;
 
@@ -676,7 +706,7 @@ export default function SettingsPage() {
                                             type="checkbox"
                                             className="sr-only peer"
                                             checked={formData.namazNotifications}
-                                            onChange={(e) => setFormData({ ...formData, namazNotifications: e.target.checked })}
+                                            onChange={(e) => handleNamazNotificationToggle(e.target.checked)}
                                         />
                                         <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-amber-500/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-600"></div>
                                     </label>
