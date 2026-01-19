@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SURAHS } from '../../lib/constants';
-import { Search } from 'lucide-react-native';
+import { Search, Bookmark } from 'lucide-react-native';
 import { Link, useRouter } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 
@@ -38,7 +38,14 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-slate-950">
       <View className="p-4 bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
-        <Text className="text-2xl font-black text-gray-900 dark:text-white mb-4">Kuran-ı Kerim</Text>
+        <View className="flex-row justify-between items-center mb-4">
+          <Text className="text-2xl font-black text-gray-900 dark:text-white">Kuran-ı Kerim</Text>
+          <Link href="/kuran/bookmarks" asChild>
+            <TouchableOpacity className="p-2 bg-amber-50 dark:bg-amber-900/10 rounded-full">
+              <Bookmark size={20} color="#f59e0b" />
+            </TouchableOpacity>
+          </Link>
+        </View>
 
         <View className="flex-row items-center bg-gray-100 dark:bg-slate-900 rounded-xl px-4 py-3">
           <Search size={20} color={isDark ? '#94a3b8' : '#64748b'} />

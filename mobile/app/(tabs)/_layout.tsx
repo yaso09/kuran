@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { BookOpen, Radio, MessageSquare, User } from 'lucide-react-native';
+import { BookOpen, Clock, MessageSquare, User } from 'lucide-react-native';
 import { useColorScheme } from 'nativewind';
 
 export default function TabLayout() {
@@ -28,7 +28,7 @@ export default function TabLayout() {
         name="worship"
         options={{
           title: 'İbadet',
-          tabBarIcon: ({ color }) => <Radio size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Clock size={24} color={color} />,
         }}
       />
       <Tabs.Screen

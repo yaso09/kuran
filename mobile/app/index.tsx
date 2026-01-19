@@ -1,14 +1,17 @@
-import { Redirect } from 'expo-router';
+import { Redirect, useRouter } from 'expo-router';
 import LandingPage from '../components/LandingPage';
-import { useAuth } from '../context/ctx';
+import { useAuth } from '@clerk/clerk-expo';
 
 export default function Index() {
-    const { signIn, isAuthenticated } = useAuth();
+    const { isSignedIn, isLoaded } = useAuth();
+    const router = useRouter();
+
+    if (!isLoaded) return null;
 
     // If somehow we render this while authenticated, redirect
-    if (isAuthenticated) {
+    if (isSignedIn) {
         return <Redirect href="/(tabs)" />;
     }
 
-    return <LandingPage onLogin={signIn} />;
+    return <LandingPage onLogin={() => router.push('/auth/sign-in')} />;
 }

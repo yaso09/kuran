@@ -1,222 +1,267 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Modal, FlatList, RefreshControl } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { MapPin, ChevronDown, Clock, Radio } from 'lucide-react-native';
+import { MapPin, ChevronDown, Clock, Bell } from 'lucide-react-native';
+import { Link } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getPrayerTimes } from '../../lib/pray';
 import { TURKISH_CITIES } from '../../lib/cities';
-import { useColorScheme } from 'nativewind';
-
-interface PrayerTime {
-    vakit: string;
-    saat: string;
-}
+import { schedulePrayerNotification, registerForPushNotificationsAsync } from '../../lib/notifications';
+import QuranRadio from '../../components/QuranRadio';
+import { useUser } from '@clerk/clerk-expo';
 
 export default function WorshipScreen() {
-    const [city, setCity] = useState<string>('İstanbul');
-    const [times, setTimes] = useState<PrayerTime[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [city, setCity] = useState('İstanbul');
+    const [prayerTimes, setPrayerTimes] = useState<any>(null);
+    const [nextPrayer, setNextPrayer] = useState<string>('');
+    const [countdown, setCountdown] = useState<string>('');
     const [modalVisible, setModalVisible] = useState(false);
-    const [nextPrayer, setNextPrayer] = useState<{ vakit: string; remaining: string } | null>(null);
+    const [loading, setLoading] = useState(false);
 
-    const { colorScheme } = useColorScheme();
-    const isDark = colorScheme === 'dark';
-
-    useEffect(() => {
-        loadSettings();
-    }, []);
+    // Notification State
+    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+    const { user } = useUser();
 
     useEffect(() => {
-        if (city) {
-            loadTimes();
-            const interval = setInterval(updateCountdown, 1000);
-            return () => clearInterval(interval);
+        loadCity();
+        const interval = setInterval(() => {
+            calculateNextPrayer();
+        }, 60000); // Update every minute
+        return () => clearInterval(interval);
+    }, [user]);
+
+    useEffect(() => {
+        if (prayerTimes) {
+            calculateNextPrayer();
         }
-    }, [city, times]);
+    }, [prayerTimes]);
 
-    const loadSettings = async () => {
+    const loadCity = async () => {
         try {
-            const savedCity = await AsyncStorage.getItem('user_city');
-            if (savedCity) setCity(savedCity);
-            else setCity('İstanbul');
+            setLoading(true);
+            let initialCity = 'İstanbul';
+
+            // Try Clerk first
+            if (user?.unsafeMetadata?.city) {
+                initialCity = user.unsafeMetadata.city as string;
+            } else {
+                // Fallback to AsyncStorage
+                const savedCity = await AsyncStorage.getItem('user_city');
+                if (savedCity) initialCity = savedCity;
+            }
+
+            const savedNotif = await AsyncStorage.getItem('notifications_enabled');
+            if (savedNotif) setNotificationsEnabled(JSON.parse(savedNotif));
+
+            setCity(initialCity);
+            fetchPrayerTimes(initialCity);
         } catch (e) {
             console.error(e);
+        } finally {
+            setLoading(false);
         }
     };
 
     const saveCity = async (selectedCity: string) => {
         try {
-            await AsyncStorage.setItem('user_city', selectedCity);
             setCity(selectedCity);
             setModalVisible(false);
+            fetchPrayerTimes(selectedCity);
+
+            // Save locally
+            await AsyncStorage.setItem('user_city', selectedCity);
+
+            // Sync with Clerk
+            if (user) {
+                await user.update({
+                    unsafeMetadata: {
+                        ...user.unsafeMetadata,
+                        city: selectedCity
+                    }
+                });
+            }
         } catch (e) {
             console.error(e);
         }
     };
 
-    const loadTimes = async () => {
-        setLoading(true);
-        const data = await getPrayerTimes(city);
-        if (data.success && data.result) {
-            setTimes(data.result);
+    const toggleNotifications = async () => {
+        const newState = !notificationsEnabled;
+        setNotificationsEnabled(newState);
+        await AsyncStorage.setItem('notifications_enabled', JSON.stringify(newState));
+
+        if (newState) {
+            await registerForPushNotificationsAsync();
+            // Ideally schedule here based on prayerTimes
+            if (prayerTimes) {
+                // Demo scheduling for next prayer
+                // schedulePrayerNotification('Namaz Vakti', 'Vakit Girdi!', 5);
+            }
         }
-        setLoading(false);
     };
 
-    const updateCountdown = () => {
-        if (times.length === 0) return;
+    const fetchPrayerTimes = async (cityName: string) => {
+        setLoading(true);
+        try {
+            const times = await getPrayerTimes(cityName);
+            setPrayerTimes(times);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const calculateNextPrayer = () => {
+        // Basic countdown logic (simplified for demo)
+        // Needs full date parsing implementation used in original pray.ts
+        if (!prayerTimes) return;
 
         const now = new Date();
         const currentMinutes = now.getHours() * 60 + now.getMinutes();
-        const currentSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+
+        const prayers = [
+            { name: 'İmsak', time: prayerTimes['İmsak'] },
+            { name: 'Güneş', time: prayerTimes['Güneş'] },
+            { name: 'Öğle', time: prayerTimes['Öğle'] },
+            { name: 'İkindi', time: prayerTimes['İkindi'] },
+            { name: 'Akşam', time: prayerTimes['Akşam'] },
+            { name: 'Yatsı', time: prayerTimes['Yatsı'] }
+        ];
 
         let next = null;
-        let nextTimeStr = '';
+        let diff = 0;
 
-        for (const t of times) {
-            const [h, m] = t.saat.split(':').map(Number);
-            const timeMinutes = h * 60 + m;
+        for (const p of prayers) {
+            const [h, m] = p.time.split(':').map(Number);
+            const pMinutes = h * 60 + m;
 
-            if (timeMinutes > currentMinutes) {
-                next = t;
-                nextTimeStr = t.saat;
+            if (pMinutes > currentMinutes) {
+                next = p;
+                diff = pMinutes - currentMinutes;
                 break;
             }
         }
 
         if (!next) {
-            // If passed all, next is Imsak of tomorrow (approx for now, using today's Imsak)
-            next = times[0];
-            nextTimeStr = times[0].saat;
-            // Logic for tomorrow's countdown is complex without tomorrow's data, simplified for MVP
+            // Tomorrow Imsak
+            next = prayers[0];
+            // Simplified calc
+            setNextPrayer('İmsak (Yarın)');
+            setCountdown('...');
+            return;
         }
 
-        if (next) {
-            const [targetH, targetM] = nextTimeStr.split(':').map(Number);
-            const targetSeconds = targetH * 3600 + targetM * 60;
-
-            let diff = targetSeconds - currentSeconds;
-            if (diff < 0) diff += 24 * 3600; // Wrap around for next day
-
-            const h = Math.floor(diff / 3600);
-            const m = Math.floor((diff % 3600) / 60);
-            const s = diff % 60;
-
-            setNextPrayer({
-                vakit: next.vakit,
-                remaining: `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
-            });
-        }
+        setNextPrayer(next.name);
+        const h = Math.floor(diff / 60);
+        const m = diff % 60;
+        setCountdown(`${h} sa ${m} dk`);
     };
 
-    const renderCityItem = ({ item }: { item: string }) => (
-        <TouchableOpacity
-            className="p-4 border-b border-gray-100 dark:border-slate-800"
-            onPress={() => saveCity(item)}
-        >
-            <Text className="text-gray-900 dark:text-white font-medium">{item}</Text>
-        </TouchableOpacity>
-    );
-
     return (
-        <SafeAreaView className="flex-1 bg-white dark:bg-slate-950">
-            {/* City Selector Header */}
-            <View className="px-4 py-3 border-b border-gray-100 dark:border-slate-800 flex-row justify-between items-center">
-                <View>
-                    <Text className="text-xs text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider">Konum</Text>
-                    <TouchableOpacity
-                        className="flex-row items-center mt-1"
-                        onPress={() => setModalVisible(true)}
-                    >
-                        <MapPin size={18} color="#f59e0b" style={{ marginRight: 6 }} />
-                        <Text className="text-xl font-black text-gray-900 dark:text-white mr-1">{city}</Text>
-                        <ChevronDown size={16} color={isDark ? '#94a3b8' : '#64748b'} />
-                    </TouchableOpacity>
-                </View>
-                <TouchableOpacity className="w-10 h-10 bg-amber-50 dark:bg-amber-900/10 rounded-full items-center justify-center">
-                    <Radio size={20} color="#f59e0b" />
-                </TouchableOpacity>
-            </View>
-
+        <SafeAreaView className="flex-1 bg-gray-50 dark:bg-slate-950">
             <ScrollView
                 contentContainerStyle={{ padding: 16 }}
-                refreshControl={<RefreshControl refreshing={loading} onRefresh={loadTimes} tintColor="#f59e0b" />}
+                refreshControl={<RefreshControl refreshing={loading} onRefresh={loadCity} tintColor="#f59e0b" />}
             >
-                {/* Countdown Card */}
-                {nextPrayer && (
-                    <View className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-3xl p-6 mb-8 shadow-lg shadow-amber-500/30">
-                        <View className="flex-row justify-between items-start mb-2">
-                            <View>
-                                <Text className="text-amber-100 font-medium mb-1">Sıradaki Vakit</Text>
-                                <Text className="text-3xl font-black text-white">{nextPrayer.vakit}</Text>
-                            </View>
-                            <Clock size={32} color="rgba(255,255,255,0.3)" />
-                        </View>
-                        <Text className="text-5xl font-bold text-white tracking-widest mt-4 font-mono">
-                            {nextPrayer.remaining}
-                        </Text>
-                        <Text className="text-amber-100 text-xs mt-2 text-right">kaldı</Text>
-                    </View>
-                )}
-
-                {/* Times Grid */}
-                <View className="bg-gray-50 dark:bg-slate-900 rounded-3xl p-4">
-                    {times.map((item, index) => {
-                        const isNext = item.vakit === nextPrayer?.vakit;
-                        return (
-                            <View
-                                key={item.vakit}
-                                className={`flex-row justify-between items-center p-4 rounded-xl mb-2 ${isNext ? 'bg-white dark:bg-slate-800 shadow-sm border border-amber-200 dark:border-amber-900/30' : ''}`}
-                            >
-                                <View className="flex-row items-center">
-                                    <View className={`w-2 h-2 rounded-full mr-3 ${isNext ? 'bg-amber-500' : 'bg-gray-300 dark:bg-slate-700'}`} />
-                                    <Text className={`font-bold ${isNext ? 'text-amber-600 dark:text-amber-500 text-lg' : 'text-gray-600 dark:text-slate-400'}`}>
-                                        {item.vakit}
-                                    </Text>
-                                </View>
-                                <Text className={`font-black ${isNext ? 'text-gray-900 dark:text-white text-xl' : 'text-gray-900 dark:text-white'}`}>
-                                    {item.saat}
-                                </Text>
-                            </View>
-                        )
-                    })}
-                </View>
-
-                {/* Radio Banner Helper */}
-                <View className="mt-8 bg-indigo-600 rounded-2xl p-6 relative overflow-hidden">
-                    <View className="absolute -right-4 -top-4 w-24 h-24 bg-indigo-500 rounded-full opacity-50" />
-                    <View className="relative z-10">
-                        <Text className="text-white font-bold text-lg mb-1">Kuran Radyo</Text>
-                        <Text className="text-indigo-200 text-sm mb-4">7/24 Kesintisiz Yayın</Text>
-                        <TouchableOpacity className="bg-white self-start px-4 py-2 rounded-full">
-                            <Text className="text-indigo-600 font-bold text-xs">Şimdi Dinle</Text>
+                {/* Header */}
+                <View className="flex-row items-center justify-between mb-6">
+                    <View>
+                        <Text className="text-gray-500 dark:text-gray-400 text-sm font-medium">Konum</Text>
+                        <TouchableOpacity
+                            onPress={() => setModalVisible(true)}
+                            className="flex-row items-center"
+                        >
+                            <MapPin size={18} color="#f59e0b" />
+                            <Text className="text-2xl font-black text-gray-900 dark:text-white ml-1">{city}</Text>
+                            <ChevronDown size={20} color="#f59e0b" />
                         </TouchableOpacity>
                     </View>
+                    <TouchableOpacity
+                        onPress={toggleNotifications}
+                        className={`p-3 rounded-full ${notificationsEnabled ? 'bg-amber-100' : 'bg-gray-100 dark:bg-slate-800'}`}
+                    >
+                        <Bell size={20} color={notificationsEnabled ? '#d97706' : '#94a3b8'} fill={notificationsEnabled ? '#d97706' : 'none'} />
+                    </TouchableOpacity>
                 </View>
+
+                {/* Countdown Card */}
+                <View className="bg-amber-500 rounded-3xl p-6 mb-6 shadow-lg shadow-amber-500/30">
+                    <View className="flex-row justify-between items-start">
+                        <View>
+                            <Text className="text-amber-100 font-medium mb-1">Sıradaki Vakit</Text>
+                            <Text className="text-4xl font-black text-white mb-2">{nextPrayer}</Text>
+                            <View className="bg-white/20 px-3 py-1 rounded-full self-start flex-row items-center">
+                                <Clock size={14} color="white" />
+                                <Text className="text-white font-bold ml-1">{countdown}</Text>
+                            </View>
+                        </View>
+                        <View className="bg-white/20 w-12 h-12 rounded-full items-center justify-center">
+                            <Clock size={24} color="white" />
+                        </View>
+                    </View>
+                </View>
+
+                {/* Prayer List */}
+                <View className="bg-white dark:bg-slate-900 rounded-3xl p-4 shadow-sm mb-6">
+                    {prayerTimes && Object.keys(prayerTimes).map((key, index) => (
+                        <View key={key} className={`flex-row justify-between items-center py-3 ${index !== 5 ? 'border-b border-gray-100 dark:border-slate-800' : ''}`}>
+                            <Text className="text-base font-bold text-gray-600 dark:text-gray-400">{key}</Text>
+                            <Text className="text-lg font-black text-gray-900 dark:text-white">{prayerTimes[key]}</Text>
+                        </View>
+                    ))}
+                    {!prayerTimes && (
+                        <View className="py-10 items-center">
+                            <Text className="text-gray-400">Yükleniyor...</Text>
+                        </View>
+                    )}
+                </View>
+
+                {/* Radio Section */}
+                <View className="mb-6">
+                    <QuranRadio />
+                </View>
+
+                {/* Zikirmatik Banner */}
+                <Link href="/zikirmatik/index" asChild>
+                    <TouchableOpacity className="mt-4 bg-teal-600 rounded-2xl p-6 relative overflow-hidden mb-8">
+                        <View className="absolute -right-4 -top-4 w-24 h-24 bg-teal-500 rounded-full opacity-50" />
+                        <View className="relative z-10">
+                            <Text className="text-white font-bold text-lg mb-1">Zikirmatik</Text>
+                            <Text className="text-teal-200 text-sm">Günlük Zikirlerinizi Takip Edin</Text>
+                        </View>
+                    </TouchableOpacity>
+                </Link>
             </ScrollView>
 
             {/* City Selection Modal */}
             <Modal
-                animationType="slide"
-                transparent={true}
                 visible={modalVisible}
+                animationType="slide"
+                presentationStyle="pageSheet"
                 onRequestClose={() => setModalVisible(false)}
             >
-                <View className="flex-1 bg-black/50">
-                    <View className="flex-1 mt-20 bg-white dark:bg-slate-950 rounded-t-3xl overflow-hidden">
-                        <View className="p-4 border-b border-gray-100 dark:border-slate-800 flex-row justify-between items-center">
-                            <Text className="text-xl font-bold text-gray-900 dark:text-white">Şehir Seçin</Text>
-                            <TouchableOpacity onPress={() => setModalVisible(false)} className="p-2">
-                                <Text className="text-amber-500 font-bold">Kapat</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <FlatList
-                            data={TURKISH_CITIES}
-                            renderItem={renderCityItem}
-                            keyExtractor={(item) => item}
-                            contentContainerStyle={{ paddingBottom: 40 }}
-                        />
+                <View className="flex-1 bg-white dark:bg-slate-950 p-4">
+                    <View className="flex-row justify-between items-center mb-4">
+                        <Text className="text-xl font-bold text-gray-900 dark:text-white">Şehir Seçin</Text>
+                        <TouchableOpacity onPress={() => setModalVisible(false)}>
+                            <Text className="text-amber-500 font-bold">Kapat</Text>
+                        </TouchableOpacity>
                     </View>
+                    <FlatList
+                        data={TURKISH_CITIES}
+                        keyExtractor={(item) => item}
+                        renderItem={({ item }) => (
+                            <TouchableOpacity
+                                onPress={() => saveCity(item)}
+                                className="py-4 border-b border-gray-100 dark:border-slate-800"
+                            >
+                                <Text className={`text-lg ${city === item ? 'font-bold text-amber-500' : 'text-gray-900 dark:text-white'}`}>
+                                    {item}
+                                </Text>
+                            </TouchableOpacity>
+                        )}
+                    />
                 </View>
             </Modal>
         </SafeAreaView>

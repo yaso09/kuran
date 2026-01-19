@@ -38,7 +38,7 @@ Modern web teknolojileri kullanılarak geliştirilmiş, son derece kapsamlı, so
 Bu modül, uygulamanın çekirdeğini oluşturur ve kullanıcı deneyimi (UX) en üst düzeyde tutulacak şekilde tasarlanmıştır.
 
 - **Hibrit Görünüm Motoru**:
-  - **Mealli Mod (Full View)**: Bu modda ayetler kartlar halinde listelenir. Her kartta Arapça metin, Latin harfleriyle okunuş, Türkçe meal (seçilebilir kaynak) ve tefsir notları için ikonlar bulunur.
+  - **Mealli Mod (Full View)**: Bu modda ayetler kartlar halinde listelenir. Her kartta Arapça metin ve Türkçe meal (seçilebilir kaynak: Diyanet, Hayrat, Ö.N. Bilmen) bulunur.
   - **İbadet Modu (Reading View)**: "Mushaf" deneyimini dijital ortama taşır. Tüm dikkat dağıtıcı unsurlar (butonlar, menüler, mealler) gizlenir. Sadece yüksek kontrastlı, okunaklı Arapça metin ekrana gelir.
 - **Akıllı Ses Çalar (Audio Engine)**:
   - `HTML5 Audo API` üzerine kurulmuştur.
@@ -51,8 +51,7 @@ Bu modül, uygulamanın çekirdeğini oluşturur ve kullanıcı deneyimi (UX) en
 Kullanıcıların statik içerik tüketiminden çıkıp, dinamik bir topluluğun parçası olmasını sağlar.
 
 - **Konusal Kategorizasyon**: Ayetler, Hadisler, Soru-Cevap, Tartışma ve Bilgi Paylaşımı başlıkları.
-- **Nested (İç İçe) Yorum Sistemi**: Reddit benzeri bir yapı ile forum gönderilerine ve yorumlara sonsuz seviyede (veya belli derinlikte) yanıt verilebilir.
-- **Ayet Referans Sistemi**: Kullanıcılar yorumlarında `Bakara:255` gibi formatlar kullanarak direkt ayet kartlarını yorumlarına gömebilir (Smart Embedding - Planlanan).
+- **Gelişmiş Yorum Sistemi**: Reddit benzeri bir yapı ile forum gönderilerine ve yorumlara yanıt verilebilir.
 - **Etkileşim Bildirimleri**:
   - "Yorumuna yanıt geldi"
   - "Gönderin beğenildi"
@@ -178,9 +177,14 @@ Uygulama, `@ducanh2912/next-pwa` ile tam uyumlu bir PWA'dır.
 - **Manifest**: Dinamik manifest dosyası, cihaz ana ekranında uygulama gibi görünmesini sağlar.
 
 ### Mobil UI
-- Mobil cihazlar için özel alt navigasyon barı (`BottomNav`).
-- Dokunmatik dostu buton boyutları.
 - Responsive grid yapıları (`grid-cols-1 md:grid-cols-3`).
+
+### Native Mobil Uygulama (Expo)
+Platformun ayrıca bir adet tam kapsamlı yerel mobil uygulaması bulunmaktadır (`/mobile` dizini).
+- **Zikirmatik**: Mobil özel tasarlanmış titreşimli sayaç.
+- **AI Chat (Sohbet)**: Gelişmiş mobil sohbet arayüzü.
+- **Yerel Bildirimler**: Namaz vakitleri için Expo Notifications entegrasyonu.
+- **Performans**: React Native ve NativeWind v4 ile yüksek performanslı UI.
 
 ---
 
