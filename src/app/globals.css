@@ -24,7 +24,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: white;
+  background: #0b0c0f;
 }
 
 .font-arabic {

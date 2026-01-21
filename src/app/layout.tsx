@@ -4,6 +4,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
 import PWARegistration from "@/components/PWARegistration";
 import NotificationInitializer from "@/components/NotificationInitializer";
+import { headers } from "next/headers";
+import AppShell from "@/components/AppShell";
 
 const inter = Inter({ subsets: ["latin"] });
 const amiri = Amiri({
@@ -30,6 +32,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = headers();
+  const userAgent = headersList.get("user-agent") || "";
+  const isMobile = /android|iphone|ipad|ipod/i.test(userAgent);
+
   return (
     <ClerkProvider
       appearance={{
@@ -48,7 +54,9 @@ export default function RootLayout({
         >
           <PWARegistration />
           <NotificationInitializer />
-          {children}
+          <AppShell isMobile={isMobile}>
+            {children}
+          </AppShell>
         </body>
       </html>
     </ClerkProvider>

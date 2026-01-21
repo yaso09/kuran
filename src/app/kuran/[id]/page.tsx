@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "next/navigation";
 import { useUser } from "@clerk/nextjs"; // Added Clerk hook
 import Navbar from "@/components/Navbar";
+import { useMobile } from "@/context/MobileContext";
 import { SurahData, Verse } from "@/types/quran";
 import { Loader2, Play, Pause, ChevronLeft, ChevronRight, Volume2, ArrowLeft, Bookmark, MessageCircle, Heart, Image, Flame } from "lucide-react";
 import Link from "next/link";
@@ -18,6 +19,7 @@ import CommentItem from "@/components/CommentItem";
 export default function SurahPage() {
     const params = useParams();
     const { user } = useUser(); // Clerk Hook
+    const { isMobile } = useMobile();
     const idUnwrapped = params?.id ? (Array.isArray(params.id) ? params.id[0] : params.id) : "1";
 
     const [data, setData] = useState<SurahData | null>(null);
@@ -364,7 +366,7 @@ export default function SurahPage() {
             )}
 
             {/* Premium Sticky Header */}
-            <div className="bg-[#0b0c0f]/95 backdrop-blur-md border-b border-slate-800 sticky top-16 z-30 shadow-sm transition-all group/header">
+            <div className={`bg-[#0b0c0f]/95 backdrop-blur-md border-b border-slate-800 sticky ${isMobile ? 'top-0' : 'top-16'} z-30 shadow-sm transition-all group/header`}>
                 {/* Progress Bar */}
                 <div className="absolute bottom-0 left-0 h-[2px] bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)] transition-all duration-300 ease-out z-40" style={{ width: `${progress}%` }}></div>
 

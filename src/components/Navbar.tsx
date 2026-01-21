@@ -6,9 +6,13 @@ import { Menu, X, BookOpen, Bell } from "lucide-react";
 import { useState } from "react";
 import StreakDisplay from "./StreakDisplay";
 import ProfileDropdown from "./ProfileDropdown";
+import { useMobile } from "@/context/MobileContext";
 
 export default function Navbar() {
+    const { isMobile } = useMobile();
     const [isOpen, setIsOpen] = useState(false);
+
+    if (isMobile) return null;
 
     return (
         <nav className="bg-[#0b0c0f]/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 transition-colors duration-300">
@@ -33,9 +37,7 @@ export default function Navbar() {
                         <Link href="/dinle" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Dinle
                         </Link>
-                        <Link href="/sohbet" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Sohbet
-                        </Link>
+
                         <Link href="/forum" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Forum
                         </Link>
@@ -97,12 +99,7 @@ export default function Navbar() {
                         >
                             Dinle
                         </Link>
-                        <Link
-                            href="/sohbet"
-                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
-                        >
-                            Sohbet
-                        </Link>
+
                         <Link
                             href="/forum"
                             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
