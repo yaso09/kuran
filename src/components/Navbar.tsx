@@ -41,9 +41,7 @@ export default function Navbar() {
                         <Link href="/forum" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Forum
                         </Link>
-                        <Link href="/analizler" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Analizler
-                        </Link>
+
                         <SignedIn>
                             <Link href="/bildirimler" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
                                 <Bell size={16} />
@@ -106,12 +104,7 @@ export default function Navbar() {
                         >
                             Forum
                         </Link>
-                        <Link
-                            href="/analizler"
-                            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-400 hover:bg-slate-800 hover:border-amber-500 hover:text-amber-500"
-                        >
-                            Analizler
-                        </Link>
+
                         <SignedIn>
                             <Link
                                 href="/bildirimler"

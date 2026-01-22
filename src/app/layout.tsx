@@ -6,6 +6,7 @@ import PWARegistration from "@/components/PWARegistration";
 import NotificationInitializer from "@/components/NotificationInitializer";
 import { headers } from "next/headers";
 import AppShell from "@/components/AppShell";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 const amiri = Amiri({
@@ -49,6 +50,21 @@ export default function RootLayout({
       }}
     >
       <html lang="tr">
+        <head>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-PVWM506F0M"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-PVWM506F0M');
+            `}
+          </Script>
+        </head>
         <body
           className={`${inter.className} ${amiri.variable} antialiased`}
         >
