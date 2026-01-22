@@ -8,6 +8,8 @@ import { headers } from "next/headers";
 import AppShell from "@/components/AppShell";
 import Script from "next/script";
 
+import StructuredData from "@/components/StructuredData";
+
 const inter = Inter({ subsets: ["latin"] });
 const amiri = Amiri({
   subsets: ["arabic"],
@@ -16,15 +18,61 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  title: "Kur'ancılar",
-  description: "Kur'an Okuyucu ve Takip Uygulaması",
+  metadataBase: new URL('https://kurancilar.com'),
+  title: {
+    default: "Kur'ancılar | Dijital Kur'an Deneyimi",
+    template: "%s | Kur'ancılar"
+  },
+  description: "Kur'an-ı Kerim okuma, meal karşılaştırma, sesli dinleme ve sosyal tefekkür platformu. Reklamsız ve modern Kur'an deneyimi.",
+  keywords: ["kuran", "quran", "kuran oku", "meal", "kuran meali", "diyanet vakfı", "tefsir", "islam", "ayet", "sure"],
+  authors: [{ name: "Kur'ancılar" }],
+  creator: "Kur'ancılar",
+  publisher: "Kur'ancılar",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    url: "https://kurancilar.com",
+    siteName: "Kur'ancılar",
+    title: "Kur'ancılar | Dijital Kur'an Deneyimi",
+    description: "Kur'an-ı Kerim okuma, meal karşılaştırma ve sosyal tefekkür platformu.",
+    images: [
+      {
+        url: "/vercel.svg", // Placeholder for actual social image
+        width: 1200,
+        height: 630,
+        alt: "Kur'ancılar Platformu",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kur'ancılar | Modern Kur'an Okuyucu",
+    description: "Reklamsız, modern ve sosyal Kur'an-ı Kerim platformu.",
+    images: ["/vercel.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://kurancilar.com',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Kur'ancılar",
-  },
-  formatDetection: {
-    telephone: false,
   },
 };
 
@@ -68,6 +116,7 @@ export default function RootLayout({
         <body
           className={`${inter.className} ${amiri.variable} antialiased`}
         >
+          <StructuredData />
           <PWARegistration />
           <NotificationInitializer />
           <AppShell isMobile={isMobile}>

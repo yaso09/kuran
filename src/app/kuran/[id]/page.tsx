@@ -146,6 +146,17 @@ export default function SurahPage() {
                     }
                 }
 
+                // Handle URL hash scrolling
+                const hash = window.location.hash;
+                if (hash && hash.startsWith('#ayet-')) {
+                    setTimeout(() => {
+                        const el = document.getElementById(hash.substring(1));
+                        if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }, 800);
+                }
+
             } catch (err) {
                 console.error(err);
             } finally {

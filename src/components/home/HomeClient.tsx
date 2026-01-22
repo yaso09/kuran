@@ -230,7 +230,7 @@ export default function HomeClient() {
                                         {searchResults.map((result: any, i: number) => (
                                             <Link
                                                 key={i}
-                                                href={`/kuran/${result.surahId}#ayet-${result.verseNumber}`}
+                                                href={`/kuran/${result.surahId}/${result.verseNumber}`}
                                                 className="block p-4 rounded-xl bg-[#0b0c0f] border border-slate-800 hover:border-amber-600/50 transition-all group"
                                             >
                                                 <div className="flex justify-between items-start mb-2">

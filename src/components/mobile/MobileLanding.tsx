@@ -20,6 +20,17 @@ const getGreeting = () => {
     return "Hayırlı Akşamlar";
 };
 
+interface BookmarkedVerse {
+    verseKey: string;
+    verseNumber: number;
+    turkish?: {
+        diyanet_vakfi?: string;
+    };
+    arabic?: string;
+    surahId: number;
+    surahName: string;
+}
+
 // Random Verse Logic (Simplified for client-side demo, ideally server-side or API)
 const getRandomVerse = () => {
     // Just a placeholder implementation. 
@@ -35,6 +46,9 @@ export default function MobileLanding() {
     const { user, isLoaded } = useUser();
     const [mounted, setMounted] = useState(false);
     const [dailyVerse, setDailyVerse] = useState<{ text: string, source: string } | null>(null);
+    const [savedVerses, setSavedVerses] = useState<BookmarkedVerse[]>([]);
+    const [loadingBookmarks, setLoadingBookmarks] = useState(false);
+
 
     // AI Search States
     const [searchQuery, setSearchQuery] = useState("");
@@ -46,6 +60,49 @@ export default function MobileLanding() {
         setMounted(true);
         setDailyVerse(getRandomVerse());
     }, []);
+
+    useEffect(() => {
+        const fetchBookmarks = async () => {
+            if (!user || !user.unsafeMetadata.bookmarks) {
+                setSavedVerses([]);
+                return;
+            }
+
+            const rawBookmarks = user.unsafeMetadata.bookmarks as string[];
+            const bookmarkKeys = rawBookmarks.filter(k => k && typeof k === "string" && k.includes(":"));
+            setLoadingBookmarks(true);
+
+            try {
+                // Fetch details for each bookmark (limit to 5 for home page)
+                const promises = bookmarkKeys.slice(0, 5).map(async (key) => {
+                    try {
+                        const res = await fetch(`/api/ayet/${key}`);
+                        if (!res.ok) return null;
+                        const verse = await res.json();
+                        const surah = SURAHS.find(s => s.id === verse.sureNo);
+                        return {
+                            ...verse,
+                            surahId: verse.sureNo,
+                            surahName: surah?.name || `Sure ${verse.sureNo}`
+                        } as BookmarkedVerse;
+                    } catch (e) {
+                        return null;
+                    }
+                });
+
+                const results = await Promise.all(promises);
+                setSavedVerses(results.filter((v): v is BookmarkedVerse => v !== null));
+            } catch (error) {
+                console.error("Bookmark fetch error", error);
+            } finally {
+                setLoadingBookmarks(false);
+            }
+        };
+
+        if (isLoaded && user) {
+            fetchBookmarks();
+        }
+    }, [user, isLoaded]);
 
     const handleSearch = async (e?: React.FormEvent) => {
         if (e) e.preventDefault();
@@ -199,7 +256,7 @@ export default function MobileLanding() {
                             ) : searchResults.length > 0 ? (
                                 <div className="space-y-2">
                                     {searchResults.map((res: any, i) => (
-                                        <Link href={`/kuran/${res.surahId}#ayet-${res.verseNumber}`} key={i} className="block bg-[#0b0c0f] p-4 rounded-2xl border border-slate-800 active:bg-slate-900 transition-colors">
+                                        <Link href={`/kuran/${res.surahId}/${res.verseNumber}`} key={i} className="block bg-[#0b0c0f] p-4 rounded-2xl border border-slate-800 active:bg-slate-900 transition-colors">
                                             <div className="flex justify-between mb-2">
                                                 <span className="text-amber-500 font-bold text-xs uppercase">{res.surahName} • {res.verseNumber}</span>
                                                 <ArrowUpRight size={14} className="text-slate-600" />
@@ -279,6 +336,60 @@ export default function MobileLanding() {
                         <span className="text-[11px] font-medium text-slate-400 group-hover:text-slate-200">Forum</span>
                     </Link>
                 </div>
+
+                {/* Saved Verses Section */}
+                <SignedIn>
+                    <div className="space-y-4">
+                        <div className="flex items-center justify-between px-1">
+                            <h2 className="text-lg font-black text-white flex items-center gap-2">
+                                <Bookmark className="text-amber-500 fill-amber-500/20" size={20} />
+                                Kaydedilen Ayetler
+                            </h2>
+                            {savedVerses.length > 0 && (
+                                <Link href="/ayarlar" className="text-xs font-bold text-amber-500 uppercase tracking-wider">
+                                    Tümü
+                                </Link>
+                            )}
+                        </div>
+
+                        {loadingBookmarks ? (
+                            <div className="flex justify-center py-8 bg-[#15171c] rounded-3xl border border-slate-800">
+                                <Loader2 className="animate-spin text-amber-500" size={24} />
+                            </div>
+                        ) : savedVerses.length > 0 ? (
+                            <div className="space-y-3">
+                                {savedVerses.map((verse) => (
+                                    <Link
+                                        key={verse.verseKey}
+                                        href={`/kuran/${verse.surahId}/${verse.verseNumber}`}
+                                        className="block bg-[#15171c] p-4 rounded-3xl border border-slate-800 active:bg-slate-900 transition-all"
+                                    >
+                                        <div className="flex justify-between items-start mb-3">
+                                            <div className="flex flex-col">
+                                                <span className="text-amber-500 font-bold text-[10px] uppercase tracking-widest">{verse.surahName}</span>
+                                                <span className="text-slate-500 text-[10px] font-medium">Ayet {verse.verseNumber}</span>
+                                            </div>
+                                            <ArrowUpRight className="text-slate-600" size={16} />
+                                        </div>
+                                        <p className="text-slate-300 text-sm leading-relaxed line-clamp-2 mb-3">
+                                            {verse.turkish?.diyanet_vakfi}
+                                        </p>
+                                        <div className="flex justify-end">
+                                            <p className="text-sm font-arabic text-slate-500" dir="rtl">{verse.arabic}</p>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="text-center py-10 bg-[#15171c] rounded-3xl border border-slate-800 border-dashed">
+                                <p className="text-xs text-slate-500 mb-3">Henüz kaydedilmiş ayetiniz yok.</p>
+                                <Link href="/kuran" className="inline-flex items-center gap-2 px-6 py-2 bg-amber-600/10 text-amber-500 rounded-full text-xs font-bold border border-amber-500/20 active:scale-95 transition-all">
+                                    Okumaya Başla
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+                </SignedIn>
 
                 {/* Daily Verse Card */}
                 {dailyVerse && (
