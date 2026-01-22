@@ -106,15 +106,15 @@ ALTER TABLE public.push_subscriptions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.notifications ENABLE ROW LEVEL SECURITY;
 
 -- Permissive Policies for development with Clerk
-CREATE POLICY "Public profile access" ON public.profiles FOR ALL USING (true);
-CREATE POLICY "Public comments access" ON public.comments FOR ALL USING (true);
-CREATE POLICY "Public forum access" ON public.forum_posts FOR ALL USING (true);
-CREATE POLICY "Public forum comments access" ON public.forum_comments FOR ALL USING (true);
-CREATE POLICY "Public post likes access" ON public.post_likes FOR ALL USING (true);
-CREATE POLICY "Public comment likes access" ON public.comment_likes FOR ALL USING (true);
-CREATE POLICY "Public forum comment likes access" ON public.forum_comment_likes FOR ALL USING (true);
-CREATE POLICY "Public push subscriptions access" ON public.push_subscriptions FOR ALL USING (true);
-CREATE POLICY "Public notifications access" ON public.notifications FOR ALL USING (true);
+CREATE POLICY "Public profile access" ON public.profiles FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public comments access" ON public.comments FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public forum access" ON public.forum_posts FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public forum comments access" ON public.forum_comments FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public post likes access" ON public.post_likes FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public comment likes access" ON public.comment_likes FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public forum comment likes access" ON public.forum_comment_likes FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public push subscriptions access" ON public.push_subscriptions FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "Public notifications access" ON public.notifications FOR ALL USING (true) WITH CHECK (true);
 
 -- Functions to Toggle Likes
 CREATE OR REPLACE FUNCTION public.toggle_post_like(target_post_id UUID, target_user_id TEXT)
