@@ -163,3 +163,52 @@ export function initializeNotifications(): void {
         // This will be handled by service worker for better support
     }
 }
+
+export async function registerPushSubscription(userId: string) {
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator) || !('PushManager' in window)) {
+        return;
+    }
+
+    try {
+        const registration = await navigator.serviceWorker.ready;
+        const existingSubscription = await registration.pushManager.getSubscription();
+
+        if (existingSubscription) {
+            // Even if exists, we might want to update it on the backend just in case
+            await fetch("/api/push/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    userId: userId,
+                    subscription: existingSubscription.toJSON()
+                })
+            });
+            return;
+        }
+
+        const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
+        if (!vapidPublicKey) {
+            console.warn("VAPID Public Key is missing");
+            return;
+        }
+
+        const subscription = await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: vapidPublicKey
+        });
+
+        await fetch("/api/push/subscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                userId: userId,
+                subscription: subscription.toJSON()
+            })
+        });
+
+        console.log("Push subscription successful");
+    } catch (error) {
+        console.error("Push registration failed:", error);
+    }
+}
+

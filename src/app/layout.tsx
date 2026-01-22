@@ -4,6 +4,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
 import PWARegistration from "@/components/PWARegistration";
 import NotificationInitializer from "@/components/NotificationInitializer";
+import NotificationManager from "@/components/NotificationManager";
 import { headers } from "next/headers";
 import AppShell from "@/components/AppShell";
 import Script from "next/script";
@@ -119,6 +120,7 @@ export default function RootLayout({
           <StructuredData />
           <PWARegistration />
           <NotificationInitializer />
+          <NotificationManager />
           <AppShell isMobile={isMobile}>
             {children}
           </AppShell>

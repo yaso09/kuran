@@ -10,6 +10,7 @@ import {
     saveNotificationSettings,
     requestNotificationPermission,
     scheduleDailyNotification,
+    registerPushSubscription,
     type NotificationSettings,
 } from '@/lib/notifications';
 import {
@@ -154,6 +155,8 @@ export default function SettingsPage() {
                     setFormData(prev => ({ ...prev, namazNotifications: false }));
                     return;
                 }
+                // Also trigger push subscription
+                await registerPushSubscription(user.id);
             }
 
             // Save to Supabase immediately

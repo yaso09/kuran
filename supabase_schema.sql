@@ -83,6 +83,17 @@ CREATE TABLE public.push_subscriptions (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
+-- 7. Notifications Table
+CREATE TABLE public.notifications (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id TEXT REFERENCES public.profiles(id) ON DELETE CASCADE,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    url TEXT DEFAULT '/',
+    read BOOLEAN DEFAULT false,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
 -- Row Level Security (RLS)
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.comments ENABLE ROW LEVEL SECURITY;
@@ -92,6 +103,7 @@ ALTER TABLE public.post_likes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.comment_likes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.forum_comment_likes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.push_subscriptions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.notifications ENABLE ROW LEVEL SECURITY;
 
 -- Permissive Policies for development with Clerk
 CREATE POLICY "Public profile access" ON public.profiles FOR ALL USING (true);
@@ -102,6 +114,7 @@ CREATE POLICY "Public post likes access" ON public.post_likes FOR ALL USING (tru
 CREATE POLICY "Public comment likes access" ON public.comment_likes FOR ALL USING (true);
 CREATE POLICY "Public forum comment likes access" ON public.forum_comment_likes FOR ALL USING (true);
 CREATE POLICY "Public push subscriptions access" ON public.push_subscriptions FOR ALL USING (true);
+CREATE POLICY "Public notifications access" ON public.notifications FOR ALL USING (true);
 
 -- Functions to Toggle Likes
 CREATE OR REPLACE FUNCTION public.toggle_post_like(target_post_id UUID, target_user_id TEXT)

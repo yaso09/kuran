@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
     ArrowRight, Book, Smartphone, Headphones, Moon, Download, Star,
     Search, Sparkles, Flame, Clock, Bookmark, MessageSquare, Users,
-    Menu, X, Calendar, ChevronRight, PlayCircle, LogIn, Loader2, ArrowUpRight
+    Menu, X, Calendar, ChevronRight, PlayCircle, LogIn, Loader2, ArrowUpRight, Fingerprint
 } from "lucide-react";
 import { usePWAInstall } from "@/hooks/usePWAInstall";
 import { useEffect, useState } from "react";
@@ -334,6 +334,16 @@ export default function MobileLanding() {
                             <Users size={24} />
                         </div>
                         <span className="text-[11px] font-medium text-slate-400 group-hover:text-slate-200">Forum</span>
+                    </Link>
+                </div>
+
+                {/* Second Row of Actions */}
+                <div className="grid grid-cols-4 gap-3">
+                    <Link href="/zikirmatik" className="flex flex-col items-center gap-2 group">
+                        <div className="w-16 h-16 rounded-3xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-300 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-300 shadow-sm">
+                            <Fingerprint size={24} />
+                        </div>
+                        <span className="text-[11px] font-medium text-slate-400 group-hover:text-slate-200">Zikirmatik</span>
                     </Link>
                 </div>
 

@@ -13,6 +13,7 @@ import { supabase } from "@/lib/supabase";
 import { X, MessageSquare, Quote, CornerDownRight } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { calculateNewStreak } from "@/lib/streak";
 
 import CommentItem from "@/components/CommentItem";
 
@@ -81,56 +82,35 @@ export default function SurahPage() {
                 if (user && !metadataUpdatedRef.current) {
                     metadataUpdatedRef.current = true;
                     const today = new Date().toDateString();
-                    const lastReadDate = user.unsafeMetadata.lastReadDate as string | undefined;
-                    const currentStreak = (user.unsafeMetadata.streak as number) || 0;
-                    const currentCoins = (user.unsafeMetadata.coins as number) || 0;
-                    const currentFreezes = user.unsafeMetadata.freezes !== undefined
-                        ? (user.unsafeMetadata.freezes as number)
-                        : 2;
 
-                    let newStreak = currentStreak;
-                    let newCoins = currentCoins;
-                    let newFreezes = currentFreezes;
+                    const { newStreak, newFreezes, newCoins, hasIncreased } = calculateNewStreak({
+                        currentStreak: (user.unsafeMetadata.streak as number) || 0,
+                        lastReadDate: user.unsafeMetadata.lastReadDate as string || null,
+                        freezes: user.unsafeMetadata.freezes !== undefined ? (user.unsafeMetadata.freezes as number) : 2,
+                        coins: (user.unsafeMetadata.coins as number) || 0,
+                        readingHistory: (user.unsafeMetadata.readingHistory as string[]) || []
+                    }, today);
 
-                    if (lastReadDate !== today) {
-                        // Earn coins for first read of the day
-                        newCoins += 10;
+                    if (hasIncreased) {
+                        setShowCelebration(true);
+                        setTimeout(() => setShowCelebration(false), 4000);
 
-                        const yesterday = new Date();
-                        yesterday.setDate(yesterday.getDate() - 1);
+                        // Update reading history
+                        const history = (user.unsafeMetadata.readingHistory as string[]) || [];
+                        const newHistory = Array.from(new Set([...history, today]));
 
-                        if (lastReadDate === yesterday.toDateString()) {
-                            newStreak += 1;
-                            setShowCelebration(true);
-                            setTimeout(() => setShowCelebration(false), 4000);
-                        } else if (lastReadDate) {
-                            // Missed day(s)
-                            if (newFreezes > 0) {
-                                newFreezes -= 1;
-                                // Streak stays as is (frozen)
-                                // Increment streak for today's read as well? 
-                                // Usually freeze protects it, then today's action increments it.
-                                // Logic: (Pre-missed streak) + 1
-                                newStreak += 1;
-                            } else {
-                                newStreak = 1;
+                        user.update({
+                            unsafeMetadata: {
+                                ...user.unsafeMetadata,
+                                lastVerse: `/kuran/${idUnwrapped}`,
+                                lastReadDate: today,
+                                streak: newStreak,
+                                coins: newCoins,
+                                freezes: newFreezes,
+                                readingHistory: newHistory
                             }
-                        } else {
-                            newStreak = 1;
-                        }
+                        }).catch(e => console.error("Streak sync failed", e));
                     }
-
-                    // Update Metadata (Fire and forget)
-                    user.update({
-                        unsafeMetadata: {
-                            ...user.unsafeMetadata,
-                            lastVerse: `/kuran/${idUnwrapped}`,
-                            lastReadDate: today,
-                            streak: newStreak,
-                            coins: newCoins,
-                            freezes: newFreezes
-                        }
-                    }).catch(e => console.error("Streak sync failed", e));
                 }
 
                 // Restore Scroll Position
