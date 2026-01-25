@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
     ArrowRight, Book, Smartphone, Headphones, Moon, Download, Star,
     Search, Sparkles, Flame, Clock, Bookmark, MessageSquare, Users,
-    Menu, X, Calendar, ChevronRight, PlayCircle, LogIn, Loader2, ArrowUpRight, Fingerprint
+    Menu, X, Calendar, ChevronRight, PlayCircle, LogIn, Loader2, ArrowUpRight, Fingerprint, User
 } from "lucide-react";
 import { usePWAInstall } from "@/hooks/usePWAInstall";
 import { useEffect, useState } from "react";
@@ -31,21 +31,11 @@ interface BookmarkedVerse {
     surahName: string;
 }
 
-// Random Verse Logic (Simplified for client-side demo, ideally server-side or API)
-const getRandomVerse = () => {
-    // Just a placeholder implementation. 
-    // In a real app, this should come from an API or a pre-determined daily selection.
-    return {
-        text: "Şüphesiz Allah, adaleti, iyilik yapmayı, yakınlara yardım etmeyi emreder; hayâsızlığı, fenalık ve azgınlığı da yasaklar. O, düşünüp tutasınız diye size öğüt veriyor.",
-        source: "Nahl Suresi, 90. Ayet"
-    };
-};
 
 export default function MobileLanding() {
     const { canInstall, install } = usePWAInstall();
     const { user, isLoaded } = useUser();
     const [mounted, setMounted] = useState(false);
-    const [dailyVerse, setDailyVerse] = useState<{ text: string, source: string } | null>(null);
     const [savedVerses, setSavedVerses] = useState<BookmarkedVerse[]>([]);
     const [loadingBookmarks, setLoadingBookmarks] = useState(false);
 
@@ -58,7 +48,6 @@ export default function MobileLanding() {
 
     useEffect(() => {
         setMounted(true);
-        setDailyVerse(getRandomVerse());
     }, []);
 
     useEffect(() => {
@@ -199,7 +188,15 @@ export default function MobileLanding() {
                 </div>
                 <div className="flex items-center gap-3">
                     <SignedIn>
-                        <UserButton afterSignOutUrl="/" />
+                        <Link href="/ayarlar" className="w-10 h-10 rounded-full overflow-hidden border-2 border-slate-700 hover:border-amber-500 transition-colors">
+                            {user?.imageUrl ? (
+                                <img src={user.imageUrl} alt="Profile" className="w-full h-full object-cover" />
+                            ) : (
+                                <div className="w-full h-full bg-gradient-to-br from-amber-500 to-purple-600 flex items-center justify-center">
+                                    <User className="text-white" size={20} />
+                                </div>
+                            )}
+                        </Link>
                     </SignedIn>
                     <SignedOut>
                         <Link href="/sign-in" className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-amber-500">
@@ -401,38 +398,6 @@ export default function MobileLanding() {
                     </div>
                 </SignedIn>
 
-                {/* Daily Verse Card */}
-                {dailyVerse && (
-                    <div className="relative overflow-hidden rounded-[32px] bg-[#15171c] border border-slate-800 p-6 shadow-2xl">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 via-purple-500 to-blue-500"></div>
-                        <div className="absolute -right-4 -top-4 w-24 h-24 bg-amber-500/5 rounded-full blur-xl"></div>
-
-                        <div className="flex items-center gap-2 mb-4">
-                            <span className="px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-[10px] font-bold text-amber-500 uppercase tracking-widest">
-                                Günün Ayeti
-                            </span>
-                        </div>
-
-                        <blockquote className="relative">
-                            <span className="absolute -top-4 -left-2 text-6xl text-slate-800 font-serif leading-none opacity-50">“</span>
-                            <p className="text-lg font-serif italic text-slate-200 leading-relaxed relative z-10 px-2">
-                                {dailyVerse.text}
-                            </p>
-                            <cite className="block mt-4 text-sm font-medium text-slate-500 not-italic text-right">
-                                — {dailyVerse.source}
-                            </cite>
-                        </blockquote>
-
-                        <div className="flex gap-2 mt-6 justify-end">
-                            <button className="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition">
-                                <Bookmark size={18} />
-                            </button>
-                            <button className="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition">
-                                <ArrowRight size={18} />
-                            </button>
-                        </div>
-                    </div>
-                )}
 
                 {/* Install Prompts */}
                 {canInstall && (

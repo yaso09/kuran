@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Kur'ancılar",
+    "slug": "kurancilar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0b0c0f"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yasireymen.kurancilar"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0b0c0f"
+      },
+      "package": "com.yasireymen.kurancilar",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "748fc304-889e-49df-8c96-fc44f5379b5f"
+      }
+    }
+  }
+}

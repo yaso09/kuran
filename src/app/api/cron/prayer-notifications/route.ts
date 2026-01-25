@@ -93,7 +93,13 @@ export async function GET(request: NextRequest) {
             }
         }
 
-        return NextResponse.json({ success: true, processed: results });
+        console.log(`Cron processed ${results.length} notifications across ${Object.keys(cityGroups).length} cities.`);
+        return NextResponse.json({
+            success: true,
+            processed: results,
+            cityCount: Object.keys(cityGroups).length,
+            notificationCount: results.length
+        });
     } catch (error: any) {
         console.error("Cron Error:", error);
         return NextResponse.json({ error: error.message }, { status: 500 });
