@@ -180,11 +180,11 @@ Uygulama, `@ducanh2912/next-pwa` ile tam uyumlu bir PWA'dır.
 - Responsive grid yapıları (`grid-cols-1 md:grid-cols-3`).
 
 ### Native Mobil Uygulama (Expo)
-Platformun ayrıca bir adet tam kapsamlı yerel mobil uygulaması bulunmaktadır (`/mobile` dizini).
-- **Zikirmatik**: Mobil özel tasarlanmış titreşimli sayaç.
-- **AI Chat (Sohbet)**: Gelişmiş mobil sohbet arayüzü.
-- **Yerel Bildirimler**: Namaz vakitleri için Expo Notifications entegrasyonu.
-- **Performans**: React Native ve NativeWind v4 ile yüksek performanslı UI.
+Platformun ayrıca bir adet gelişmiş yerel mobil uygulaması bulunmaktadır (`/mobile` dizini).
+- **WebView Mimarsisi**: Web sitesini (`kuran.yasireymen.com`) yerel bir uygulama performansıyla sunan gelişmiş WebView yapısı.
+- **Gelişmiş Çevrimdışı Destek**: İnternet bağlantısı koptuğunda kullanıcıyı karşılayan özel "İnternet Yok" ekranı ve yeniden bağlanma mekanizması.
+- **Native Branding**: Web (PWA) ile senkronize logolar, açılış ekranları (splash) ve koyu tema desteği.
+- **Esnek Altyapı**: Expo SDK 54 tabanlı, `react-native-webview` ve `expo-network` ile güçlendirilmiş yapı.
 
 ---
 
