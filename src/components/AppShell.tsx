@@ -1,6 +1,6 @@
 "use client";
 
-import { MobileProvider } from "@/context/MobileContext";
+import { MobileProvider, useMobile } from "@/context/MobileContext";
 import BottomNav from "./mobile/BottomNav";
 
 interface AppShellProps {
@@ -8,13 +8,23 @@ interface AppShellProps {
     isMobile: boolean;
 }
 
+function AppShellContent({ children }: { children: React.ReactNode }) {
+    const { isMobile } = useMobile();
+
+    return (
+        <div className={`min-h-screen transition-all duration-300 ${isMobile ? "pb-24" : ""}`}>
+            {children}
+            {isMobile && <BottomNav />}
+        </div>
+    );
+}
+
 export default function AppShell({ children, isMobile }: AppShellProps) {
     return (
         <MobileProvider isMobile={isMobile}>
-            <div className={`min-h-screen ${isMobile ? "pb-24" : ""}`}>
+            <AppShellContent>
                 {children}
-                {isMobile && <BottomNav />}
-            </div>
+            </AppShellContent>
         </MobileProvider>
     );
 }

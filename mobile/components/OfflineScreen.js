@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, Platform } from 'react-native';
 import { WifiOff, RotateCcw } from 'lucide-react-native';
 import { StatusBar } from 'expo-status-bar';
 
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 24,
-        fontWeight: '900',
+        fontWeight: 'bold',
         color: '#fff',
         marginBottom: 15,
         textAlign: 'center',
@@ -60,21 +60,25 @@ const styles = StyleSheet.create({
         backgroundColor: '#f59e0b',
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 10,
         paddingVertical: 14,
         paddingHorizontal: 30,
         borderRadius: 16,
-        shadowColor: '#f59e0b',
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.3,
-        shadowRadius: 10,
-        elevation: 5,
+        ...Platform.select({
+            ios: {
+                shadowColor: '#f59e0b',
+                shadowOffset: { width: 0, height: 4 },
+                shadowOpacity: 0.3,
+                shadowRadius: 10,
+            },
+            android: {
+                elevation: 5,
+            },
+        }),
     },
     buttonText: {
         color: '#0b0c0f',
         fontSize: 16,
         fontWeight: 'bold',
+        marginLeft: 10,
     },
 });
-
-import { Platform } from 'react-native';

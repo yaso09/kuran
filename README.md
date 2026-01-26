@@ -15,12 +15,11 @@ Modern web teknolojileri kullanılarak geliştirilmiş, son derece kapsamlı, so
 ## 📑 İçindekiler Kılavuzu
 
 1. [🌟 Detaylı Özellik İncelemesi](#-detaylı-özellik-incelemesi)
-   - [Kuran Okuma Modülü](#1-kuran-okuma-modülü)
+   - [Kuran Okuma ve Arama](#1-kuran-okuma-modülü)
    - [Sosyal Etkileşim ve Forum](#2-sosyal-etkileşim-ve-forum)
    - [İbadet Asistanı](#3-ibadet-asistanı)
    - [Oyunlaştırma (Gamification)](#4-oyunlaştırma-gamification)
-   - [Platform Analitiği (Nabız)](#5-platform-analitiği-nabız)
-   - [Bildirim Altyapısı](#6-bildirim-push-notification-altyapısı)
+   - [Bildirim Altyapısı](#5-bildirim-push-notification-altyapısı)
 2. [🏗 Teknik Mimari ve Altyapı](#-teknik-mimari-ve-altyapı)
 3. [🗄 Veritabanı Şeması](#-veritabanı-şeması)
 4. [🔌 API Dokümantasyonu](#-api-dokümantasyonu)
@@ -40,6 +39,9 @@ Bu modül, uygulamanın çekirdeğini oluşturur ve kullanıcı deneyimi (UX) en
 - **Hibrit Görünüm Motoru**:
   - **Mealli Mod (Full View)**: Bu modda ayetler kartlar halinde listelenir. Her kartta Arapça metin ve Türkçe meal (seçilebilir kaynak: Diyanet, Hayrat, Ö.N. Bilmen) bulunur.
   - **İbadet Modu (Reading View)**: "Mushaf" deneyimini dijital ortama taşır. Tüm dikkat dağıtıcı unsurlar (butonlar, menüler, mealler) gizlenir. Sadece yüksek kontrastlı, okunaklı Arapça metin ekrana gelir.
+- **Akıllı Sure Arama (Smart Search)**:
+  - Sure listesi sayfasında, sure ismine veya numarasına göre anlık filtreleme yapan gelişmiş arama barı.
+  - Hızlı erişim için optimize edilmiş UX.
 - **Akıllı Ses Çalar (Audio Engine)**:
   - `HTML5 Audo API` üzerine kurulmuştur.
   - **Wake Lock API Entegrasyonu**: Sure dinlenirken telefon ekranının kapanmasını engeller.
@@ -63,6 +65,7 @@ Günlük dini vecibelerin takibini kolaylaştıran araçlar seti.
 - **Gelişmiş Namaz Vakitleri**:
   - **Kaynak**: `vakit.vercel.app` servisi üzerinden Diyanet uyumlu veriler.
   - **Akıllı Önbellek (Caching)**: Şehir aramaları 24 saat, vakit verileri 1 saat sunucu tarafında önbelleklenir (Next.js Revalidation).
+  - **Vakit Bildirimleri**: Kullanıcının seçtiği vakitlerde (Vercel Cron ile çalışan) otomatik push bildirimleri.
   - **Geri Sayım Sayacı**: Bir sonraki vakte kalan süreyi saniye bazlı gösterir. Kerahat vakitlerinde özel uyarı verir.
 - **Kuran Radyo**:
   - `Icecast/Shoutcast` protokollerini destekleyen, düşük gecikmeli canlı yayın oynatıcı.
@@ -77,20 +80,12 @@ Düzenli kullanımı teşvik eden psikolojik motivasyon sistemi.
   - Freeze hakları, düzenli okuma yapılarak kazanılan "Coin"ler ile marketten alınabilir.
 - **Rozet Sistemi**: Belirli başarılara (İlk Hatim, 30 Günlük Seri vb.) ulaşıldığında kazanılan dijital rozetler.
 
-### 5. Platform Analitiği (Nabız)
-`src/app/analizler` altında bulunan bu modül, platformun genel kullanım verilerini görselleştirir.
-
-- **Global İstatistikler**: Toplam üye, günlük aktif kullanıcı, toplam okunma sayısı.
-- **Trend Grafikleri**:
-  - `BarChart`: Son 14 günlük ziyaretçi trendi.
-  - `PieChart`: İçerik dağılımı (Yorum vs. Gönderi).
-- **Popüler İçerik**: En çok ziyaret edilen sureler ve forum başlıkları.
-
-### 6. Bildirim (Push Notification) Altyapısı
+### 5. Bildirim (Push Notification) Altyapısı
 Uygulama kapalıyken bile kullanıcıya ulaşabilen sistem.
 
 - **Web Push Protocol**: VAPID (Voluntary Application Server Identification) anahtarları ile imzalanmış güvenli payload gönderimi.
 - **Service Worker**: Arka planda gelen push olaylarını yakalar ve işletim sistemi bildirimine dönüştürür.
+- **Cron Job**: Vercel Cron entegrasyonu ile namaz vakitleri sunucu tarafında periyodik olarak kontrol edilir ve abonelere otomatik bildirim gönderilir.
 - **Yönetim Paneli**: Kullanıcılar `/ayarlar` sayfasından bildirim türlerini (Namaz, Okuma, Sosyal) tek tek özelleştirebilir.
 
 ---

@@ -15,9 +15,8 @@ export default function App() {
   const checkConnection = async () => {
     try {
       const state = await Network.getNetworkStateAsync();
-      const offline = !state.isConnected || !state.isInternetReachable;
-      // Note: isInternetReachable might be null initially on some platforms
-      setIsOffline(offline === true);
+      const offline = state.isConnected === false || state.isInternetReachable === false;
+      setIsOffline(offline);
       return !offline;
     } catch (error) {
       console.error('Error checking network state:', error);
@@ -34,22 +33,13 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleRetry = async () => {
-    const online = await checkConnection();
-    if (online) {
-      setKey(prev => prev + 1); // Refresh the component tree
-    }
-  };
-
-  if (isOffline && Platform.OS !== 'web') {
-    return <OfflineScreen onRetry={handleRetry} />;
-  }
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
         <StatusBar style="light" backgroundColor="#0b0c0f" />
-        {Platform.OS === 'web' ? (
+        {isOffline && Platform.OS !== 'web' ? (
+          <OfflineScreen onRetry={handleRetry} />
+        ) : Platform.OS === 'web' ? (
           <iframe
             src={url}
             style={styles.iframe}
@@ -67,7 +57,7 @@ export default function App() {
             domStorageEnabled={true}
             startInLoadingState={true}
             scalesPageToFit={true}
-            decelerationRate="normal"
+            {...(Platform.OS === 'ios' ? { decelerationRate: 'normal' } : {})}
             originWhitelist={['*']}
             allowFileAccess={true}
             onError={() => setIsOffline(true)}
