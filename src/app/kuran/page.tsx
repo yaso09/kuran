@@ -100,15 +100,13 @@ export default function KuranPage() {
                                         </span>
                                     </div>
 
-                                    {/* Mini Progress Bar */}
-                                    {progress > 0 && (
-                                        <div className="mt-6 w-full h-1 bg-slate-800/50 rounded-full overflow-hidden">
-                                            <div
-                                                className={`h-full transition-all duration-1000 ${isCompleted ? 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'bg-amber-600/50'}`}
-                                                style={{ width: `${progress}%` }}
-                                            />
-                                        </div>
-                                    )}
+                                    {/* Mini Progress Bar - Always rendered for consistent height */}
+                                    <div className="mt-6 w-full h-1 bg-slate-800/50 rounded-full overflow-hidden">
+                                        <div
+                                            className={`h-full transition-all duration-1000 ${isCompleted ? 'bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]' : 'bg-amber-600/50'}`}
+                                            style={{ width: `${progress}%`, opacity: progress > 0 ? 1 : 0 }}
+                                        />
+                                    </div>
                                 </div>
                             </Link>
                         );

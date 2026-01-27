@@ -5,7 +5,7 @@ const vapidPrivateKey = process.env.VAPID_PRIVATE_KEY;
 
 if (vapidPublicKey && vapidPrivateKey) {
     webpush.setVapidDetails(
-        'mailto:example@yourdomain.com',
+        process.env.VAPID_SUBJECT || 'mailto:admin@yasireymen.com',
         vapidPublicKey,
         vapidPrivateKey
     );
@@ -19,7 +19,10 @@ export async function sendPushNotification(subscription: any, payload: { title: 
         );
         return { success: true };
     } catch (error: any) {
-        console.error('Push notification error:', error);
-        return { success: false, error: error.message };
+        // Suppress logging for expired/invalid subscriptions as they are handled upstream
+        if (error.statusCode !== 410 && error.statusCode !== 404) {
+            console.error('Push notification error:', error);
+        }
+        return { success: false, error: error.message, statusCode: error.statusCode };
     }
 }

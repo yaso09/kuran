@@ -150,6 +150,12 @@ export default function SurahPage() {
     const [currentVisibleVerse, setCurrentVisibleVerse] = useState<string | null>(null);
     const [progress, setProgress] = useState(0);
 
+    const bookmarksRef = useRef(bookmarks);
+
+    useEffect(() => {
+        bookmarksRef.current = bookmarks;
+    }, [bookmarks]);
+
     useEffect(() => {
         if (!data || loading) return;
 
@@ -177,6 +183,7 @@ export default function SurahPage() {
                                 user.update({
                                     unsafeMetadata: {
                                         ...user.unsafeMetadata,
+                                        bookmarks: bookmarksRef.current, // Use ref to prevent stale overwrite
                                         lastVerse: verseKey,
                                         lastRead: `/kuran/${idUnwrapped}#ayet-${verseKey.split(':')[1]}`,
                                         surahProgress: {
@@ -221,9 +228,11 @@ export default function SurahPage() {
         setBookmarks(newBookmarks);
 
         try {
-            await fetch("/api/user/bookmark", {
-                method: "POST",
-                body: JSON.stringify({ verseKey }),
+            await user.update({
+                unsafeMetadata: {
+                    ...user.unsafeMetadata,
+                    bookmarks: newBookmarks
+                }
             });
         } catch (error) {
             console.error("Bookmark error", error);

@@ -63,7 +63,17 @@ export default function HomeClient() {
                 });
 
                 const results = await Promise.all(promises);
-                setSavedVerses(results.filter((v): v is BookmarkedVerse => v !== null));
+                const validResults = results.filter((v): v is BookmarkedVerse => v !== null);
+
+                // Sort by Surah ID, then Verse ID
+                validResults.sort((a, b) => {
+                    if (a.surahId !== b.surahId) {
+                        return a.surahId - b.surahId;
+                    }
+                    return a.verseNumber - b.verseNumber;
+                });
+
+                setSavedVerses(validResults);
             } catch (error) {
                 console.error("Bookmark fetch error", error);
             } finally {
@@ -100,7 +110,7 @@ export default function HomeClient() {
                     "Authorization": `Bearer ${cerebrasApiKey}`
                 },
                 body: JSON.stringify({
-                    model: "llama3.1-8b",
+                    model: "llama-3.3-70b",
                     messages: [
                         {
                             role: "system",
@@ -321,7 +331,7 @@ export default function HomeClient() {
                     </div>
 
                     {/* Saved Verses Section */}
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10 relative z-10">
                         <div className="flex items-center gap-2 mb-6">
                             <Bookmark {...({ className: "text-amber-500" } as any)} />
                             <h2 className="text-xl font-bold text-white">Kaydedilen Ayetler</h2>

@@ -159,16 +159,20 @@ export default function SettingsPage() {
                 await registerPushSubscription(user.id);
             }
 
-            // Save to Supabase immediately
+            // Use upsert instead of update to handle missing profile rows
             await supabase
                 .from('profiles')
-                .update({ notifications_enabled: enabled })
-                .eq('id', user.id);
+                .upsert({
+                    id: user.id,
+                    notifications_enabled: enabled,
+                    city: formData.city || 'Istanbul' // Default if missing
+                });
 
-        } catch (error) {
-            console.error('Error saving notification setting:', error);
+        } catch (err: any) {
+            console.error('Error saving notification setting:', err);
             // Revert on error
             setFormData(prev => ({ ...prev, namazNotifications: !enabled }));
+            setError(`Hata: ${err.message || 'Bilinmeyen hata'} (${err.code || 'NoCode'})`);
         }
     };
 
@@ -390,7 +394,9 @@ export default function SettingsPage() {
                 {error && (
                     <div className="mb-6 bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex items-center gap-3">
                         <AlertCircle className="text-red-500" size={20} />
-                        <p className="text-red-500 font-medium">{error}</p>
+                        <p className="text-red-500 font-medium text-sm">
+                            {error}
+                        </p>
                         <button onClick={() => setError('')} className="ml-auto text-red-500 hover:text-red-400">
                             <X size={18} />
                         </button>
@@ -637,9 +643,36 @@ export default function SettingsPage() {
                 <div className="relative group mb-6">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
                     <div className="relative bg-[#15171c] rounded-xl p-6 border border-slate-800">
-                        <div className="flex items-center gap-3 mb-6">
-                            <Bell className="text-green-500" size={20} />
-                            <h2 className="text-xl font-black text-white">Bildirimler</h2>
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center gap-3">
+                                <Bell className="text-green-500" size={20} />
+                                <h2 className="text-xl font-black text-white">Bildirimler</h2>
+                            </div>
+                            <button
+                                onClick={async () => {
+                                    if (!window.confirm("Test bildirimi gönderilsin mi?")) return;
+                                    try {
+                                        const res = await fetch('/api/notifications/send', {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({
+                                                userId: user.id,
+                                                title: "🔔 Test Bildirimi",
+                                                body: "Bildirim sisteminiz başarıyla çalışıyor! Elhamdülillah.",
+                                                url: "/ayarlar"
+                                            })
+                                        });
+                                        if (res.ok) alert("Bildirim gönderildi!");
+                                        else alert("Bildirim gönderilemedi. Hata kodu: " + res.status);
+                                    } catch (e) {
+                                        alert("Bir hata oluştu.");
+                                        console.error(e);
+                                    }
+                                }}
+                                className="text-xs bg-slate-800 hover:bg-slate-700 text-white px-3 py-2 rounded-lg font-bold transition-colors border border-slate-700"
+                            >
+                                🔔 Test Bildirimi Gönder
+                            </button>
                         </div>
 
                         <div className="space-y-4">

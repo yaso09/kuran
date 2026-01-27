@@ -1,18 +1,35 @@
 self.addEventListener('push', function (event) {
     if (event.data) {
-        const data = event.data.json();
-        const options = {
-            body: data.body,
-            icon: data.icon || '/icons/icon-192x192.png',
-            badge: data.badge || '/icons/icon-192x192.png',
-            data: {
-                url: data.url || '/'
-            }
-        };
+        try {
+            const data = event.data.json();
+            console.log('[Service Worker] Push Received:', data);
 
-        event.waitUntil(
-            self.registration.showNotification(data.title, options)
-        );
+            const options = {
+                body: data.body,
+                icon: data.icon || '/icons/icon-192x192.png',
+                badge: data.badge || '/icons/icon-192x192.png',
+                vibrate: [100, 50, 100],
+                data: {
+                    url: data.url || '/',
+                    dateOfArrival: Date.now(),
+                    primaryKey: 1
+                },
+                actions: [
+                    {
+                        action: 'explore',
+                        title: 'Görüntüle',
+                    },
+                ]
+            };
+
+            event.waitUntil(
+                self.registration.showNotification(data.title, options)
+                    .then(() => console.log('[Service Worker] Notification shown'))
+                    .catch(err => console.error('[Service Worker] Notification error:', err))
+            );
+        } catch (err) {
+            console.error('[Service Worker] Error processing push event:', err);
+        }
     }
 });
 

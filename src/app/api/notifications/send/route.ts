@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         }
 
         const results = await Promise.all(
-            subscriptions.map(sub => {
+            subscriptions.map(async (sub) => {
                 const pushSubscription = {
                     endpoint: sub.endpoint,
                     keys: {
@@ -44,12 +44,23 @@ export async function POST(request: NextRequest) {
                         auth: sub.auth
                     }
                 };
-                return sendPushNotification(pushSubscription, {
+                const result = await sendPushNotification(pushSubscription, {
                     title,
                     body,
                     icon: "/icons/icon-192x192.png",
                     url: url || "/"
                 });
+
+                // Clean up invalid subscriptions
+                if (!result.success && (result.statusCode === 410 || result.statusCode === 404)) {
+                    console.log(`Deleting expired subscription for user ${userId}`);
+                    await supabase
+                        .from("push_subscriptions")
+                        .delete()
+                        .eq("endpoint", sub.endpoint);
+                }
+
+                return result;
             })
         );
 

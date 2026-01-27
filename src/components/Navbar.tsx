@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
-import { Menu, X, BookOpen, Bell } from "lucide-react";
+import { Menu, X, BookOpen, Bell, Clock } from "lucide-react";
 import { useState } from "react";
 import StreakDisplay from "./StreakDisplay";
 import ProfileDropdown from "./ProfileDropdown";
 import { useMobile } from "@/context/MobileContext";
+import { usePrayerTimes } from "@/hooks/usePrayerTimes";
 
 export default function Navbar() {
     const { isMobile } = useMobile();
     const [isOpen, setIsOpen] = useState(false);
+    const { nextPrayer, loading } = usePrayerTimes();
 
     if (isMobile) return null;
 
@@ -28,8 +30,14 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
-                        <Link href="/namaz-vakitleri" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                            Namaz Vakitleri
+                        <Link href="/namaz-vakitleri" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors flex flex-col items-center leading-none gap-1">
+                            <span>Namaz Vakitleri</span>
+                            {nextPrayer && !loading && (
+                                <span className="text-[10px] font-bold text-amber-500 bg-amber-500/10 px-1.5 py-0.5 rounded-md flex items-center gap-1">
+                                    <Clock size={10} />
+                                    {nextPrayer.remaining}
+                                </span>
+                            )}
                         </Link>
                         <Link href="/kuran" className="text-slate-300 hover:text-amber-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Oku

@@ -170,7 +170,13 @@ export async function registerPushSubscription(userId: string) {
     }
 
     try {
-        const registration = await navigator.serviceWorker.ready;
+        // Force update service worker to ensure latest version
+        const registration = await navigator.serviceWorker.register('/sw.js', {
+            scope: '/',
+            updateViaCache: 'none'
+        });
+        await registration.update();
+
         const existingSubscription = await registration.pushManager.getSubscription();
 
         if (existingSubscription) {

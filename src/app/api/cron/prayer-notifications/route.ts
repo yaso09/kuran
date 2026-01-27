@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { getPrayerTimes } from "@/lib/pray";
+import { sendPushNotification } from "@/lib/webpush";
 
 export async function GET(request: NextRequest) {
     // For security, you might want to check a CRON_SECRET header here
@@ -69,20 +70,38 @@ export async function GET(request: NextRequest) {
                             ? `${city} için ${prayer.vakit} vaktine az kaldı. Abdestinizi tazelemeyi unutmayın.`
                             : `${city} için ${prayer.vakit} vakti. Namazınızı huzurla kılın.`;
 
-                        // Send notifications to all users in this city
-                        for (const userId of cityGroups[city]) {
-                            // We trigger the send API internally (or we could call the function directly)
-                            // Calling the function directly is better
-                            await fetch(`${request.nextUrl.origin}/api/notifications/send`, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({
-                                    userId,
-                                    title,
-                                    body,
-                                    url: '/namaz-vakitleri'
-                                })
+                        // Send notification directly without internal fetch
+                        try {
+                            // 1. Save to notifications table
+                            await supabase.from("notifications").insert({
+                                user_id: userId,
+                                title,
+                                body,
+                                url: '/namaz-vakitleri',
+                                read: false
                             });
+
+                            // 2. Get subscriptions
+                            const { data: subscriptions } = await supabase
+                                .from("push_subscriptions")
+                                .select("*")
+                                .eq("user_id", userId);
+
+                            if (subscriptions && subscriptions.length > 0) {
+                                await Promise.all(subscriptions.map(sub =>
+                                    sendPushNotification({
+                                        endpoint: sub.endpoint,
+                                        keys: { p256dh: sub.p256dh, auth: sub.auth }
+                                    }, {
+                                        title,
+                                        body,
+                                        icon: "/icons/icon-192x192.png",
+                                        url: '/namaz-vakitleri'
+                                    })
+                                ));
+                            }
+                        } catch (err) {
+                            console.error(`Failed to notify user ${userId}:`, err);
                         }
 
                         results.push({ city, vakit: prayer.vakit, type: shouldNotify45Min ? '45min' : 'exact' });

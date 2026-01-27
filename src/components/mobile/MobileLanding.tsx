@@ -117,7 +117,7 @@ export default function MobileLanding() {
                     "Authorization": `Bearer ${cerebrasApiKey}`
                 },
                 body: JSON.stringify({
-                    model: "llama3.1-8b",
+                    model: "llama-3.3-70b",
                     messages: [
                         {
                             role: "system",

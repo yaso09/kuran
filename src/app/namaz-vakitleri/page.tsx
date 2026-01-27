@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import { usePageTracking } from '@/hooks/usePageTracking';
 import { TURKISH_CITIES } from '@/lib/cities';
@@ -12,87 +12,21 @@ import {
     Moon,
     Sun,
     Loader2,
-    Calendar,
     Navigation,
     Bell
 } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
-import { useUser } from '@clerk/nextjs';
-
-interface PrayerTime {
-    vakit: string;
-    saat: string;
-}
+import { usePrayerTimes } from '@/hooks/usePrayerTimes';
 
 export default function NamazVakitleri() {
-    const { user } = useUser();
-    const [city, setCity] = useState("Istanbul");
-    const [prayerTimes, setPrayerTimes] = useState<PrayerTime[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
-    const [nextPrayer, setNextPrayer] = useState<{ name: string; time: string; remaining: string } | null>(null);
+    const [selectedCity, setSelectedCity] = React.useState<string | undefined>(undefined);
+    const { city, setCity, prayerTimes, loading, error, nextPrayer } = usePrayerTimes(selectedCity);
 
     usePageTracking('/namaz-vakitleri', 'Namaz Vakitleri');
 
-    useEffect(() => {
-        const fetchUserCity = async () => {
-            if (user) {
-                const { data } = await supabase
-                    .from('profiles')
-                    .select('city')
-                    .eq('id', user.id)
-                    .single();
-                if (data?.city) setCity(data.city);
-            }
-        };
-        fetchUserCity();
-    }, [user]);
-
-    useEffect(() => {
-        const fetchTimes = async () => {
-            setLoading(true);
-            setError("");
-            try {
-                const res = await fetch(`/api/pray-times?city=${city}`);
-                const data = await res.json();
-                if (data.success && data.result) {
-                    setPrayerTimes(data.result);
-                    calculateNextPrayer(data.result);
-                } else {
-                    setError("Vakitler alınamadı.");
-                }
-            } catch (err) {
-                setError("Bir hata oluştu.");
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchTimes();
-    }, [city]);
-
-    const calculateNextPrayer = (times: PrayerTime[]) => {
-        const now = new Date();
-        const currentTime = now.getHours() * 60 + now.getMinutes();
-
-        const sortedTimes = times.map(t => {
-            const [h, m] = t.saat.split(':').map(Number);
-            return { ...t, minutes: h * 60 + m };
-        });
-
-        const next = sortedTimes.find(t => t.minutes > currentTime) || sortedTimes[0];
-
-        // Calculate remaining
-        let diff = next.minutes - currentTime;
-        if (diff < 0) diff += 24 * 60;
-
-        const h = Math.floor(diff / 60);
-        const m = diff % 60;
-
-        setNextPrayer({
-            name: next.vakit,
-            time: next.saat,
-            remaining: `${h} sa ${m} dk`
-        });
+    // Handle city change
+    const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCity(e.target.value);
+        setCity(e.target.value);
     };
 
     const getIcon = (vakit: string) => {
@@ -130,7 +64,7 @@ export default function NamazVakitleri() {
                             <MapPin className="text-amber-500 mr-2" size={18} />
                             <select
                                 value={city}
-                                onChange={(e) => setCity(e.target.value)}
+                                onChange={handleCityChange}
                                 className="bg-transparent border-none text-white focus:ring-0 cursor-pointer w-full font-bold outline-none"
                             >
                                 {TURKISH_CITIES.map(c => (
