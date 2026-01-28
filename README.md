@@ -39,9 +39,10 @@ Bu modül, uygulamanın çekirdeğini oluşturur ve kullanıcı deneyimi (UX) en
 - **Hibrit Görünüm Motoru**:
   - **Mealli Mod (Full View)**: Bu modda ayetler kartlar halinde listelenir. Her kartta Arapça metin ve Türkçe meal (seçilebilir kaynak: Diyanet, Hayrat, Ö.N. Bilmen) bulunur.
   - **İbadet Modu (Reading View)**: "Mushaf" deneyimini dijital ortama taşır. Tüm dikkat dağıtıcı unsurlar (butonlar, menüler, mealler) gizlenir. Sadece yüksek kontrastlı, okunaklı Arapça metin ekrana gelir.
-- **Akıllı Sure Arama (Smart Search)**:
-  - Sure listesi sayfasında, sure ismine veya numarasına göre anlık filtreleme yapan gelişmiş arama barı.
-  - Hızlı erişim için optimize edilmiş UX.
+- **Yapay Zeka Destekli Semantik Arama (Cerebras AI)**:
+  - Klasik kelime eşleşmesi yerine anlam bazlı arama yapar (Örn: "Moralim bozuk" yazınca İnşirah suresini getirir).
+  - **Teknoloji**: `Llama-3.3-70b` modeli ve `Cerebras` altyapısı kullanılarak doğal dil işleme (NLP) yapılır.
+  - **Hız**: Saniyenin altında (sub-second) cevap süresi ile anlık ayet önerileri sunar.
 - **Akıllı Ses Çalar (Audio Engine)**:
   - `HTML5 Audo API` üzerine kurulmuştur.
   - **Wake Lock API Entegrasyonu**: Sure dinlenirken telefon ekranının kapanmasını engeller.
@@ -232,6 +233,9 @@ Platformun ayrıca bir adet gelişmiş yerel mobil uygulaması bulunmaktadır (`
    NEXT_PUBLIC_VAPID_PUBLIC_KEY=...
    VAPID_PRIVATE_KEY=...
    VAPID_SUBJECT=mailto:admin@example.com
+
+   # AI Search (Cerebras)
+   NEXT_PUBLIC_CEREBRAS_API_KEY=csk-...
    ```
 
 4. **Veritabanını Hazırlayın**

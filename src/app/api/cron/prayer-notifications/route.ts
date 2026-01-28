@@ -10,6 +10,12 @@ export async function GET(request: NextRequest) {
     //     return new Response('Unauthorized', { status: 401 });
     // }
 
+    // Vercel Hobby Plan Limit Workaround:
+    // Since Vercel Cron only runs daily on Hobby plan, we recommend using an external 
+    // free cron service (like cron-job.org or GitHub Actions) to hit this endpoint 
+    // every 10-15 minutes.
+    // GET /api/cron/prayer-notifications
+
     try {
         // 1. Get all users with notifications enabled
         const { data: profiles, error: profileError } = await supabase
@@ -70,38 +76,41 @@ export async function GET(request: NextRequest) {
                             ? `${city} için ${prayer.vakit} vaktine az kaldı. Abdestinizi tazelemeyi unutmayın.`
                             : `${city} için ${prayer.vakit} vakti. Namazınızı huzurla kılın.`;
 
-                        // Send notification directly without internal fetch
-                        try {
-                            // 1. Save to notifications table
-                            await supabase.from("notifications").insert({
-                                user_id: userId,
-                                title,
-                                body,
-                                url: '/namaz-vakitleri',
-                                read: false
-                            });
+                        // Notify all users in this city
+                        const userIds = cityGroups[city];
+                        for (const uid of userIds) {
+                            try {
+                                // 1. Save to notifications table
+                                await supabase.from("notifications").insert({
+                                    user_id: uid,
+                                    title,
+                                    body,
+                                    url: '/namaz-vakitleri',
+                                    read: false
+                                });
 
-                            // 2. Get subscriptions
-                            const { data: subscriptions } = await supabase
-                                .from("push_subscriptions")
-                                .select("*")
-                                .eq("user_id", userId);
+                                // 2. Get subscriptions
+                                const { data: subscriptions } = await supabase
+                                    .from("push_subscriptions")
+                                    .select("*")
+                                    .eq("user_id", uid);
 
-                            if (subscriptions && subscriptions.length > 0) {
-                                await Promise.all(subscriptions.map(sub =>
-                                    sendPushNotification({
-                                        endpoint: sub.endpoint,
-                                        keys: { p256dh: sub.p256dh, auth: sub.auth }
-                                    }, {
-                                        title,
-                                        body,
-                                        icon: "/icons/icon-192x192.png",
-                                        url: '/namaz-vakitleri'
-                                    })
-                                ));
+                                if (subscriptions && subscriptions.length > 0) {
+                                    await Promise.all(subscriptions.map(sub =>
+                                        sendPushNotification({
+                                            endpoint: sub.endpoint,
+                                            keys: { p256dh: sub.p256dh, auth: sub.auth }
+                                        }, {
+                                            title,
+                                            body,
+                                            icon: "/icons/icon-192x192.png",
+                                            url: '/namaz-vakitleri'
+                                        })
+                                    ));
+                                }
+                            } catch (err) {
+                                console.error(`Failed to notify user ${uid}:`, err);
                             }
-                        } catch (err) {
-                            console.error(`Failed to notify user ${userId}:`, err);
                         }
 
                         results.push({ city, vakit: prayer.vakit, type: shouldNotify45Min ? '45min' : 'exact' });
