@@ -16,4 +16,7 @@ export interface Verse {
 
 export interface SurahData {
     verses: Verse[];
+    tafseer?: {
+        elmalili?: string;
+    };
 }

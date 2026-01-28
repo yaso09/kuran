@@ -427,6 +427,13 @@ export default function SurahPage() {
                             </select>
                         )}
 
+                        <Link
+                            href={`/kuran/${surahId}/tefsir`}
+                            className="bg-slate-800 text-slate-300 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold hover:bg-slate-700 hover:text-white transition-colors border border-slate-700 hover:border-slate-600"
+                        >
+                            Tefsir
+                        </Link>
+
                         <button
                             onClick={playFullSurah}
                             className="flex items-center gap-2 bg-amber-600 text-white p-1.5 sm:px-4 sm:py-1.5 rounded-full text-sm font-medium hover:bg-amber-700 transition-colors shadow-sm hover:shadow-md hover:shadow-amber-600/20"
