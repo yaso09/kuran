@@ -43,7 +43,7 @@ export function calculateNewStreak(
         };
     }
 
-    // Continuing streak
+    // Continuing streak (read yesterday)
     if (lastReadDate === yesterdayStr) {
         return {
             newStreak: currentStreak + 1,
@@ -54,21 +54,33 @@ export function calculateNewStreak(
         };
     }
 
-    // Missed day(s)
-    if (freezes > 0) {
-        // Use freeze to protect streak
-        // The logic here is: the freeze protects the *existing* streak from resetting.
-        // Today's read then increments that protected streak.
+    // Check how many days missed
+    const lastRead = new Date(lastReadDate);
+    const todayDate = new Date(today);
+    const daysDiff = Math.floor((todayDate.getTime() - lastRead.getTime()) / (1000 * 60 * 60 * 24));
+
+    // Missed 1 day - use freeze if available
+    if (daysDiff === 2) {
+        if (freezes > 0) {
+            return {
+                newStreak: currentStreak + 1,
+                newFreezes: freezes - 1,
+                newCoins: coins + 10,
+                hasIncreased: true,
+                useFreeze: true
+            };
+        }
+        // No freeze available, but still within 2-day grace period
         return {
             newStreak: currentStreak + 1,
-            newFreezes: freezes - 1,
+            newFreezes: freezes,
             newCoins: coins + 10,
             hasIncreased: true,
-            useFreeze: true
+            useFreeze: false
         };
     }
 
-    // Streak reset
+    // Missed 2+ days - streak reset
     return {
         newStreak: 1,
         newFreezes: freezes,

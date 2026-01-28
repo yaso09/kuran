@@ -14,6 +14,7 @@ import { X, MessageSquare, Quote, CornerDownRight } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { calculateNewStreak } from "@/lib/streak";
+import StreakCelebration from "@/components/StreakCelebration";
 
 import CommentItem from "@/components/CommentItem";
 
@@ -34,6 +35,8 @@ export default function SurahPage() {
     const [viewMode, setViewMode] = useState<'full' | 'reading'>('full');
     const [selectedMeal, setSelectedMeal] = useState<'diyanet_vakfi' | 'omer_nasuhi_bilmen' | 'hayrat_nesriyat'>('diyanet_vakfi');
     const [showCelebration, setShowCelebration] = useState(false);
+    const [celebrationData, setCelebrationData] = useState({ streak: 0, coins: 0 });
+    const prevStreakRef = useRef<number | null>(null);
     const [likedComments, setLikedComments] = useState<Set<string>>(new Set());
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -82,18 +85,34 @@ export default function SurahPage() {
                 if (user && !metadataUpdatedRef.current) {
                     metadataUpdatedRef.current = true;
                     const today = new Date().toDateString();
+                    const currentStreak = (user.unsafeMetadata.streak as number) || 0;
+
+                    console.log('[Streak Debug] Current streak:', currentStreak);
+                    console.log('[Streak Debug] Last read date:', user.unsafeMetadata.lastReadDate);
+                    console.log('[Streak Debug] Today:', today);
+
+                    // Initialize prevStreak if not set
+                    if (prevStreakRef.current === null) {
+                        prevStreakRef.current = currentStreak;
+                        console.log('[Streak Debug] Initialized prevStreak:', currentStreak);
+                    }
 
                     const { newStreak, newFreezes, newCoins, hasIncreased } = calculateNewStreak({
-                        currentStreak: (user.unsafeMetadata.streak as number) || 0,
+                        currentStreak,
                         lastReadDate: user.unsafeMetadata.lastReadDate as string || null,
                         freezes: user.unsafeMetadata.freezes !== undefined ? (user.unsafeMetadata.freezes as number) : 2,
                         coins: (user.unsafeMetadata.coins as number) || 0,
                         readingHistory: (user.unsafeMetadata.readingHistory as string[]) || []
                     }, today);
 
+                    console.log('[Streak Debug] Calculation result:', { newStreak, hasIncreased, prevStreak: prevStreakRef.current });
+
+                    // Show celebration if streak increased OR if it's a fresh start (streak = 1)
                     if (hasIncreased) {
+                        console.log('[Streak Debug] 🎉 SHOWING CELEBRATION!', { newStreak, coins: 10 });
+                        setCelebrationData({ streak: newStreak, coins: 10 });
                         setShowCelebration(true);
-                        setTimeout(() => setShowCelebration(false), 4000);
+                        prevStreakRef.current = newStreak;
 
                         // Update reading history
                         const history = (user.unsafeMetadata.readingHistory as string[]) || [];
@@ -109,6 +128,11 @@ export default function SurahPage() {
                                 freezes: newFreezes,
                                 readingHistory: newHistory
                             }
+                        }).then(() => {
+                            // Reload page after a delay to ensure Navbar and other components update
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 4000); // Wait for celebration to finish
                         }).catch(e => console.error("Streak sync failed", e));
                     }
                 }
@@ -347,23 +371,12 @@ export default function SurahPage() {
             <Navbar />
 
             {/* Streak Celebration Overlay */}
-            {showCelebration && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none">
-                    <div className="bg-[#15171c]/90 backdrop-blur-xl border border-amber-500/30 p-12 rounded-3xl shadow-[0_0_100px_rgba(245,158,11,0.2)] flex flex-col items-center gap-6 animate-in zoom-in duration-500 scale-110">
-                        <div className="relative">
-                            <Flame size={120} className="text-amber-500 fill-amber-500 animate-flame" />
-                            <div className="absolute inset-0 bg-amber-500 blur-2xl opacity-50 animate-pulse"></div>
-                        </div>
-                        <div className="text-center">
-                            <h2 className="text-4xl font-black text-white tracking-tight mb-2 uppercase">TEBRİKLER!</h2>
-                            <p className="text-amber-500 font-bold text-xl uppercase tracking-widest">SERİNİZ ARTTI</p>
-                        </div>
-                        <div className="bg-amber-600 text-white px-8 py-3 rounded-2xl text-4xl font-black shadow-xl animate-bounce">
-                            {(user?.unsafeMetadata.streak as number) || 1} GÜN
-                        </div>
-                    </div>
-                </div>
-            )}
+            <StreakCelebration
+                show={showCelebration}
+                streak={celebrationData.streak}
+                coinsEarned={celebrationData.coins}
+                onClose={() => setShowCelebration(false)}
+            />
 
             {/* Premium Sticky Header */}
             <div className={`bg-[#0b0c0f]/95 backdrop-blur-md border-b border-slate-800 sticky ${isMobile ? 'top-0' : 'top-16'} z-30 shadow-sm transition-all group/header`}>

@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useUser } from '@clerk/nextjs';
+import { useUser, useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
 import { User, Settings, LogOut, ChevronDown } from 'lucide-react';
 
 export default function ProfileDropdown() {
     const { user } = useUser();
+    const { signOut } = useClerk();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -65,10 +66,9 @@ export default function ProfileDropdown() {
                             <span className="font-medium">Hesap Ayarları</span>
                         </Link>
                         <button
-                            onClick={() => {
+                            onClick={async () => {
                                 setIsOpen(false);
-                                // Clerk's sign out will be handled by the settings page
-                                window.location.href = '/sign-in';
+                                await signOut({ redirectUrl: '/' });
                             }}
                             className="w-full flex items-center gap-3 px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-red-500 transition-colors"
                         >
