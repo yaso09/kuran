@@ -1,0 +1,269 @@
+[
+  {
+    "sure": 104,
+    "ayet": 1,
+    "transliteration": "Veylun likulli humezetin lumeze(tin)",
+    "words": [
+      {
+        "text": "وَيْلٌ",
+        "meaning": "vay haline"
+      },
+      {
+        "text": "لِكُلِّ",
+        "meaning": "herkesin"
+      },
+      {
+        "text": "هُمَزَةٍ",
+        "meaning": "diliyle çekiştiren"
+      },
+      {
+        "text": "لُمَزَةٍۙ",
+        "meaning": "kaş göz işaretleriyle alay eden"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Mal toplayarak onu tekrar tekrar sayan, diliyle çekiştirip alay eden kimsenin vay haline!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 2,
+    "transliteration": "Elleżî ceme’a mâlen ve ’addedeh(u)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "o ki"
+      },
+      {
+        "text": "جَمَعَ",
+        "meaning": "yığdı"
+      },
+      {
+        "text": "مَالًا",
+        "meaning": "mal"
+      },
+      {
+        "text": "وَعَدَّدَهُۙ",
+        "meaning": "ve onu saydı durdu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Mal toplayarak onu tekrar tekrar sayan, diliyle çekiştirip alay eden kimsenin vay haline!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 3,
+    "transliteration": "Yahsebu enne mâlehu aḣledeh(u)",
+    "words": [
+      {
+        "text": "يَحْسَبُ",
+        "meaning": "sanıyor"
+      },
+      {
+        "text": "اَنَّ",
+        "meaning": "muhakkak"
+      },
+      {
+        "text": "مَالَهُٓ",
+        "meaning": "malının"
+      },
+      {
+        "text": "اَخْلَدَهُۚ",
+        "meaning": "onu ebedi yaşatacağını"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Malının kendisini ölümsüz kılacağını sanır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 4,
+    "transliteration": "Kellâ(s) leyunbeżenne fî-lhutame(ti)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "لَيُنْبَذَنَّ",
+        "meaning": "andolsun o atılacaktır"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْحُطَمَةِۘ",
+        "meaning": "Hutame'ye"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hayır; o, and olsun ki, Hutame'ye atılacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 5,
+    "transliteration": "Vemâ edrâke mâ-lhutame(tu)",
+    "words": [
+      {
+        "text": "وَمَٓا",
+        "meaning": "nedir?"
+      },
+      {
+        "text": "اَدْرٰيكَ",
+        "meaning": "bilir misin?"
+      },
+      {
+        "text": "مَا",
+        "meaning": "nedir"
+      },
+      {
+        "text": "الْحُطَمَةُۜ",
+        "meaning": "Hutame"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hutame'nin ne olduğunu sen bilir misin?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 6,
+    "transliteration": "Nâru(A)llâhi-lmûkade(tu)",
+    "words": [
+      {
+        "text": "نَارُ",
+        "meaning": "ateşidir"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "الْمُوقَدَةُۙ",
+        "meaning": "tutuşturulmuş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, yüreklere çökecek olan, Allah'ın tutuşturulmuş ateşidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 7,
+    "transliteration": "Elletî tettali’u ‘alâ-l-ef-ide(ti)",
+    "words": [
+      {
+        "text": "اَلَّت۪ي",
+        "meaning": "ki"
+      },
+      {
+        "text": "تَطَّلِعُ",
+        "meaning": "işler"
+      },
+      {
+        "text": "عَلَى",
+        "meaning": null
+      },
+      {
+        "text": "الْاَفْـِٔدَةِۜ",
+        "meaning": "gönüllere"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, yüreklere çökecek olan, Allah'ın tutuşturulmuş ateşidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 8,
+    "transliteration": "İnnehâ ‘aleyhim mu/sade(tun)",
+    "words": [
+      {
+        "text": "اِنَّهَا",
+        "meaning": "şüphesiz o"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "onların üzerine"
+      },
+      {
+        "text": "مُؤْصَدَةٌۙ",
+        "meaning": "kapatılıp kilitlenecektir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar, uzun sütunlar arasında, her yönden o ateşle kapatılmışlardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 104,
+    "ayet": 9,
+    "transliteration": "Fî ‘amedin mumeddede(tin)",
+    "words": [
+      {
+        "text": "ف۪ي",
+        "meaning": "arasında"
+      },
+      {
+        "text": "عَمَدٍ",
+        "meaning": "direkler"
+      },
+      {
+        "text": "مُمَدَّدَةٍ",
+        "meaning": "uzatılmış"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar, uzun sütunlar arasında, her yönden o ateşle kapatılmışlardır."
+        }
+      }
+    }
+  }
+]

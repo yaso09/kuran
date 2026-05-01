@@ -1,0 +1,392 @@
+[
+  {
+    "index": "01",
+    "start": {
+      "index": "1",
+      "verse": "1",
+      "name": "Fâtiha"
+    },
+    "end": {
+      "index": "2",
+      "verse": "141",
+      "name": "Bakara"
+    }
+  },
+  {
+    "index": "02",
+    "start": {
+      "index": "2",
+      "verse": "142",
+      "name": "Bakara"
+    },
+    "end": {
+      "index": "2",
+      "verse": "252",
+      "name": "Bakara"
+    }
+  },
+  {
+    "index": "03",
+    "start": {
+      "index": "2",
+      "verse": "253",
+      "name": "Bakara"
+    },
+    "end": {
+      "index": "3",
+      "verse": "92",
+      "name": "Âl-i İmrân"
+    }
+  },
+  {
+    "index": "04",
+    "start": {
+      "index": "3",
+      "verse": "93",
+      "name": "Âl-i İmrân"
+    },
+    "end": {
+      "index": "4",
+      "verse": "23",
+      "name": "Nisâ"
+    }
+  },
+  {
+    "index": "05",
+    "start": {
+      "index": "4",
+      "verse": "24",
+      "name": "Nisâ"
+    },
+    "end": {
+      "index": "4",
+      "verse": "147",
+      "name": "Nisâ"
+    }
+  },
+  {
+    "index": "06",
+    "start": {
+      "index": "4",
+      "verse": "148",
+      "name": "Nisâ"
+    },
+    "end": {
+      "index": "5",
+      "verse": "81",
+      "name": "Mâide"
+    }
+  },
+  {
+    "index": "07",
+    "start": {
+      "index": "5",
+      "verse": "82",
+      "name": "Mâide"
+    },
+    "end": {
+      "index": "6",
+      "verse": "110",
+      "name": "En'âm"
+    }
+  },
+  {
+    "index": "08",
+    "start": {
+      "index": "6",
+      "verse": "111",
+      "name": "En'âm"
+    },
+    "end": {
+      "index": "7",
+      "verse": "87",
+      "name": "A'râf"
+    }
+  },
+  {
+    "index": "09",
+    "start": {
+      "index": "7",
+      "verse": "88",
+      "name": "A'râf"
+    },
+    "end": {
+      "index": "8",
+      "verse": "40",
+      "name": "Enfâl"
+    }
+  },
+  {
+    "index": "10",
+    "start": {
+      "index": "8",
+      "verse": "41",
+      "name": "Enfâl"
+    },
+    "end": {
+      "index": "9",
+      "verse": "92",
+      "name": "Tevbe"
+    }
+  },
+  {
+    "index": "11",
+    "start": {
+      "index": "9",
+      "verse": "93",
+      "name": "Tevbe"
+    },
+    "end": {
+      "index": "11",
+      "verse": "5",
+      "name": "Hûd"
+    }
+  },
+  {
+    "index": "12",
+    "start": {
+      "index": "11",
+      "verse": "6",
+      "name": "Hûd"
+    },
+    "end": {
+      "index": "12",
+      "verse": "52",
+      "name": "Yusuf"
+    }
+  },
+  {
+    "index": "13",
+    "start": {
+      "index": "12",
+      "verse": "53",
+      "name": "Yusuf"
+    },
+    "end": {
+      "index": "14",
+      "verse": "52",
+      "name": "İbrahim"
+    }
+  },
+  {
+    "index": "14",
+    "start": {
+      "index": "15",
+      "verse": "1",
+      "name": "Hicr"
+    },
+    "end": {
+      "index": "16",
+      "verse": "128",
+      "name": "Nahl"
+    }
+  },
+  {
+    "index": "15",
+    "start": {
+      "index": "17",
+      "verse": "1",
+      "name": "İsrâ"
+    },
+    "end": {
+      "index": "18",
+      "verse": "74",
+      "name": "Kehf"
+    }
+  },
+  {
+    "index": "16",
+    "start": {
+      "index": "18",
+      "verse": "75",
+      "name": "Kehf"
+    },
+    "end": {
+      "index": "20",
+      "verse": "135",
+      "name": "Tâhâ"
+    }
+  },
+  {
+    "index": "17",
+    "start": {
+      "index": "21",
+      "verse": "1",
+      "name": "Enbiyâ"
+    },
+    "end": {
+      "index": "22",
+      "verse": "78",
+      "name": "Hac"
+    }
+  },
+  {
+    "index": "18",
+    "start": {
+      "index": "23",
+      "verse": "1",
+      "name": "Mü'minûn"
+    },
+    "end": {
+      "index": "25",
+      "verse": "20",
+      "name": "Furkân"
+    }
+  },
+  {
+    "index": "19",
+    "start": {
+      "index": "25",
+      "verse": "21",
+      "name": "Furkân"
+    },
+    "end": {
+      "index": "27",
+      "verse": "55",
+      "name": "Neml"
+    }
+  },
+  {
+    "index": "20",
+    "start": {
+      "index": "27",
+      "verse": "56",
+      "name": "Neml"
+    },
+    "end": {
+      "index": "29",
+      "verse": "45",
+      "name": "Ankebût"
+    }
+  },
+  {
+    "index": "21",
+    "start": {
+      "index": "29",
+      "verse": "46",
+      "name": "Ankebût"
+    },
+    "end": {
+      "index": "33",
+      "verse": "30",
+      "name": "Ahzâb"
+    }
+  },
+  {
+    "index": "22",
+    "start": {
+      "index": "33",
+      "verse": "31",
+      "name": "Ahzâb"
+    },
+    "end": {
+      "index": "36",
+      "verse": "27",
+      "name": "Yâsîn"
+    }
+  },
+  {
+    "index": "23",
+    "start": {
+      "index": "36",
+      "verse": "28",
+      "name": "Yâsîn"
+    },
+    "end": {
+      "index": "39",
+      "verse": "31",
+      "name": "Zümer"
+    }
+  },
+  {
+    "index": "24",
+    "start": {
+      "index": "39",
+      "verse": "32",
+      "name": "Zümer"
+    },
+    "end": {
+      "index": "41",
+      "verse": "46",
+      "name": "Fussilet"
+    }
+  },
+  {
+    "index": "25",
+    "start": {
+      "index": "41",
+      "verse": "47",
+      "name": "Fussilet"
+    },
+    "end": {
+      "index": "45",
+      "verse": "37",
+      "name": "Câsiye"
+    }
+  },
+  {
+    "index": "26",
+    "start": {
+      "index": "46",
+      "verse": "1",
+      "name": "Ahkâf"
+    },
+    "end": {
+      "index": "51",
+      "verse": "30",
+      "name": "Zâriyat"
+    }
+  },
+  {
+    "index": "27",
+    "start": {
+      "index": "51",
+      "verse": "31",
+      "name": "Zâriyat"
+    },
+    "end": {
+      "index": "57",
+      "verse": "29",
+      "name": "Hadîd"
+    }
+  },
+  {
+    "index": "28",
+    "start": {
+      "index": "58",
+      "verse": "1",
+      "name": "Mücâdele"
+    },
+    "end": {
+      "index": "66",
+      "verse": "12",
+      "name": "Tahrîm"
+    }
+  },
+  {
+    "index": "29",
+    "start": {
+      "index": "67",
+      "verse": "1",
+      "name": "Mülk"
+    },
+    "end": {
+      "index": "77",
+      "verse": "50",
+      "name": "Mürselât"
+    }
+  },
+  {
+    "index": "30",
+    "start": {
+      "index": "78",
+      "verse": "1",
+      "name": "Nebe'"
+    },
+    "end": {
+      "index": "114",
+      "verse": "6",
+      "name": "Nâs"
+    }
+  }
+]

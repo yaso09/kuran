@@ -1,0 +1,2580 @@
+[
+  {
+    "sure": 55,
+    "ayet": 1,
+    "transliteration": "Errahmân(u)",
+    "words": [
+      {
+        "text": "اَلرَّحْمٰنُۙ",
+        "meaning": "Çok merhametli (Allah)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rahman olan Allah Kuran'ı öğretti;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 2,
+    "transliteration": "‘Alleme-lkur-ân(e)",
+    "words": [
+      {
+        "text": "عَلَّمَ",
+        "meaning": "öğretti"
+      },
+      {
+        "text": "الْقُرْاٰنَۜ",
+        "meaning": "Kur'an'ı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rahman olan Allah Kuran'ı öğretti;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 3,
+    "transliteration": "Ḣaleka-l-insân(e)",
+    "words": [
+      {
+        "text": "خَلَقَ",
+        "meaning": "yarattı"
+      },
+      {
+        "text": "الْاِنْسَانَۙ",
+        "meaning": "insanı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsanı yarattı, ona konuşmayı öğretti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 4,
+    "transliteration": "‘Allemehu-lbeyân(e)",
+    "words": [
+      {
+        "text": "عَلَّمَهُ",
+        "meaning": "ona öğretti"
+      },
+      {
+        "text": "الْبَيَانَ",
+        "meaning": "beyanı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsanı yarattı, ona konuşmayı öğretti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 5,
+    "transliteration": "Eşşemsu velkameru bihusbân(in)",
+    "words": [
+      {
+        "text": "اَلشَّمْسُ",
+        "meaning": "güneş"
+      },
+      {
+        "text": "وَالْقَمَرُ",
+        "meaning": "ve ay"
+      },
+      {
+        "text": "بِحُسْبَانٍۖ",
+        "meaning": "bir hesap iledir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Güneş ve ayın hareketleri bir hesaba göredir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 6,
+    "transliteration": "Ve-nnecmu ve-şşeceru yescudân(i)",
+    "words": [
+      {
+        "text": "وَالنَّجْمُ",
+        "meaning": "necm (bitkiler-yıldızlar)"
+      },
+      {
+        "text": "وَالشَّجَرُ",
+        "meaning": "ve ağaçlar"
+      },
+      {
+        "text": "يَسْجُدَانِ",
+        "meaning": "secde etmektedirler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bitkiler ve ağaçlar O'nun buyruğuna boyun eğerler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 7,
+    "transliteration": "Ve-ssemâe rafe’ahâ ve vada’a-lmîzân(e)",
+    "words": [
+      {
+        "text": "وَالسَّمَٓاءَ",
+        "meaning": "ve göğü"
+      },
+      {
+        "text": "رَفَعَهَا",
+        "meaning": "yükseltti"
+      },
+      {
+        "text": "وَوَضَعَ",
+        "meaning": "ve koydu"
+      },
+      {
+        "text": "الْم۪يزَانَۙ",
+        "meaning": "mizanı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, göğü yükseltmiştir; tartıyı koymuştur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 8,
+    "transliteration": "Ellâ tatġav fî-lmîzân(i)",
+    "words": [
+      {
+        "text": "اَلَّا",
+        "meaning": null
+      },
+      {
+        "text": "تَطْغَوْا",
+        "meaning": "taşkınlık etmeyin"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْم۪يزَانِ",
+        "meaning": "tartıda"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Artık tartıda tecavüz etmeyin."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 9,
+    "transliteration": "Ve akîmû-lvezne bilkisti velâ tuḣsirû-lmîzân(e)",
+    "words": [
+      {
+        "text": "وَاَق۪يمُوا",
+        "meaning": "ve yapın"
+      },
+      {
+        "text": "الْوَزْنَ",
+        "meaning": "tartıyı"
+      },
+      {
+        "text": "بِالْقِسْطِ",
+        "meaning": "adaletle"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "تُخْسِرُوا",
+        "meaning": "eksiklik yapmayın"
+      },
+      {
+        "text": "الْم۪يزَانَ",
+        "meaning": "terazide"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Tartmayı doğru yapın, tartıyı eksik tutmayın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 10,
+    "transliteration": "Vel-arda veda’ahâ lil-enâm(i)",
+    "words": [
+      {
+        "text": "وَالْاَرْضَ",
+        "meaning": "ve yeryüzünü"
+      },
+      {
+        "text": "وَضَعَهَا",
+        "meaning": "koydu"
+      },
+      {
+        "text": "لِلْاَنَامِۙ",
+        "meaning": "canlılar için"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah, yeri yaratıkları için meydana getirmiştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 11,
+    "transliteration": "Fîhâ fâkihetun ve-nnaḣlu żâtu-l-ekmâm(i)",
+    "words": [
+      {
+        "text": "ف۪يهَا",
+        "meaning": "onda vardır"
+      },
+      {
+        "text": "فَاكِهَةٌۖ",
+        "meaning": "meyva(lar)"
+      },
+      {
+        "text": "وَالنَّخْلُ",
+        "meaning": "ve hurmalar"
+      },
+      {
+        "text": "ذَاتُ",
+        "meaning": null
+      },
+      {
+        "text": "الْاَكْمَامِ",
+        "meaning": "salkımlı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Orada meyveler, salkımlı hurma ağaçları, kabuklu taneler, güzel kokulu otlar vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 12,
+    "transliteration": "Velhabbu żû-l’asfi ve-rrayhân(i)",
+    "words": [
+      {
+        "text": "وَالْحَبُّ",
+        "meaning": "ve dane(ler)"
+      },
+      {
+        "text": "ذُو",
+        "meaning": null
+      },
+      {
+        "text": "الْعَصْفِ",
+        "meaning": "saplı ve yapraklı"
+      },
+      {
+        "text": "وَالرَّيْحَانُۚ",
+        "meaning": "ve hoş kokulu bitkiler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Orada meyveler, salkımlı hurma ağaçları, kabuklu taneler, güzel kokulu otlar vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 13,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insanlar ve cinler! Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 14,
+    "transliteration": "Ḣaleka-l-insâne min salsâlin kelfeḣḣâr(i)",
+    "words": [
+      {
+        "text": "خَلَقَ",
+        "meaning": "yarattı"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insanı"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-dan"
+      },
+      {
+        "text": "صَلْصَالٍ",
+        "meaning": "pişmiş çamur-"
+      },
+      {
+        "text": "كَالْفَخَّارِۙ",
+        "meaning": "kiremit gibi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, insanı pişmiş çamur gibi kuru balçıktan yaratmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 15,
+    "transliteration": "Ve ḣaleka-lcânne min mâricin min nâr(in)",
+    "words": [
+      {
+        "text": "وَخَلَقَ",
+        "meaning": "ve yarattı"
+      },
+      {
+        "text": "الْجَٓانَّ",
+        "meaning": "cin'i"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-den"
+      },
+      {
+        "text": "مَارِجٍ",
+        "meaning": "dumanı olmayan alev-"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ten"
+      },
+      {
+        "text": "نَارٍۚ",
+        "meaning": "ateş-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Cinleri de yalın bir alevden yaratmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 16,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken; Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 17,
+    "transliteration": "Rabbu-lmeşrikayni ve rabbu-lmaġribeyn(i)",
+    "words": [
+      {
+        "text": "رَبُّ",
+        "meaning": "Rabbidir"
+      },
+      {
+        "text": "الْمَشْرِقَيْنِ",
+        "meaning": "iki doğunun"
+      },
+      {
+        "text": "وَرَبُّ",
+        "meaning": "ve Rabbidir"
+      },
+      {
+        "text": "الْمَغْرِبَيْنِۚ",
+        "meaning": "iki batının"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, iki doğunun Rabbidir, iki batının Rabbidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 18,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 19,
+    "transliteration": "Merace-lbahrayni yeltekiyân(i)",
+    "words": [
+      {
+        "text": "مَرَجَ",
+        "meaning": "salıverdi"
+      },
+      {
+        "text": "الْبَحْرَيْنِ",
+        "meaning": "iki denizi"
+      },
+      {
+        "text": "يَلْتَقِيَانِۙ",
+        "meaning": "birbirine kavuşuyorlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Acı ve tatlı sulu iki denizi birbirine kavuşmamak üzere salıvermiştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 20,
+    "transliteration": "Beynehumâ berzeḣun lâ yebġiyân(i)",
+    "words": [
+      {
+        "text": "بَيْنَهُمَا",
+        "meaning": "aralarında vardır"
+      },
+      {
+        "text": "بَرْزَخٌ",
+        "meaning": "bir engel"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يَبْغِيَانِۚ",
+        "meaning": "(birbirine) geçip karışmıyorlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Aralarında bir engel vardır; birbirinin sınırını aşamazlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 21,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 22,
+    "transliteration": "Yaḣrucu minhumâ-llu/lu-u velmercân(u)",
+    "words": [
+      {
+        "text": "يَخْرُجُ",
+        "meaning": "çıkar"
+      },
+      {
+        "text": "مِنْهُمَا",
+        "meaning": "ikisinden de"
+      },
+      {
+        "text": "اللُّؤْلُؤُ۬",
+        "meaning": "inci"
+      },
+      {
+        "text": "وَالْمَرْجَانُۚ",
+        "meaning": "ve mercan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu iki denizden de inci ve mercan çıkar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 23,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 24,
+    "transliteration": "Velehu-lcevâri-lmunşeâtu fî-lbahri kel-a’lâm(i)",
+    "words": [
+      {
+        "text": "وَلَهُ",
+        "meaning": "ve O'nundur"
+      },
+      {
+        "text": "الْجَوَارِ",
+        "meaning": "gemiler"
+      },
+      {
+        "text": "الْمُنْشَاٰتُ",
+        "meaning": "inşa edilmiş"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْبَحْرِ",
+        "meaning": "denizde"
+      },
+      {
+        "text": "كَالْاَعْلَامِۚ",
+        "meaning": "koca dağlar gibi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Denizde yürüyen dağlar gibi gemiler O'nundur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 25,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ۟",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 26,
+    "transliteration": "Kullu men ‘aleyhâ fân(in)",
+    "words": [
+      {
+        "text": "كُلُّ",
+        "meaning": "her şey"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": null
+      },
+      {
+        "text": "عَلَيْهَا",
+        "meaning": "üzerinde bulunan"
+      },
+      {
+        "text": "فَانٍۚ",
+        "meaning": "yok olacaktır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yeryüzünde bulunan her şey fanidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 27,
+    "transliteration": "Ve yebkâ vechu rabbike żû-lcelâli vel-ikrâm(i)",
+    "words": [
+      {
+        "text": "وَيَبْقٰى",
+        "meaning": "baki kalacaktır"
+      },
+      {
+        "text": "وَجْهُ",
+        "meaning": "yüzü"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "ذُو",
+        "meaning": "sahibi"
+      },
+      {
+        "text": "الْجَلَالِ",
+        "meaning": "celal"
+      },
+      {
+        "text": "وَالْاِكْرَامِۚ",
+        "meaning": "ve ikram"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ancak, yüce ve cömert olan Rabbinin varlığı bakidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 28,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 29,
+    "transliteration": "Yes-eluhu men fî-ssemâvâti vel-ard(i)(c) kulle yevmin huve fî şe/n(in)",
+    "words": [
+      {
+        "text": "يَسْـَٔلُهُ",
+        "meaning": "O'ndan isterler"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "فِي",
+        "meaning": "bulunan"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "göklerde"
+      },
+      {
+        "text": "وَالْاَرْضِۜ",
+        "meaning": "ve yerde"
+      },
+      {
+        "text": "كُلَّ",
+        "meaning": "her"
+      },
+      {
+        "text": "يَوْمٍ",
+        "meaning": "gün"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "شَأْنٍۚ",
+        "meaning": "yeni bir iştedir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Göklerde ve yerde olan kimseler her şeyi O'ndan isterler; O her an kainata tasarruf etmektedir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 30,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 31,
+    "transliteration": "Senefruġu lekum eyyuhâ-śśekalân(i)",
+    "words": [
+      {
+        "text": "سَنَفْرُغُ",
+        "meaning": "boş vaktimiz olacak"
+      },
+      {
+        "text": "لَكُمْ",
+        "meaning": "sizin için"
+      },
+      {
+        "text": "اَيُّهَ",
+        "meaning": "ey"
+      },
+      {
+        "text": "الثَّقَلَانِۚ",
+        "meaning": "iki yük sahibi (insan ve cin)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insan ve cin toplulukları! Sizin de hesabınızı ele alacağız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 32,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 33,
+    "transliteration": "Yâ ma’şera-lcinni vel-insi ini-steta’tum en tenfużû min aktâri-ssemâvâti vel-ardi fenfużû(c) lâ tenfużûne illâ bisultân(in)",
+    "words": [
+      {
+        "text": "يَا",
+        "meaning": "ey"
+      },
+      {
+        "text": "مَعْشَرَ",
+        "meaning": "topluluğu"
+      },
+      {
+        "text": "الْجِنِّ",
+        "meaning": "cinler"
+      },
+      {
+        "text": "وَالْاِنْسِ",
+        "meaning": "ve insanlar"
+      },
+      {
+        "text": "اِنِ",
+        "meaning": "eğer"
+      },
+      {
+        "text": "اسْتَطَعْتُمْ",
+        "meaning": "gücünüz yeterse"
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "تَنْفُذُوا",
+        "meaning": "geçip gitmeğe"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "اَقْطَارِ",
+        "meaning": "bucakları-"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "göklerin"
+      },
+      {
+        "text": "وَالْاَرْضِ",
+        "meaning": "ve yerin"
+      },
+      {
+        "text": "فَانْفُذُواۜ",
+        "meaning": "geçin gidin"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "تَنْفُذُونَ",
+        "meaning": "geçemezsiniz"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "ancak (geçebilirsiniz)"
+      },
+      {
+        "text": "بِسُلْطَانٍۚ",
+        "meaning": "kudretle"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey cin ve insan toplulukları! Göklerin ve yerin çevresini aşıp geçmeye gücünüz yetiyorsa geçin! Ama Allah'ın verdiği bir güç olmaksızın geçemezsiniz ki!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 34,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 35,
+    "transliteration": "Yurselu ‘aleykumâ şuvâzun min nârin ve nuhâsun felâ tentesirân(i)",
+    "words": [
+      {
+        "text": "يُرْسَلُ",
+        "meaning": "gönderilir"
+      },
+      {
+        "text": "عَلَيْكُمَا",
+        "meaning": "ikinizin üzerine"
+      },
+      {
+        "text": "شُوَاظٌ",
+        "meaning": "yalın alev"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ten"
+      },
+      {
+        "text": "نَارٍ",
+        "meaning": "ateş-"
+      },
+      {
+        "text": "وَنُحَاسٌ",
+        "meaning": "ve kıpkızıl bir duman"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": null
+      },
+      {
+        "text": "تَنْتَصِرَانِۚ",
+        "meaning": "başaramazsınız"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insanlar ve cinler! Üzerinize dumansız bir alev ve ateşsiz bir duman gönderilir de kurtulamazsınız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 36,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 37,
+    "transliteration": "Fe-iżâ-nşakkati-ssemâu fekânet verdeten ke-ddihân(i)",
+    "words": [
+      {
+        "text": "فَاِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "انْشَقَّتِ",
+        "meaning": "yarıldığı"
+      },
+      {
+        "text": "السَّمَٓاءُ",
+        "meaning": "gök"
+      },
+      {
+        "text": "فَكَانَتْ",
+        "meaning": "ve olduğunda"
+      },
+      {
+        "text": "وَرْدَةً",
+        "meaning": "kıpkırmızı bir gül"
+      },
+      {
+        "text": "كَالدِّهَانِۚ",
+        "meaning": "erimiş yağ gibi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gök yarılıp da, gül gibi kızardığı, yağ gibi eridiği zaman haliniz nice olur?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 38,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 39,
+    "transliteration": "Feyevme-iżin lâ yus-elu ‘an żenbihi insun velâ cân(nun)",
+    "words": [
+      {
+        "text": "فَيَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يُسْـَٔلُ",
+        "meaning": "sorulmaz"
+      },
+      {
+        "text": "عَنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "ذَنْبِه۪ٓ",
+        "meaning": "günahı-"
+      },
+      {
+        "text": "اِنْسٌ",
+        "meaning": "insana"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ne de"
+      },
+      {
+        "text": "جَٓانٌّۚ",
+        "meaning": "cin'e"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün ne insana ve ne cine suçu sorulur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 40,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 41,
+    "transliteration": "Yu’rafu-lmucrimûne bisîmâhum feyu/ḣażu bi-nnevâsî vel-akdâm(i)",
+    "words": [
+      {
+        "text": "يُعْرَفُ",
+        "meaning": "tanınır"
+      },
+      {
+        "text": "الْمُجْرِمُونَ",
+        "meaning": "suçlular"
+      },
+      {
+        "text": "بِس۪يمٰيهُمْ",
+        "meaning": "simalarından"
+      },
+      {
+        "text": "فَيُؤْخَذُ",
+        "meaning": "ve tutulur"
+      },
+      {
+        "text": "بِالنَّوَاص۪ي",
+        "meaning": "alınlar(ın)dan"
+      },
+      {
+        "text": "وَالْاَقْدَامِۚ",
+        "meaning": "ve ayaklar(ın)dan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Suçlular simalarından tanınırlar da, alın saçlarından ve ayaklarından yakalanırlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 42,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 43,
+    "transliteration": "Hâżihi cehennemu-lletî yukeżżibu bihâ-lmucrimûn(e)",
+    "words": [
+      {
+        "text": "هٰذِه۪",
+        "meaning": "işte bu"
+      },
+      {
+        "text": "جَهَنَّمُ",
+        "meaning": "cehennemdir"
+      },
+      {
+        "text": "الَّت۪ي",
+        "meaning": null
+      },
+      {
+        "text": "يُكَذِّبُ",
+        "meaning": "yalanladığı"
+      },
+      {
+        "text": "بِهَا",
+        "meaning": "onunla"
+      },
+      {
+        "text": "الْمُجْرِمُونَۢ",
+        "meaning": "suçluların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İşte suçluların yalanladıkları cehennem budur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 44,
+    "transliteration": "Yatûfûne beynehâ ve beyne hamîmin ân(in)",
+    "words": [
+      {
+        "text": "يَطُوفُونَ",
+        "meaning": "dolaşırlar"
+      },
+      {
+        "text": "بَيْنَهَا",
+        "meaning": "onunla"
+      },
+      {
+        "text": "وَبَيْنَ",
+        "meaning": "arasında"
+      },
+      {
+        "text": "حَم۪يمٍ",
+        "meaning": "kaynar su"
+      },
+      {
+        "text": "اٰنٍۚ",
+        "meaning": "kızgın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar, cehennem ateşiyle kaynar su arasında dolaşır dururlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 45,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ۟",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 46,
+    "transliteration": "Velimen ḣâfe makâme rabbihi cennetân(i)",
+    "words": [
+      {
+        "text": "وَلِمَنْ",
+        "meaning": "kimseler için vardır"
+      },
+      {
+        "text": "خَافَ",
+        "meaning": "korkan"
+      },
+      {
+        "text": "مَقَامَ",
+        "meaning": "(divanında) durmaktan"
+      },
+      {
+        "text": "رَبِّه۪",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "جَنَّتَانِۚ",
+        "meaning": "iki cennet"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rabbine karşı durmaktan korkan kimseye iki cennet vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 47,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۙ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 48,
+    "transliteration": "Żevâtâ efnân(in)",
+    "words": [
+      {
+        "text": "ذَوَاتَٓا",
+        "meaning": "ikisinin de vardır"
+      },
+      {
+        "text": "اَفْنَانٍۚ",
+        "meaning": "çeşitli ağaçları meyvaları"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu iki cennet türlü ağaçlarla doludur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 49,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 50,
+    "transliteration": "Fîhimâ ‘aynâni tecriyân(i)",
+    "words": [
+      {
+        "text": "ف۪يهِمَا",
+        "meaning": "ikisinde de vardır"
+      },
+      {
+        "text": "عَيْنَانِ",
+        "meaning": "iki kaynak"
+      },
+      {
+        "text": "تَجْرِيَانِۚ",
+        "meaning": "akıp giden"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu cennetlerden akan iki kaynak vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 51,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 52,
+    "transliteration": "Fîhimâ min kulli fâkihetin zevcân(i)",
+    "words": [
+      {
+        "text": "ف۪يهِمَا",
+        "meaning": "ikisinde de vardır"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "كُلِّ",
+        "meaning": "hepsi-"
+      },
+      {
+        "text": "فَاكِهَةٍ",
+        "meaning": "meyvaların"
+      },
+      {
+        "text": "زَوْجَانِۚ",
+        "meaning": "iki çift"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu cennetlerde türlü meyveden çift çift vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 53,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 54,
+    "transliteration": "Mutteki-îne ‘alâ furuşin betâ-inuhâ min istebrak(in)(c) ve cenâ-lcenneteyni dân(in)",
+    "words": [
+      {
+        "text": "مُتَّكِـ۪ٔينَ",
+        "meaning": "yaslanırlar"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": "üzerine"
+      },
+      {
+        "text": "فُرُشٍ",
+        "meaning": "yataklar"
+      },
+      {
+        "text": "بَطَٓائِنُهَا",
+        "meaning": "astarları"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-tan"
+      },
+      {
+        "text": "اِسْتَبْرَقٍۜ",
+        "meaning": "kalın atlas-"
+      },
+      {
+        "text": "وَجَنَا",
+        "meaning": "ve toplanması (meyvelerin)"
+      },
+      {
+        "text": "الْجَنَّتَيْنِ",
+        "meaning": "iki cennetin"
+      },
+      {
+        "text": "دَانٍۚ",
+        "meaning": "yakındır (kolaydır)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Orada, örtüleri parlak atlastan yataklara yaslanırlar; iki cennetin meyvelerini de kolayca toplarlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 55,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 56,
+    "transliteration": "Fîhinne kâsirâtu-ttarfi lem yatmiśhunne insun kablehum velâ cân(nun)",
+    "words": [
+      {
+        "text": "ف۪يهِنَّ",
+        "meaning": "orada vardır"
+      },
+      {
+        "text": "قَاصِرَاتُ",
+        "meaning": "(eşlerine) diken (dilberler)"
+      },
+      {
+        "text": "الطَّرْفِۙ",
+        "meaning": "bakışlarını"
+      },
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَطْمِثْهُنَّ",
+        "meaning": "onlara temas etmemiştir"
+      },
+      {
+        "text": "اِنْسٌ",
+        "meaning": "insan"
+      },
+      {
+        "text": "قَبْلَهُمْ",
+        "meaning": "bunlardan önce"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ne de"
+      },
+      {
+        "text": "جَٓانٌّۚ",
+        "meaning": "cin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Orada, bakışlarını yalnız eşlerine çevirmiş, daha önce ne insan ve ne de cinlerin dokunmuş olduğu eşler vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 57,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 58,
+    "transliteration": "Ke-ennehunne-lyâkûtu velmercân(u)",
+    "words": [
+      {
+        "text": "كَاَنَّهُنَّ",
+        "meaning": "sanki onlar"
+      },
+      {
+        "text": "الْيَاقُوتُ",
+        "meaning": "yakut"
+      },
+      {
+        "text": "وَالْمَرْجَانُۚ",
+        "meaning": "ve mercandırlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar yakut ve mercan gibidirler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 59,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 60,
+    "transliteration": "Hel cezâu-l-ihsâni illâ-l-ihsân(u)",
+    "words": [
+      {
+        "text": "هَلْ",
+        "meaning": "değil midir?"
+      },
+      {
+        "text": "جَزَٓاءُ",
+        "meaning": "karşılığı"
+      },
+      {
+        "text": "الْاِحْسَانِ",
+        "meaning": "iyiliğin"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "yalnız"
+      },
+      {
+        "text": "الْاِحْسَانُۚ",
+        "meaning": "iyilik"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İyiliğin karşılığı ancak iyilik değil midir?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 61,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 62,
+    "transliteration": "Vemin dûnihimâ cennetân(i)",
+    "words": [
+      {
+        "text": "وَمِنْ",
+        "meaning": "ve vardır"
+      },
+      {
+        "text": "دُونِهِمَا",
+        "meaning": "ikisinden başka"
+      },
+      {
+        "text": "جَنَّتَانِۚ",
+        "meaning": "iki cennet (daha)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu iki cennetten başka iki cennet daha vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 63,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۙ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 64,
+    "transliteration": "Mudhâmmetân(i)",
+    "words": [
+      {
+        "text": "مُدْهَٓامَّتَانِۚ",
+        "meaning": "yemyeşildirler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Renkleri koyu yeşildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 65,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 66,
+    "transliteration": "Fîhimâ ‘aynâni naddâḣatân(i)",
+    "words": [
+      {
+        "text": "ف۪يهِمَا",
+        "meaning": "ikisinde de  vardır"
+      },
+      {
+        "text": "عَيْنَانِ",
+        "meaning": "iki kaynak"
+      },
+      {
+        "text": "نَضَّاخَتَانِۚ",
+        "meaning": "fışkıran"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İkisinde de durmadan fışkıran iki kaynak vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 67,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 68,
+    "transliteration": "Fîhimâ fâkihetun ve naḣlun ve rummân(un)",
+    "words": [
+      {
+        "text": "ف۪يهِمَا",
+        "meaning": "ikisinde de vardır"
+      },
+      {
+        "text": "فَاكِهَةٌ",
+        "meaning": "meyvalar"
+      },
+      {
+        "text": "وَنَخْلٌ",
+        "meaning": "ve hurma"
+      },
+      {
+        "text": "وَرُمَّانٌۚ",
+        "meaning": "ve nar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İkisinde de türlü türlü meyveler, hurmalıklar ve nar ağaçları vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 69,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 70,
+    "transliteration": "Fîhinne ḣayrâtun hisân(un)",
+    "words": [
+      {
+        "text": "ف۪يهِنَّ",
+        "meaning": "onlarda vardır"
+      },
+      {
+        "text": "خَيْرَاتٌ",
+        "meaning": "iyi huylu (kadınlar)"
+      },
+      {
+        "text": "حِسَانٌۚ",
+        "meaning": "güzel"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oralarda iyi huylu güzel kadınlar vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 71,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 72,
+    "transliteration": "Hûrun maksûrâtun fî-lḣiyâm(i)",
+    "words": [
+      {
+        "text": "حُورٌ",
+        "meaning": "huriler"
+      },
+      {
+        "text": "مَقْصُورَاتٌ",
+        "meaning": "kapanmış"
+      },
+      {
+        "text": "فِي",
+        "meaning": "içine"
+      },
+      {
+        "text": "الْخِيَامِۚ",
+        "meaning": "çadırlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Çadırlar içinde ceylan gözlüler vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 73,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 74,
+    "transliteration": "Lem yatmiśhunne insun kablehum velâ cân(nun)",
+    "words": [
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَطْمِثْهُنَّ",
+        "meaning": "onlara temas etmemiştir"
+      },
+      {
+        "text": "اِنْسٌ",
+        "meaning": "insan"
+      },
+      {
+        "text": "قَبْلَهُمْ",
+        "meaning": "bunlardan önce"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ne de"
+      },
+      {
+        "text": "جَٓانٌّۚ",
+        "meaning": "cin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlara daha önce insan da, cin de dokunmamıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 75,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِۚ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 76,
+    "transliteration": "Mutteki-îne ‘alâ rafrafin ḣudrin ve’abkariyyin hisân(in)",
+    "words": [
+      {
+        "text": "مُتَّكِـ۪ٔينَ",
+        "meaning": "yaslanırlar"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": "üzerine"
+      },
+      {
+        "text": "رَفْرَفٍ",
+        "meaning": "yastıklar"
+      },
+      {
+        "text": "خُضْرٍ",
+        "meaning": "yeşil"
+      },
+      {
+        "text": "وَعَبْقَرِيٍّ",
+        "meaning": "ve döşeklere"
+      },
+      {
+        "text": "حِسَانٍۚ",
+        "meaning": "harikulade güzel"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Cennetlikler orada yeşil yastıklara ve harikulade işlemeli döşeklere yaslanırlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 77,
+    "transliteration": "Febi-eyyi âlâ-i rabbikumâ tukeżżibân(i)",
+    "words": [
+      {
+        "text": "فَبِاَيِّ",
+        "meaning": "şimdi hangi?"
+      },
+      {
+        "text": "اٰلَٓاءِ",
+        "meaning": "ni'metlerini"
+      },
+      {
+        "text": "رَبِّكُمَا",
+        "meaning": "Rabbinizin"
+      },
+      {
+        "text": "تُكَذِّبَانِ",
+        "meaning": "yalanlıyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 55,
+    "ayet": 78,
+    "transliteration": "Tebârake-smu rabbike żî-lcelâli vel-ikrâm(i)",
+    "words": [
+      {
+        "text": "تَبَارَكَ",
+        "meaning": "ne yücedir"
+      },
+      {
+        "text": "اسْمُ",
+        "meaning": "adı"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "ذِي",
+        "meaning": "sahibi"
+      },
+      {
+        "text": "الْجَلَالِ",
+        "meaning": "büyüklük"
+      },
+      {
+        "text": "وَالْاِكْرَامِ",
+        "meaning": "ve ikram"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Büyük ve pek cömert olan Rabbinin adı ne yücedir!"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,1330 @@
+[
+  {
+    "book": "01 Sözler",
+    "path": "01_Sozler",
+    "chapters": [
+      {
+        "name": "Birinci Söz",
+        "filename": "01.01_Birinci_Soz.html"
+      },
+      {
+        "name": "İkinci Söz",
+        "filename": "01.02_Ikinci_Soz.html"
+      },
+      {
+        "name": "Üçüncü Söz",
+        "filename": "01.03_Ucuncu_Soz.html"
+      },
+      {
+        "name": "Dördüncü Söz",
+        "filename": "01.04_Dorduncu_Soz.html"
+      },
+      {
+        "name": "Beşinci Söz",
+        "filename": "01.05_Besinci_Soz.html"
+      },
+      {
+        "name": "Altıncı Söz",
+        "filename": "01.06_Altinci_Soz.html"
+      },
+      {
+        "name": "Yedinci Söz",
+        "filename": "01.07_Yedinci_Soz.html"
+      },
+      {
+        "name": "Sekizinci Söz",
+        "filename": "01.08_Sekizinci_Soz.html"
+      },
+      {
+        "name": "Dokuzuncu Söz",
+        "filename": "01.09_Dokuzuncu_Soz.html"
+      },
+      {
+        "name": "Onuncu Söz",
+        "filename": "01.10_Onuncu_Soz.html"
+      },
+      {
+        "name": "On Birinci Söz",
+        "filename": "01.11_On_Birinci_Soz.html"
+      },
+      {
+        "name": "On İkinci Söz",
+        "filename": "01.12_On_Ikinci_Soz.html"
+      },
+      {
+        "name": "On Üçüncü Söz",
+        "filename": "01.13_On_Ucuncu_Soz.html"
+      },
+      {
+        "name": "On Dördüncü Söz",
+        "filename": "01.14_On_Dorduncu_Soz.html"
+      },
+      {
+        "name": "On Beşinci Söz",
+        "filename": "01.15_On_Besinci_Soz.html"
+      },
+      {
+        "name": "On Altıncı Söz",
+        "filename": "01.16_On_Altinci_Soz.html"
+      },
+      {
+        "name": "On Yedinci Söz",
+        "filename": "01.17_On_Yedinci_Soz.html"
+      },
+      {
+        "name": "On Sekizinci Söz",
+        "filename": "01.18_On_Sekizinci_Soz.html"
+      },
+      {
+        "name": "On Dokuzuncu Söz",
+        "filename": "01.19_On_Dokuzuncu_Soz.html"
+      },
+      {
+        "name": "Yirminci Söz",
+        "filename": "01.20_Yirminci_Soz.html"
+      },
+      {
+        "name": "Yirmi Birinci Söz",
+        "filename": "01.21_Yirmi_Birinci_Soz.html"
+      },
+      {
+        "name": "Yirmi İkinci Söz",
+        "filename": "01.22_Yirmi_Ikinci_Soz.html"
+      },
+      {
+        "name": "Yirmi Üçüncü Söz",
+        "filename": "01.23_Yirmi_Ucuncu_Soz.html"
+      },
+      {
+        "name": "Yirmi Dördüncü Söz",
+        "filename": "01.24_Yirmi_Dorduncu_Soz.html"
+      },
+      {
+        "name": "Yirmi Beşinci Söz",
+        "filename": "01.25_Yirmi_Besinci_Soz.html"
+      },
+      {
+        "name": "Yirmi Altıncı Söz",
+        "filename": "01.26_Yirmi_Altinci_Soz.html"
+      },
+      {
+        "name": "Yirmi Yedinci Söz",
+        "filename": "01.27_Yirmi_Yedinci_Soz.html"
+      },
+      {
+        "name": "Yirmi Sekizinci Söz",
+        "filename": "01.28_Yirmi_Sekizinci_Soz.html"
+      },
+      {
+        "name": "Yirmi Dokuzuncu Söz",
+        "filename": "01.29_Yirmi_Dokuzuncu_Soz.html"
+      },
+      {
+        "name": "Otuzuncu Söz",
+        "filename": "01.30_Otuzuncu_Soz.html"
+      },
+      {
+        "name": "Otuz Birinci Söz",
+        "filename": "01.31_Otuz_Birinci_Soz.html"
+      },
+      {
+        "name": "Otuz İkinci Söz",
+        "filename": "01.32_Otuz_Ikinci_Soz.html"
+      },
+      {
+        "name": "Otuz Üçüncü Söz",
+        "filename": "01.33_Otuz_Ucuncu_Soz.html"
+      },
+      {
+        "name": "Lemaat",
+        "filename": "01.34_Lemaat__Sozler_.html"
+      },
+      {
+        "name": "KONFERANS",
+        "filename": "01.35_Konferans__Sozler_.html"
+      },
+      {
+        "name": "Fihrist",
+        "filename": "01.36_Fihrist__Sozler_.html"
+      },
+      {
+        "name": "SÖZLER",
+        "filename": "01_SOZLER.html"
+      }
+    ]
+  },
+  {
+    "book": "02 Mektubat",
+    "path": "02_Mektubat",
+    "chapters": [
+      {
+        "name": "Birinci Mektup",
+        "filename": "02.01_Birinci_Mektup.html"
+      },
+      {
+        "name": "İkinci Mektup",
+        "filename": "02.02_Ikinci_Mektup.html"
+      },
+      {
+        "name": "Üçüncü Mektup",
+        "filename": "02.03_Ucuncu_Mektup.html"
+      },
+      {
+        "name": "Dördüncü Mektup",
+        "filename": "02.04_Dorduncu_Mektup.html"
+      },
+      {
+        "name": "Beşinci Mektup",
+        "filename": "02.05_Besinci_Mektup.html"
+      },
+      {
+        "name": "Altıncı Mektup",
+        "filename": "02.06_Altinci_Mektup.html"
+      },
+      {
+        "name": "Yedinci Mektup",
+        "filename": "02.07_Yedinci_Mektup.html"
+      },
+      {
+        "name": "Sekizinci Mektup",
+        "filename": "02.08_Sekizinci_Mektup.html"
+      },
+      {
+        "name": "Dokuzuncu Mektup",
+        "filename": "02.09_Dokuzuncu_Mektup.html"
+      },
+      {
+        "name": "Onuncu Mektup",
+        "filename": "02.10_Onuncu_Mektup.html"
+      },
+      {
+        "name": "On Birinci Mektup",
+        "filename": "02.11_On_Birinci_Mektup.html"
+      },
+      {
+        "name": "On İkinci Mektup",
+        "filename": "02.12_On_Ikinci_Mektup.html"
+      },
+      {
+        "name": "On Üçüncü Mektup",
+        "filename": "02.13_On_Ucuncu_Mektup.html"
+      },
+      {
+        "name": "On Dördüncü Mektup",
+        "filename": "02.14_On_Dorduncu_Mektup.html"
+      },
+      {
+        "name": "On Beşinci Mektup",
+        "filename": "02.15_On_Besinci_Mektup.html"
+      },
+      {
+        "name": "On Altıncı Mektup",
+        "filename": "02.16_On_Altinci_Mektup.html"
+      },
+      {
+        "name": "On Yedinci Mektup",
+        "filename": "02.17_On_Yedinci_Mektup.html"
+      },
+      {
+        "name": "On Sekizinci Mektup",
+        "filename": "02.18_On_Sekizinci_Mektup.html"
+      },
+      {
+        "name": "On Dokuzuncu Mektup",
+        "filename": "02.19_On_Dokuzuncu_Mektup.html"
+      },
+      {
+        "name": "Yirminci Mektup",
+        "filename": "02.20_Yirminci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Birinci Mektup",
+        "filename": "02.21_Yirmi_Birinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi İkinci Mektup",
+        "filename": "02.22_Yirmi_Ikinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Üçüncü Mektup",
+        "filename": "02.23_Yirmi_Ucuncu_Mektup.html"
+      },
+      {
+        "name": "Yirmi Dördüncü Mektup",
+        "filename": "02.24_Yirmi_Dorduncu_Mektup.html"
+      },
+      {
+        "name": "Yirmi Beşinci Mektup",
+        "filename": "02.25_Yirmi_Besinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Altıncı Mektup",
+        "filename": "02.26_Yirmi_Altinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Yedinci Mektup",
+        "filename": "02.27_Yirmi_Yedinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Sekizinci Mektup",
+        "filename": "02.28_Yirmi_Sekizinci_Mektup.html"
+      },
+      {
+        "name": "Yirmi Dokuzuncu Mektup",
+        "filename": "02.29_Yirmi_Dokuzuncu_Mektup.html"
+      },
+      {
+        "name": "Otuzuncu Mektup",
+        "filename": "02.30_Otuzuncu_Mektup.html"
+      },
+      {
+        "name": "Otuz Birinci Mektup",
+        "filename": "02.31_Otuz_Birinci_Mektup.html"
+      },
+      {
+        "name": "Otuz İkinci Mektup",
+        "filename": "02.32_Otuz_Ikinci_Mektup.html"
+      },
+      {
+        "name": "Otuz Üçüncü Mektup",
+        "filename": "02.33_Otuz_Ucuncu_Mektup.html"
+      },
+      {
+        "name": "Isarat-i Gaybiye Hakkinda Bir Takriz",
+        "filename": "02.34_Isarat-i_Gaybiye_Hakkinda_Bir_Takriz.html"
+      },
+      {
+        "name": "Hakikat Çekirdekleri",
+        "filename": "02.35_Hakikat_Cekirdekleri.html"
+      },
+      {
+        "name": "Gonuller Fatihi Buyuk Ustada",
+        "filename": "02.36_Gonuller_Fatihi_Buyuk_Ustada.html"
+      },
+      {
+        "name": "Fihriste-i Mektubat",
+        "filename": "02.37_Fihriste-i_Mektubat.html"
+      },
+      {
+        "name": "Hakikat Isiklari",
+        "filename": "02.38_Hakikat_Isiklari.html"
+      },
+      {
+        "name": "Dua  Mektubat ",
+        "filename": "02.39_Dua__Mektubat_.html"
+      },
+      {
+        "name": "MEKTUBAT",
+        "filename": "02_MEKTUBAT.html"
+      }
+    ]
+  },
+  {
+    "book": "03 Lem'alar",
+    "path": "03_Lemalar",
+    "chapters": [
+      {
+        "name": "Birinci Lem’a",
+        "filename": "03.01_Birinci_Lema.html"
+      },
+      {
+        "name": "İkinci Lem’a",
+        "filename": "03.02_Ikinci_Lema.html"
+      },
+      {
+        "name": "Üçüncü Lem’a",
+        "filename": "03.03_Ucuncu_Lema.html"
+      },
+      {
+        "name": "Dördüncü Lem’a",
+        "filename": "03.04_Dorduncu_Lema.html"
+      },
+      {
+        "name": "Beşinci Lem’a",
+        "filename": "03.05_Besinci_Lema.html"
+      },
+      {
+        "name": "Altıncı Lem’a",
+        "filename": "03.06_Altinci_Lema.html"
+      },
+      {
+        "name": "Yedinci Lem’a",
+        "filename": "03.07_Yedinci_Lema.html"
+      },
+      {
+        "name": "Sekizinci Lem’a",
+        "filename": "03.08_Sekizinci_Lema.html"
+      },
+      {
+        "name": "Dokuzuncu Lem’a",
+        "filename": "03.09_Dokuzuncu_Lema.html"
+      },
+      {
+        "name": "Onuncu Lem’a",
+        "filename": "03.10_Onuncu_Lema.html"
+      },
+      {
+        "name": "On Birinci Lem’a",
+        "filename": "03.11_On_Birinci_Lema.html"
+      },
+      {
+        "name": "On İkinci Lem’a",
+        "filename": "03.12_On_Ikinci_Lema.html"
+      },
+      {
+        "name": "On Üçüncü Lem’a",
+        "filename": "03.13_On_Ucuncu_Lema.html"
+      },
+      {
+        "name": "On Dördüncü Lem’a",
+        "filename": "03.14_On_Dorduncu_Lema.html"
+      },
+      {
+        "name": "On Beşinci Lem’a",
+        "filename": "03.15_On_Besinci_Lema.html"
+      },
+      {
+        "name": "On Altıncı Lem’a",
+        "filename": "03.16_On_Altinci_Lema.html"
+      },
+      {
+        "name": "On Yedinci Lem’a",
+        "filename": "03.17_On_Yedinci_Lema.html"
+      },
+      {
+        "name": "On Sekizinci Lem’a",
+        "filename": "03.18_On_Sekizinci_Lema.html"
+      },
+      {
+        "name": "On Dokuzuncu Lem’a",
+        "filename": "03.19_On_Dokuzuncu_Lema.html"
+      },
+      {
+        "name": "Yirminci Lem’a",
+        "filename": "03.20_Yirminci_Lema.html"
+      },
+      {
+        "name": "Yirmi Birinci Lem’a",
+        "filename": "03.21_Yirmi_Birinci_Lema.html"
+      },
+      {
+        "name": "Yirmi İkinci Lem’a",
+        "filename": "03.22_Yirmi_Ikinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Üçüncü Lem’a",
+        "filename": "03.23_Yirmi_Ucuncu_Lema.html"
+      },
+      {
+        "name": "Yirmi Dördüncü Lem’a",
+        "filename": "03.24_Yirmi_Dorduncu_Lema.html"
+      },
+      {
+        "name": "Yirmi Beşinci Lem’a",
+        "filename": "03.25_Yirmi_Besinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Altıncı Lem’a",
+        "filename": "03.26_Yirmi_Altinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Yedinci Lem’a",
+        "filename": "03.27_Yirmi_Yedinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Sekizinci Lem’a",
+        "filename": "03.28_Yirmi_Sekizinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Dokuzuncu Lem’a",
+        "filename": "03.29_Yirmi_Dokuzuncu_Lema.html"
+      },
+      {
+        "name": "Otuzuncu Lem’a",
+        "filename": "03.30_Otuzuncu_Lema.html"
+      },
+      {
+        "name": "Otuz Birinci Lem’a",
+        "filename": "03.31_Otuz_Birinci_Lema.html"
+      },
+      {
+        "name": "Otuz İkinci Lem’a",
+        "filename": "03.32_Otuz_Ikinci_Lema.html"
+      },
+      {
+        "name": "Otuz Üçüncü Lem’a",
+        "filename": "03.33_Otuz_Ucuncu_Lema.html"
+      },
+      {
+        "name": "Münâcat",
+        "filename": "03.34_Muncat__Lemalar_.html"
+      },
+      {
+        "name": "Fihrist",
+        "filename": "03.35_Fihrist__Lemalar_.html"
+      },
+      {
+        "name": "Dua  Lemalar ",
+        "filename": "03.36_Dua__Lemalar_.html"
+      },
+      {
+        "name": "LEM’ALAR",
+        "filename": "03_LEMALAR.html"
+      }
+    ]
+  },
+  {
+    "book": "04 Şuâlar",
+    "path": "04_Sular",
+    "chapters": [
+      {
+        "name": "Birinci Şuâ",
+        "filename": "04.01_Birinci_Su.html"
+      },
+      {
+        "name": "İkinci Şuâ",
+        "filename": "04.02_Ikinci_Su.html"
+      },
+      {
+        "name": "Üçüncü Şuâ",
+        "filename": "04.03_Ucuncu_Su.html"
+      },
+      {
+        "name": "Dördüncü Şuâ",
+        "filename": "04.04_Dorduncu_Su.html"
+      },
+      {
+        "name": "Beşinci Şuâ",
+        "filename": "04.05_Besinci_Su.html"
+      },
+      {
+        "name": "Altıncı Şuâ",
+        "filename": "04.06_Altinci_Su.html"
+      },
+      {
+        "name": "Yedinci Şuâ",
+        "filename": "04.07_Yedinci_Su.html"
+      },
+      {
+        "name": "Sekizinci Şuâ",
+        "filename": "04.08_Sekizinci_Su.html"
+      },
+      {
+        "name": "Dokuzuncu Şuâ",
+        "filename": "04.09_Dokuzuncu_Su.html"
+      },
+      {
+        "name": "On Birinci Şuâ",
+        "filename": "04.10_On_Birinci_Su.html"
+      },
+      {
+        "name": "On İkinci Şuâ",
+        "filename": "04.11_On_Ikinci_Su.html"
+      },
+      {
+        "name": "On Üçüncü Şuâ",
+        "filename": "04.12_On_Ucuncu_Su.html"
+      },
+      {
+        "name": "On Dördüncü Şuâ",
+        "filename": "04.13_On_Dorduncu_Su.html"
+      },
+      {
+        "name": "On Beşinci Şuâ",
+        "filename": "04.14_On_Besinci_Su.html"
+      },
+      {
+        "name": "Yirmi Dokuzuncu Lemadan Ikinci Bab",
+        "filename": "04.15_Yirmi_Dokuzuncu_Lemadan_Ikinci_Bab.html"
+      },
+      {
+        "name": "اَلدَّاعٖى",
+        "filename": "04.16_Edd.html"
+      },
+      {
+        "name": "Dua  Sular ",
+        "filename": "04.17_Dua__Sular_.html"
+      },
+      {
+        "name": "Icindekiler  Sular ",
+        "filename": "04.18_Icindekiler__Sular_.html"
+      },
+      {
+        "name": "ŞUÂLAR",
+        "filename": "04_SULAR.html"
+      }
+    ]
+  },
+  {
+    "book": "05 Tarihçe-i Hayat",
+    "path": "05_Tarihce-i_Hayat",
+    "chapters": [
+      {
+        "name": "On soz",
+        "filename": "05.01_On_soz.html"
+      },
+      {
+        "name": "RİSALE-İ NUR KÜLLİYATI",
+        "filename": "05.02_Giris.html"
+      },
+      {
+        "name": "Ilk Hayati",
+        "filename": "05.03_Ilk_Hayati.html"
+      },
+      {
+        "name": "Barla Hayati",
+        "filename": "05.04_Barla_Hayati.html"
+      },
+      {
+        "name": "Eskisehir Hayati",
+        "filename": "05.05_Eskisehir_Hayati.html"
+      },
+      {
+        "name": "Kastamonu Hayati",
+        "filename": "05.06_Kastamonu_Hayati.html"
+      },
+      {
+        "name": "Denizli Hayati",
+        "filename": "05.07_Denizli_Hayati.html"
+      },
+      {
+        "name": "Emirdag Hayati",
+        "filename": "05.08_Emirdag_Hayati.html"
+      },
+      {
+        "name": "Afyon Hayati",
+        "filename": "05.09_Afyon_Hayati.html"
+      },
+      {
+        "name": "Isparta Hayati",
+        "filename": "05.10_Isparta_Hayati.html"
+      },
+      {
+        "name": "Haric Memleketler",
+        "filename": "05.11_Haric_Memleketler.html"
+      },
+      {
+        "name": "Beduzzaman ve Risale-i Nur",
+        "filename": "05.12_Beduzzaman_ve_Risale-i_Nur.html"
+      },
+      {
+        "name": "Dua  Tarihce-i Hayati ",
+        "filename": "05.13_Dua__Tarihce-i_Hayati_.html"
+      },
+      {
+        "name": "Icindekiler",
+        "filename": "05.14_Icindekiler.html"
+      },
+      {
+        "name": "BEDÎÜZZAMAN SAİD NURSÎ",
+        "filename": "05_TARIHCE-I_HAYAT.html"
+      }
+    ]
+  },
+  {
+    "book": "06 Mesnevî-i Nuriye",
+    "path": "06_Mesnev-i_Nuriye",
+    "chapters": [
+      {
+        "name": "Itizar",
+        "filename": "06.01_Itizar.html"
+      },
+      {
+        "name": "Mukaddime",
+        "filename": "06.02_Mukaddime.html"
+      },
+      {
+        "name": "Mesnevî-i Nuriye’nin Birinci Parçası Olan Lem’alar Risalesi",
+        "filename": "06.03_Lemalar_Risalesi.html"
+      },
+      {
+        "name": "Reşhalar",
+        "filename": "06.04_Reshalar.html"
+      },
+      {
+        "name": "Lâsiyyemalar",
+        "filename": "06.05_Lsiyyemalar.html"
+      },
+      {
+        "name": "Katre",
+        "filename": "06.06_Katre.html"
+      },
+      {
+        "name": "Hubab",
+        "filename": "06.07_Hubab.html"
+      },
+      {
+        "name": "Habbe",
+        "filename": "06.08_Habbe.html"
+      },
+      {
+        "name": "Zühre",
+        "filename": "06.09_Zuhre.html"
+      },
+      {
+        "name": "Zerre",
+        "filename": "06.10_Zerre.html"
+      },
+      {
+        "name": "Şemme Risalesi",
+        "filename": "06.11_Semme_Risalesi.html"
+      },
+      {
+        "name": "Onuncu Risale",
+        "filename": "06.12_Onuncu_Risale.html"
+      },
+      {
+        "name": "Sule",
+        "filename": "06.13_Sule.html"
+      },
+      {
+        "name": "Nokta",
+        "filename": "06.14_Nokta.html"
+      },
+      {
+        "name": "Munderecat Hakkinda",
+        "filename": "06.15_Munderecat_Hakkinda.html"
+      },
+      {
+        "name": "Fihrist  Mesnev ",
+        "filename": "06.16_Fihrist__Mesnev_.html"
+      },
+      {
+        "name": "MESNEVÎ-İ NURİYE",
+        "filename": "06_MESNEV-I_NURIYE.html"
+      }
+    ]
+  },
+  {
+    "book": "07 İşaratü'l-i'caz",
+    "path": "07_Isaratul-icaz",
+    "chapters": [
+      {
+        "name": "Tenbih",
+        "filename": "07.01_Tenbih.html"
+      },
+      {
+        "name": "Ifadetul-Meram",
+        "filename": "07.02_Ifadetul-Meram.html"
+      },
+      {
+        "name": "Kuranin Tarifi",
+        "filename": "07.03_Kuranin_Tarifi.html"
+      },
+      {
+        "name": "Fatiha Suresi",
+        "filename": "07.04_Fatiha_Suresi.html"
+      },
+      {
+        "name": "Sure-i Bakara",
+        "filename": "07.05_Bakara_Suresi_1-_2-_3._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 4-5. yetler",
+        "filename": "07.06_Bakara_Suresi_4-5._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 6. yet",
+        "filename": "07.07_Bakara_Suresi_6._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 7. yet",
+        "filename": "07.08_Bakara_Suresi_7._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 8. yet",
+        "filename": "07.09_Bakara_Suresi_8._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 9-10. yetler",
+        "filename": "07.10_Bakara_Suresi_9-10._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 11-12. yetler",
+        "filename": "07.11_Bakara_Suresi_11-12._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 13. yet",
+        "filename": "07.12_Bakara_Suresi_13._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 14-15. yetler",
+        "filename": "07.13_Bakara_Suresi_14-15._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 16. yet",
+        "filename": "07.14_Bakara_Suresi_16._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 17-18-19-20. yetler",
+        "filename": "07.15_Bakara_Suresi_17-18-19-20._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 21-22. yetler",
+        "filename": "07.16_Bakara_Suresi_21-22._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 23-24. yetler",
+        "filename": "07.17_Bakara_Suresi_23-24._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 25. yet",
+        "filename": "07.18_Bakara_Suresi_25._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 26-27. yetler",
+        "filename": "07.19_Bakara_Suresi_26-27._yetler.html"
+      },
+      {
+        "name": "Bakara Suresi 28. yet",
+        "filename": "07.20_Bakara_Suresi_28._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 29. yet",
+        "filename": "07.21_Bakara_Suresi_29._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 30. yet",
+        "filename": "07.22_Bakara_Suresi_30._yet.html"
+      },
+      {
+        "name": "Bakara Suresi 31-32-33. yetler",
+        "filename": "07.23_Bakara_Suresi_31-32-33._yetler.html"
+      },
+      {
+        "name": "Ecnebi Feylesofların Kur’an’ı Tasdiklerine Dair Şehadetleri",
+        "filename": "07.24_Ecnebi_Feylesoflarin_Kuran_Hakkindaki_Beyanatlari.html"
+      },
+      {
+        "name": "Mehmed Kayalarin Bir Mudafaasi",
+        "filename": "07.25_Mehmed_Kayalarin_Bir_Mudafaasi.html"
+      },
+      {
+        "name": "Dua  Isaratul-Icaz ",
+        "filename": "07.26_Dua__Isaratul-Icaz_.html"
+      },
+      {
+        "name": "Fihrist  Isaratul-Icaz ",
+        "filename": "07.27_Fihrist__Isaratul-Icaz_.html"
+      },
+      {
+        "name": "İŞARATÜ’L-İ’CAZ",
+        "filename": "07_ISARATUL-ICAZ.html"
+      }
+    ]
+  },
+  {
+    "book": "08 Sikke-i Tasdik-i Gayb",
+    "path": "08_Sikke-i_Tasdik-i_Gayb",
+    "chapters": [
+      {
+        "name": "Parlak Fikralar ve Guzel Mektuplar 1",
+        "filename": "08.01_Parlak_Fikralar_ve_Guzel_Mektuplar_1.html"
+      },
+      {
+        "name": "Birinci Şuâ",
+        "filename": "08.02_Birinci_Su.html"
+      },
+      {
+        "name": "Sekizinci Şuâ",
+        "filename": "08.03_Sekizinci_Su.html"
+      },
+      {
+        "name": "On Sekizinci Lema",
+        "filename": "08.04_On_Sekizinci_Lema.html"
+      },
+      {
+        "name": "Yirmi Sekizinci Lema",
+        "filename": "08.05_Yirmi_Sekizinci_Lema.html"
+      },
+      {
+        "name": "Sekizinci Lema",
+        "filename": "08.06_Sekizinci_Lema.html"
+      },
+      {
+        "name": "Parlak Fikralar ve Guzel Mektuplar 2",
+        "filename": "08.07_Parlak_Fikralar_ve_Guzel_Mektuplar_2.html"
+      },
+      {
+        "name": "Dua  Sikke-i Tasdik-i Gayb ",
+        "filename": "08.08_Dua__Sikke-i_Tasdik-i_Gayb_.html"
+      },
+      {
+        "name": "SİKKE-İ TASDİK-İ GAYBÎ",
+        "filename": "08_SIKKE-I_TASDIK-I_GAYB.html"
+      }
+    ]
+  },
+  {
+    "book": "09 Barla Lâhikası",
+    "path": "09_Barla_Lhikasi",
+    "chapters": [
+      {
+        "name": "Barla Lhikasi - Takdim",
+        "filename": "09.01_Barla_Lhikasi_-_Takdim.html"
+      },
+      {
+        "name": "Barla Lhikasi - Yedinci Risale",
+        "filename": "09.02_Barla_Lhikasi_-_Yedinci_Risale.html"
+      },
+      {
+        "name": "Barla Lhikasi s.21-39",
+        "filename": "09.03_Barla_Lhikasi_s.21-39.html"
+      },
+      {
+        "name": "Barla Lhikasi s.40-58",
+        "filename": "09.04_Barla_Lhikasi_s.40-58.html"
+      },
+      {
+        "name": "Barla Lhikasi s.59-80",
+        "filename": "09.05_Barla_Lhikasi_s.59-80.html"
+      },
+      {
+        "name": "Barla Lhikasi s.80-102",
+        "filename": "09.06_Barla_Lhikasi_s.80-102.html"
+      },
+      {
+        "name": "Barla Lhikasi s.103-121",
+        "filename": "09.07_Barla_Lhikasi_s.103-121.html"
+      },
+      {
+        "name": "Barla Lhikasi s.121-146",
+        "filename": "09.08_Barla_Lhikasi_s.121-146.html"
+      },
+      {
+        "name": "Barla Lhikasi s.146-159",
+        "filename": "09.09_Barla_Lhikasi_s.146-159.html"
+      },
+      {
+        "name": "Barla Lhikasi s.160-180",
+        "filename": "09.10_Barla_Lhikasi_s.160-180.html"
+      },
+      {
+        "name": "Barla Lhikasi s.181-201",
+        "filename": "09.11_Barla_Lhikasi_s.181-201.html"
+      },
+      {
+        "name": "Barla Lhikasi s.202-221",
+        "filename": "09.12_Barla_Lhikasi_s.202-221.html"
+      },
+      {
+        "name": "Barla Lhikasi s.221-240",
+        "filename": "09.13_Barla_Lhikasi_s.221-240.html"
+      },
+      {
+        "name": "Barla Lhikasi s.241-261",
+        "filename": "09.14_Barla_Lhikasi_s.241-261.html"
+      },
+      {
+        "name": "Barla Lhikasi s.262-280",
+        "filename": "09.15_Barla_Lhikasi_s.262-280.html"
+      },
+      {
+        "name": "Barla Lhikasi s.280-299",
+        "filename": "09.16_Barla_Lhikasi_s.280-299.html"
+      },
+      {
+        "name": "Barla Lhikasi s.300-321",
+        "filename": "09.17_Barla_Lhikasi_s.300-321.html"
+      },
+      {
+        "name": "Barla Lhikasi s.321-340",
+        "filename": "09.18_Barla_Lhikasi_s.321-340.html"
+      },
+      {
+        "name": "Barla Lhikasi s.340-362",
+        "filename": "09.19_Barla_Lhikasi_s.340-362.html"
+      },
+      {
+        "name": "Barla Lhikasi s.363-392",
+        "filename": "09.20_Barla_Lhikasi_s.363-392.html"
+      },
+      {
+        "name": "BARLA LÂHİKASI",
+        "filename": "09_BARLA_LHIKASI.html"
+      }
+    ]
+  },
+  {
+    "book": "10 Kastamonu Lâhikası",
+    "path": "10_Kastamonu_Lhikasi",
+    "chapters": [
+      {
+        "name": "Kastamonu Lhikasi - Takdim",
+        "filename": "10.01_Kastamonu_Lhikasi_-_Takdim.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.10-30",
+        "filename": "10.02_Kastamonu_Lhikasi_s.10-30.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.30-51",
+        "filename": "10.03_Kastamonu_Lhikasi_s.30-51.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.52-69",
+        "filename": "10.04_Kastamonu_Lhikasi_s.52-69.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.70-91",
+        "filename": "10.05_Kastamonu_Lhikasi_s.70-91.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.91-109",
+        "filename": "10.06_Kastamonu_Lhikasi_s.91-109.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.110-129",
+        "filename": "10.07_Kastamonu_Lhikasi_s.110-129.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.130-149",
+        "filename": "10.08_Kastamonu_Lhikasi_s.130-149.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.150-166  Lemaattan ",
+        "filename": "10.09_Kastamonu_Lhikasi_s.150-166__Lemaattan_.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.167-189",
+        "filename": "10.10_Kastamonu_Lhikasi_s.167-189.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.190-210",
+        "filename": "10.11_Kastamonu_Lhikasi_s.190-210.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.211-230",
+        "filename": "10.12_Kastamonu_Lhikasi_s.211-230.html"
+      },
+      {
+        "name": "Kastamonu Lhikasi s.231-255",
+        "filename": "10.13_Kastamonu_Lhikasi_s.231-255.html"
+      },
+      {
+        "name": "KASTAMONU LÂHİKASI",
+        "filename": "10_KASTAMONU_LHIKASI.html"
+      }
+    ]
+  },
+  {
+    "book": "11 Emirdağ Lâhikası 1",
+    "path": "11_Emirdag_Lhikasi_1",
+    "chapters": [
+      {
+        "name": "Emirdag Lhikasi - I - Takdim",
+        "filename": "11.01_Emirdag_Lhikasi_-_I_-_Takdim.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.10-31",
+        "filename": "11.02_Emirdag_Lhikasi_-_I_s.10-31.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.31-50",
+        "filename": "11.03_Emirdag_Lhikasi_-_I_s.31-50.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.50-69",
+        "filename": "11.04_Emirdag_Lhikasi_-_I_s.50-69.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.70-90",
+        "filename": "11.05_Emirdag_Lhikasi_-_I_s.70-90.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.90-110",
+        "filename": "11.06_Emirdag_Lhikasi_-_I_s.90-110.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.110-130",
+        "filename": "11.07_Emirdag_Lhikasi_-_I_s.110-130.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.131-150",
+        "filename": "11.08_Emirdag_Lhikasi_-_I_s.131-150.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.150-170",
+        "filename": "11.09_Emirdag_Lhikasi_-_I_s.150-170.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.170-190",
+        "filename": "11.10_Emirdag_Lhikasi_-_I_s.170-190.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.190-211",
+        "filename": "11.11_Emirdag_Lhikasi_-_I_s.190-211.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.212-230",
+        "filename": "11.12_Emirdag_Lhikasi_-_I_s.212-230.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.230-251",
+        "filename": "11.13_Emirdag_Lhikasi_-_I_s.230-251.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.251-270",
+        "filename": "11.14_Emirdag_Lhikasi_-_I_s.251-270.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - I s.271-288",
+        "filename": "11.15_Emirdag_Lhikasi_-_I_s.271-288.html"
+      },
+      {
+        "name": "EMİRDAĞ LÂHİKASI – 1",
+        "filename": "11_EMIRDAG_LHIKASI_-_I.html"
+      }
+    ]
+  },
+  {
+    "book": "12 Emirdağ Lâhikası 2",
+    "path": "12_Emirdag_Lhikasi_2",
+    "chapters": [
+      {
+        "name": "Emirdag Lhikasi - II s.6-26",
+        "filename": "12.01_Emirdag_Lhikasi_-_II_s.6-26.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.27-50",
+        "filename": "12.02_Emirdag_Lhikasi_-_II_s.27-50.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.51-70",
+        "filename": "12.03_Emirdag_Lhikasi_-_II_s.51-70.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.70-90",
+        "filename": "12.04_Emirdag_Lhikasi_-_II_s.70-90.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.91-109",
+        "filename": "12.05_Emirdag_Lhikasi_-_II_s.91-109.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.110-128",
+        "filename": "12.06_Emirdag_Lhikasi_-_II_s.110-128.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.129-148",
+        "filename": "12.07_Emirdag_Lhikasi_-_II_s.129-148.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.149-170",
+        "filename": "12.08_Emirdag_Lhikasi_-_II_s.149-170.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.171-189",
+        "filename": "12.09_Emirdag_Lhikasi_-_II_s.171-189.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.190-210",
+        "filename": "12.10_Emirdag_Lhikasi_-_II_s.190-210.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.210-229",
+        "filename": "12.11_Emirdag_Lhikasi_-_II_s.210-229.html"
+      },
+      {
+        "name": "Emirdag Lhikasi - II s.230-247",
+        "filename": "12.12_Emirdag_Lhikasi_-_II_s.230-247.html"
+      },
+      {
+        "name": "EMİRDAĞ LÂHİKASI – 2",
+        "filename": "12_EMIRDAG_LHIKASI_-_II.html"
+      }
+    ]
+  },
+  {
+    "book": "13 Asâ-yı Musa",
+    "path": "13_As-yi_Musa",
+    "chapters": [
+      {
+        "name": "Birinci Mesele",
+        "filename": "13.01.01_Birinci_Mesele.html"
+      },
+      {
+        "name": "Ikinci Mesele",
+        "filename": "13.01.02_Ikinci_Mesele.html"
+      },
+      {
+        "name": "Ucuncu Mesele",
+        "filename": "13.01.03_Ucuncu_Mesele.html"
+      },
+      {
+        "name": "Dorduncu Mesele",
+        "filename": "13.01.04_Dorduncu_Mesele.html"
+      },
+      {
+        "name": "Besinci Mesele",
+        "filename": "13.01.05_Besinci_Mesele.html"
+      },
+      {
+        "name": "Altinci Mesele",
+        "filename": "13.01.06_Altinci_Mesele.html"
+      },
+      {
+        "name": "Yedinci Mesele",
+        "filename": "13.01.07_Yedinci_Mesele.html"
+      },
+      {
+        "name": "Sekizinci Mesele",
+        "filename": "13.01.08_Sekizinci_Mesele.html"
+      },
+      {
+        "name": "Dokuzuncu Mesele",
+        "filename": "13.01.09_Dokuzuncu_Mesele.html"
+      },
+      {
+        "name": "Onuncu Mesele",
+        "filename": "13.01.10_Onuncu_Mesele.html"
+      },
+      {
+        "name": "On Birinci Mesele",
+        "filename": "13.01.11_On_Birinci_Mesele.html"
+      },
+      {
+        "name": "As-yi Musadan Birinci Kisim",
+        "filename": "13.01_As-yi_Musadan_Birinci_Kisim.html"
+      },
+      {
+        "name": "Âyetü’l-Kübra",
+        "filename": "13.02.01_Birinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Ikinci Huccet-i Imaniye",
+        "filename": "13.02.02_Ikinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Ucuncu Huccet-i Imaniye",
+        "filename": "13.02.03_Ucuncu_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Dorduncu Huccet-i Imaniye",
+        "filename": "13.02.04_Dorduncu_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Besinci Huccet-i Imaniye",
+        "filename": "13.02.05_Besinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Altinci Huccet-i Imaniye",
+        "filename": "13.02.06_Altinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Yedinci Huccet-i Imaniye",
+        "filename": "13.02.07_Yedinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Sekizinci Huccet-i Imaniye",
+        "filename": "13.02.08_Sekizinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Dokuzuncu Huccet-i Imaniye",
+        "filename": "13.02.09_Dokuzuncu_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Onuncu Huccet-i Imaniye",
+        "filename": "13.02.10_Onuncu_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "On Birinci Huccet-i Imaniye",
+        "filename": "13.02.11_On_Birinci_Huccet-i_Imaniye.html"
+      },
+      {
+        "name": "Fihrist  As-yi Musa ",
+        "filename": "13.02.12_Fihrist__As-yi_Musa_.html"
+      },
+      {
+        "name": "Asâ-yı Musa’dan İkinci Kısım",
+        "filename": "13.02_As-yi_Musadan_Ikinci_Kisim.html"
+      },
+      {
+        "name": "ASÂ-YI MUSA",
+        "filename": "13_AS-YI_MUSA.html"
+      }
+    ]
+  },
+  {
+    "book": "14 Küçük Kitaplar",
+    "path": "14_Kucuk_Kitaplar",
+    "chapters": [
+      {
+        "name": "Birinci Makale",
+        "filename": "14.01.01_Birinci_Makale.html"
+      },
+      {
+        "name": "Ikinci Makale",
+        "filename": "14.01.02_Ikinci_Makale.html"
+      },
+      {
+        "name": "Ucuncu Makale",
+        "filename": "14.01.03_Ucuncu_Makale.html"
+      },
+      {
+        "name": "Fihrist  Muhakemat ",
+        "filename": "14.01.04_Fihrist__Muhakemat_.html"
+      },
+      {
+        "name": "Takriz",
+        "filename": "14.01.05_Takriz.html"
+      },
+      {
+        "name": "MUHAKEMAT",
+        "filename": "14.01_MUHAKEMAT.html"
+      },
+      {
+        "name": "DİVAN-I HARB-İ ÖRFÎ",
+        "filename": "14.02_DIVAN-I_HARB-I_ORF.html"
+      },
+      {
+        "name": "HUTBE-İ ŞAMİYE",
+        "filename": "14.03_HUTBE-I_SAMIYE.html"
+      },
+      {
+        "name": "MÜNAZARAT",
+        "filename": "14.04_MUNAZARAT.html"
+      },
+      {
+        "name": "SUNUHAT",
+        "filename": "14.05.01_SUNUHAT.html"
+      },
+      {
+        "name": "TULAT",
+        "filename": "14.05.02_TULAT.html"
+      },
+      {
+        "name": "ISARAT",
+        "filename": "14.05.03_ISARAT.html"
+      },
+      {
+        "name": "SÜNUHAT – TULÛAT – İŞARAT",
+        "filename": "14.05_SUNUHAT_-_TULAT_-_ISARAT.html"
+      },
+      {
+        "name": "GENÇLİK REHBERİ",
+        "filename": "14.06_GENCLIK_REHBERI.html"
+      },
+      {
+        "name": "HANIMLAR REHBERİ",
+        "filename": "14.07_HANIMLAR_REHBERI.html"
+      },
+      {
+        "name": "KONFERANS",
+        "filename": "14.08_KONFERANS.html"
+      },
+      {
+        "name": "NUR ÇEŞMESİ",
+        "filename": "14.09_NUR_CESMESI.html"
+      },
+      {
+        "name": "NUR’UN İLK KAPISI",
+        "filename": "14.10_NURUN_ILK_KAPISI.html"
+      },
+      {
+        "name": "Eski Eserler",
+        "filename": "14_KUCUK_KITAPLAR.html"
+      }
+    ]
+  }
+]

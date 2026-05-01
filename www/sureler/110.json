@@ -1,0 +1,123 @@
+[
+  {
+    "sure": 110,
+    "ayet": 1,
+    "transliteration": "İżâ câ-e nasru(A)llâhi vel-feth(u)",
+    "words": [
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "جَٓاءَ",
+        "meaning": "geldiği"
+      },
+      {
+        "text": "نَصْرُ",
+        "meaning": "yardımı"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "وَالْفَتْحُۙ",
+        "meaning": "ve fetih"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 110,
+    "ayet": 2,
+    "transliteration": "Ve raeyte-nnâse yedḣulûne fî dîni(A)llâhi efvâcâ(n)",
+    "words": [
+      {
+        "text": "وَرَاَيْتَ",
+        "meaning": "ve gördüğün (zaman)"
+      },
+      {
+        "text": "النَّاسَ",
+        "meaning": "insanların"
+      },
+      {
+        "text": "يَدْخُلُونَ",
+        "meaning": "girdiklerini"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "د۪ينِ",
+        "meaning": "dinine"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "اَفْوَاجًاۙ",
+        "meaning": "dalga dalga"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 110,
+    "ayet": 3,
+    "transliteration": "Fesebbih bihamdi rabbike vestaġfirh(u)(c) innehu kâne tevvâbâ(n)",
+    "words": [
+      {
+        "text": "فَسَبِّحْ",
+        "meaning": "o halde tesbih et"
+      },
+      {
+        "text": "بِحَمْدِ",
+        "meaning": "överek"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbini"
+      },
+      {
+        "text": "وَاسْتَغْفِرْهُۜ",
+        "meaning": "ve O'ndan mağfiret dile"
+      },
+      {
+        "text": "اِنَّهُ",
+        "meaning": "çünkü O"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": null
+      },
+      {
+        "text": "تَوَّابًا",
+        "meaning": "tevbeyi kabul edendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+        }
+      }
+    }
+  }
+]

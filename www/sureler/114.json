@@ -1,0 +1,172 @@
+[
+  {
+    "sure": 114,
+    "ayet": 1,
+    "transliteration": "Kul e’ûżu birabbi-nnâs(i)",
+    "words": [
+      {
+        "text": "قُلْ",
+        "meaning": "de ki"
+      },
+      {
+        "text": "اَعُوذُ",
+        "meaning": "sığınırım ben"
+      },
+      {
+        "text": "بِرَبِّ",
+        "meaning": "Rabbine"
+      },
+      {
+        "text": "النَّاسِۙ",
+        "meaning": "insanların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 114,
+    "ayet": 2,
+    "transliteration": "Meliki-nnâs(i)",
+    "words": [
+      {
+        "text": "مَلِكِ",
+        "meaning": "padişahına"
+      },
+      {
+        "text": "النَّاسِۙ",
+        "meaning": "insanların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 114,
+    "ayet": 3,
+    "transliteration": "İlâhi-nnâs(i)",
+    "words": [
+      {
+        "text": "اِلٰهِ",
+        "meaning": "tanrısına"
+      },
+      {
+        "text": "النَّاسِۙ",
+        "meaning": "insanların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 114,
+    "ayet": 4,
+    "transliteration": "Min şerri-lvesvâsi-lḣannâs(i)",
+    "words": [
+      {
+        "text": "مِنْ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "شَرِّ",
+        "meaning": "şerri-"
+      },
+      {
+        "text": "الْوَسْوَاسِ",
+        "meaning": "vesvesecinin"
+      },
+      {
+        "text": "الْخَنَّاسِۙ",
+        "meaning": "sinsi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 114,
+    "ayet": 5,
+    "transliteration": "Elleżî yuvesvisu fî sudûri-nnâs(i)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "o ki"
+      },
+      {
+        "text": "يُوَسْوِسُ",
+        "meaning": "fısıldar"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "صُدُورِ",
+        "meaning": "göğüslerine"
+      },
+      {
+        "text": "النَّاسِۙ",
+        "meaning": "insanların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 114,
+    "ayet": 6,
+    "transliteration": "Mine-lcinneti ve-nnâs(i)",
+    "words": [
+      {
+        "text": "مِنَ",
+        "meaning": "-den"
+      },
+      {
+        "text": "الْجِنَّةِ",
+        "meaning": "cinler-"
+      },
+      {
+        "text": "وَالنَّاسِ",
+        "meaning": "ve insanlar(dan)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+        }
+      }
+    }
+  }
+]

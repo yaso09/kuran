@@ -1,0 +1,311 @@
+[
+  {
+    "sure": 101,
+    "ayet": 1,
+    "transliteration": "El-kâri’a(tu)",
+    "words": [
+      {
+        "text": "اَلْقَارِعَةُۙ",
+        "meaning": "çarpan olay"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gürültü koparacak olan"
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 2,
+    "transliteration": "Mâ-lkâri’a(tu)",
+    "words": [
+      {
+        "text": "مَا",
+        "meaning": "nedir?"
+      },
+      {
+        "text": "الْقَارِعَةُۚ",
+        "meaning": "çarpan olay"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Nedir o gürültü koparacak olan?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 3,
+    "transliteration": "Vemâ edrâke mâ-lkâri’a(tu)",
+    "words": [
+      {
+        "text": "وَمَٓا",
+        "meaning": "nedir"
+      },
+      {
+        "text": "اَدْرٰيكَ",
+        "meaning": "sana bildiren"
+      },
+      {
+        "text": "مَا",
+        "meaning": "ne olduğunu"
+      },
+      {
+        "text": "الْقَارِعَةُۜ",
+        "meaning": "çarpan olayın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gürültü koparacak olanın ne olduğunu sen bilir misin?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 4,
+    "transliteration": "Yevme yekûnu-nnâsu kelferâşi-lmebśûś(i)",
+    "words": [
+      {
+        "text": "يَوْمَ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "يَكُونُ",
+        "meaning": "olur(lar)"
+      },
+      {
+        "text": "النَّاسُ",
+        "meaning": "insanlar"
+      },
+      {
+        "text": "كَالْفَرَاشِ",
+        "meaning": "pervaneler gibi"
+      },
+      {
+        "text": "الْمَبْثُوثِۙ",
+        "meaning": "yayılmış"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün insanlar, ateş etrafında çırpınıp dökülen pervaneye dönecekler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 5,
+    "transliteration": "Ve tekûnu-lcibâlu kel’ihni-lmenfûş(i)",
+    "words": [
+      {
+        "text": "وَتَكُونُ",
+        "meaning": "ve olurlar"
+      },
+      {
+        "text": "الْجِبَالُ",
+        "meaning": "dağlar"
+      },
+      {
+        "text": "كَالْعِهْنِ",
+        "meaning": "renkli yün gibi"
+      },
+      {
+        "text": "الْمَنْفُوشِۜ",
+        "meaning": "atılmış"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dağlar, atılmış renkli yüne benzeyecekler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 6,
+    "transliteration": "Fe-emmâ men śekulet mevâzînuh(u)",
+    "words": [
+      {
+        "text": "فَاَمَّا",
+        "meaning": "ama"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimin"
+      },
+      {
+        "text": "ثَقُلَتْ",
+        "meaning": "ağır gelirse"
+      },
+      {
+        "text": "مَوَاز۪ينُهُۙ",
+        "meaning": "tartıları"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama tartıları ağır gelen kimse hoş bir hayat içinde olacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 7,
+    "transliteration": "Fehuve fî ‘îşetin râdiye(tin)",
+    "words": [
+      {
+        "text": "فَهُوَ",
+        "meaning": "o"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": "içindedir"
+      },
+      {
+        "text": "ع۪يشَةٍ",
+        "meaning": "bir hayat"
+      },
+      {
+        "text": "رَاضِيَةٍۜ",
+        "meaning": "memnun edici"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama tartıları ağır gelen kimse hoş bir hayat içinde olacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 8,
+    "transliteration": "Ve emmâ men ḣaffet mevâzînuh(u)",
+    "words": [
+      {
+        "text": "وَاَمَّا",
+        "meaning": "ve fakat"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimin"
+      },
+      {
+        "text": "خَفَّتْ",
+        "meaning": "hafif gelirse"
+      },
+      {
+        "text": "مَوَاز۪ينُهُۙ",
+        "meaning": "tartıları"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Tartıları hafif gelenler ise,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 9,
+    "transliteration": "Fe-ummuhu hâviye(tun)",
+    "words": [
+      {
+        "text": "فَاُمُّهُ",
+        "meaning": "onun anası"
+      },
+      {
+        "text": "هَاوِيَةٌۜ",
+        "meaning": "haviye(uçurum)dur"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onların yeri bir çukurdur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 10,
+    "transliteration": "Vemâ edrâke mâ hiyeh",
+    "words": [
+      {
+        "text": "وَمَٓا",
+        "meaning": "nedir?"
+      },
+      {
+        "text": "اَدْرٰيكَ",
+        "meaning": "sana bildiren"
+      },
+      {
+        "text": "مَا",
+        "meaning": "ne olduğunu"
+      },
+      {
+        "text": "هِيَهْۜ",
+        "meaning": "onun"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O çukurun ne olduğunu sen bilir misin?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 101,
+    "ayet": 11,
+    "transliteration": "Nârun hâmiye(tun)",
+    "words": [
+      {
+        "text": "نَارٌ",
+        "meaning": "bir ateştir"
+      },
+      {
+        "text": "حَامِيَةٌ",
+        "meaning": "kızgın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, kızgın bir ateştir."
+        }
+      }
+    }
+  }
+]

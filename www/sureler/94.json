@@ -1,0 +1,230 @@
+[
+  {
+    "sure": 94,
+    "ayet": 1,
+    "transliteration": "Elem neşrah leke sadrak(e)",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "نَشْرَحْ",
+        "meaning": "açmadık mı?"
+      },
+      {
+        "text": "لَكَ",
+        "meaning": "senin"
+      },
+      {
+        "text": "صَدْرَكَۙ",
+        "meaning": "göğsünü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Senin gönlünü açmadık mı?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 2,
+    "transliteration": "Ve veda’nâ ‘anke vizrak(e)",
+    "words": [
+      {
+        "text": "وَوَضَعْنَا",
+        "meaning": "ve atmadık mı?"
+      },
+      {
+        "text": "عَنْكَ",
+        "meaning": "senin üzerinden"
+      },
+      {
+        "text": "وِزْرَكَۙ",
+        "meaning": "yükünü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Belini büken yükünü üzerinden almadık mı?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 3,
+    "transliteration": "Elleżî enkada zahrak(e)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ٓي",
+        "meaning": "(o yük) ki"
+      },
+      {
+        "text": "اَنْقَضَ",
+        "meaning": "çatırdatmıştı"
+      },
+      {
+        "text": "ظَهْرَكَۙ",
+        "meaning": "sırtını"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Belini büken yükünü üzerinden almadık mı?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 4,
+    "transliteration": "Ve rafa’nâ leke żikrak(e)",
+    "words": [
+      {
+        "text": "وَرَفَعْنَا",
+        "meaning": "ve yükseltmedik mi?"
+      },
+      {
+        "text": "لَكَ",
+        "meaning": "senin"
+      },
+      {
+        "text": "ذِكْرَكَۜ",
+        "meaning": "şanını"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Senin şanını yükseltmedik mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 5,
+    "transliteration": "Fe-inne me’a-l’usri yusrâ(n)",
+    "words": [
+      {
+        "text": "فَاِنَّ",
+        "meaning": "muhakkak (vardır)"
+      },
+      {
+        "text": "مَعَ",
+        "meaning": "beraber"
+      },
+      {
+        "text": "الْعُسْرِ",
+        "meaning": "her güçlükle"
+      },
+      {
+        "text": "يُسْرًاۙ",
+        "meaning": "bir kolaylık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Elbette güçlükle beraber şüphesiz bir kolaylık vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 6,
+    "transliteration": "İnne me’a-l’usri yusrâ(n)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "elbette (vardır)"
+      },
+      {
+        "text": "مَعَ",
+        "meaning": "beraber"
+      },
+      {
+        "text": "الْعُسْرِ",
+        "meaning": "her güçlükle"
+      },
+      {
+        "text": "يُسْرًاۜ",
+        "meaning": "bir kolaylık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gerçekten, güçlükle beraber bir kolaylık vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 7,
+    "transliteration": "Fe-iżâ feraġte fensab",
+    "words": [
+      {
+        "text": "فَاِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "فَرَغْتَ",
+        "meaning": "boş kaldığın (işin bitince)"
+      },
+      {
+        "text": "فَانْصَبْۙ",
+        "meaning": "(tekrar) başla"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse, bir işi bitirince diğerine giriş;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 94,
+    "ayet": 8,
+    "transliteration": "Ve-ilâ rabbike ferġab",
+    "words": [
+      {
+        "text": "وَاِلٰى",
+        "meaning": "ve"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabb'ine"
+      },
+      {
+        "text": "فَارْغَبْ",
+        "meaning": "niyaz et yalvar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ve ümit edeceğini yalnız Rabbinden iste."
+        }
+      }
+    }
+  }
+]

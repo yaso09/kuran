@@ -1,0 +1,169 @@
+[
+  {
+    "sure": 105,
+    "ayet": 1,
+    "transliteration": "Elem tera keyfe fe’ale rabbuke bi-ashâbi-lfîl(i)",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "تَرَ",
+        "meaning": "görmedin mi?"
+      },
+      {
+        "text": "كَيْفَ",
+        "meaning": "nasıl"
+      },
+      {
+        "text": "فَعَلَ",
+        "meaning": "yaptığını"
+      },
+      {
+        "text": "رَبُّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "بِاَصْحَابِ",
+        "meaning": "sahiplerine"
+      },
+      {
+        "text": "الْف۪يلِۜ",
+        "meaning": "fil"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Fil sahiplerine Rabbinin ne ettiğini görmedin mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 105,
+    "ayet": 2,
+    "transliteration": "Elem yec’al keydehum fî tadlîl(in)",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَجْعَلْ",
+        "meaning": "çıkarmadı mı?"
+      },
+      {
+        "text": "كَيْدَهُمْ",
+        "meaning": "onların tuzaklarını"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "تَضْل۪يلٍۙ",
+        "meaning": "boşa"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onların düzenlerini boşa çıkarmadı mı?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 105,
+    "ayet": 3,
+    "transliteration": "Ve ersele ‘aleyhim tayran ebâbîl(e)",
+    "words": [
+      {
+        "text": "وَاَرْسَلَ",
+        "meaning": "ve gönderdi"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "üzerlerine"
+      },
+      {
+        "text": "طَيْرًا",
+        "meaning": "kuşlar"
+      },
+      {
+        "text": "اَبَاب۪يلَۙ",
+        "meaning": "sürü sürü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onların üzerine, sert taşlar atan sürülerle kuşlar gönderdi."
+        }
+      }
+    }
+  },
+  {
+    "sure": 105,
+    "ayet": 4,
+    "transliteration": "Termîhim bihicâratin min siccîl(in)",
+    "words": [
+      {
+        "text": "تَرْم۪يهِمْ",
+        "meaning": "onlara atıyorlardı"
+      },
+      {
+        "text": "بِحِجَارَةٍ",
+        "meaning": "sertleşmiş taşlar"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-dan"
+      },
+      {
+        "text": "سِجّ۪يلٍۖۙ",
+        "meaning": "çamur-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onların üzerine, sert taşlar atan sürülerle kuşlar gönderdi."
+        }
+      }
+    }
+  },
+  {
+    "sure": 105,
+    "ayet": 5,
+    "transliteration": "Fece’alehum ke’asfin me/kûl(in)",
+    "words": [
+      {
+        "text": "فَجَعَلَهُمْ",
+        "meaning": "nihayet onları yaptı"
+      },
+      {
+        "text": "كَعَصْفٍ",
+        "meaning": "ekin yaprağı gibi"
+      },
+      {
+        "text": "مَأْكُولٍ",
+        "meaning": "yenmiş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonunda onları, yenilmiş ekin gibi yaptı."
+        }
+      }
+    }
+  }
+]

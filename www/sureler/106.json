@@ -1,0 +1,130 @@
+[
+  {
+    "sure": 106,
+    "ayet": 1,
+    "transliteration": "Li-îlâfi kurayş(in)",
+    "words": [
+      {
+        "text": "لِا۪يلَافِ",
+        "meaning": "alıştırdığı için"
+      },
+      {
+        "text": "قُرَيْشٍۙ",
+        "meaning": "Kureyşi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kureyş kabilesinin yaz ve kış yolculuklarında uzlaşması ve anlaşması sağlanmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 106,
+    "ayet": 2,
+    "transliteration": "Îlâfihim rihlete-şşitâ-i ve-ssayf(i)",
+    "words": [
+      {
+        "text": "ا۪يلَافِهِمْ",
+        "meaning": "onları alıştırdığı için"
+      },
+      {
+        "text": "رِحْلَةَ",
+        "meaning": "yolculuğuna"
+      },
+      {
+        "text": "الشِّتَٓاءِ",
+        "meaning": "kış"
+      },
+      {
+        "text": "وَالصَّيْفِۚ",
+        "meaning": "ve yaz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kureyş kabilesinin yaz ve kış yolculuklarında uzlaşması ve anlaşması sağlanmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 106,
+    "ayet": 3,
+    "transliteration": "Felya’budû rabbe hâżâ-lbeyt(i)",
+    "words": [
+      {
+        "text": "فَلْيَعْبُدُوا",
+        "meaning": "kulluk etsinler"
+      },
+      {
+        "text": "رَبَّ",
+        "meaning": "Rabbine"
+      },
+      {
+        "text": "هٰذَا",
+        "meaning": "bu"
+      },
+      {
+        "text": "الْبَيْتِۙ",
+        "meaning": "evin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse kendilerini açken doyuran ve korku içindeyken güven veren bu Ev'in (Kabe'nin) Rabbine kulluk etsinler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 106,
+    "ayet": 4,
+    "transliteration": "Elleżî et’amehum min cû’in ve âmenehum min ḣavf(in)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ٓي",
+        "meaning": "o ki"
+      },
+      {
+        "text": "اَطْعَمَهُمْ",
+        "meaning": "onları yedirip"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-tan (kurtardı)"
+      },
+      {
+        "text": "جُوعٍ",
+        "meaning": "açlık-"
+      },
+      {
+        "text": "وَاٰمَنَهُمْ",
+        "meaning": "ve onları güvene kavuşturdu"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-dan"
+      },
+      {
+        "text": "خَوْفٍ",
+        "meaning": "korku-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse kendilerini açken doyuran ve korku içindeyken güven veren bu Ev'in (Kabe'nin) Rabbine kulluk etsinler."
+        }
+      }
+    }
+  }
+]

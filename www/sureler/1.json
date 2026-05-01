@@ -1,0 +1,223 @@
+[
+  {
+    "sure": 1,
+    "ayet": 1,
+    "transliteration": "Bismi(A)llâhi-rrahmâni-rrahîm(i)",
+    "words": [
+      {
+        "text": "بِسْمِ",
+        "meaning": "adıyla"
+      },
+      {
+        "text": "اللَّهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "اَلرَّحْمٰنِ",
+        "meaning": "Rahman"
+      },
+      {
+        "text": "الرَّحِيمِ",
+        "meaning": "Rahim"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rahman ve Rahim olan Allah'ın adıyla:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 2,
+    "transliteration": "Elhamdu li(A)llâhi rabbi-l’âlemîn(e)",
+    "words": [
+      {
+        "text": "اَلْحَمْدُ",
+        "meaning": "hamdolsun"
+      },
+      {
+        "text": "لِلّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "رَبِّ",
+        "meaning": "Rabbi"
+      },
+      {
+        "text": "الْعَالَم۪ينَۙ",
+        "meaning": "Alemlerin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hamd, Alemlerin Rabbi Allah'a mahsustur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 3,
+    "transliteration": "Errahmâni-rrahîm(i)",
+    "words": [
+      {
+        "text": "اَلرَّحْمٰنِ",
+        "meaning": "(O) Rahman'dır"
+      },
+      {
+        "text": "الرَّح۪يمِۙ",
+        "meaning": "Rahim'dir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O Rahman ve Rahim'dir,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 4,
+    "transliteration": "Mâliki yevmi-ddîn(i)",
+    "words": [
+      {
+        "text": "مَالِكِ",
+        "meaning": "sahibidir"
+      },
+      {
+        "text": "يَوْمِ",
+        "meaning": "gününün"
+      },
+      {
+        "text": "الدّ۪ينِۜ",
+        "meaning": "Din"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Din Gününün sahibidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 5,
+    "transliteration": "İyyâke na’budu ve-iyyâke nesta’în(u)",
+    "words": [
+      {
+        "text": "اِيَّاكَ",
+        "meaning": "ancak sana"
+      },
+      {
+        "text": "نَعْبُدُ",
+        "meaning": "kulluk ederiz"
+      },
+      {
+        "text": "وَاِيَّاكَ",
+        "meaning": "ancak senden"
+      },
+      {
+        "text": "نَسْتَع۪ينُۜ",
+        "meaning": "yardım isteriz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ancak Sana kulluk eder ve yalnız Senden yardım dileriz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 6,
+    "transliteration": "İhdinâ-ssirâta-lmustakîm(e)",
+    "words": [
+      {
+        "text": "اِهْدِنَا",
+        "meaning": "bizi ilet"
+      },
+      {
+        "text": "الصِّرَاطَ",
+        "meaning": "yola"
+      },
+      {
+        "text": "الْمُسْتَق۪يمَۙ",
+        "meaning": "doğru"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bizi doğru yola eriştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 1,
+    "ayet": 7,
+    "transliteration": "Sirâta-lleżîne en’amte ‘aleyhim ġayri-lmaġdûbi ‘aleyhim velâ-ddâllîn(e)",
+    "words": [
+      {
+        "text": "صِرَاطَ",
+        "meaning": "yoluna"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "onlar ki"
+      },
+      {
+        "text": "اَنْعَمْتَ",
+        "meaning": "ni'met verdin"
+      },
+      {
+        "text": "عَلَيْهِمْۙ",
+        "meaning": "kimselerin"
+      },
+      {
+        "text": "غَيْرِ",
+        "meaning": "değil"
+      },
+      {
+        "text": "الْمَغْضُوبِ",
+        "meaning": "gazabedilmiş olanların"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "kendilerine"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve değil"
+      },
+      {
+        "text": "الضَّٓالّ۪ينَ",
+        "meaning": "sapmışların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Nimete erdirdiğin kimselerin yoluna; gazaba uğrayanların, ya da sapıtanların yoluna değil."
+        }
+      }
+    }
+  }
+]

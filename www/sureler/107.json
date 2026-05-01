@@ -1,0 +1,207 @@
+[
+  {
+    "sure": 107,
+    "ayet": 1,
+    "transliteration": "Era-eyte-lleżî yukeżżibu bi-ddîn(i)",
+    "words": [
+      {
+        "text": "اَرَاَيْتَ",
+        "meaning": "gördün mü?"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": "kimseyi"
+      },
+      {
+        "text": "يُكَذِّبُ",
+        "meaning": "yalanlayan"
+      },
+      {
+        "text": "بِالدّ۪ينِۜ",
+        "meaning": "dini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dini yalan sayanı gördün mü?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 2,
+    "transliteration": "Feżâlike-lleżî yedu’’u-lyetîm(e)",
+    "words": [
+      {
+        "text": "فَذٰلِكَ",
+        "meaning": "işte o"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": null
+      },
+      {
+        "text": "يَدُعُّ",
+        "meaning": "iter kakar"
+      },
+      {
+        "text": "الْيَت۪يمَۙ",
+        "meaning": "öksüzü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öksüzü kakıştıran, yoksulu doyurmaya yanaşmayan kimse işte odur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 3,
+    "transliteration": "Velâ yehuddu ‘alâ ta’âmi-lmiskîn(i)",
+    "words": [
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يَحُضُّ",
+        "meaning": "teşvik etmez"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "طَعَامِ",
+        "meaning": "doyurmaya"
+      },
+      {
+        "text": "الْمِسْك۪ينِۜ",
+        "meaning": "yoksulu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öksüzü kakıştıran, yoksulu doyurmaya yanaşmayan kimse işte odur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 4,
+    "transliteration": "Feveylun lil-musallîn(e)",
+    "words": [
+      {
+        "text": "فَوَيْلٌ",
+        "meaning": "vay haline"
+      },
+      {
+        "text": "لِلْمُصَلّ۪ينَۙ",
+        "meaning": "namaz kılanların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Vay o namaz kılanların haline ki:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 5,
+    "transliteration": "Elleżîne hum ‘an salâtihim sâhûn(e)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ينَ",
+        "meaning": "ki"
+      },
+      {
+        "text": "هُمْ",
+        "meaning": "onlar"
+      },
+      {
+        "text": "عَنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "صَلَاتِهِمْ",
+        "meaning": "namazları-"
+      },
+      {
+        "text": "سَاهُونَۙ",
+        "meaning": "gaflet ederler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar kıldıkları namazdan gafildirler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 6,
+    "transliteration": "Elleżîne hum yurâûn(e)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ينَ",
+        "meaning": "ki"
+      },
+      {
+        "text": "هُمْ",
+        "meaning": "onlar"
+      },
+      {
+        "text": "يُرَٓاؤُ۫نَۙ",
+        "meaning": "gösteriş yaparlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar gösteriş yaparlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 107,
+    "ayet": 7,
+    "transliteration": "Ve yemne’ûne-lmâ’ûn(e)",
+    "words": [
+      {
+        "text": "وَيَمْنَعُونَ",
+        "meaning": "ve esirgerler"
+      },
+      {
+        "text": "الْمَاعُونَ",
+        "meaning": "en ufak bir yardımı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onlar basit şeyleri dahi vermezler."
+        }
+      }
+    }
+  }
+]

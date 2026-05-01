@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kur'an-ı Kerim Oku ve Dinle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="muslim-icon_quran.png">
+    <link rel="apple-touch-icon" href="muslim-icon_quran.png">
+    <link rel="shortcut icon" href="muslim-icon_quran.ico">
+    <script src="moment.min.js"></script>
+    <script src="moment-timezone.min.js"></script>
+    <script src="adhan.js"></script>
+    <script src="cordova.js"></script>
+    <script src="mobileFileManager.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar: Juz & Surah List -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <h1>Kur'an-ı Kerim</h1>
+                    <button id="closeSidebarBtn" class="close-sidebar-btn" title="Menüyü Kapat">✖</button>
+                </div>
+                <p>Yasir Eymen Kayabaşı</p>
+            </div>
+            <div class="sidebar-tabs">
+                <button id="tabJuz" class="sidebar-tab active">Cüzler</button>
+                <button id="tabSurah" class="sidebar-tab">Sureler</button>
+                <button id="tabRisale" class="sidebar-tab">Risale-i Nur</button>
+            </div>
+            <div class="sidebar-controls">
+                <input type="text" id="searchInput" placeholder="Arama yapın...">
+                <button id="settingsOpenBtn" style="display: none; margin-top: 10px; width: 100%; padding: 8px; background-color: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer;">⚙️ Ayarlar / İçerik Yönetimi</button>
+            </div>
+            <ul id="juzList" class="main-list">
+                <!-- Juzlar js ile doldurulacak -->
+            </ul>
+            <ul id="surahList" class="main-list" style="display: none;">
+                <!-- Düz Sureler js ile doldurulacak -->
+            </ul>
+            <ul id="risaleList" class="main-list" style="display: none;">
+                <!-- Risale-i Nur js ile doldurulacak -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button id="menuToggleBtn" class="menu-toggle-btn" title="Menüyü Aç/Kapat">☰</button>
+                    <h2 id="currentSurahTitle" style="margin: 0;">Lütfen bir sure seçin</h2>
+                    <button id="readingModeBtn" title="Okuma Modu (Sayfa Sayfa)">📖 Okuma Modu</button>
+                    <button id="closeSurahBtn"
+                        style="display: none; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: #b83318; padding: 0; line-height: 1;"
+                        title="Sureyi Kapat">✖</button>
+                </div>
+                <div class="controls">
+                    <div class="control-group" id="updateGroup" style="align-items: flex-end;">
+                        <button class="audio-btn" id="guiUpdateBtn" style="display: none; background-color: #632314;">🔄
+                            Sistemi Güncelle</button>
+                    </div>
+                    <div class="control-group" id="reciterGroup">
+                        <label for="reciterSelect">Hafız:</label>
+                        <select id="reciterSelect">
+                            <option value="gamadi">Saad al-Ghamidi</option>
+                            <option value="muaykli">Mahir el-Muaykli</option>
+                        </select>
+                    </div>
+                    <div class="control-group" id="translationGroup">
+                        <label for="translationSelect">Meal:</label>
+                        <select id="translationSelect">
+                            <option value="diyanet">Diyanet İşleri</option>
+                            <option value="vakfi">Diyanet Vakfı</option>
+                            <option value="yazir">Elmalılı Hamdi Yazır</option>
+                            <option value="ozturk">Yaşar Nuri Öztürk</option>
+                            <option value="yuksel">Edip Yüksel</option>
+                            <option value="golpinarli">Abdulbâkî Gölpınarlı</option>
+                            <option value="ates">Süleyman Ateş</option>
+                            <option value="bulac">Ali Bulaç</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="audio-controls" id="audioControls" style="display: none;">
+                    <button id="playAllBtn">▶ Tüm Sureyi Dinle</button>
+                    <button id="pauseAudioBtn" style="display:none;">⏸ Duraklat</button>
+                    <div id="nowPlayingText"></div>
+                </div>
+            </header>
+
+            <div id="homeView" class="verses-container">
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center;">
+                    <div id="prayerTimesContainer" class="prayer-times-card">
+                        <div class="prayer-header">
+                            <h3 id="prayerLocation">Yükleniyor...</h3>
+                            <div class="prayer-location-search">
+                                <input type="text" id="citySearchInput" placeholder="Şehir ara...">
+                                <button id="citySearchBtn">🔍</button>
+                            </div>
+                            <div id="locationSearchResults" class="location-results-list" style="display: none;"></div>
+                            <p id="prayerDate"></p>
+                        </div>
+                        <div class="prayer-grid" id="prayerGrid">
+                            <!-- Prayer times will be injected here -->
+                        </div>
+                        <div class="prayer-footer">
+                            <p id="nextPrayerTime"></p>
+                        </div>
+                    </div>
+                    <div
+                        style="margin-top: 30px; padding: 20px; color: #5d4f3b; font-style: italic; border-top: 1px double var(--border-color); width: 100%; max-width: 500px;">
+                        Okumak veya dinlemek istediğiniz sureyi sol menüden cüzlere tıklayarak veya sureler sekmesinden
+                        seçebilirsiniz.
+                    </div>
+                </div>
+            </div>
+
+            <div id="versesContainer" class="verses-container" style="display: none;">
+            </div>
+        </main>
+    </div>
+
+    <!-- Audio Player (Hidden) -->
+    <audio id="audioPlayer"></audio>
+
+    <!-- Ayet Detay Modali -->
+    <div id="verseDetailModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalBtn">&times;</span>
+            <h2 id="modalVerseTitle"></h2>
+            <div id="modalVerseArabic" class="arabic-text"></div>
+            <div id="modalVerseTransliteration" class="transliteration"></div>
+
+            <div class="modal-translations">
+                <h3>Mealler</h3>
+                <ul id="modalTranslationList"></ul>
+            </div>
+
+            <div class="modal-tafsir">
+                <h3>Tefsir</h3>
+                <select id="tafsirSelect" style="font-family: 'Georgia', serif; padding: 5px;"></select>
+                <div id="tafsirContent" class="tafsir-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="readingModeOverlay">
+        <div id="readingModeContent"></div>
+
+        <!-- Alt Menü -->
+        <div class="reading-bottom-bar">
+            <!-- Sağ: İleri (Kur'an'da önceki sayfa = sağ) -->
+            <button class="reading-bar-btn nav-btn" id="nextPageBtn" title="İleri ▶">
+                <span class="btn-icon">◀</span>
+                <span class="btn-label">İleri</span>
+            </button>
+
+            <!-- Sayfa bilgisi -->
+            <span id="pageInfo">Sayfa 1</span>
+
+            <!-- Ses butonu -->
+            <button class="reading-bar-btn audio-bar-btn" id="readingAudioBtn" title="Dinle">
+                <span class="btn-icon">🔊</span>
+                <span class="btn-label">Dinle</span>
+            </button>
+
+            <!-- Hafız seçimi -->
+            <div class="reading-bar-btn reading-reciter-wrap" title="Hafız Seç">
+                <span class="btn-icon">🎙️</span>
+                <select id="readingReciterSelect" title="Hafız Seç">
+                    <option value="gamadi">Ghamidi</option>
+                    <option value="muaykli">Muaykli</option>
+                </select>
+            </div>
+
+
+            <!-- Kapatma butonu -->
+            <button class="reading-bar-btn exit-bar-btn" id="exitReadingModeBtn" title="Kapat">
+                <span class="btn-icon">✖</span>
+                <span class="btn-label">Kapat</span>
+            </button>
+
+            <!-- Sol: Geri (Kur'an'da sonraki sayfa = sol) -->
+            <button class="reading-bar-btn nav-btn" id="prevPageBtn" title="◀ Geri">
+                <span class="btn-icon">▶</span>
+      <!-- Ayarlar Modal -->
+    <div id="settingsModal" class="modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div class="modal-content" style="background-color: #fdfdfd; color: #222; margin: auto; padding: 0; border: none; width: 90%; max-width: 700px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); overflow: hidden;">
+            <!-- Modal Header -->
+            <div style="background: #3a2e22; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="margin: 0; font-size: 1.2rem;">⚙️ Ayarlar ve İçerik Yönetimi</h2>
+                <button id="closeSettingsModal" style="background: none; border: none; font-size: 28px; cursor: pointer; color: white; line-height: 1;">&times;</button>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div style="display: flex; background: #f4ebd8; border-bottom: 1px solid #ddd;">
+                <button class="settings-tab-btn active" data-tab="repo-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid #7b2a1a;">🌐 Market</button>
+                <button class="settings-tab-btn" data-tab="content-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">📚 İçerik</button>
+                <button class="settings-tab-btn" data-tab="general-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">⚙️ Genel</button>
+            </div>
+            
+            <div style="padding: 20px; max-height: 70vh; overflow-y: auto;">
+                <!-- TAB 1: Eklenti Deposu (Market) -->
+                <div id="repo-tab" class="settings-tab-content">
+                    <div style="margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                        <h3 style="margin-top: 0;">📦 Depo Yönetimi</h3>
+                        <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+                            <input type="text" id="repoUrlInput" placeholder="GitHub Repo (örn: yaso09/kuran)" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                            <button id="addRepoBtn" style="padding: 10px 20px; background-color: #2b422b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Ekle</button>
+                        </div>
+                        <ul id="managedReposList" style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
+                            <!-- Ekli depolar js ile buraya gelecek -->
+                        </ul>
+                    </div>
+
+                    <div style="background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h3 style="margin: 0;">🛒 Mevcut İçerikler</h3>
+                            <button id="refreshRepoBtn" style="padding: 6px 12px; background: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Yenile</button>
+                        </div>
+                        <ul id="repoItemsList" style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
+                            <li style="padding: 20px; text-align: center; color: #888;">Depolar taranıyor...</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TAB 2: İçerik Yönetimi -->
+                <div id="content-tab" class="settings-tab-content" style="display: none;">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                            📖 Mealler
+                            <button id="uploadMealBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #632314; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                        </h3>
+                        <ul id="settingsMealsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <input type="file" id="mealFileInput" accept=".meal" style="display: none;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                            🎙️ Kıraatlar
+                            <button id="uploadKiraatBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #2b3a42; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                        </h3>
+                        <ul id="settingsKiraatsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <input type="file" id="kiraatFileInput" accept=".kiraat" style="display: none;">
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                            📚 Tefsirler
+                            <button id="uploadTefsirBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #3b422b; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                        </h3>
+                        <ul id="settingsTefsirsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <input type="file" id="tefsirFileInput" accept=".tefsir" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- TAB 3: Genel Ayarlar -->
+                <div id="general-tab" class="settings-tab-content" style="display: none;">
+                    <div style="margin-bottom: 20px;">
+                        <h3>🎨 Görünüm</h3>
+                        <p style="font-size: 0.9rem; color: #666;">Yazı boyutu ve tema ayarları yakında eklenecek.</p>
+                    </div>
+                    <div>
+                        <h3>🔄 Sistem</h3>
+                        <button id="guiUpdateBtn" style="width: 100%; padding: 12px; background: #4a4a4a; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Uygulamayı İnternetten Güncelle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

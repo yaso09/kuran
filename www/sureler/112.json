@@ -1,0 +1,122 @@
+[
+  {
+    "sure": 112,
+    "ayet": 1,
+    "transliteration": "Kul huva(A)llâhu ehad(un)",
+    "words": [
+      {
+        "text": "قُلْ",
+        "meaning": "de ki"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O"
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "اَحَدٌۚ",
+        "meaning": "birdir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: O Allah bir tektir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 112,
+    "ayet": 2,
+    "transliteration": "(A)llâhu-ssamed(u)",
+    "words": [
+      {
+        "text": "اَللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "الصَّمَدُۚ",
+        "meaning": "Samed'dir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah her şeyden müstağni ve her şey O'na muhtaçtır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 112,
+    "ayet": 3,
+    "transliteration": "Lem yelid velem yûled(u)",
+    "words": [
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَلِدْ",
+        "meaning": "doğurmamıştır"
+      },
+      {
+        "text": "وَلَمْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "يُولَدْۙ",
+        "meaning": "doğurulmamıştır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O doğurmamış ve doğmamıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 112,
+    "ayet": 4,
+    "transliteration": "Velem yekun lehu kufuven ehad(un)",
+    "words": [
+      {
+        "text": "وَلَمْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "يَكُنْ",
+        "meaning": "olmamıştır"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "O'nun"
+      },
+      {
+        "text": "كُفُوًا",
+        "meaning": "dengi"
+      },
+      {
+        "text": "اَحَدٌ",
+        "meaning": "hiçbir şey"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hiçbir şey O'na denk değildir."
+        }
+      }
+    }
+  }
+]

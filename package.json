@@ -1,0 +1,40 @@
+{
+  "name": "kuran",
+  "version": "1.0.0",
+  "description": "Kur'an-ı Kerîm Okuma Uygulaması",
+  "keywords": [
+    "Kuran",
+    "Quran"
+  ],
+  "homepage": "https://github.com/yaso09/kuran#readme",
+  "bugs": {
+    "url": "https://github.com/yaso09/kuran/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaso09/kuran.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Yasir Eymen Kayabaşı",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install:python": "python -m pip install -r requirements.txt",
+    "dev": "node index.js",
+    "dev:desktop": "npm run gen_risale_index && python desktop/main.py --dev",
+    "dev:mobile": "npm run gen_risale_index && node dev_mobile.js",
+    "build:desktop": "npm run gen_risale_index && python -m PyInstaller pyinstaller.spec --noconfirm --clean && node build_installer.js",
+    "build:mobile": "npm run gen_risale_index && node build_mobile.js",
+    "build:mobile-release": "npm run gen_risale_index && node build_mobile_release.js",
+    "build": "npm run build:desktop && npm run build:mobile",
+    "gen_quran_index": "python desktop/gen_quran_index.py",
+    "gen_risale_index": "python desktop/gen_risale_index.py"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.4"
+  },
+  "devDependencies": {
+    "innosetup-compiler": "^6.3.1"
+  }
+}

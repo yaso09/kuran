@@ -1,0 +1,768 @@
+[
+  {
+    "sure": 85,
+    "ayet": 1,
+    "transliteration": "Ve-ssemâ-i żâti-lburûc(i)",
+    "words": [
+      {
+        "text": "وَالسَّمَٓاءِ",
+        "meaning": "göğe andolsun"
+      },
+      {
+        "text": "ذَاتِ",
+        "meaning": "sahibi"
+      },
+      {
+        "text": "الْبُرُوجِۙ",
+        "meaning": "burçlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İçinde burçları bulunan göğe and olsun;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 2,
+    "transliteration": "Velyevmi-lmev’ûd(i)",
+    "words": [
+      {
+        "text": "وَالْيَوْمِ",
+        "meaning": "ve güne andolsun"
+      },
+      {
+        "text": "الْمَوْعُودِۙ",
+        "meaning": "va'dedilen"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Söz verilen kıyamet gününe and olsun;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 3,
+    "transliteration": "Ve şâhidin ve meşhûd(in)",
+    "words": [
+      {
+        "text": "وَشَاهِدٍ",
+        "meaning": "ve şahide andolsun"
+      },
+      {
+        "text": "وَمَشْهُودٍۜ",
+        "meaning": "ve şahidlik edilene"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şahitlik edene ve edilene and olsun ki, insanlar öldükten sonra diriltileceklerdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 4,
+    "transliteration": "Kutile ashâbu-l-uḣdûd(i)",
+    "words": [
+      {
+        "text": "قُتِلَ",
+        "meaning": "kahroldu"
+      },
+      {
+        "text": "اَصْحَابُ",
+        "meaning": "adamları"
+      },
+      {
+        "text": "الْاُخْدُودِۙ",
+        "meaning": "hendeğin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hazırladıkları hendekleri, tutuşturulmuş ateşle doldurarak onun çevresinde oturup, inanmış kimselere dinlerinden dönmeleri için yaptıkları işkenceleri seyredenler kahrolmuştur!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 5,
+    "transliteration": "Ennâri żâti-lvekûd(i)",
+    "words": [
+      {
+        "text": "اَلنَّارِ",
+        "meaning": "ateş"
+      },
+      {
+        "text": "ذَاتِ",
+        "meaning": "dolu"
+      },
+      {
+        "text": "الْوَقُودِۙ",
+        "meaning": "tutuşturulmuş yakıt"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hazırladıkları hendekleri, tutuşturulmuş ateşle doldurarak onun çevresinde oturup, inanmış kimselere dinlerinden dönmeleri için yaptıkları işkenceleri seyredenler kahrolmuştur!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 6,
+    "transliteration": "İż hum ‘aleyhâ ku’ûd(un)",
+    "words": [
+      {
+        "text": "اِذْ",
+        "meaning": "hani"
+      },
+      {
+        "text": "هُمْ",
+        "meaning": "onlar"
+      },
+      {
+        "text": "عَلَيْهَا",
+        "meaning": "onun başında"
+      },
+      {
+        "text": "قُعُودٌۙ",
+        "meaning": "oturmuşlardı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hazırladıkları hendekleri, tutuşturulmuş ateşle doldurarak onun çevresinde oturup, inanmış kimselere dinlerinden dönmeleri için yaptıkları işkenceleri seyredenler kahrolmuştur!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 7,
+    "transliteration": "Vehum ‘alâ mâ yef’alûne bilmu/minîne şuhûd(un)",
+    "words": [
+      {
+        "text": "وَهُمْ",
+        "meaning": "ve onlar"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "مَا",
+        "meaning": "şeyleri"
+      },
+      {
+        "text": "يَفْعَلُونَ",
+        "meaning": "yaptıkları"
+      },
+      {
+        "text": "بِالْمُؤْمِن۪ينَ",
+        "meaning": "mü'minlere"
+      },
+      {
+        "text": "شُهُودٌۜ",
+        "meaning": "seyrediyorlardı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hazırladıkları hendekleri, tutuşturulmuş ateşle doldurarak onun çevresinde oturup, inanmış kimselere dinlerinden dönmeleri için yaptıkları işkenceleri seyredenler kahrolmuştur!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 8,
+    "transliteration": "Vemâ nekamû minhum illâ en yu/minû bi(A)llâhi-l’azîzi-lhamîd(i)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "نَقَمُوا",
+        "meaning": "öc almadılar"
+      },
+      {
+        "text": "مِنْهُمْ",
+        "meaning": "onlardan"
+      },
+      {
+        "text": "اِلَّٓا",
+        "meaning": "başka bir sebeple"
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "يُؤْمِنُوا",
+        "meaning": "inanmalarından"
+      },
+      {
+        "text": "بِاللّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "الْعَز۪يزِ",
+        "meaning": "aziz"
+      },
+      {
+        "text": "الْحَم۪يدِۙ",
+        "meaning": "övgüye layık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu inkarcıların, inananlara kızmaları; onların sadece, göklerin ve yerin hükümranlığı kendisinin bulunan ve övülmeğe layık ve güçlü olan Allah'a inanmış olmalarındandı. Allah her şeye şahiddir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 9,
+    "transliteration": "Elleżî lehu mulku-ssemâvâti vel-ard(i)(c) va(A)llâhu ‘alâ kulli şey-in şehîd(un)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "O ki"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "O'nundur"
+      },
+      {
+        "text": "مُلْكُ",
+        "meaning": "hükümranlığı"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "göklerin"
+      },
+      {
+        "text": "وَالْاَرْضِۜ",
+        "meaning": "ve yerin"
+      },
+      {
+        "text": "وَاللّٰهُ",
+        "meaning": "ve Allah"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": "üzerine"
+      },
+      {
+        "text": "كُلِّ",
+        "meaning": "her"
+      },
+      {
+        "text": "شَيْءٍ",
+        "meaning": "şey"
+      },
+      {
+        "text": "شَه۪يدٌۜ",
+        "meaning": "tanıktır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu inkarcıların, inananlara kızmaları; onların sadece, göklerin ve yerin hükümranlığı kendisinin bulunan ve övülmeğe layık ve güçlü olan Allah'a inanmış olmalarındandı. Allah her şeye şahiddir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 10,
+    "transliteration": "İnne-lleżîne fetenû-lmu/minîne velmu/minâti śümme lem yetûbû felehum ‘ażâbu cehenneme ve lehum ‘ażâbu-lharîk(i)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "فَتَنُوا",
+        "meaning": "işkence eden(ler)"
+      },
+      {
+        "text": "الْمُؤْمِن۪ينَ",
+        "meaning": "inanan erkeklere"
+      },
+      {
+        "text": "وَالْمُؤْمِنَاتِ",
+        "meaning": "ve inanan kadınlara"
+      },
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَتُوبُوا",
+        "meaning": "tevbe etmeyenler"
+      },
+      {
+        "text": "فَلَهُمْ",
+        "meaning": "onlar için vardır"
+      },
+      {
+        "text": "عَذَابُ",
+        "meaning": "azabı"
+      },
+      {
+        "text": "جَهَنَّمَ",
+        "meaning": "cehennem"
+      },
+      {
+        "text": "وَلَهُمْ",
+        "meaning": "ve onlar için vardır"
+      },
+      {
+        "text": "عَذَابُ",
+        "meaning": "azabı"
+      },
+      {
+        "text": "الْحَر۪يقِۜ",
+        "meaning": "yangın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama inanmış erkek ve kadınlara işkence ederek onları dinlerinden çevirmeğe uğraşanlar, eğer tevbe etmezlerse, onlara cehennem azabı vardır. Yakıcı azap da onlaradır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 11,
+    "transliteration": "İnne-lleżîne âmenû ve ’amilû-ssâlihâti lehum cennâtun tecrî min tahtihâ-l-enhâr(u)(c) żâlike-lfevzu-lkebîr(u)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "اٰمَنُوا",
+        "meaning": "inanan(lar)"
+      },
+      {
+        "text": "وَعَمِلُوا",
+        "meaning": "ve yapanlar"
+      },
+      {
+        "text": "الصَّالِحَاتِ",
+        "meaning": "iyi işler"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlar için vardır"
+      },
+      {
+        "text": "جَنَّاتٌ",
+        "meaning": "cennetler"
+      },
+      {
+        "text": "تَجْر۪ي",
+        "meaning": "akan"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "تَحْتِهَا",
+        "meaning": "altlarından"
+      },
+      {
+        "text": "الْاَنْهَارُۜ",
+        "meaning": "ırmaklar"
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "işte budur"
+      },
+      {
+        "text": "الْفَوْزُ",
+        "meaning": "başarı"
+      },
+      {
+        "text": "الْكَب۪يرُۜ",
+        "meaning": "büyük"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şüphesiz inanıp yararlı işler işleyenlere, onlara, içlerinden ırmaklar akan cennetler vardır. Bu, büyük kurtuluştur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 12,
+    "transliteration": "İnne batşe rabbike leşedîd(un)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "بَطْشَ",
+        "meaning": "tutuşu"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "لَشَد۪يدٌۜ",
+        "meaning": "şiddetlidir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu Rabbinin yakalaması amansızdır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 13,
+    "transliteration": "İnnehu huve yubdi-u ve yu’îd(u)",
+    "words": [
+      {
+        "text": "اِنَّهُ",
+        "meaning": "şüphesiz O"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O'dur"
+      },
+      {
+        "text": "يُبْدِئُ",
+        "meaning": "ilkin var eden"
+      },
+      {
+        "text": "وَيُع۪يدُۚ",
+        "meaning": "sonra yeniden devam eden"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Önce yaratıp sonra bunu tekrar eden O'dur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 14,
+    "transliteration": "Ve huve-lġafûru-lvedûd(u)",
+    "words": [
+      {
+        "text": "وَهُوَ",
+        "meaning": "ve O"
+      },
+      {
+        "text": "الْغَفُورُ",
+        "meaning": "bağışlayandır"
+      },
+      {
+        "text": "الْوَدُودُۙ",
+        "meaning": "sevendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yüce arşın sahibi, çok seven, bağışlayan O'dur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 15,
+    "transliteration": "Żû-l’arşi-lmecîd(i)",
+    "words": [
+      {
+        "text": "ذُو",
+        "meaning": "sahibidir"
+      },
+      {
+        "text": "الْعَرْشِ",
+        "meaning": "Arş'ın"
+      },
+      {
+        "text": "الْمَج۪يدُۙ",
+        "meaning": "yücedir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yüce arşın sahibi, çok seven, bağışlayan O'dur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 16,
+    "transliteration": "Fa’’âlun limâ yurîd(u)",
+    "words": [
+      {
+        "text": "فَعَّالٌ",
+        "meaning": "yapandır"
+      },
+      {
+        "text": "لِمَا",
+        "meaning": "şeyi"
+      },
+      {
+        "text": "يُر۪يدُۜ",
+        "meaning": "istediği"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Her dilediğini mutlaka yapandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 17,
+    "transliteration": "Hel etâke hadîśu-lcunûd(i)",
+    "words": [
+      {
+        "text": "هَلْ",
+        "meaning": "-mi?"
+      },
+      {
+        "text": "اَتٰيكَ",
+        "meaning": "sana geldi-"
+      },
+      {
+        "text": "حَد۪يثُ",
+        "meaning": "haberi"
+      },
+      {
+        "text": "الْجُنُودِۙ",
+        "meaning": "orduların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Firavun ve Semud ordularının haberi sana geldi mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 18,
+    "transliteration": "Fir’avne ve śemûd(e)",
+    "words": [
+      {
+        "text": "فِرْعَوْنَ",
+        "meaning": "Fir'avn'ın"
+      },
+      {
+        "text": "وَثَمُودَۜ",
+        "meaning": "ve Semud'un"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Firavun ve Semud ordularının haberi sana geldi mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 19,
+    "transliteration": "Beli-lleżîne keferû fî tekżîb(in)",
+    "words": [
+      {
+        "text": "بَلِ",
+        "meaning": "doğrusu"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "كَفَرُوا",
+        "meaning": "inkar eden(ler)"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": "içindedirler"
+      },
+      {
+        "text": "تَكْذ۪يبٍۙ",
+        "meaning": "bir yalanlama"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu inkar edenler, hep yalanlayagelmişlerdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 20,
+    "transliteration": "Va(A)llâhu min verâ-ihim muhît(un)",
+    "words": [
+      {
+        "text": "وَاللّٰهُ",
+        "meaning": "fakat Allah"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "وَرَٓائِهِمْ",
+        "meaning": "onları arkalarından"
+      },
+      {
+        "text": "مُح۪يطٌۚ",
+        "meaning": "kuşatmıştır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oysa Allah onları ardlarından çevirmiştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 21,
+    "transliteration": "Bel huve kur-ânun mecîd(un)",
+    "words": [
+      {
+        "text": "بَلْ",
+        "meaning": "hayır"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "o"
+      },
+      {
+        "text": "قُرْاٰنٌ",
+        "meaning": "bir Kur'an'dır"
+      },
+      {
+        "text": "مَج۪يدٌۙ",
+        "meaning": "şerefli"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu sana vahyedilen bu Kitap, Levhi Mahfuz'da bulunan şanlı bir Kuran'dır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 85,
+    "ayet": 22,
+    "transliteration": "Fî levhin mahfûz(in)",
+    "words": [
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "لَوْحٍ",
+        "meaning": "bir levhadadır"
+      },
+      {
+        "text": "مَحْفُوظٍ",
+        "meaning": "korunan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu sana vahyedilen bu Kitap, Levhi Mahfuz'da bulunan şanlı bir Kuran'dır."
+        }
+      }
+    }
+  }
+]

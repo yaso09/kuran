@@ -1,0 +1,234 @@
+[
+  {
+    "sure": 102,
+    "ayet": 1,
+    "transliteration": "El-hâkumu-ttekâśur(u)",
+    "words": [
+      {
+        "text": "اَلْهٰيكُمُ",
+        "meaning": "sizi oyaladı"
+      },
+      {
+        "text": "التَّكَاثُرُۙ",
+        "meaning": "çokluk yarışı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Çoğunluk olmak iddianız sizi o kadar meşgul etti ki, mezarları ziyaretle oradakileri de sayacak kadar oldunuz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 2,
+    "transliteration": "Hattâ zurtumu-lmekâbir(a)",
+    "words": [
+      {
+        "text": "حَتّٰى",
+        "meaning": "nihayet"
+      },
+      {
+        "text": "زُرْتُمُ",
+        "meaning": "ziyaret ettiniz"
+      },
+      {
+        "text": "الْمَقَابِرَۜ",
+        "meaning": "kabirleri"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Çoğunluk olmak iddianız sizi o kadar meşgul etti ki, mezarları ziyaretle oradakileri de sayacak kadar oldunuz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 3,
+    "transliteration": "Kellâ sevfe ta’lemûn(e)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "سَوْفَ",
+        "meaning": "yakında"
+      },
+      {
+        "text": "تَعْلَمُونَۙ",
+        "meaning": "bileceksiniz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hayır; öyle olmayın; yakında bileceksiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 4,
+    "transliteration": "Śumme kellâ sevfe ta’lemûn(e)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "سَوْفَ",
+        "meaning": "yakında"
+      },
+      {
+        "text": "تَعْلَمُونَۜ",
+        "meaning": "bileceksiniz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hayır; gözünüzü açın; yakında bileceksiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 5,
+    "transliteration": "Kellâ lev ta’lemûne ‘ilme-lyakîn(i)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "لَوْ",
+        "meaning": "keşke"
+      },
+      {
+        "text": "تَعْلَمُونَ",
+        "meaning": "bilseydiniz"
+      },
+      {
+        "text": "عِلْمَ",
+        "meaning": "bilgi ile"
+      },
+      {
+        "text": "الْيَق۪ينِۜ",
+        "meaning": "kesin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dikkat edin, şayet yaptığınızın sonucunu kesin olarak bir bilseniz!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 6,
+    "transliteration": "Leteravunne-lcahîm(e)",
+    "words": [
+      {
+        "text": "لَتَرَوُنَّ",
+        "meaning": "mutlaka görürdünüz"
+      },
+      {
+        "text": "الْجَح۪يمَۙ",
+        "meaning": "cehennemi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun ki, cehennemi göreceksiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 7,
+    "transliteration": "Śumme leteravunnehâ ‘ayne-lyakîn(i)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "لَتَرَوُنَّهَا",
+        "meaning": "onu göreceksiniz"
+      },
+      {
+        "text": "عَيْنَ",
+        "meaning": "gözle"
+      },
+      {
+        "text": "الْيَق۪ينِۙ",
+        "meaning": "kesin olarak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun ki, onu gözünüzle kesin olarak göreceksiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 102,
+    "ayet": 8,
+    "transliteration": "Śumme letus-elunne yevme-iżin ‘ani-nna’îm(i)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "لَتُسْـَٔلُنَّ",
+        "meaning": "sorulacaksınız"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "عَنِ",
+        "meaning": "-den"
+      },
+      {
+        "text": "النَّع۪يمِ",
+        "meaning": "ni'metler-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra o gün, size verilmiş olan her nimetten sorguya çekileceksiniz."
+        }
+      }
+    }
+  }
+]

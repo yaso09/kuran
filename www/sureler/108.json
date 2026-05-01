@@ -1,0 +1,87 @@
+[
+  {
+    "sure": 108,
+    "ayet": 1,
+    "transliteration": "İnnâ a’taynâke-lkevśer(a)",
+    "words": [
+      {
+        "text": "اِنَّٓا",
+        "meaning": "elbette biz"
+      },
+      {
+        "text": "اَعْطَيْنَاكَ",
+        "meaning": "sana verdik"
+      },
+      {
+        "text": "الْكَوْثَرَۜ",
+        "meaning": "Kevser'i"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu sana pek çok nimet vermişizdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 108,
+    "ayet": 2,
+    "transliteration": "Fesalli lirabbike venhar",
+    "words": [
+      {
+        "text": "فَصَلِّ",
+        "meaning": "öyleyse namaz kıl"
+      },
+      {
+        "text": "لِرَبِّكَ",
+        "meaning": "Rabbin için"
+      },
+      {
+        "text": "وَانْحَرْۜ",
+        "meaning": "ve kurban kes"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse Rabbin için namaz kıl, kurban kes."
+        }
+      }
+    }
+  },
+  {
+    "sure": 108,
+    "ayet": 3,
+    "transliteration": "İnne şâni-eke huve-l-ebter(u)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "شَانِئَكَ",
+        "meaning": "sana buğzeden"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "o"
+      },
+      {
+        "text": "الْاَبْتَرُ",
+        "meaning": "sonu kesik olandır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu adı sanı ortadan kalkacak olan, sana kin tutan kimsedir."
+        }
+      }
+    }
+  }
+]

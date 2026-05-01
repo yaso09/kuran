@@ -1,0 +1,601 @@
+[
+  {
+    "sure": 92,
+    "ayet": 1,
+    "transliteration": "Velleyli iżâ yaġşâ",
+    "words": [
+      {
+        "text": "وَالَّيْلِ",
+        "meaning": "geceye andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "يَغْشٰىۙ",
+        "meaning": "örttüğü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kararıp ortalığı bürüdüğü zaman geceye and olsun."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 2,
+    "transliteration": "Ve-nnehâri iżâ tecellâ",
+    "words": [
+      {
+        "text": "وَالنَّهَارِ",
+        "meaning": "ve gündüze andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "تَجَلّٰىۙ",
+        "meaning": "göründüğü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Açılıp aydınlattığı zaman gündüze and olsun."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 3,
+    "transliteration": "Vemâ ḣaleka-żżekera vel-unśâ",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve andolsun"
+      },
+      {
+        "text": "خَلَقَ",
+        "meaning": "yaratana"
+      },
+      {
+        "text": "الذَّكَرَ",
+        "meaning": "erkeği"
+      },
+      {
+        "text": "وَالْاُنْثٰىۙ",
+        "meaning": "ve dişiyi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Erkeği ve dişiyi yaratana and olsun ki:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 4,
+    "transliteration": "İnne sa’yekum leşettâ",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "سَعْيَكُمْ",
+        "meaning": "sizin işiniz"
+      },
+      {
+        "text": "لَشَتّٰىۜ",
+        "meaning": "çeşit çeşittir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu sizin çalışmalarınız çeşitlidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 5,
+    "transliteration": "Fe-emmâ men a’tâ vettekâ",
+    "words": [
+      {
+        "text": "فَاَمَّا",
+        "meaning": "ama"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kim"
+      },
+      {
+        "text": "اَعْطٰى",
+        "meaning": "(hayır için) verir"
+      },
+      {
+        "text": "وَاتَّقٰىۙ",
+        "meaning": "korunursa"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Elinde bulunandan verenin, Allah'a karşı gelmekten sakınanın, en güzel söz olan Allah'ın birliğini doğrulayanın işlerini kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 6,
+    "transliteration": "Ve saddeka bilhusnâ",
+    "words": [
+      {
+        "text": "وَصَدَّقَ",
+        "meaning": "ve doğrularsa"
+      },
+      {
+        "text": "بِالْحُسْنٰىۙ",
+        "meaning": "en güzel(söz)ü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Elinde bulunandan verenin, Allah'a karşı gelmekten sakınanın, en güzel söz olan Allah'ın birliğini doğrulayanın işlerini kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 7,
+    "transliteration": "Fesenuyessiruhu lilyusrâ",
+    "words": [
+      {
+        "text": "فَسَنُيَسِّرُهُ",
+        "meaning": "ona kolaylaştırırız"
+      },
+      {
+        "text": "لِلْيُسْرٰىۜ",
+        "meaning": "en kolayı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Elinde bulunandan verenin, Allah'a karşı gelmekten sakınanın, en güzel söz olan Allah'ın birliğini doğrulayanın işlerini kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 8,
+    "transliteration": "Ve emmâ men beḣile vestaġnâ",
+    "words": [
+      {
+        "text": "وَاَمَّا",
+        "meaning": "ama"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kim"
+      },
+      {
+        "text": "بَخِلَ",
+        "meaning": "cimrilik ederse"
+      },
+      {
+        "text": "وَاسْتَغْنٰىۙ",
+        "meaning": "ve kendini zengin görürse"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, cimrilik eden, kendini Allah'tan müstağni sayan, en güzel sözü yalanlayan kimsenin güçlüğe uğramasını kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 9,
+    "transliteration": "Ve keżżebe bilhusnâ",
+    "words": [
+      {
+        "text": "وَكَذَّبَ",
+        "meaning": "ve yalanlarsa"
+      },
+      {
+        "text": "بِالْحُسْنٰىۙ",
+        "meaning": "en güzel(söz)ü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, cimrilik eden, kendini Allah'tan müstağni sayan, en güzel sözü yalanlayan kimsenin güçlüğe uğramasını kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 10,
+    "transliteration": "Fesenuyessiruhu lil’usrâ",
+    "words": [
+      {
+        "text": "فَسَنُيَسِّرُهُ",
+        "meaning": "ona da kolaylaştırırız"
+      },
+      {
+        "text": "لِلْعُسْرٰىۜ",
+        "meaning": "en güç(yolda gitmey)i"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, cimrilik eden, kendini Allah'tan müstağni sayan, en güzel sözü yalanlayan kimsenin güçlüğe uğramasını kolaylaştırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 11,
+    "transliteration": "Vemâ yuġnî ‘anhu mâluhu iżâ teraddâ",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve yoktur"
+      },
+      {
+        "text": "يُغْن۪ي",
+        "meaning": "faydası"
+      },
+      {
+        "text": "عَنْهُ",
+        "meaning": "ona"
+      },
+      {
+        "text": "مَالُهُٓ",
+        "meaning": "malının"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "تَرَدّٰىۜ",
+        "meaning": "çukura düştüğü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O kimse ölüp ateşe yuvarlandığı zaman, malı ona fayda vermez."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 12,
+    "transliteration": "İnne ‘aleynâ lelhudâ",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "عَلَيْنَا",
+        "meaning": "bize aittir"
+      },
+      {
+        "text": "لَلْهُدٰىۘ",
+        "meaning": "doğru yola iletmek"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bize düşen sadece doğru yolu göstermektir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 13,
+    "transliteration": "Ve-inne lenâ lel-âḣirate vel-ûlâ",
+    "words": [
+      {
+        "text": "وَاِنَّ",
+        "meaning": "ve şüphesiz"
+      },
+      {
+        "text": "لَنَا",
+        "meaning": "bizimdir"
+      },
+      {
+        "text": "لَلْاٰخِرَةَ",
+        "meaning": "son da"
+      },
+      {
+        "text": "وَالْاُو۫لٰى",
+        "meaning": "ilk de"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şüphesiz ahiret de, dünya da Bizimdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 14,
+    "transliteration": "Fe-enżertukum nâran telezzâ",
+    "words": [
+      {
+        "text": "فَاَنْذَرْتُكُمْ",
+        "meaning": "ben sizi uyardım"
+      },
+      {
+        "text": "نَارًا",
+        "meaning": "bir ateşe karşı"
+      },
+      {
+        "text": "تَلَظّٰىۚ",
+        "meaning": "alev saçan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sizi alevler saçan ateşle uyardım;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 15,
+    "transliteration": "Lâ yaslâhâ illâ-l-eşkâ",
+    "words": [
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يَصْلٰيهَٓا",
+        "meaning": "ona girmez"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başkası"
+      },
+      {
+        "text": "الْاَشْقٰىۙ",
+        "meaning": "haydut olandan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oraya, yalanlayıp yüz çevirmiş olan o en azgından başkası yaslanmaz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 16,
+    "transliteration": "Elleżî keżżebe ve tevellâ",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "o ki"
+      },
+      {
+        "text": "كَذَّبَ",
+        "meaning": "yalanlandı"
+      },
+      {
+        "text": "وَتَوَلّٰىۜ",
+        "meaning": "ve sırtını döndü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oraya, yalanlayıp yüz çevirmiş olan o en azgından başkası yaslanmaz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 17,
+    "transliteration": "Ve seyucennebuhâ-l-etkâ",
+    "words": [
+      {
+        "text": "وَسَيُجَنَّبُهَا",
+        "meaning": "ve ondan uzak tutulur"
+      },
+      {
+        "text": "الْاَتْقٰىۙ",
+        "meaning": "en muttaki olan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Arınmak için malını veren, en çok sakınan kimse ise ondan uzak tutulur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 18,
+    "transliteration": "Elleżî yu/tî mâlehu yetezekkâ",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "o ki"
+      },
+      {
+        "text": "يُؤْت۪ي",
+        "meaning": "(hayra) vererek"
+      },
+      {
+        "text": "مَالَهُ",
+        "meaning": "malını"
+      },
+      {
+        "text": "يَتَزَكّٰىۚ",
+        "meaning": "arınır yücelir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Arınmak için malını veren, en çok sakınan kimse ise ondan uzak tutulur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 19,
+    "transliteration": "Vemâ li-ehadin ‘indehu min ni’metin tuczâ",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve yoktur"
+      },
+      {
+        "text": "لِاَحَدٍ",
+        "meaning": "hiç kimsenin"
+      },
+      {
+        "text": "عِنْدَهُ",
+        "meaning": "onun yanında"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "نِعْمَةٍ",
+        "meaning": "ni'meti"
+      },
+      {
+        "text": "تُجْزٰىۙ",
+        "meaning": "karşılık verilecek"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O yaptığı iyiliği birinden karşılık görmek için değil, ancak yüce Rabbinin hoşnudluğunu (rızasını) gözeterek yapmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 20,
+    "transliteration": "İllâ-btiġâe vechi rabbihi-l-a’lâ",
+    "words": [
+      {
+        "text": "اِلَّا",
+        "meaning": "yalnız"
+      },
+      {
+        "text": "ابْتِغَٓاءَ",
+        "meaning": "ulaşmak için"
+      },
+      {
+        "text": "وَجْهِ",
+        "meaning": "rızasına"
+      },
+      {
+        "text": "رَبِّهِ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "الْاَعْلٰىۚ",
+        "meaning": "yüce"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O yaptığı iyiliği birinden karşılık görmek için değil, ancak yüce Rabbinin hoşnudluğunu (rızasını) gözeterek yapmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 92,
+    "ayet": 21,
+    "transliteration": "Ve lesevfe yerdâ",
+    "words": [
+      {
+        "text": "وَلَسَوْفَ",
+        "meaning": "yakında"
+      },
+      {
+        "text": "يَرْضٰى",
+        "meaning": "razı olacaktır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Elbette kendisi de hoşnut (razı) olacaktır."
+        }
+      }
+    }
+  }
+]

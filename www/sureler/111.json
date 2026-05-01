@@ -1,0 +1,169 @@
+[
+  {
+    "sure": 111,
+    "ayet": 1,
+    "transliteration": "Tebbet yedâ ebî lehebin vetebb(e)",
+    "words": [
+      {
+        "text": "تَبَّتْ",
+        "meaning": "kurusun"
+      },
+      {
+        "text": "يَدَٓا",
+        "meaning": "iki eli"
+      },
+      {
+        "text": "اَب۪ي",
+        "meaning": "Ebu"
+      },
+      {
+        "text": "لَهَبٍ",
+        "meaning": "Leheb'in"
+      },
+      {
+        "text": "وَتَبَّۜ",
+        "meaning": "zaten kurudu da"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ebu Leheb'in elleri kurusun; kurudu da!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 111,
+    "ayet": 2,
+    "transliteration": "Mâ aġnâ ‘anhu mâluhu vemâ keseb(e)",
+    "words": [
+      {
+        "text": "مَٓا",
+        "meaning": null
+      },
+      {
+        "text": "اَغْنٰى",
+        "meaning": "kurtaramadı"
+      },
+      {
+        "text": "عَنْهُ",
+        "meaning": "onu"
+      },
+      {
+        "text": "مَالُهُ",
+        "meaning": "malı"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "كَسَبَۜ",
+        "meaning": "kazandığı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Malı ve kazandığı kendisine fayda vermedi."
+        }
+      }
+    }
+  },
+  {
+    "sure": 111,
+    "ayet": 3,
+    "transliteration": "Seyaslâ nâran żâte leheb(in)",
+    "words": [
+      {
+        "text": "سَيَصْلٰى",
+        "meaning": "girecektir"
+      },
+      {
+        "text": "نَارًا",
+        "meaning": "bir ateşe"
+      },
+      {
+        "text": "ذَاتَ",
+        "meaning": null
+      },
+      {
+        "text": "لَهَبٍۚ",
+        "meaning": "alevli"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Alevli ateşe yaslanacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 111,
+    "ayet": 4,
+    "transliteration": "Vemraetuhu hammâlete-lhatab(i)",
+    "words": [
+      {
+        "text": "وَامْرَاَتُهُۜ",
+        "meaning": "ve karısı"
+      },
+      {
+        "text": "حَمَّالَةَ",
+        "meaning": "hamalı"
+      },
+      {
+        "text": "الْحَطَبِۚ",
+        "meaning": "odun"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Karısı da, boynunda bir ip olduğu halde ona odun taşıyacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 111,
+    "ayet": 5,
+    "transliteration": "Fî cîdihâ hablun min mesed(in)",
+    "words": [
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "ج۪يدِهَا",
+        "meaning": "boynunda"
+      },
+      {
+        "text": "حَبْلٌ",
+        "meaning": "bir ip"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "مَسَدٍ",
+        "meaning": "hurma lifi-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Karısı da, boynunda bir ip olduğu halde ona odun taşıyacaktır."
+        }
+      }
+    }
+  }
+]

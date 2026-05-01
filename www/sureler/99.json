@@ -1,0 +1,266 @@
+[
+  {
+    "sure": 99,
+    "ayet": 1,
+    "transliteration": "İżâ zulzileti-l-ardu zilzâlehâ",
+    "words": [
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "زُلْزِلَتِ",
+        "meaning": "sarsıldığı"
+      },
+      {
+        "text": "الْاَرْضُ",
+        "meaning": "yer"
+      },
+      {
+        "text": "زِلْزَالَهَاۙ",
+        "meaning": "yaman sarsıntı ile"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yer dehşetle sarsıldıkça sarsıldığı, yeryüzü ağırlıklarını dışarıya çıkardığı ve insanın: \"Buna ne oluyor?\" dediği zaman;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 2,
+    "transliteration": "Ve aḣraceti-l-ardu eśkâlehâ",
+    "words": [
+      {
+        "text": "وَاَخْرَجَتِ",
+        "meaning": "ve çıkardığı (zaman)"
+      },
+      {
+        "text": "الْاَرْضُ",
+        "meaning": "yer"
+      },
+      {
+        "text": "اَثْقَالَهَاۙ",
+        "meaning": "ağırlıklarını"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yer dehşetle sarsıldıkça sarsıldığı, yeryüzü ağırlıklarını dışarıya çıkardığı ve insanın: \"Buna ne oluyor?\" dediği zaman;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 3,
+    "transliteration": "Ve kâle-l-insânu mâ lehâ",
+    "words": [
+      {
+        "text": "وَقَالَ",
+        "meaning": "ve dediği (zaman)"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "مَا",
+        "meaning": "ne oluyor?"
+      },
+      {
+        "text": "لَهَاۚ",
+        "meaning": "ona"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yer dehşetle sarsıldıkça sarsıldığı, yeryüzü ağırlıklarını dışarıya çıkardığı ve insanın: \"Buna ne oluyor?\" dediği zaman;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 4,
+    "transliteration": "Yevme-iżin tuhaddiśu aḣbârahâ",
+    "words": [
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "işte o gün"
+      },
+      {
+        "text": "تُحَدِّثُ",
+        "meaning": "söyler"
+      },
+      {
+        "text": "اَخْبَارَهَاۙ",
+        "meaning": "haberlerini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İşte o gün, yer, Rabbinin ona vahyetmesiyle kendi haberlerini anlatır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 5,
+    "transliteration": "Bi-enne rabbeke evhâ lehâ",
+    "words": [
+      {
+        "text": "بِاَنَّ",
+        "meaning": "çünkü"
+      },
+      {
+        "text": "رَبَّكَ",
+        "meaning": "Rabbin"
+      },
+      {
+        "text": "اَوْحٰى",
+        "meaning": "vahyetmiştir"
+      },
+      {
+        "text": "لَهَاۜ",
+        "meaning": "ona"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İşte o gün, yer, Rabbinin ona vahyetmesiyle kendi haberlerini anlatır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 6,
+    "transliteration": "Yevme-iżin yasduru-nnâsu eştâten liyurav a’mâlehum",
+    "words": [
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "يَصْدُرُ",
+        "meaning": "çıkarlar"
+      },
+      {
+        "text": "النَّاسُ",
+        "meaning": "insanlar"
+      },
+      {
+        "text": "اَشْتَاتًاۙ",
+        "meaning": "ayrı ayrı guruplar halinde"
+      },
+      {
+        "text": "لِيُرَوْا",
+        "meaning": "gösterilsin diye"
+      },
+      {
+        "text": "اَعْمَالَهُمْۜ",
+        "meaning": "yaptıkları işler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün insanlar işlerinin kendilerine gösterilmesi için bölük bölük dönerler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 7,
+    "transliteration": "Femen ya’mel miśkâle żerratin ḣayran yerah(u)",
+    "words": [
+      {
+        "text": "فَمَنْ",
+        "meaning": "artık kim"
+      },
+      {
+        "text": "يَعْمَلْ",
+        "meaning": "yapmışsa"
+      },
+      {
+        "text": "مِثْقَالَ",
+        "meaning": "ağırlığınca"
+      },
+      {
+        "text": "ذَرَّةٍ",
+        "meaning": "zerre"
+      },
+      {
+        "text": "خَيْرًا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "يَرَهُۜ",
+        "meaning": "onu görür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kim zerre kadar iyilik yapmışsa onu görür."
+        }
+      }
+    }
+  },
+  {
+    "sure": 99,
+    "ayet": 8,
+    "transliteration": "Vemen ya’mel miśkâle żerratin şerran yerah(u)",
+    "words": [
+      {
+        "text": "وَمَنْ",
+        "meaning": "ve kim"
+      },
+      {
+        "text": "يَعْمَلْ",
+        "meaning": "yapmışsa"
+      },
+      {
+        "text": "مِثْقَالَ",
+        "meaning": "ağırlığınca"
+      },
+      {
+        "text": "ذَرَّةٍ",
+        "meaning": "zerre"
+      },
+      {
+        "text": "شَرًّا",
+        "meaning": "şer"
+      },
+      {
+        "text": "يَرَهُ",
+        "meaning": "onu görür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kim de zerre kadar kötülük yapmışsa onu görür."
+        }
+      }
+    }
+  }
+]

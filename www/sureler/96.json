@@ -1,0 +1,575 @@
+[
+  {
+    "sure": 96,
+    "ayet": 1,
+    "transliteration": "İkra/ bi-ismi rabbike-lleżî ḣalak(e)",
+    "words": [
+      {
+        "text": "اِقْرَأْ",
+        "meaning": "oku"
+      },
+      {
+        "text": "بِاسْمِ",
+        "meaning": "adıyle"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": null
+      },
+      {
+        "text": "خَلَقَۚ",
+        "meaning": "yaratan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yaratan Rabbinin adıyla oku!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 2,
+    "transliteration": "Ḣaleka-l-insâne min ‘alak(in)",
+    "words": [
+      {
+        "text": "خَلَقَ",
+        "meaning": "O yarattı"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insanı"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-tan"
+      },
+      {
+        "text": "عَلَقٍۚ",
+        "meaning": "alak-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, insanı pıhtılaşmış kandan (alak'tan) yarattı."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 3,
+    "transliteration": "İkra/ ve rabbuke-l-ekram(u)",
+    "words": [
+      {
+        "text": "اِقْرَأْ",
+        "meaning": "oku"
+      },
+      {
+        "text": "وَرَبُّكَ",
+        "meaning": "ve Rabbin"
+      },
+      {
+        "text": "الْاَكْرَمُۙ",
+        "meaning": "en büyük kerem sahibidir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oku! Kalemle öğreten, insana bilmediğini bildiren Rabbin, en büyük kerem sahibidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 4,
+    "transliteration": "Elleżî ‘alleme bil-kalem(i)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ي",
+        "meaning": "O ki"
+      },
+      {
+        "text": "عَلَّمَ",
+        "meaning": "öğretti"
+      },
+      {
+        "text": "بِالْقَلَمِۙ",
+        "meaning": "kalemle"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oku! Kalemle öğreten, insana bilmediğini bildiren Rabbin, en büyük kerem sahibidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 5,
+    "transliteration": "‘Alleme-l-insâne mâ lem ya’lem",
+    "words": [
+      {
+        "text": "عَلَّمَ",
+        "meaning": "öğretti"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insana"
+      },
+      {
+        "text": "مَا",
+        "meaning": "şeyi"
+      },
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَعْلَمْۜ",
+        "meaning": "bilmediği"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Oku! Kalemle öğreten, insana bilmediğini bildiren Rabbin, en büyük kerem sahibidir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 6,
+    "transliteration": "Kellâ inne-l-insâne leyatġâ",
+    "words": [
+      {
+        "text": "كَلَّٓا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insan"
+      },
+      {
+        "text": "لَيَطْغٰىۙ",
+        "meaning": "azar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, insanoğlu kendini müstağni sayarak azgınlık eder."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 7,
+    "transliteration": "En ra-âhu-staġnâ",
+    "words": [
+      {
+        "text": "اَنْ",
+        "meaning": "için"
+      },
+      {
+        "text": "رَاٰهُ",
+        "meaning": "kendini gördüğü"
+      },
+      {
+        "text": "اسْتَغْنٰىۜ",
+        "meaning": "zengin (kendine yeterli)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, insanoğlu kendini müstağni sayarak azgınlık eder."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 8,
+    "transliteration": "İnne ilâ rabbike-rruc’â",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اِلٰى",
+        "meaning": null
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinedir"
+      },
+      {
+        "text": "الرُّجْعٰىۜ",
+        "meaning": "dönüş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dönüş şüphesiz Rabbinedir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 9,
+    "transliteration": "Era-eyte-lleżî yenhâ",
+    "words": [
+      {
+        "text": "اَرَاَيْتَ",
+        "meaning": "gördün mü?"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": "şu"
+      },
+      {
+        "text": "يَنْهٰىۙ",
+        "meaning": "men'edeni"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sen, namaz kılan kulu bundan menedeni gördün mü?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 10,
+    "transliteration": "‘Abden iżâ sallâ",
+    "words": [
+      {
+        "text": "عَبْدًا",
+        "meaning": "bir kulu?"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "صَلّٰىۜ",
+        "meaning": "namaz kıldığı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sen, namaz kılan kulu bundan menedeni gördün mü?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 11,
+    "transliteration": "Era-eyte in kâne ‘alâ-lhudâ",
+    "words": [
+      {
+        "text": "اَرَاَيْتَ",
+        "meaning": "gördün mü?"
+      },
+      {
+        "text": "اِنْ",
+        "meaning": "ya"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "olursa"
+      },
+      {
+        "text": "عَلَى",
+        "meaning": "üzerinde"
+      },
+      {
+        "text": "الْهُدٰىۙ",
+        "meaning": "doğru yol"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Söyle bakalım, o kul doğru yolda giden veya Allah'a karşı gelmekten sakınmayı buyuran bir kimse olsun; veya söyle, yalanlayıp yüz çeviren birisi olsun"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 12,
+    "transliteration": "Ev emera bi-ttakvâ",
+    "words": [
+      {
+        "text": "اَوْ",
+        "meaning": "yahut"
+      },
+      {
+        "text": "اَمَرَ",
+        "meaning": "emrederse"
+      },
+      {
+        "text": "بِالتَّقْوٰىۜ",
+        "meaning": "korunmayı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Söyle bakalım, o kul doğru yolda giden veya Allah'a karşı gelmekten sakınmayı buyuran bir kimse olsun; veya söyle, yalanlayıp yüz çeviren birisi olsun"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 13,
+    "transliteration": "Era-eyte in keżżebe ve tevellâ",
+    "words": [
+      {
+        "text": "اَرَاَيْتَ",
+        "meaning": "gördün mü?"
+      },
+      {
+        "text": "اِنْ",
+        "meaning": "ya"
+      },
+      {
+        "text": "كَذَّبَ",
+        "meaning": "yalanlarsa?"
+      },
+      {
+        "text": "وَتَوَلّٰىۜ",
+        "meaning": "ve yüz çevirirse?"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Söyle bakalım, o kul doğru yolda giden veya Allah'a karşı gelmekten sakınmayı buyuran bir kimse olsun; veya söyle, yalanlayıp yüz çeviren birisi olsun"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 14,
+    "transliteration": "Elem ya’lem bi-enna(A)llâhe yerâ",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَعْلَمْ",
+        "meaning": "bilmedi mi (o)?"
+      },
+      {
+        "text": "بِاَنَّ",
+        "meaning": "muhakkak"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "يَرٰىۜ",
+        "meaning": "gördüğünü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın her şeyi görmekte olduğunu bilmez mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 15,
+    "transliteration": "Kellâ le-in lem yentehi lenesfe’an bi-nnâsiye(ti)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "لَئِنْ",
+        "meaning": "eğer"
+      },
+      {
+        "text": "لَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَنْتَهِ۬",
+        "meaning": "bundan vazgeçmezse"
+      },
+      {
+        "text": "لَنَسْفَعًا",
+        "meaning": "mutlaka yakalarız"
+      },
+      {
+        "text": "بِالنَّاصِيَةِۙ",
+        "meaning": "perçeminden"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama bundan vazgeçmezse, and olsun ki, onu perçeminden,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 16,
+    "transliteration": "Nâsiyetin kâżibetin ḣâti-e(tin)",
+    "words": [
+      {
+        "text": "نَاصِيَةٍ",
+        "meaning": "perçem(den)"
+      },
+      {
+        "text": "كَاذِبَةٍ",
+        "meaning": "yalancı"
+      },
+      {
+        "text": "خَاطِئَةٍۚ",
+        "meaning": "günahkar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yalancı ve günahkar perçeminden cehenneme sürükleriz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 17,
+    "transliteration": "Felyed’u nâdiyeh(u)",
+    "words": [
+      {
+        "text": "فَلْيَدْعُ",
+        "meaning": "o zaman çağırsın"
+      },
+      {
+        "text": "نَادِيَهُۙ",
+        "meaning": "meclisini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O zaman, kafadarlarını çağırsın,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 18,
+    "transliteration": "Sened’u-zzebâniye(te)",
+    "words": [
+      {
+        "text": "سَنَدْعُ",
+        "meaning": "biz de çağıracağız"
+      },
+      {
+        "text": "الزَّبَانِيَةَۙ",
+        "meaning": "zebanileri"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Biz de zebanileri çağıracağız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 96,
+    "ayet": 19,
+    "transliteration": "Kellâ lâ tuti’hu vescud vakterib ۩",
+    "words": [
+      {
+        "text": "كَلَّاۜ",
+        "meaning": "hayır"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "تُطِعْهُ",
+        "meaning": "ona boyun eğme"
+      },
+      {
+        "text": "وَاسْجُدْ",
+        "meaning": "secde et"
+      },
+      {
+        "text": "وَاقْتَرِبْ ۩",
+        "meaning": "ve yaklaş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sakın ona uyma; sen secde et, Rabbine yaklaş."
+        }
+      }
+    }
+  }
+]

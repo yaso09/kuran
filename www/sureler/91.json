@@ -1,0 +1,443 @@
+[
+  {
+    "sure": 91,
+    "ayet": 1,
+    "transliteration": "Ve-şşemsi ve duhâhâ",
+    "words": [
+      {
+        "text": "وَالشَّمْسِ",
+        "meaning": "güneşe andolsun"
+      },
+      {
+        "text": "وَضُحٰيهَاۙۖ",
+        "meaning": "ve onun aydın sabahına"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Güneşe ve onun ışığına,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 2,
+    "transliteration": "Velkameri iżâ telâhâ",
+    "words": [
+      {
+        "text": "وَالْقَمَرِ",
+        "meaning": "ve aya andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": null
+      },
+      {
+        "text": "تَلٰيهَاۙۖ",
+        "meaning": "onu izleyen"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ardından gelmekte olan aya,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 3,
+    "transliteration": "Ve-nnehâri iżâ cellâhâ",
+    "words": [
+      {
+        "text": "وَالنَّهَارِ",
+        "meaning": "ve gündüze andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": null
+      },
+      {
+        "text": "جَلّٰيهَاۙۖ",
+        "meaning": "onu (güneşi) ortaya çıkaran"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onu ortaya koyan gündüze,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 4,
+    "transliteration": "Velleyli iżâ yaġşâhâ",
+    "words": [
+      {
+        "text": "وَالَّيْلِ",
+        "meaning": "ve geceye andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": null
+      },
+      {
+        "text": "يَغْشٰيهَاۙۖ",
+        "meaning": "onu örten"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onu bürüyen geceye,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 5,
+    "transliteration": "Ve-ssemâ-i vemâ benâhâ",
+    "words": [
+      {
+        "text": "وَالسَّمَٓاءِ",
+        "meaning": "ve göğe andolsun"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "بَنٰيهَاۙۖ",
+        "meaning": "onu yapana"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Göğe ve onu yapana,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 6,
+    "transliteration": "Vel-ardi vemâ tahâhâ",
+    "words": [
+      {
+        "text": "وَالْاَرْضِ",
+        "meaning": "ve yere andolsun"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "طَحٰيهَاۙۖ",
+        "meaning": "onu yuvarlayıp döşeyene"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yere ve onu yayana,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 7,
+    "transliteration": "Ve nefsin vemâ sevvâhâ",
+    "words": [
+      {
+        "text": "وَنَفْسٍ",
+        "meaning": "ve nefse andolsun"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "سَوّٰيهَاۙۖ",
+        "meaning": "onu biçimlendirene"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kişiye ve onu şekillendirene,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 8,
+    "transliteration": "Fe-elhemehâ fucûrahâ ve takvâhâ",
+    "words": [
+      {
+        "text": "فَاَلْهَمَهَا",
+        "meaning": "ona ilham edene andolsun"
+      },
+      {
+        "text": "فُجُورَهَا",
+        "meaning": "bozukluğunu"
+      },
+      {
+        "text": "وَتَقْوٰيهَاۙۖ",
+        "meaning": "ve korunmasını"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra da ona iyilik ve kötülük kabiliyeti verene and olsun ki:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 9,
+    "transliteration": "Kad efleha men zekkâhâ",
+    "words": [
+      {
+        "text": "قَدْ",
+        "meaning": "elbette"
+      },
+      {
+        "text": "اَفْلَحَ",
+        "meaning": "kazanmıştır"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimse"
+      },
+      {
+        "text": "زَكّٰيهَاۙۖ",
+        "meaning": "nefsini yücelten"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kendini arıtan saadete ermiştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 10,
+    "transliteration": "Ve kad ḣâbe men dessâhâ",
+    "words": [
+      {
+        "text": "وَقَدْ",
+        "meaning": "ve elbette"
+      },
+      {
+        "text": "خَابَ",
+        "meaning": "ziyana uğramıştır"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimse"
+      },
+      {
+        "text": "دَسّٰيهَاۜ",
+        "meaning": "onu alçaltan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kendini fenalıklara gömen kimse de ziyana uğramıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 11,
+    "transliteration": "Keżżebet śemûdu bitaġvâhâ",
+    "words": [
+      {
+        "text": "كَذَّبَتْ",
+        "meaning": "yalanladı"
+      },
+      {
+        "text": "ثَمُودُ",
+        "meaning": "Semud"
+      },
+      {
+        "text": "بِطَغْوٰيهَاۙۖ",
+        "meaning": "azgınlığı yüzünden"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Semud milleti, içlerinden en azgını ileri atılınca, azgınlığı yüzünden peygamberleri yalanladı."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 12,
+    "transliteration": "İżi-nbe’aśe eşkâhâ",
+    "words": [
+      {
+        "text": "اِذِ",
+        "meaning": "zaman"
+      },
+      {
+        "text": "انْبَعَثَ",
+        "meaning": "ayaklandığı"
+      },
+      {
+        "text": "اَشْقٰيهَاۙۖ",
+        "meaning": "en haydutları"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Semud milleti, içlerinden en azgını ileri atılınca, azgınlığı yüzünden peygamberleri yalanladı."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 13,
+    "transliteration": "Fekâle lehum rasûlu(A)llâhi nâkata(A)llâhi ve sukyâhâ",
+    "words": [
+      {
+        "text": "فَقَالَ",
+        "meaning": "demişti"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlara"
+      },
+      {
+        "text": "رَسُولُ",
+        "meaning": "elçisi"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "نَاقَةَ",
+        "meaning": "devesine"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "وَسُقْيٰيهَا۠",
+        "meaning": "ve onun su içmesini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın peygamberi onlara, Allah'ın devesini göstermiş ve: \"Allah'ın bu devesine ve onun su hakkına dokunmayın\" demişti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 14,
+    "transliteration": "Fekeżżebûhu fe’akarûhâ fedemdeme ‘aleyhim rabbuhum biżenbihim fesevvâhâ",
+    "words": [
+      {
+        "text": "فَكَذَّبُوهُ",
+        "meaning": "onu yalanladılar"
+      },
+      {
+        "text": "فَعَقَرُوهَاۙۖ",
+        "meaning": "ve onu kestiler"
+      },
+      {
+        "text": "فَدَمْدَمَ",
+        "meaning": "başlarına geçirdi"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "onların"
+      },
+      {
+        "text": "رَبُّهُمْ",
+        "meaning": "Rableri"
+      },
+      {
+        "text": "بِذَنْبِهِمْ",
+        "meaning": "günahları yüzünden"
+      },
+      {
+        "text": "فَسَوّٰيهَاۙۖ",
+        "meaning": "ve orayı dümdüz etti"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onu yalanladılar ve deveyi boğazladılar. Bunun üzerine Rableri, suçlarından dolayı onların üzerine katmerli azap indirdi; yerle bir etti onları."
+        }
+      }
+    }
+  },
+  {
+    "sure": 91,
+    "ayet": 15,
+    "transliteration": "Velâ yeḣâfu ‘ukbâhâ",
+    "words": [
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يَخَافُ",
+        "meaning": "(Rab) korkmaz"
+      },
+      {
+        "text": "عُقْبٰيهَا",
+        "meaning": "bu işin sonundan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu işin sonundan O'nun korkusu yoktur."
+        }
+      }
+    }
+  }
+]

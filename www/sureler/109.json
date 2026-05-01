@@ -1,0 +1,200 @@
+[
+  {
+    "sure": 109,
+    "ayet": 1,
+    "transliteration": "Kul yâ eyyuhâ-lkâfirûn(e)",
+    "words": [
+      {
+        "text": "قُلْ",
+        "meaning": "de ki"
+      },
+      {
+        "text": "يَٓا",
+        "meaning": "ey"
+      },
+      {
+        "text": "اَيُّهَا",
+        "meaning": "ey"
+      },
+      {
+        "text": "الْكَافِرُونَۙ",
+        "meaning": "inkar edenler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Ey inkarcılar!\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 109,
+    "ayet": 2,
+    "transliteration": "Lâ a’budu mâ ta’budûn(e)",
+    "words": [
+      {
+        "text": "لَٓا",
+        "meaning": null
+      },
+      {
+        "text": "اَعْبُدُ",
+        "meaning": "ben ibadet etmem"
+      },
+      {
+        "text": "مَا",
+        "meaning": "şeye"
+      },
+      {
+        "text": "تَعْبُدُونَۙ",
+        "meaning": "sizin taptığınız"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Ben sizin taptıklarınıza tapmam.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 109,
+    "ayet": 3,
+    "transliteration": "Velâ entum ‘âbidûne mâ a’bud(u)",
+    "words": [
+      {
+        "text": "وَلَٓا",
+        "meaning": "ve (etmezsiniz)"
+      },
+      {
+        "text": "اَنْتُمْ",
+        "meaning": "siz de"
+      },
+      {
+        "text": "عَابِدُونَ",
+        "meaning": "ibadeti"
+      },
+      {
+        "text": "مَٓا",
+        "meaning": null
+      },
+      {
+        "text": "اَعْبُدُۚ",
+        "meaning": "benim taptığıma"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Benim taptığıma da sizler tapmazsınız.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 109,
+    "ayet": 4,
+    "transliteration": "Velâ enâ ‘âbidun mâ ‘abedtum",
+    "words": [
+      {
+        "text": "وَلَٓا",
+        "meaning": "ve değil(im)"
+      },
+      {
+        "text": "اَنَا۬",
+        "meaning": "ben"
+      },
+      {
+        "text": "عَابِدٌ",
+        "meaning": "ibadet eden"
+      },
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "عَبَدْتُمْۙ",
+        "meaning": "sizin taptıklarınıza"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Ben de sizin taptığınıza tapacak değilim.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 109,
+    "ayet": 5,
+    "transliteration": "Velâ entum ‘âbidûne mâ a’bud(u)",
+    "words": [
+      {
+        "text": "وَلَٓا",
+        "meaning": "ve değilsiniz"
+      },
+      {
+        "text": "اَنْتُمْ",
+        "meaning": "siz de"
+      },
+      {
+        "text": "عَابِدُونَ",
+        "meaning": "ibadet eden"
+      },
+      {
+        "text": "مَٓا",
+        "meaning": null
+      },
+      {
+        "text": "اَعْبُدُۜ",
+        "meaning": "benim ibadet ettiğime"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Benim taptığıma da sizler tapmıyorsunuz.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 109,
+    "ayet": 6,
+    "transliteration": "Lekum dînukum veliye dîn(i)",
+    "words": [
+      {
+        "text": "لَكُمْ",
+        "meaning": "sizindir"
+      },
+      {
+        "text": "د۪ينُكُمْ",
+        "meaning": "sizin dininiz"
+      },
+      {
+        "text": "وَلِيَ",
+        "meaning": "ve benimdir"
+      },
+      {
+        "text": "د۪ينِ",
+        "meaning": "benim dinim"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Sizin dininiz size, benim dinim banadır.\""
+        }
+      }
+    }
+  }
+]

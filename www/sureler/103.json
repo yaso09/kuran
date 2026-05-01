@@ -1,0 +1,103 @@
+[
+  {
+    "sure": 103,
+    "ayet": 1,
+    "transliteration": "Vel-’asr(i)",
+    "words": [
+      {
+        "text": "وَالْعَصْرِۙ",
+        "meaning": "asra andolsun ki"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İkindi vaktine (Asra; çağa) and olsun ki,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 103,
+    "ayet": 2,
+    "transliteration": "İnne-l-insâne lefî ḣusr(in)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insan"
+      },
+      {
+        "text": "لَف۪ي",
+        "meaning": "içindedir"
+      },
+      {
+        "text": "خُسْرٍۙ",
+        "meaning": "ziyan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsan hiç şüphesiz hüsran içindedir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 103,
+    "ayet": 3,
+    "transliteration": "İllâ-lleżîne âmenû ve ’amilû-ssâlihâti ve tevâsav bilhakki ve tevâsav bi-ssabr(i)",
+    "words": [
+      {
+        "text": "اِلَّا",
+        "meaning": "ancak (ziyanda değillerdir)"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "اٰمَنُوا",
+        "meaning": "inanan(lar)"
+      },
+      {
+        "text": "وَعَمِلُوا",
+        "meaning": "ve yapanlar"
+      },
+      {
+        "text": "الصَّالِحَاتِ",
+        "meaning": "iyi işler"
+      },
+      {
+        "text": "وَتَوَاصَوْا",
+        "meaning": "tavsiye edenler"
+      },
+      {
+        "text": "بِالْحَقِّ",
+        "meaning": "hakkı"
+      },
+      {
+        "text": "وَتَوَاصَوْا",
+        "meaning": "ve tavsiye edenler"
+      },
+      {
+        "text": "بِالصَّبْرِ",
+        "meaning": "sabrı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ancak inanıp yararlı iş işleyenler, birbirlerine gerçeği tavsiye edenler ve sabırlı olmayı tavsiye edenler bunun dışındadır."
+        }
+      }
+    }
+  }
+]

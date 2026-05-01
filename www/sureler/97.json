@@ -1,0 +1,197 @@
+[
+  {
+    "sure": 97,
+    "ayet": 1,
+    "transliteration": "İnnâ enzelnâhu fî leyleti-lkadr(i)",
+    "words": [
+      {
+        "text": "اِنَّٓا",
+        "meaning": "elbette biz"
+      },
+      {
+        "text": "اَنْزَلْنَاهُ",
+        "meaning": "onu indirdik"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "لَيْلَةِ",
+        "meaning": "gecesinde"
+      },
+      {
+        "text": "الْقَدْرِۚ",
+        "meaning": "kadir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu, Biz, Kuran'ı kadir gecesinde indirmişizdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 97,
+    "ayet": 2,
+    "transliteration": "Vemâ edrâke mâ leyletu-lkadr(i)",
+    "words": [
+      {
+        "text": "وَمَٓا",
+        "meaning": "nedir?"
+      },
+      {
+        "text": "اَدْرٰيكَ",
+        "meaning": "sana bildiren"
+      },
+      {
+        "text": "مَا",
+        "meaning": "ne olduğunu"
+      },
+      {
+        "text": "لَيْلَةُ",
+        "meaning": "gecesi(nin)"
+      },
+      {
+        "text": "الْقَدْرِۜ",
+        "meaning": "kadir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kadir gecesinin ne olduğunu sen bilir misin?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 97,
+    "ayet": 3,
+    "transliteration": "Leyletu-lkadri ḣayrun min elfi şehr(in)",
+    "words": [
+      {
+        "text": "لَيْلَةُ",
+        "meaning": "gecesi"
+      },
+      {
+        "text": "الْقَدْرِ",
+        "meaning": "kadir"
+      },
+      {
+        "text": "خَيْرٌ",
+        "meaning": "hayırlıdır"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-dan"
+      },
+      {
+        "text": "اَلْفِ",
+        "meaning": "bin"
+      },
+      {
+        "text": "شَهْرٍۜ",
+        "meaning": "ay-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kadir gecesi bin aydan hayırlıdır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 97,
+    "ayet": 4,
+    "transliteration": "Tenezzelu-lmelâ-iketu ve-rrûhu fîhâ bi-iżni rabbihim min kulli emr(in)",
+    "words": [
+      {
+        "text": "تَنَزَّلُ",
+        "meaning": "iner de iner"
+      },
+      {
+        "text": "الْمَلٰٓئِكَةُ",
+        "meaning": "melekler"
+      },
+      {
+        "text": "وَالرُّوحُ",
+        "meaning": "ve Ruh"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "onda"
+      },
+      {
+        "text": "بِاِذْنِ",
+        "meaning": "izniyle"
+      },
+      {
+        "text": "رَبِّهِمْۚ",
+        "meaning": "Rab'lerinin"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "için"
+      },
+      {
+        "text": "كُلِّ",
+        "meaning": "her"
+      },
+      {
+        "text": "اَمْرٍۙۛ",
+        "meaning": "iş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Melekler ve Cebrail o gecede Rablerinin izniyle her türlü iş için inerler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 97,
+    "ayet": 5,
+    "transliteration": "Selâmun hiye hattâ matla’i-lfecr(i)",
+    "words": [
+      {
+        "text": "سَلَامٌ۠ۛ",
+        "meaning": "esenliktir"
+      },
+      {
+        "text": "هِيَ",
+        "meaning": "o"
+      },
+      {
+        "text": "حَتّٰى",
+        "meaning": "kadar"
+      },
+      {
+        "text": "مَطْلَعِ",
+        "meaning": "ağarıncaya"
+      },
+      {
+        "text": "الْفَجْرِ",
+        "meaning": "tan yeri"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gece, tan yerinin ağarmasına kadar bir esenliktir."
+        }
+      }
+    }
+  }
+]

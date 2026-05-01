@@ -1,0 +1,1258 @@
+[
+  {
+    "sure": 75,
+    "ayet": 1,
+    "transliteration": "Lâ uksimu biyevmi-lkiyâme(ti)",
+    "words": [
+      {
+        "text": "لَٓا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "اُقْسِمُ",
+        "meaning": "and içerim"
+      },
+      {
+        "text": "بِيَوْمِ",
+        "meaning": "gününe"
+      },
+      {
+        "text": "الْقِيٰمَةِۙ",
+        "meaning": "kıyamet"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kıyamet gününe yemin ederim."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 2,
+    "transliteration": "Velâ uksimu bi-nnefsi-llevvâme(ti)",
+    "words": [
+      {
+        "text": "وَلَٓا",
+        "meaning": "yine hayır"
+      },
+      {
+        "text": "اُقْسِمُ",
+        "meaning": "and içerim"
+      },
+      {
+        "text": "بِالنَّفْسِ",
+        "meaning": "nefse"
+      },
+      {
+        "text": "اللَّوَّامَةِ",
+        "meaning": "daima kendini kınayan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ve nedamet çeken nefse yemin ederim."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 3,
+    "transliteration": "Eyahsebu-l-insânu ellen necme’a ‘izâmeh(u)",
+    "words": [
+      {
+        "text": "اَيَحْسَبُ",
+        "meaning": "-mı sanıyor?"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "اَلَّنْ",
+        "meaning": null
+      },
+      {
+        "text": "نَجْمَعَ",
+        "meaning": "bir araya toplamayacağımızı-"
+      },
+      {
+        "text": "عِظَامَهُۜ",
+        "meaning": "kendisinin kemiklerini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsan, kemiklerini bir araya toplayamayız mı sanıyor?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 4,
+    "transliteration": "Belâ kâdirîne ‘alâ en nusevviye benâneh(u)",
+    "words": [
+      {
+        "text": "بَلٰى",
+        "meaning": "evet"
+      },
+      {
+        "text": "قَادِر۪ينَ",
+        "meaning": "gücümüz yeter"
+      },
+      {
+        "text": "عَلٰٓى",
+        "meaning": null
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "نُسَوِّيَ",
+        "meaning": "düzenlemeğe"
+      },
+      {
+        "text": "بَنَانَهُ",
+        "meaning": "onun parmak uçlarnı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Evet, Biz onu, parmak uçlarına varıncaya kadar bütün incelikleriyle yeniden yapmaya kadiriz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 5,
+    "transliteration": "Bel yurîdu-l-insânu liyefcura emâmeh(u)",
+    "words": [
+      {
+        "text": "بَلْ",
+        "meaning": "fakat"
+      },
+      {
+        "text": "يُر۪يدُ",
+        "meaning": "ister"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "لِيَفْجُرَ",
+        "meaning": "yalanlamak"
+      },
+      {
+        "text": "اَمَامَهُۚ",
+        "meaning": "ilerisini (kıyameti)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, insanoğlu gelecekte de suç işlemek ister de: \"Kıyamet günü ne zamanmış! \" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 6,
+    "transliteration": "Yes-elu eyyâne yevmu-lkiyâme(ti)",
+    "words": [
+      {
+        "text": "يَسْـَٔلُ",
+        "meaning": "sorup durur"
+      },
+      {
+        "text": "اَيَّانَ",
+        "meaning": "nerede?"
+      },
+      {
+        "text": "يَوْمُ",
+        "meaning": "günü"
+      },
+      {
+        "text": "الْقِيٰمَةِۜ",
+        "meaning": "kıyamet"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ama, insanoğlu gelecekte de suç işlemek ister de: \"Kıyamet günü ne zamanmış! \" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 7,
+    "transliteration": "Fe-iżâ berika-lbasar(u)",
+    "words": [
+      {
+        "text": "فَاِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "بَرِقَ",
+        "meaning": "kamaştığı"
+      },
+      {
+        "text": "الْبَصَرُۙ",
+        "meaning": "göz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gözün kamaştığı, ayın tutulduğu, güneş ve ayın bir araya getirildiği zaman, işte o gün insan: \"kaçacak yer nerede?\" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 8,
+    "transliteration": "Ve ḣasefe-lkamer(u)",
+    "words": [
+      {
+        "text": "وَخَسَفَ",
+        "meaning": "ve tutulduğu"
+      },
+      {
+        "text": "الْقَمَرُۙ",
+        "meaning": "ay"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gözün kamaştığı, ayın tutulduğu, güneş ve ayın bir araya getirildiği zaman, işte o gün insan: \"kaçacak yer nerede?\" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 9,
+    "transliteration": "Ve cumi’a-şşemsu velkamer(u)",
+    "words": [
+      {
+        "text": "وَجُمِعَ",
+        "meaning": "ve bir araya toplandığı"
+      },
+      {
+        "text": "الشَّمْسُ",
+        "meaning": "güneş"
+      },
+      {
+        "text": "وَالْقَمَرُۙ",
+        "meaning": "ve ay"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gözün kamaştığı, ayın tutulduğu, güneş ve ayın bir araya getirildiği zaman, işte o gün insan: \"kaçacak yer nerede?\" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 10,
+    "transliteration": "Yekûlu-l-insânu yevme-iżin eyne-lmefer(ru)",
+    "words": [
+      {
+        "text": "يَقُولُ",
+        "meaning": "der"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "اَيْنَ",
+        "meaning": "neresidir?"
+      },
+      {
+        "text": "الْمَفَرُّۚ",
+        "meaning": "kaçacak yer"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gözün kamaştığı, ayın tutulduğu, güneş ve ayın bir araya getirildiği zaman, işte o gün insan: \"kaçacak yer nerede?\" der."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 11,
+    "transliteration": "Kellâ lâ vezer(a)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "لَا",
+        "meaning": "yoktur"
+      },
+      {
+        "text": "وَزَرَۚ",
+        "meaning": "sığınacak yer"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hayır; hayır; bir sığınak yoktur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 12,
+    "transliteration": "İlâ rabbike yevme-iżin(i)lmustekar(ru)",
+    "words": [
+      {
+        "text": "اِلٰى",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": null
+      },
+      {
+        "text": "يَوْمَئِذٍۨ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "الْمُسْتَقَرُّۜ",
+        "meaning": "varıp durulacak yer"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün, sen, Rabbinin huzuruna varıp durursun."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 13,
+    "transliteration": "Yunebbeu-l-insânu yevme-iżin bimâ kaddeme ve aḣḣar(a)",
+    "words": [
+      {
+        "text": "يُنَبَّؤُا",
+        "meaning": "haber verilir"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insanın"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "بِمَا",
+        "meaning": "şeyler"
+      },
+      {
+        "text": "قَدَّمَ",
+        "meaning": "yapıp öne sürdüğü"
+      },
+      {
+        "text": "وَاَخَّرَۜ",
+        "meaning": "ve geri bıraktığı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün, insanoğluna önde ve sonda yaptığı ne varsa bildirilir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 14,
+    "transliteration": "Beli-l-insânu ‘alâ nefsihi basîra(tun)",
+    "words": [
+      {
+        "text": "بَلِ",
+        "meaning": "doğrusu"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "نَفْسِه۪",
+        "meaning": "kendi nefsini"
+      },
+      {
+        "text": "بَص۪يرَةٌۙ",
+        "meaning": "görür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Özürlerini sayıp dökse de, insanoğlu, artık kendi kendinin şahididir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 15,
+    "transliteration": "Velev elkâ me’âżîrah(u)",
+    "words": [
+      {
+        "text": "وَلَوْ",
+        "meaning": "ve şayet"
+      },
+      {
+        "text": "اَلْقٰى",
+        "meaning": "ortaya atsa (da)"
+      },
+      {
+        "text": "مَعَاذ۪يرَهُۜ",
+        "meaning": "özürler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Özürlerini sayıp dökse de, insanoğlu, artık kendi kendinin şahididir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 16,
+    "transliteration": "Lâ tuharrik bihi lisâneke lita’cele bih(i)",
+    "words": [
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "تُحَرِّكْ",
+        "meaning": "depretme"
+      },
+      {
+        "text": "بِه۪",
+        "meaning": "onu"
+      },
+      {
+        "text": "لِسَانَكَ",
+        "meaning": "diline"
+      },
+      {
+        "text": "لِتَعْجَلَ",
+        "meaning": "okumak için"
+      },
+      {
+        "text": "بِه۪ۜ",
+        "meaning": "onu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Cebrail sana Kuran okurken, unutmamak için acele edip onunla beraber söyleme, yalnız dinle."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 17,
+    "transliteration": "İnne ‘aleynâ cem’ahu ve kur-âneh(u)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "عَلَيْنَا",
+        "meaning": "bize düşer"
+      },
+      {
+        "text": "جَمْعَهُ",
+        "meaning": "onu toplamak"
+      },
+      {
+        "text": "وَقُرْاٰنَهُۚ",
+        "meaning": "ve okumak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu o vahyolunanı kalbine yerleştirmek ve onu sana okutturmak Bize düşer."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 18,
+    "transliteration": "Fe-iżâ kara/nâhu fettebi’ kur-âneh(u)",
+    "words": [
+      {
+        "text": "فَاِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "قَرَأْنَاهُ",
+        "meaning": "O'nu okuduğumuz"
+      },
+      {
+        "text": "فَاتَّبِعْ",
+        "meaning": "izle"
+      },
+      {
+        "text": "قُرْاٰنَهُۚ",
+        "meaning": "onun okunuşunu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Biz onu Cebrail'e okuttuğumuz zaman, onun okumasını dinle."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 19,
+    "transliteration": "Śumme inne ‘aleynâ beyâneh(u)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "عَلَيْنَا",
+        "meaning": "bize düşer"
+      },
+      {
+        "text": "بَيَانَهُۜ",
+        "meaning": "onu açıklamak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra onu sana açıklamak Bize düşer."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 20,
+    "transliteration": "Kellâ bel tuhibbûne-l’âcile(te)",
+    "words": [
+      {
+        "text": "كَلَّا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "بَلْ",
+        "meaning": "bilakis"
+      },
+      {
+        "text": "تُحِبُّونَ",
+        "meaning": "siz seviyorsunuz"
+      },
+      {
+        "text": "الْعَاجِلَةَۙ",
+        "meaning": "çarçabuk geçeni"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hayır, hayır! Sizler, çabuk elde edeceğiniz dünya nimetlerini seversiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 21,
+    "transliteration": "Ve teżerûne-l-âḣira(te)",
+    "words": [
+      {
+        "text": "وَتَذَرُونَ",
+        "meaning": "ve bırakıyorsunuz"
+      },
+      {
+        "text": "الْاٰخِرَةَۜ",
+        "meaning": "ahireti"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ahireti bırakırsınız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 22,
+    "transliteration": "Vucûhun yevme-iżin nâdira(tun)",
+    "words": [
+      {
+        "text": "وُجُوهٌ",
+        "meaning": "yüzler vardır"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "نَاضِرَةٌۙ",
+        "meaning": "ışıl ışıl parlar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün bir takım yüzler Rablerine bakıp parlayacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 23,
+    "transliteration": "İlâ rabbihâ nâzira(tun)",
+    "words": [
+      {
+        "text": "اِلٰى",
+        "meaning": null
+      },
+      {
+        "text": "رَبِّهَا",
+        "meaning": "Rabbine"
+      },
+      {
+        "text": "نَاظِرَةٌۚ",
+        "meaning": "bakar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün bir takım yüzler Rablerine bakıp parlayacaktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 24,
+    "transliteration": "Ve vucûhun yevme-iżin bâsira(tun)",
+    "words": [
+      {
+        "text": "وَوُجُوهٌ",
+        "meaning": "ve yüzler vardır"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "بَاسِرَةٌۙ",
+        "meaning": "asıktır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün bir takım yüzler de asıktır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 25,
+    "transliteration": "Tezunnu en yuf’ale bihâ fâkira(tun)",
+    "words": [
+      {
+        "text": "تَظُنُّ",
+        "meaning": "anlar"
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "يُفْعَلَ",
+        "meaning": "yapılacağını"
+      },
+      {
+        "text": "بِهَا",
+        "meaning": "kendisine"
+      },
+      {
+        "text": "فَاقِرَةٌۜ",
+        "meaning": "belini kıran(bela)nın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kendisinin belkemiğinin kırılacağını sanır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 26,
+    "transliteration": "Kellâ iżâ belaġati-tterâkiye",
+    "words": [
+      {
+        "text": "كَلَّٓا",
+        "meaning": "hayır"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "ne zaman ki"
+      },
+      {
+        "text": "بَلَغَتِ",
+        "meaning": "(can) dayanır"
+      },
+      {
+        "text": "التَّرَاقِيَۙ",
+        "meaning": "köprücük kemiklerine"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dikkat edin; can boğaza gelip köprücük kemiklerine dayandığı zaman: \"Çare bulan yok mudur?\" denir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 27,
+    "transliteration": "Ve kîle men(se) râk(in)",
+    "words": [
+      {
+        "text": "وَق۪يلَ",
+        "meaning": "ve denir"
+      },
+      {
+        "text": "مَنْ۔",
+        "meaning": "kim?"
+      },
+      {
+        "text": "رَاقٍۙ",
+        "meaning": "efsun yapar"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dikkat edin; can boğaza gelip köprücük kemiklerine dayandığı zaman: \"Çare bulan yok mudur?\" denir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 28,
+    "transliteration": "Ve zanne ennehu-lfirâk(u)",
+    "words": [
+      {
+        "text": "وَظَنَّ",
+        "meaning": "ve anlar"
+      },
+      {
+        "text": "اَنَّهُ",
+        "meaning": "bunun"
+      },
+      {
+        "text": "الْفِرَاقُۙ",
+        "meaning": "ayrılık zamanı olduğunu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Artık ayrılık vaktinin geldiğini sanır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 29,
+    "transliteration": "Velteffeti-ssâku bi-ssâk(i)",
+    "words": [
+      {
+        "text": "وَالْتَفَّتِ",
+        "meaning": "ve dolaşır"
+      },
+      {
+        "text": "السَّاقُ",
+        "meaning": "bacak"
+      },
+      {
+        "text": "بِالسَّاقِۙ",
+        "meaning": "bacağa"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bacaklar birbirine dolaşır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 30,
+    "transliteration": "İlâ rabbike yevme-iżin(i)lmesâk(u)",
+    "words": [
+      {
+        "text": "اِلٰى",
+        "meaning": null
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinedir"
+      },
+      {
+        "text": "يَوْمَئِذٍۨ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "الْمَسَاقُۜ۟",
+        "meaning": "sevk"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün sevk Rabbin huzurunadır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 31,
+    "transliteration": "Felâ saddeka velâ sallâ",
+    "words": [
+      {
+        "text": "فَلَا",
+        "meaning": null
+      },
+      {
+        "text": "صَدَّقَ",
+        "meaning": "sadaka vermedi"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "صَلّٰىۙ",
+        "meaning": "namaz da kılmadı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, Peygamberi doğrulamamış, namaz kılmamış, ama yalanlayıp yüz çevirmiş, sonra da salına salına kendinden yana olanlara gitmişti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 32,
+    "transliteration": "Velâkin keżżebe ve tevellâ",
+    "words": [
+      {
+        "text": "وَلٰكِنْ",
+        "meaning": "fakat"
+      },
+      {
+        "text": "كَذَّبَ",
+        "meaning": "yalanladı"
+      },
+      {
+        "text": "وَتَوَلّٰىۙ",
+        "meaning": "ve döndü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, Peygamberi doğrulamamış, namaz kılmamış, ama yalanlayıp yüz çevirmiş, sonra da salına salına kendinden yana olanlara gitmişti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 33,
+    "transliteration": "Śumme żehebe ilâ ehlihi yetemettâ",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "ذَهَبَ",
+        "meaning": "gitti"
+      },
+      {
+        "text": "اِلٰٓى",
+        "meaning": null
+      },
+      {
+        "text": "اَهْلِه۪",
+        "meaning": "ailesine"
+      },
+      {
+        "text": "يَتَمَطّٰىۜ",
+        "meaning": "çalım satarak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, Peygamberi doğrulamamış, namaz kılmamış, ama yalanlayıp yüz çevirmiş, sonra da salına salına kendinden yana olanlara gitmişti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 34,
+    "transliteration": "Evlâ leke fe-evlâ",
+    "words": [
+      {
+        "text": "اَوْلٰى",
+        "meaning": "yazık"
+      },
+      {
+        "text": "لَكَ",
+        "meaning": "sana"
+      },
+      {
+        "text": "فَاَوْلٰىۙ",
+        "meaning": "yazık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sana yazıklar olsun, yazıklar!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 35,
+    "transliteration": "Śumme evlâ leke fe-evlâ",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "yine"
+      },
+      {
+        "text": "اَوْلٰى",
+        "meaning": "yazık"
+      },
+      {
+        "text": "لَكَ",
+        "meaning": "sana"
+      },
+      {
+        "text": "فَاَوْلٰىۜ",
+        "meaning": "yazık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Daha ne olsun, sana yazıklar olsun, yazıklar!"
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 36,
+    "transliteration": "Eyahsebu-l-insânu en yutrake sudâ(n)",
+    "words": [
+      {
+        "text": "اَيَحْسَبُ",
+        "meaning": "sanıyor mu?"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "يُتْرَكَ",
+        "meaning": "bırakılacağını"
+      },
+      {
+        "text": "سُدًىۜ",
+        "meaning": "başı boş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsanoğlu kendisinin başıboş bırakılacağını mı sanır?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 37,
+    "transliteration": "Elem yeku nutfeten min meniyyin yumnâ",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": "değil miydi?"
+      },
+      {
+        "text": "يَكُ",
+        "meaning": "kendisi"
+      },
+      {
+        "text": "نُطْفَةً",
+        "meaning": "bir nutfe (sperm)"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-den"
+      },
+      {
+        "text": "مَنِيٍّ",
+        "meaning": "meni-"
+      },
+      {
+        "text": "يُمْنٰىۙ",
+        "meaning": "dökülen"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, katılan bir meni damlası değil miydi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 38,
+    "transliteration": "Śumme kâne ‘alekaten feḣaleka fesevvâ",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "oldu"
+      },
+      {
+        "text": "عَلَقَةً",
+        "meaning": "alaka (embriyo)"
+      },
+      {
+        "text": "فَخَلَقَ",
+        "meaning": "ve yarattı"
+      },
+      {
+        "text": "فَسَوّٰىۙ",
+        "meaning": "ve düzenledi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra kan pıhtısı olmuş, sonra Allah onu yaratıp şekil vermişti."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 39,
+    "transliteration": "Fece’ale minhu-zzevceyni-żżekera vel-unśâ",
+    "words": [
+      {
+        "text": "فَجَعَلَ",
+        "meaning": "ve var etti"
+      },
+      {
+        "text": "مِنْهُ",
+        "meaning": "ondan"
+      },
+      {
+        "text": "الزَّوْجَيْنِ",
+        "meaning": "iki çifti"
+      },
+      {
+        "text": "الذَّكَرَ",
+        "meaning": "erkeği"
+      },
+      {
+        "text": "وَالْاُنْثٰىۜ",
+        "meaning": "ve dişiyi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ondan, erkek, dişi iki cins yaratmıştı."
+        }
+      }
+    }
+  },
+  {
+    "sure": 75,
+    "ayet": 40,
+    "transliteration": "Eleyse żâlike bikâdirin ‘alâ en yuhyiye-lmevtâ",
+    "words": [
+      {
+        "text": "اَلَيْسَ",
+        "meaning": "değil mi?"
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "buna"
+      },
+      {
+        "text": "بِقَادِرٍ",
+        "meaning": "gücü yetecek"
+      },
+      {
+        "text": "عَلٰٓى",
+        "meaning": null
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "يُحْيِيَ",
+        "meaning": "diriltmeğe"
+      },
+      {
+        "text": "الْمَوْتٰى",
+        "meaning": "ölüleri"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bunları yapan Allah'ın ölüleri diriltmeye gücü yetmez mi? Elbette yeter."
+        }
+      }
+    }
+  }
+]

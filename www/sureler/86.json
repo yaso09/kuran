@@ -1,0 +1,501 @@
+[
+  {
+    "sure": 86,
+    "ayet": 1,
+    "transliteration": "Ve-ssemâ-i ve-ttârik(i)",
+    "words": [
+      {
+        "text": "وَالسَّمَٓاءِ",
+        "meaning": "göğe andolsun"
+      },
+      {
+        "text": "وَالطَّارِقِۙ",
+        "meaning": "ve tarık'a"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Göğe ve Tarık'a and olsun;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 2,
+    "transliteration": "Vemâ edrâke mâ-ttârik(u)",
+    "words": [
+      {
+        "text": "وَمَٓا",
+        "meaning": "ve nedir?"
+      },
+      {
+        "text": "اَدْرٰيكَ",
+        "meaning": "sana bildiren"
+      },
+      {
+        "text": "مَا",
+        "meaning": "nedir"
+      },
+      {
+        "text": "الطَّارِقُۙ",
+        "meaning": "tarık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Tarık'ın ne olduğunu sen bilir misin?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 3,
+    "transliteration": "Ennecmu-śśâkib(u)",
+    "words": [
+      {
+        "text": "اَلنَّجْمُ",
+        "meaning": "yıldızdır"
+      },
+      {
+        "text": "الثَّاقِبُۙ",
+        "meaning": "parlayan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, (ışığıyla karanlığı) delen yıldızdır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 4,
+    "transliteration": "İn kullu nefsin lemmâ ‘aleyhâ hâfiz(un)",
+    "words": [
+      {
+        "text": "اِنْ",
+        "meaning": "yoktur ki"
+      },
+      {
+        "text": "كُلُّ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "نَفْسٍ",
+        "meaning": "can"
+      },
+      {
+        "text": "لَمَّا",
+        "meaning": "olmasın"
+      },
+      {
+        "text": "عَلَيْهَا",
+        "meaning": "başında"
+      },
+      {
+        "text": "حَافِظٌۜ",
+        "meaning": "bir koruyucu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Üzerinde gözetici olmayan kimse yoktur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 5,
+    "transliteration": "Felyenzuri-l-insânu mimme ḣulik(e)",
+    "words": [
+      {
+        "text": "فَلْيَنْظُرِ",
+        "meaning": "bir baksın"
+      },
+      {
+        "text": "الْاِنْسَانُ",
+        "meaning": "insan"
+      },
+      {
+        "text": "مِمَّ",
+        "meaning": "neden"
+      },
+      {
+        "text": "خُلِقَۜ",
+        "meaning": "yaratıldığına"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse insan neden yaratıldığına bir baksın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 6,
+    "transliteration": "Ḣulika min mâ-in dâfik(in)",
+    "words": [
+      {
+        "text": "خُلِقَ",
+        "meaning": "yaratıldı"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-dan"
+      },
+      {
+        "text": "مَٓاءٍ",
+        "meaning": "bir su-"
+      },
+      {
+        "text": "دَافِقٍۙ",
+        "meaning": "atılan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, erkek ve kadının beli ile kaburga kemikleri arasından atılagelen bir sudan yaratılmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 7,
+    "transliteration": "Yaḣrucu min beyni-ssulbi ve-tterâ-ib(i)",
+    "words": [
+      {
+        "text": "يَخْرُجُ",
+        "meaning": "çıkan"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "بَيْنِ",
+        "meaning": "arasından"
+      },
+      {
+        "text": "الصُّلْبِ",
+        "meaning": "bel"
+      },
+      {
+        "text": "وَالتَّرَٓائِبِۜ",
+        "meaning": "ve kaburga kemikleri"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, erkek ve kadının beli ile kaburga kemikleri arasından atılagelen bir sudan yaratılmıştır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 8,
+    "transliteration": "İnnehu ‘alâ rac’ihi lekâdir(un)",
+    "words": [
+      {
+        "text": "اِنَّهُ",
+        "meaning": "şüphesiz O"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "رَجْعِه۪",
+        "meaning": "onu tekrar döndürmeye"
+      },
+      {
+        "text": "لَقَادِرٌۜ",
+        "meaning": "elbette kadirdir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şüphesiz Allah, gizliliklerin ortaya çıkacağı gün, insanı tekrar yaratmaya Kadir'dir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 9,
+    "transliteration": "Yevme tublâ-sserâ-ir(u)",
+    "words": [
+      {
+        "text": "يَوْمَ",
+        "meaning": "gün"
+      },
+      {
+        "text": "تُبْلَى",
+        "meaning": "yoklanacağı"
+      },
+      {
+        "text": "السَّرَٓائِرُۙ",
+        "meaning": "sırların"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şüphesiz Allah, gizliliklerin ortaya çıkacağı gün, insanı tekrar yaratmaya Kadir'dir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 10,
+    "transliteration": "Femâ lehu min kuvvetin velâ nâsir(in)",
+    "words": [
+      {
+        "text": "فَمَا",
+        "meaning": "yoktur"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "onun"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "قُوَّةٍ",
+        "meaning": "gücü"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve ne de"
+      },
+      {
+        "text": "نَاصِرٍۜ",
+        "meaning": "bir yardımcısı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O gün, insanın gücü de, yardımcısı da olmaz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 11,
+    "transliteration": "Ve-ssemâ-iżâti-rrac’(i)",
+    "words": [
+      {
+        "text": "وَالسَّمَٓاءِ",
+        "meaning": "göğe andolsun"
+      },
+      {
+        "text": "ذَاتِ",
+        "meaning": null
+      },
+      {
+        "text": "الرَّجْعِۙ",
+        "meaning": "dönüşlü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dönüşlü göğe ve yarılan yeryüzüne and olsun ki,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 12,
+    "transliteration": "Vel-ardi żâti-ssad’(i)",
+    "words": [
+      {
+        "text": "وَالْاَرْضِ",
+        "meaning": "ve yere andolsun"
+      },
+      {
+        "text": "ذَاتِ",
+        "meaning": null
+      },
+      {
+        "text": "الصَّدْعِۙ",
+        "meaning": "çatlayan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dönüşlü göğe ve yarılan yeryüzüne and olsun ki,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 13,
+    "transliteration": "İnnehu lekavlun fasl(un)",
+    "words": [
+      {
+        "text": "اِنَّهُ",
+        "meaning": "elbette O"
+      },
+      {
+        "text": "لَقَوْلٌ",
+        "meaning": "muhakkak bir sözdür"
+      },
+      {
+        "text": "فَصْلٌۙ",
+        "meaning": "ayırdedici"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu bu Kuran kesin bir sözdür."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 14,
+    "transliteration": "Vemâ huve bil-hezl(i)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve değildir"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O"
+      },
+      {
+        "text": "بِالْهَزْلِۜ",
+        "meaning": "şaka"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "O, eğlence için değildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 15,
+    "transliteration": "İnnehum yekîdûne keydâ(n)",
+    "words": [
+      {
+        "text": "اِنَّهُمْ",
+        "meaning": "elbette onlar"
+      },
+      {
+        "text": "يَك۪يدُونَ",
+        "meaning": "kuruyorlar"
+      },
+      {
+        "text": "كَيْدًاۙ",
+        "meaning": "bir tuzak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gerçekten onlar düzen kuruyorlar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 16,
+    "transliteration": "Ve ekîdu keydâ(n)",
+    "words": [
+      {
+        "text": "وَاَك۪يدُ",
+        "meaning": "ben de kuruyorum"
+      },
+      {
+        "text": "كَيْدًاۚ",
+        "meaning": "bir tuzak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ben de bir düzen kurmaktayım."
+        }
+      }
+    }
+  },
+  {
+    "sure": 86,
+    "ayet": 17,
+    "transliteration": "Femehhili-lkâfirîne emhilhum ruveydâ(n)",
+    "words": [
+      {
+        "text": "فَمَهِّلِ",
+        "meaning": "o halde mühlet ver"
+      },
+      {
+        "text": "الْكَافِر۪ينَ",
+        "meaning": "kafirlere"
+      },
+      {
+        "text": "اَمْهِلْهُمْ",
+        "meaning": "kendi hallerine bırak"
+      },
+      {
+        "text": "رُوَيْدًا",
+        "meaning": "birazcık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sen inkarcılara mehil ver; onlara mukabeleyi biraz geri bırak."
+        }
+      }
+    }
+  }
+]

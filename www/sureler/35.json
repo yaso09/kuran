@@ -1,0 +1,3789 @@
+[
+  {
+    "sure": 35,
+    "ayet": 1,
+    "transliteration": "Elhamdu li(A)llâhi fâtiri-ssemâvâti vel-ardi câ’ili-lmelâ-iketi rusulen ulî ecnihatin meśnâ veśulâśe verubâ’(a)(c) yezîdu fî-lḣalki mâ yeşâ(u)(c) inna(A)llâhe ‘alâ kulli şey-in kadîr(un)",
+    "words": [
+      {
+        "text": "اَلْحَمْدُ",
+        "meaning": "hamd olsun"
+      },
+      {
+        "text": "لِلّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "فَاطِرِ",
+        "meaning": "yoktan var eden"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "gökleri"
+      },
+      {
+        "text": "وَالْاَرْضِ",
+        "meaning": "ve yeri"
+      },
+      {
+        "text": "جَاعِلِ",
+        "meaning": "yapan"
+      },
+      {
+        "text": "الْمَلٰٓئِكَةِ",
+        "meaning": "melekleri"
+      },
+      {
+        "text": "رُسُلًا",
+        "meaning": "elçiler"
+      },
+      {
+        "text": "اُو۬ل۪ٓي",
+        "meaning": "sahibi"
+      },
+      {
+        "text": "اَجْنِحَةٍ",
+        "meaning": "kanatlar"
+      },
+      {
+        "text": "مَثْنٰى",
+        "meaning": "ikişer"
+      },
+      {
+        "text": "وَثُلٰثَ",
+        "meaning": "ve üçer"
+      },
+      {
+        "text": "وَرُبَاعَۜ",
+        "meaning": "ve dörder"
+      },
+      {
+        "text": "يَز۪يدُ",
+        "meaning": "artırır"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْخَلْقِ",
+        "meaning": "yaratmada"
+      },
+      {
+        "text": "مَا",
+        "meaning": "ne kadar"
+      },
+      {
+        "text": "يَشَٓاءُۜ",
+        "meaning": "dilerse"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "كُلِّ",
+        "meaning": "her"
+      },
+      {
+        "text": "شَيْءٍ",
+        "meaning": "şeyi"
+      },
+      {
+        "text": "قَد۪يرٌ",
+        "meaning": "yapabilendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Hamd, gökleri ve yeri yaratan, melekleri ikişer, üçer, dörder kanatlı elçiler kılan Allah'a mahsustur. Yaratmada dilediğini artırır. Doğrusu Allah, her şeye Kadir olandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 2,
+    "transliteration": "Mâ yeftehi(A)llâhu linnâsi min rahmetin felâ mumsike lehâ(s) vemâ yumsik felâ mursile lehu min ba’dih(i)(c) vehuve-l’azîzu-lhakîm(u)",
+    "words": [
+      {
+        "text": "مَا",
+        "meaning": "ne ki"
+      },
+      {
+        "text": "يَفْتَحِ",
+        "meaning": "(Allah) açar"
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "لِلنَّاسِ",
+        "meaning": "insanlar için"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ten"
+      },
+      {
+        "text": "رَحْمَةٍ",
+        "meaning": "rahmet-"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": "olamaz"
+      },
+      {
+        "text": "مُمْسِكَ",
+        "meaning": "tutan"
+      },
+      {
+        "text": "لَهَاۚ",
+        "meaning": "onu"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve ne ki"
+      },
+      {
+        "text": "يُمْسِكْۙ",
+        "meaning": "(Allah) tutar"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": "olmaz"
+      },
+      {
+        "text": "مُرْسِلَ",
+        "meaning": "salıverecek"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "onu"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "بَعْدِه۪ۜ",
+        "meaning": "O'ndan sonra"
+      },
+      {
+        "text": "وَهُوَ",
+        "meaning": "ve O"
+      },
+      {
+        "text": "الْعَز۪يزُ",
+        "meaning": "üstündür"
+      },
+      {
+        "text": "الْحَك۪يمُ",
+        "meaning": "hüküm ve hikmet sahibidir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın insanlara verdiği rahmeti önleyebilecek yoktur. O'nun önlediğini de ardından salıverecek yoktur. O, güçlü'dür, Hakim'dir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 3,
+    "transliteration": "Yâ eyyuhâ-nnâsu-żkurû ni’meta(A)llâhi ‘aleykum(c) hel min ḣâlikin ġayru(A)llâhi yerzukukum mine-ssemâ-i vel-ard(i)(c) lâ ilâhe illâ huv(e)(s) feennâ tu/fekûn(e)",
+    "words": [
+      {
+        "text": "يَٓا",
+        "meaning": "ey"
+      },
+      {
+        "text": "اَيُّهَا",
+        "meaning": "ey"
+      },
+      {
+        "text": "النَّاسُ",
+        "meaning": "insanlar"
+      },
+      {
+        "text": "اذْكُرُوا",
+        "meaning": "hatırlayın"
+      },
+      {
+        "text": "نِعْمَتَ",
+        "meaning": "ni'metini"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "عَلَيْكُمْۜ",
+        "meaning": "size olan"
+      },
+      {
+        "text": "هَلْ",
+        "meaning": "var mı?"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiç"
+      },
+      {
+        "text": "خَالِقٍ",
+        "meaning": "yaratıcı"
+      },
+      {
+        "text": "غَيْرُ",
+        "meaning": "-tan başka"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah-"
+      },
+      {
+        "text": "يَرْزُقُكُمْ",
+        "meaning": "size rızık verecek"
+      },
+      {
+        "text": "مِنَ",
+        "meaning": "-ten"
+      },
+      {
+        "text": "السَّمَٓاءِ",
+        "meaning": "gök-"
+      },
+      {
+        "text": "وَالْاَرْضِۜ",
+        "meaning": "ve yerden"
+      },
+      {
+        "text": "لَٓا",
+        "meaning": "yoktur"
+      },
+      {
+        "text": "اِلٰهَ",
+        "meaning": "tanrı"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka"
+      },
+      {
+        "text": "هُوَۘ",
+        "meaning": "O'ndan"
+      },
+      {
+        "text": "فَاَنّٰى",
+        "meaning": "nasıl oluyor da?"
+      },
+      {
+        "text": "تُؤْفَكُونَ",
+        "meaning": "çevriliyorsunuz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insanlar! Allah'ın size olan nimetini anın; sizi gökten ve yerden rızıklandıran Allah'tan başka bir yaratan var mıdır? O'ndan başka tanrı yoktur. Nasıl aldatılıp da döndürülürsünüz?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 4,
+    "transliteration": "Ve-in yukeżżibûke fekad kużżibet rusulun min kablik(e)(c) ve-ila(A)llâhi turce’u-l-umûr(u)",
+    "words": [
+      {
+        "text": "وَاِنْ",
+        "meaning": "ve eğer"
+      },
+      {
+        "text": "يُكَذِّبُوكَ",
+        "meaning": "seni yalanlıyorlarsa"
+      },
+      {
+        "text": "فَقَدْ",
+        "meaning": "elbette"
+      },
+      {
+        "text": "كُذِّبَتْ",
+        "meaning": "yalanlanmıştır"
+      },
+      {
+        "text": "رُسُلٌ",
+        "meaning": "elçiler (de)"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "قَبْلِكَۜ",
+        "meaning": "senden önceki"
+      },
+      {
+        "text": "وَاِلَى",
+        "meaning": "ve"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "تُرْجَعُ",
+        "meaning": "döndürülecektir"
+      },
+      {
+        "text": "الْاُمُورُ",
+        "meaning": "bütün işler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Seni yalanlıyorlarsa bil ki senden önce de nice peygamberler yalanlanmıştır. Bütün işler Allah' a döndürülür."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 5,
+    "transliteration": "Yâ eyyuhâ-nnâsu inne va’da(A)llâhi hakk(un)(s) felâ teġurrannekumu-lhayâtu-ddunyâ(s) velâ yeġurrannekum bi(A)llâhi-lġarûr(u)",
+    "words": [
+      {
+        "text": "يَٓا",
+        "meaning": "ey"
+      },
+      {
+        "text": "اَيُّهَا",
+        "meaning": "ey"
+      },
+      {
+        "text": "النَّاسُ",
+        "meaning": "insanlar"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "elbette"
+      },
+      {
+        "text": "وَعْدَ",
+        "meaning": "va'di"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "حَقٌّ",
+        "meaning": "gerçektir"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": "asla"
+      },
+      {
+        "text": "تَغُرَّنَّكُمُ",
+        "meaning": "sizi aldatmasın"
+      },
+      {
+        "text": "الْحَيٰوةُ",
+        "meaning": "hayatı"
+      },
+      {
+        "text": "الدُّنْيَا۠",
+        "meaning": "dünya"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يَغُرَّنَّكُمْ",
+        "meaning": "sizi aldatmasın"
+      },
+      {
+        "text": "بِاللّٰهِ",
+        "meaning": "Allah ile"
+      },
+      {
+        "text": "الْغَرُورُ",
+        "meaning": "o aldatıcı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insanlar! Allah'ın verdiği söz şüphesiz gerçektir; dünya hayatı sizi aldatmasın. Allah'ın affına güvendirerek şeytan sizi ayartmasın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 6,
+    "transliteration": "İnne-şşeytâne lekum ‘aduvvun fetteḣiżûhu ‘aduvvâ(en)(c) innemâ yed’û hizbehu liyekûnû min ashâbi-ssa’îr(i)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الشَّيْطَانَ",
+        "meaning": "şeytan"
+      },
+      {
+        "text": "لَكُمْ",
+        "meaning": "size"
+      },
+      {
+        "text": "عَدُوٌّ",
+        "meaning": "düşmandır"
+      },
+      {
+        "text": "فَاتَّخِذُوهُ",
+        "meaning": "siz de onu edinin"
+      },
+      {
+        "text": "عَدُوًّاۜ",
+        "meaning": "düşman"
+      },
+      {
+        "text": "اِنَّمَا",
+        "meaning": "şüphesiz o"
+      },
+      {
+        "text": "يَدْعُوا",
+        "meaning": "çağırır"
+      },
+      {
+        "text": "حِزْبَهُ",
+        "meaning": "taraftarlarını"
+      },
+      {
+        "text": "لِيَكُونُوا",
+        "meaning": "olmağa"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "اَصْحَابِ",
+        "meaning": "halkı-"
+      },
+      {
+        "text": "السَّع۪يرِۜ",
+        "meaning": "alevli ateşin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şeytan şüphesiz sizin düşmanınızdır; siz de onu düşman tutun; o, kendi taraftarlarını, çılgın alevli cehennem yaranı olmaya çağırır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 7,
+    "transliteration": "Elleżîne keferû lehum ‘ażâbun şedîd(un)(s) velleżîne âmenû ve’amilû-ssâlihâti lehum maġfiratun veecrun kebîr(un)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "كَفَرُوا",
+        "meaning": "inkar eden(ler)"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlar için vardır"
+      },
+      {
+        "text": "عَذَابٌ",
+        "meaning": "bir azab"
+      },
+      {
+        "text": "شَد۪يدٌۜ",
+        "meaning": "çetin"
+      },
+      {
+        "text": "وَالَّذ۪ينَ",
+        "meaning": "kimseler ise"
+      },
+      {
+        "text": "اٰمَنُوا",
+        "meaning": "inanan(lar)"
+      },
+      {
+        "text": "وَعَمِلُوا",
+        "meaning": "ve yapanlar"
+      },
+      {
+        "text": "الصَّالِحَاتِ",
+        "meaning": "iyi işler"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlara vardır"
+      },
+      {
+        "text": "مَغْفِرَةٌ",
+        "meaning": "mağfiret"
+      },
+      {
+        "text": "وَاَجْرٌ",
+        "meaning": "ve bir mükafat"
+      },
+      {
+        "text": "كَب۪يرٌ۟",
+        "meaning": "büyük"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnkar eden kimselere çetin azap vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 8,
+    "transliteration": "Efemen zuyyine lehu sû-u ‘amelihi feraâhu hasenâ(en)(s) fe-inna(A)llâhe yudillu men yeşâu veyehdî men yeşâ(u)(s) felâ teżheb nefsuke ‘aleyhim haserât(in)(c) inna(A)llâhe ‘alîmun bimâ yasne’ûn(e)",
+    "words": [
+      {
+        "text": "اَفَمَنْ",
+        "meaning": "kimse (de) mi?"
+      },
+      {
+        "text": "زُيِّنَ",
+        "meaning": "süslendirilen"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "kendisine"
+      },
+      {
+        "text": "سُٓوءُ",
+        "meaning": "kötü"
+      },
+      {
+        "text": "عَمَلِه۪",
+        "meaning": "işi"
+      },
+      {
+        "text": "فَرَاٰهُ",
+        "meaning": "ve onu gören"
+      },
+      {
+        "text": "حَسَنًاۜ",
+        "meaning": "güzel"
+      },
+      {
+        "text": "فَاِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "يُضِلُّ",
+        "meaning": "sapıklık içinde bırakır"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimseyi"
+      },
+      {
+        "text": "يَشَٓاءُ",
+        "meaning": "dilediği"
+      },
+      {
+        "text": "وَيَهْد۪ي",
+        "meaning": "ve yola iletir"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimseyi"
+      },
+      {
+        "text": "يَشَٓاءُۘ",
+        "meaning": "dilediği"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": "asla"
+      },
+      {
+        "text": "تَذْهَبْ",
+        "meaning": "gitmesin"
+      },
+      {
+        "text": "نَفْسُكَ",
+        "meaning": "canın"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "onlar için"
+      },
+      {
+        "text": "حَسَرَاتٍۜ",
+        "meaning": "hasretlere"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "عَل۪يمٌ",
+        "meaning": "biliyor"
+      },
+      {
+        "text": "بِمَا",
+        "meaning": "şeyleri"
+      },
+      {
+        "text": "يَصْنَعُونَ",
+        "meaning": "onların yaptıkları"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kötü işi kendisine güzel gösterilip de onu güzel gören kimse, kötülüğü hiç işlemeyene benzer mi? Şüphesiz Allah dilediğini saptırır, dilediğini de doğru yola eriştirir. Artık onlara üzülerek kendini harabetme; Allah onların yaptıklarını şüphesiz bilir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 9,
+    "transliteration": "Ve(A)llâhu-lleżî ersele-rriyâha fetuśîru sehâben fesuknâhu ilâ beledin meyyitin feahyeynâ bihi-l-arda ba’de mevtihâ(c) keżâlike-nnuşûr(u)",
+    "words": [
+      {
+        "text": "وَاللّٰهُ",
+        "meaning": "Allah'tır ki"
+      },
+      {
+        "text": "الَّذ۪ٓي",
+        "meaning": null
+      },
+      {
+        "text": "اَرْسَلَ",
+        "meaning": "gönderir"
+      },
+      {
+        "text": "الرِّيَاحَ",
+        "meaning": "rüzgarları"
+      },
+      {
+        "text": "فَتُث۪يرُ",
+        "meaning": "ve kaldırır"
+      },
+      {
+        "text": "سَحَابًا",
+        "meaning": "bir bulut"
+      },
+      {
+        "text": "فَسُقْنَاهُ",
+        "meaning": "böylece onu süreriz"
+      },
+      {
+        "text": "اِلٰى",
+        "meaning": null
+      },
+      {
+        "text": "بَلَدٍ",
+        "meaning": "bir ülkeye"
+      },
+      {
+        "text": "مَيِّتٍ",
+        "meaning": "ölü"
+      },
+      {
+        "text": "فَاَحْيَيْنَا",
+        "meaning": "ve diriltiriz"
+      },
+      {
+        "text": "بِهِ",
+        "meaning": "onunla"
+      },
+      {
+        "text": "الْاَرْضَ",
+        "meaning": "yeri"
+      },
+      {
+        "text": "بَعْدَ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "مَوْتِهَاۜ",
+        "meaning": "öldükten"
+      },
+      {
+        "text": "كَذٰلِكَ",
+        "meaning": "işte böyledir"
+      },
+      {
+        "text": "النُّشُورُ",
+        "meaning": "diriltme"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rüzgarları gönderip de bulutları yürüten Allah'tır. Biz bulutları ölü bir yere sürüp, onunla toprağı ölümünden sonra diriltiriz. İnsanları diriltmek de böyledir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 10,
+    "transliteration": "Men kâne yurîdu-l’izzete feli(A)llâhi-l’izzetu cemî’â(an)(c) ileyhi yas’adu-lkelimu-ttayyibu vel’amelu-ssâlihu yerfe’uh(u)(c) velleżîne yemkurûne-sseyyi-âti lehum ‘ażâbun şedîd(un)(s) vemekru ulâ-ike huve yebûr(u)",
+    "words": [
+      {
+        "text": "مَنْ",
+        "meaning": "kim"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "ise"
+      },
+      {
+        "text": "يُر۪يدُ",
+        "meaning": "istiyor"
+      },
+      {
+        "text": "الْعِزَّةَ",
+        "meaning": "şeref"
+      },
+      {
+        "text": "فَلِلّٰهِ",
+        "meaning": "Allah'ındır"
+      },
+      {
+        "text": "الْعِزَّةُ",
+        "meaning": "şeref"
+      },
+      {
+        "text": "جَم۪يعًاۜ",
+        "meaning": "tamamen"
+      },
+      {
+        "text": "اِلَيْهِ",
+        "meaning": "O'na"
+      },
+      {
+        "text": "يَصْعَدُ",
+        "meaning": "çıkar"
+      },
+      {
+        "text": "الْكَلِمُ",
+        "meaning": "söz"
+      },
+      {
+        "text": "الطَّيِّبُ",
+        "meaning": "güzel"
+      },
+      {
+        "text": "وَالْعَمَلُ",
+        "meaning": "ve amel"
+      },
+      {
+        "text": "الصَّالِحُ",
+        "meaning": "iyi"
+      },
+      {
+        "text": "يَرْفَعُهُۜ",
+        "meaning": "onu yükseltir"
+      },
+      {
+        "text": "وَالَّذ۪ينَ",
+        "meaning": "(gelince)"
+      },
+      {
+        "text": "يَمْكُرُونَ",
+        "meaning": "tuzak kuranlara"
+      },
+      {
+        "text": "السَّيِّـَٔاتِ",
+        "meaning": "kötü şeyleri"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlar için vardır"
+      },
+      {
+        "text": "عَذَابٌ",
+        "meaning": "bir azab"
+      },
+      {
+        "text": "شَد۪يدٌۜ",
+        "meaning": "çetin"
+      },
+      {
+        "text": "وَمَكْرُ",
+        "meaning": "ve tuzağı"
+      },
+      {
+        "text": "اُو۬لٰٓئِكَ",
+        "meaning": "onların"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "o"
+      },
+      {
+        "text": "يَبُورُ",
+        "meaning": "bozulacaktır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kudret isteyen kimse bilsin ki, kudret, bütünüyle Allah'ındır. Güzel sözler O'na yükselir, o sözleri de yararlı iş yükseltir. Kötülük yapmakta düzen kuranlara, onlara, çetin azap vardır. İşte bunların kurdukları düzenler boşa çıkar."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 11,
+    "transliteration": "Va(A)llâhu ḣalekakum min turâbin śümme min nutfetin śümme ce’alekum ezvâcâ(i)(c) vemâ tahmilu min unśâ velâ teda’u illâ bi’ilmih(i)(c) vemâ yu’ammeru min mu’ammerin velâ yunkasu min ‘umurihi illâ fî kitâb(in)(c) inne żâlike ‘ala(A)llâhi yesîr(un)",
+    "words": [
+      {
+        "text": "وَاللّٰهُ",
+        "meaning": "ve Allah"
+      },
+      {
+        "text": "خَلَقَكُمْ",
+        "meaning": "sizi yarattı"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-tan"
+      },
+      {
+        "text": "تُرَابٍ",
+        "meaning": "toprak-"
+      },
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-den"
+      },
+      {
+        "text": "نُطْفَةٍ",
+        "meaning": "nutfe(sperm)-"
+      },
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "جَعَلَكُمْ",
+        "meaning": "sizi yaptı"
+      },
+      {
+        "text": "اَزْوَاجًاۜ",
+        "meaning": "çift çift"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": null
+      },
+      {
+        "text": "تَحْمِلُ",
+        "meaning": "gebe kalamaz"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "اُنْثٰى",
+        "meaning": "dişi"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "تَضَعُ",
+        "meaning": "doğuramaz"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "dışında"
+      },
+      {
+        "text": "بِعِلْمِه۪ۜ",
+        "meaning": "O'nun bilgisi"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve verilmez"
+      },
+      {
+        "text": "يُعَمَّرُ",
+        "meaning": "ömür"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "مُعَمَّرٍ",
+        "meaning": "canlıya"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يُنْقَصُ",
+        "meaning": "azaltılmaz"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "عُمُرِه۪ٓ",
+        "meaning": "onun ömrü-"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "(yazılmadıkça)"
+      },
+      {
+        "text": "ف۪ي",
+        "meaning": null
+      },
+      {
+        "text": "كِتَابٍۜ",
+        "meaning": "Kitapta"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "bu"
+      },
+      {
+        "text": "عَلَى",
+        "meaning": "göre"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "يَس۪يرٌ",
+        "meaning": "kolaydır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah sizi topraktan, sonra nutfeden yaratmış, sonra da sizi çiftler halinde varetmiştir. Dişinin gebe kalması ve doğurması, ancak O'nun bilgisiyledir. Ömrü uzun olanın çok yaşaması ve ömürlerin azalması şüphesiz Kitap'dadır. Doğrusu bu Allah'a kolaydır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 12,
+    "transliteration": "Vemâ yestevî-lbahrâni hâżâ ‘ażbun furâtun sâ-iġun şerâbuhu vehâżâ milhun ucâc(un)(s) vemin kullin te/kulûne lahmen tariyyen vetestaḣricûne hilyeten telbesûnehâ(s) veterâ-lfulke fîhi mevâḣira litebteġû min fadlihi vele’allekum teşkurûn(e)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve olmaz"
+      },
+      {
+        "text": "يَسْتَوِي",
+        "meaning": "eşit"
+      },
+      {
+        "text": "الْبَحْرَانِۗ",
+        "meaning": "iki deniz"
+      },
+      {
+        "text": "هٰذَا",
+        "meaning": "şu"
+      },
+      {
+        "text": "عَذْبٌ",
+        "meaning": "tatlıdır"
+      },
+      {
+        "text": "فُرَاتٌ",
+        "meaning": "susuzluğu keser"
+      },
+      {
+        "text": "سَٓائِغٌ",
+        "meaning": "(boğazdan) kayar"
+      },
+      {
+        "text": "شَرَابُهُ",
+        "meaning": "içimi"
+      },
+      {
+        "text": "وَهٰذَا",
+        "meaning": "şu da"
+      },
+      {
+        "text": "مِلْحٌ",
+        "meaning": "tuzludur"
+      },
+      {
+        "text": "اُجَاجٌۜ",
+        "meaning": "acıdır"
+      },
+      {
+        "text": "وَمِنْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "كُلٍّ",
+        "meaning": "hepsinden"
+      },
+      {
+        "text": "تَأْكُلُونَ",
+        "meaning": "yersiniz"
+      },
+      {
+        "text": "لَحْمًا",
+        "meaning": "et"
+      },
+      {
+        "text": "طَرِيًّا",
+        "meaning": "taze"
+      },
+      {
+        "text": "وَتَسْتَخْرِجُونَ",
+        "meaning": "ve çıkarırsınız"
+      },
+      {
+        "text": "حِلْيَةً",
+        "meaning": "süs"
+      },
+      {
+        "text": "تَلْبَسُونَهَاۚ",
+        "meaning": "takındığınız"
+      },
+      {
+        "text": "وَتَرَى",
+        "meaning": "ve görürsün"
+      },
+      {
+        "text": "الْفُلْكَ",
+        "meaning": "gemilerin"
+      },
+      {
+        "text": "ف۪يهِ",
+        "meaning": "orada"
+      },
+      {
+        "text": "مَوَاخِرَ",
+        "meaning": "(denizi) yarıp gittiğini"
+      },
+      {
+        "text": "لِتَبْتَغُوا",
+        "meaning": "payınızı aramanız için"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "فَضْلِه۪",
+        "meaning": "lutfu-"
+      },
+      {
+        "text": "وَلَعَلَّكُمْ",
+        "meaning": "ve umulur ki"
+      },
+      {
+        "text": "تَشْكُرُونَ",
+        "meaning": "şükredersiniz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İki deniz bir değildir. Birinin suyu tatlı ve kolay içimlidir; diğeri tuzlu ve acıdır. Her birinden taze balık eti yersiniz; takındığınız süsler çıkarırsınız; Allah'ın lütfuyla rızık aramanız için gemilerin onu yararak gittiğini görürsün. Belki artık şükredersiniz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 13,
+    "transliteration": "Yûlicu-lleyle fî-nnehâri veyûlicu-nnehâra fî-lleyli veseḣḣara-şşemse velkamera kullun yecrî li-ecelin musemmâ(en)(c) żâlikumu(A)llâhu rabbukum lehu-lmulk(u)(c) velleżîne ted’ûne min dûnihi mâ yemlikûne min kitmîr(in)",
+    "words": [
+      {
+        "text": "يُولِجُ",
+        "meaning": "sokar"
+      },
+      {
+        "text": "الَّيْلَ",
+        "meaning": "geceyi"
+      },
+      {
+        "text": "فِي",
+        "meaning": "içine"
+      },
+      {
+        "text": "النَّهَارِ",
+        "meaning": "gündüzün"
+      },
+      {
+        "text": "وَيُولِجُ",
+        "meaning": "ve sokar"
+      },
+      {
+        "text": "النَّهَارَ",
+        "meaning": "gündüzü"
+      },
+      {
+        "text": "فِي",
+        "meaning": "içine"
+      },
+      {
+        "text": "الَّيْلِۙ",
+        "meaning": "gecenin"
+      },
+      {
+        "text": "وَسَخَّرَ",
+        "meaning": "ve buyruğu altına almıştır"
+      },
+      {
+        "text": "الشَّمْسَ",
+        "meaning": "güneşi"
+      },
+      {
+        "text": "وَالْقَمَرَۘ",
+        "meaning": "ve ayı"
+      },
+      {
+        "text": "كُلٌّ",
+        "meaning": "her biri"
+      },
+      {
+        "text": "يَجْر۪ي",
+        "meaning": "akıp gider"
+      },
+      {
+        "text": "لِاَجَلٍ",
+        "meaning": "bir süreye kadar"
+      },
+      {
+        "text": "مُسَمًّىۜ",
+        "meaning": "belirtilmiş"
+      },
+      {
+        "text": "ذٰلِكُمُ",
+        "meaning": "işte budur"
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "رَبُّكُمْ",
+        "meaning": "Rabbiniz"
+      },
+      {
+        "text": "لَهُ",
+        "meaning": "O'nundur"
+      },
+      {
+        "text": "الْمُلْكُۜ",
+        "meaning": "mülk"
+      },
+      {
+        "text": "وَالَّذ۪ينَ",
+        "meaning": null
+      },
+      {
+        "text": "تَدْعُونَ",
+        "meaning": "yalvardıklarınız"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "دُونِه۪",
+        "meaning": "O'ndan başka"
+      },
+      {
+        "text": "مَا",
+        "meaning": "değillerdir"
+      },
+      {
+        "text": "يَمْلِكُونَ",
+        "meaning": "sahip"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-na bile"
+      },
+      {
+        "text": "قِطْم۪يرٍۜ",
+        "meaning": "bir çekirdek zarı-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah, geceyi gündüze katar, gündüzü geceye katar; belirli bir süre içinde hareket eden güneş ve ayı buyruk altına almıştır. İşte bu, Rabbiniz olan Allah'tır, hükümranlık O'nundur. O'nu bırakıp taptıklarınız, bir çekirdek kabuğuna bile sahip değillerdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 14,
+    "transliteration": "İn ted’ûhum lâ yesme’û du’âekum velev semi’û mâ-stecâbû lekum(s) ve yevme-lkiyâmeti yekfurûne bişirkikum(c) velâ yunebbi-uke miślu ḣabîr(in)",
+    "words": [
+      {
+        "text": "اِنْ",
+        "meaning": "eğer"
+      },
+      {
+        "text": "تَدْعُوهُمْ",
+        "meaning": "onları çağırsanız"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يَسْمَعُوا",
+        "meaning": "işitmezler"
+      },
+      {
+        "text": "دُعَٓاءَكُمْۚ",
+        "meaning": "sizin çağırmanızı"
+      },
+      {
+        "text": "وَلَوْ",
+        "meaning": "şayet"
+      },
+      {
+        "text": "سَمِعُوا",
+        "meaning": "işitseler bile"
+      },
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "اسْتَجَابُوا",
+        "meaning": "cevap veremezler"
+      },
+      {
+        "text": "لَكُمْۜ",
+        "meaning": "size"
+      },
+      {
+        "text": "وَيَوْمَ",
+        "meaning": "ve günü"
+      },
+      {
+        "text": "الْقِيٰمَةِ",
+        "meaning": "kıyamet"
+      },
+      {
+        "text": "يَكْفُرُونَ",
+        "meaning": "inkar ederler"
+      },
+      {
+        "text": "بِشِرْكِكُمْۜ",
+        "meaning": "sizin ortak koşmanızı"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يُنَبِّئُكَ",
+        "meaning": "hiç kimse sana haber veremez"
+      },
+      {
+        "text": "مِثْلُ",
+        "meaning": "gibi"
+      },
+      {
+        "text": "خَب۪يرٍ۟",
+        "meaning": "herşeyi bilen"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Onları çağırırsanız, çağrınızı işitmezler; işitmiş olsalar bile size cevap veremezler; ama kıyamet günü sizin ortak koşmanızı inkar ederler. Herşeyden haberdar olan Allah gibi, sana kimse haber vermez."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 15,
+    "transliteration": "Yâ eyyuhâ-nnâsu entumu-lfukarâu ila(A)llâh(i)(s) va(A)llâhu huve-lġaniyyu-lhamîd(u)",
+    "words": [
+      {
+        "text": "يَٓا",
+        "meaning": "ey"
+      },
+      {
+        "text": "اَيُّهَا",
+        "meaning": "ey"
+      },
+      {
+        "text": "النَّاسُ",
+        "meaning": "insanlar"
+      },
+      {
+        "text": "اَنْتُمُ",
+        "meaning": "siz"
+      },
+      {
+        "text": "الْفُقَرَٓاءُ",
+        "meaning": "muhtaçsınız"
+      },
+      {
+        "text": "اِلَى",
+        "meaning": null
+      },
+      {
+        "text": "اللّٰهِۚ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "وَاللّٰهُ",
+        "meaning": "Allah ise"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O'dur"
+      },
+      {
+        "text": "الْغَنِيُّ",
+        "meaning": "zengin olan"
+      },
+      {
+        "text": "الْحَم۪يدُ",
+        "meaning": "ve hamde layık olan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ey insanlar! Siz Allah'a muhtaçsınız, Allah ise müstağnidir, övülmeğe layık olandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 16,
+    "transliteration": "İn yeşe/ yużhibkum veye/ti biḣalkin cedîd(in)",
+    "words": [
+      {
+        "text": "اِنْ",
+        "meaning": "eğer"
+      },
+      {
+        "text": "يَشَأْ",
+        "meaning": "dilese"
+      },
+      {
+        "text": "يُذْهِبْكُمْ",
+        "meaning": "sizi götürür"
+      },
+      {
+        "text": "وَيَأْتِ",
+        "meaning": "ve getirir"
+      },
+      {
+        "text": "بِخَلْقٍ",
+        "meaning": "bir halk"
+      },
+      {
+        "text": "جَد۪يدٍۚ",
+        "meaning": "yeni"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dilerse sizi yokeder, yeniden başkalarını yaratır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 17,
+    "transliteration": "Vemâ żâlike ‘ala(A)llâhi bi’azîz(in)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve, değildir"
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "bu"
+      },
+      {
+        "text": "عَلَى",
+        "meaning": "üzerine"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "بِعَز۪يزٍ",
+        "meaning": "zorlu"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu, Allah'a göre zor değildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 18,
+    "transliteration": "Velâ teziru vâziratun vizra uḣrâ(c) ve-in ted’u muśkaletun ilâ himlihâ lâ yuhmel minhu şey-un velev kâne żâ kurbâ(k) innemâ tunżiru-lleżîne yaḣşevne rabbehum bilġaybi veekâmû-ssalâ(te)(c) vemen tezekkâ fe-innemâ yetezekkâ linefsih(i)(c) ve-ila(A)llâhi-lmasîr(u)",
+    "words": [
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "تَزِرُ",
+        "meaning": "çekmez"
+      },
+      {
+        "text": "وَازِرَةٌ",
+        "meaning": "hiçbir günahkar"
+      },
+      {
+        "text": "وِزْرَ",
+        "meaning": "günahını"
+      },
+      {
+        "text": "اُخْرٰىۜ",
+        "meaning": "başkasının"
+      },
+      {
+        "text": "وَاِنْ",
+        "meaning": "ve eğer"
+      },
+      {
+        "text": "تَدْعُ",
+        "meaning": "(başkalarını) çağırsa"
+      },
+      {
+        "text": "مُثْقَلَةٌ",
+        "meaning": "yükü ağır gelen kimse"
+      },
+      {
+        "text": "اِلٰى",
+        "meaning": null
+      },
+      {
+        "text": "حِمْلِهَا",
+        "meaning": "onu taşımak için"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يُحْمَلْ",
+        "meaning": "taşınmaz"
+      },
+      {
+        "text": "مِنْهُ",
+        "meaning": "ondan (yükünden)"
+      },
+      {
+        "text": "شَيْءٌ",
+        "meaning": "hiçbir şey"
+      },
+      {
+        "text": "وَلَوْ",
+        "meaning": "ve şayet"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "(dahi) olsa"
+      },
+      {
+        "text": "ذَا",
+        "meaning": "akrabası"
+      },
+      {
+        "text": "قُرْبٰىۜ",
+        "meaning": "akrabası"
+      },
+      {
+        "text": "اِنَّمَا",
+        "meaning": "sen ancak"
+      },
+      {
+        "text": "تُنْذِرُ",
+        "meaning": "uyarırsın"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": null
+      },
+      {
+        "text": "يَخْشَوْنَ",
+        "meaning": "korkanları"
+      },
+      {
+        "text": "رَبَّهُمْ",
+        "meaning": "Rablerinden"
+      },
+      {
+        "text": "بِالْغَيْبِ",
+        "meaning": "görmeden"
+      },
+      {
+        "text": "وَاَقَامُوا",
+        "meaning": "ve kılanları"
+      },
+      {
+        "text": "الصَّلٰوةَۜ",
+        "meaning": "namazı"
+      },
+      {
+        "text": "وَمَنْ",
+        "meaning": "ve kim"
+      },
+      {
+        "text": "تَزَكّٰى",
+        "meaning": "ma'nen arınıp yücelirse"
+      },
+      {
+        "text": "فَاِنَّمَا",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "يَتَزَكّٰى",
+        "meaning": "arınmış olur"
+      },
+      {
+        "text": "لِنَفْسِه۪ۜ",
+        "meaning": "kendi yararına"
+      },
+      {
+        "text": "وَاِلَى",
+        "meaning": "ve"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'adır"
+      },
+      {
+        "text": "الْمَص۪يرُ",
+        "meaning": "dönüş"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Günahkar kimse diğerinin günahını çekmez. Günah yükü ağır olan kimse, onun taşınmasını istese, yakını olsa bile, yükünden birşey taşınmaz. Sen ancak, görmediği halde Rablerinden korkanları, namazı kılanları uyarırsın. Kim arınırsa, ancak kendisi için arınmış olur; dönüş ancak Allah'adır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 19,
+    "transliteration": "Vemâ yestevî-l-a’mâ velbasîr(u)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve değildir"
+      },
+      {
+        "text": "يَسْتَوِي",
+        "meaning": "eşit"
+      },
+      {
+        "text": "الْاَعْمٰى",
+        "meaning": "körle"
+      },
+      {
+        "text": "وَالْبَص۪يرُۙ",
+        "meaning": "gören"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kör ile gören, karanlıklar ile ışık ve gölgelikle sıcaklık bir değildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 20,
+    "transliteration": "Velâ-zzulumâtu velâ-nnûr(u)",
+    "words": [
+      {
+        "text": "وَلَا",
+        "meaning": "ve değildir"
+      },
+      {
+        "text": "الظُّلُمَاتُ",
+        "meaning": "karanlıklar"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve ne de"
+      },
+      {
+        "text": "النُّورُۙ",
+        "meaning": "aydınlık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kör ile gören, karanlıklar ile ışık ve gölgelikle sıcaklık bir değildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 21,
+    "transliteration": "Velâ-zzillu velâ-lharûr(u)",
+    "words": [
+      {
+        "text": "وَلَا",
+        "meaning": "ve değildir"
+      },
+      {
+        "text": "الظِّلُّ",
+        "meaning": "gölge (ile)"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve ne de"
+      },
+      {
+        "text": "الْحَرُورُۚ",
+        "meaning": "sıcaklık"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kör ile gören, karanlıklar ile ışık ve gölgelikle sıcaklık bir değildir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 22,
+    "transliteration": "Vemâ yestevî-l-ahyâu velâ-l-emvât(u)(c) inna(A)llâhe yusmi’u men yeşâ(u)(s) vemâ ente bimusmi’in men fî-lkubûr(i)",
+    "words": [
+      {
+        "text": "وَمَا",
+        "meaning": "ve olmaz"
+      },
+      {
+        "text": "يَسْتَوِي",
+        "meaning": "eşit"
+      },
+      {
+        "text": "الْاَحْيَٓاءُ",
+        "meaning": "dirilerle"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "الْاَمْوَاتُۜ",
+        "meaning": "ölüler"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "يُسْمِعُ",
+        "meaning": "işittirir"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimseye"
+      },
+      {
+        "text": "يَشَٓاءُۚ",
+        "meaning": "dilediği"
+      },
+      {
+        "text": "وَمَٓا",
+        "meaning": "yoksa değilsin"
+      },
+      {
+        "text": "اَنْتَ",
+        "meaning": "sen"
+      },
+      {
+        "text": "بِمُسْمِعٍ",
+        "meaning": "işittirecek"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimselere"
+      },
+      {
+        "text": "فِي",
+        "meaning": "içindeki"
+      },
+      {
+        "text": "الْقُبُورِ",
+        "meaning": "kabirler"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Dirilerle ölüler de bir değildir. Doğrusu Allah, dilediği kimseye işittirir. Sen, kabirlerde olanlara işittiremezsin."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 23,
+    "transliteration": "İn ente illâ neżîr(un)",
+    "words": [
+      {
+        "text": "اِنْ",
+        "meaning": "değilsin"
+      },
+      {
+        "text": "اَنْتَ",
+        "meaning": "sen"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka"
+      },
+      {
+        "text": "نَذ۪يرٌ",
+        "meaning": "uyarıcı(dan)"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sen sadece bir uyarıcısın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 24,
+    "transliteration": "İnnâ erselnâke bilhakki beşîran veneżîrâ(an)(c) ve-in min ummetin illâ ḣalâ fîhâ neżîr(un)",
+    "words": [
+      {
+        "text": "اِنَّٓا",
+        "meaning": "şüphesiz biz"
+      },
+      {
+        "text": "اَرْسَلْنَاكَ",
+        "meaning": "seni gönderdik"
+      },
+      {
+        "text": "بِالْحَقِّ",
+        "meaning": "gerçek ile"
+      },
+      {
+        "text": "بَش۪يرًا",
+        "meaning": "müjdeleyici"
+      },
+      {
+        "text": "وَنَذ۪يرًاۜ",
+        "meaning": "ve uyarıcı"
+      },
+      {
+        "text": "وَاِنْ",
+        "meaning": "ve yoktur"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "اُمَّةٍ",
+        "meaning": "millet"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "olmayan"
+      },
+      {
+        "text": "خَلَا",
+        "meaning": "(gelip) geçmiş"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "içinde"
+      },
+      {
+        "text": "نَذ۪يرٌ",
+        "meaning": "bir uyarıcı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Şüphesiz Biz seni, müjdeci ve uyarıcı olarak, gerçekle gönderdik. Geçmiş her ümmet içinde de mutlaka bir uyarıcı bulunagelmiştir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 25,
+    "transliteration": "Ve-in yukeżżibûke fekad keżżebe-lleżîne min kablihim câet-hum rusuluhum bilbeyyinâti vebi-zzuburi vebilkitâbi-lmunîr(i)",
+    "words": [
+      {
+        "text": "وَاِنْ",
+        "meaning": "ve eğer"
+      },
+      {
+        "text": "يُكَذِّبُوكَ",
+        "meaning": "seni yalanlıyorlarsa"
+      },
+      {
+        "text": "فَقَدْ",
+        "meaning": "elbette"
+      },
+      {
+        "text": "كَذَّبَ",
+        "meaning": "yalanlamışlardı"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler de"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "قَبْلِهِمْۚ",
+        "meaning": "bunlardan önceki"
+      },
+      {
+        "text": "جَٓاءَتْهُمْ",
+        "meaning": "onlara getirmişlerdi"
+      },
+      {
+        "text": "رُسُلُهُمْ",
+        "meaning": "elçileri"
+      },
+      {
+        "text": "بِالْبَيِّنَاتِ",
+        "meaning": "açık kanıtlar"
+      },
+      {
+        "text": "وَبِالزُّبُرِ",
+        "meaning": "ve sahifeler"
+      },
+      {
+        "text": "وَبِالْكِتَابِ",
+        "meaning": "ve Kitap"
+      },
+      {
+        "text": "الْمُن۪يرِ",
+        "meaning": "aydınlatıcı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Eğer seni yalancı sayıyorlarsa bil ki, onlardan öncekiler de yalanlamışlardı. Peygamberleri onlara belgeler, sayfalar ve nurlu kitaplar getirmişlerdi."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 26,
+    "transliteration": "Śumme eḣażtu-lleżîne keferû(s) fekeyfe kâne nekîr(i)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "اَخَذْتُ",
+        "meaning": "ben de yakaladım"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseleri"
+      },
+      {
+        "text": "كَفَرُوا",
+        "meaning": "inkar eden(leri)"
+      },
+      {
+        "text": "فَكَيْفَ",
+        "meaning": "nasıl?"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "oldu"
+      },
+      {
+        "text": "نَك۪يرِ۟",
+        "meaning": "benim inkarım"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra Ben, inkar edenleri yakaladım. Beni inkar etmek nasıl olur?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 27,
+    "transliteration": "Elem tera enna(A)llâhe enzele mine-ssemâ-i mâen feaḣracnâ bihi śemerâtin muḣtelifen elvânuhâ(c) vemine-lcibâli cudedun bîdun vehumrun muḣtelifun elvânuhâ veġarâbîbu sûd(un)",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "تَرَ",
+        "meaning": "görmedin mi"
+      },
+      {
+        "text": "اَنَّ",
+        "meaning": "elbette"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "اَنْزَلَ",
+        "meaning": "indirdi"
+      },
+      {
+        "text": "مِنَ",
+        "meaning": "-ten"
+      },
+      {
+        "text": "السَّمَٓاءِ",
+        "meaning": "gök-"
+      },
+      {
+        "text": "مَٓاءًۚ",
+        "meaning": "su"
+      },
+      {
+        "text": "فَاَخْرَجْنَا",
+        "meaning": "böylece çıkardık"
+      },
+      {
+        "text": "بِه۪",
+        "meaning": "onunla"
+      },
+      {
+        "text": "ثَمَرَاتٍ",
+        "meaning": "meyvalar"
+      },
+      {
+        "text": "مُخْتَلِفًا",
+        "meaning": "çeşit çeşit"
+      },
+      {
+        "text": "اَلْوَانُهَاۜ",
+        "meaning": "renkleri"
+      },
+      {
+        "text": "وَمِنَ",
+        "meaning": "ve"
+      },
+      {
+        "text": "الْجِبَالِ",
+        "meaning": "dağlardan"
+      },
+      {
+        "text": "جُدَدٌ",
+        "meaning": "yollar"
+      },
+      {
+        "text": "ب۪يضٌ",
+        "meaning": "beyaz"
+      },
+      {
+        "text": "وَحُمْرٌ",
+        "meaning": "ve kırmızı"
+      },
+      {
+        "text": "مُخْتَلِفٌ",
+        "meaning": "değişik"
+      },
+      {
+        "text": "اَلْوَانُهَا",
+        "meaning": "renklerde"
+      },
+      {
+        "text": "وَغَرَاب۪يبُ",
+        "meaning": "ve simsiyah"
+      },
+      {
+        "text": "سُودٌ",
+        "meaning": "kara"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın gökten su indirdiğini görmez misin? Biz onunla türlü türlü renkte ürünler yetiştirmiş; dağlarda da beyaz, kırmızı, siyah ve türlü renkte yollar varetmişizdir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 28,
+    "transliteration": "Vemine-nnâsi ve-ddevâbbi vel-en’âmi muḣtelifun elvânuhu keżâlik(e)(k) innemâ yaḣşa(A)llâhe min ‘ibâdihi-l’ulemâ(u)(k) inna(A)llâhe ‘azîzun ġafûr(un)",
+    "words": [
+      {
+        "text": "وَمِنَ",
+        "meaning": "-dan vardır"
+      },
+      {
+        "text": "النَّاسِ",
+        "meaning": "insanlar-"
+      },
+      {
+        "text": "وَالدَّوَٓابِّ",
+        "meaning": "ve hayvanlardan"
+      },
+      {
+        "text": "وَالْاَنْعَامِ",
+        "meaning": "ve davarlardan"
+      },
+      {
+        "text": "مُخْتَلِفٌ",
+        "meaning": "türlü"
+      },
+      {
+        "text": "اَلْوَانُهُ",
+        "meaning": "renkte olanlar"
+      },
+      {
+        "text": "كَذٰلِكَۜ",
+        "meaning": "böyle"
+      },
+      {
+        "text": "اِنَّمَا",
+        "meaning": "ancak"
+      },
+      {
+        "text": "يَخْشَى",
+        "meaning": "(gereğince) korkar"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah'tan"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "içinden"
+      },
+      {
+        "text": "عِبَادِهِ",
+        "meaning": "kulları"
+      },
+      {
+        "text": "الْعُلَمٰٓؤُ۬اۜ",
+        "meaning": "bilginler"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "عَز۪يزٌ",
+        "meaning": "daima üstündür"
+      },
+      {
+        "text": "غَفُورٌ",
+        "meaning": "çok bağışlayandır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsanlar, yerde yürüyenler ve davarlar da böyle türlü türlü renktedirler. Allah'ın kulları arasında O'ndan korkan, ancak bilginlerdir. Doğrusu Allah güçlüdür, bağışlayandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 29,
+    "transliteration": "İnne-lleżîne yetlûne kitâba(A)llâhi ve ekâmû-ssalâte ve enfekû mimmâ razeknâhum sirran ve’alâniyeten yercûne ticâraten len tebûr(a)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "يَتْلُونَ",
+        "meaning": "okuyan(lar)"
+      },
+      {
+        "text": "كِتَابَ",
+        "meaning": "Kitabını"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "وَاَقَامُوا",
+        "meaning": "ve kılanlar"
+      },
+      {
+        "text": "الصَّلٰوةَ",
+        "meaning": "namazı"
+      },
+      {
+        "text": "وَاَنْفَقُوا",
+        "meaning": "ve infak edenler"
+      },
+      {
+        "text": "مِمَّا",
+        "meaning": null
+      },
+      {
+        "text": "رَزَقْنَاهُمْ",
+        "meaning": "verdiğimiz rızıktan"
+      },
+      {
+        "text": "سِرًّا",
+        "meaning": "gizli"
+      },
+      {
+        "text": "وَعَلَانِيَةً",
+        "meaning": "ve açık"
+      },
+      {
+        "text": "يَرْجُونَ",
+        "meaning": "umarlar"
+      },
+      {
+        "text": "تِجَارَةً",
+        "meaning": "bir ticaret"
+      },
+      {
+        "text": "لَنْ",
+        "meaning": "asla"
+      },
+      {
+        "text": "تَبُورَۙ",
+        "meaning": "batmayacak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah'ın Kitap'ına uyanlar, namazı kılanlar, kendilerine verdiğimiz rızıktan gizli ve açık sarfedenler, tükenmeyecek bir kazanç umabilirler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 30,
+    "transliteration": "Liyuveffiyehum ucûrahum veyezîdehum min fadlih(i)(c) innehu ġafûrun şekûr(un)",
+    "words": [
+      {
+        "text": "لِيُوَفِّيَهُمْ",
+        "meaning": "onlara tam ödesin diye"
+      },
+      {
+        "text": "اُجُورَهُمْ",
+        "meaning": "ücretlerini"
+      },
+      {
+        "text": "وَيَز۪يدَهُمْ",
+        "meaning": "ve fazlasını vermesi için"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "-ndan"
+      },
+      {
+        "text": "فَضْلِه۪ۜ",
+        "meaning": "lutfu-"
+      },
+      {
+        "text": "اِنَّهُ",
+        "meaning": "çünkü O"
+      },
+      {
+        "text": "غَفُورٌ",
+        "meaning": "çok bağışlayandır"
+      },
+      {
+        "text": "شَكُورٌ",
+        "meaning": "çok karşılık verendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Çünkü Allah bu kimselerin ecirlerini tam verir ve lütfu ile arttırır. Doğrusu O, bağışlayandır, şükrün karşılığını bol bol verendir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 31,
+    "transliteration": "Velleżî evhaynâ ileyke mine-lkitâbi huve-lhakku musaddikan limâ beyne yedeyh(i)(k) inna(A)llâhe bi’ibâdihi leḣabîrun basîr(un)",
+    "words": [
+      {
+        "text": "وَالَّذ۪ٓي",
+        "meaning": null
+      },
+      {
+        "text": "اَوْحَيْنَٓا",
+        "meaning": "vahyettiğimiz"
+      },
+      {
+        "text": "اِلَيْكَ",
+        "meaning": "sana"
+      },
+      {
+        "text": "مِنَ",
+        "meaning": "-tan"
+      },
+      {
+        "text": "الْكِتَابِ",
+        "meaning": "Kitap-"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O"
+      },
+      {
+        "text": "الْحَقُّ",
+        "meaning": "gerçektir"
+      },
+      {
+        "text": "مُصَدِّقًا",
+        "meaning": "doğrulayan"
+      },
+      {
+        "text": "لِمَا",
+        "meaning": null
+      },
+      {
+        "text": "بَيْنَ",
+        "meaning": "kendinden öncekini"
+      },
+      {
+        "text": "يَدَيْهِۜ",
+        "meaning": "kendinden öncekini"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "بِعِبَادِه۪",
+        "meaning": "kullarını"
+      },
+      {
+        "text": "لَخَب۪يرٌ",
+        "meaning": "haber alandır"
+      },
+      {
+        "text": "بَص۪يرٌ",
+        "meaning": "görendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bu, sana vahyettiğimiz, öncekileri doğrulayan gerçek Kitap'dır. Allah şüphesiz kullarından haberdardır, görendir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 32,
+    "transliteration": "Śumme evraśnâ-lkitâbe-lleżîne-stafeynâ min ‘ibâdinâ(s) feminhum zâlimun linefsihi veminhum muktesidun veminhum sâbikun bilḣayrâti bi-iżni(A)llâh(i)(c) żâlike huve-lfadlu-lkebîr(u)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "اَوْرَثْنَا",
+        "meaning": "miras verdik"
+      },
+      {
+        "text": "الْكِتَابَ",
+        "meaning": "Kitabı"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": null
+      },
+      {
+        "text": "اصْطَفَيْنَا",
+        "meaning": "seçtiklerimize"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "(arasın)dan"
+      },
+      {
+        "text": "عِبَادِنَاۚ",
+        "meaning": "kullarımız"
+      },
+      {
+        "text": "فَمِنْهُمْ",
+        "meaning": "onlardan kimi"
+      },
+      {
+        "text": "ظَالِمٌ",
+        "meaning": "zulmedendir"
+      },
+      {
+        "text": "لِنَفْسِه۪ۚ",
+        "meaning": "nefsine"
+      },
+      {
+        "text": "وَمِنْهُمْ",
+        "meaning": "ve kimi"
+      },
+      {
+        "text": "مُقْتَصِدٌۚ",
+        "meaning": "orta gidendir"
+      },
+      {
+        "text": "وَمِنْهُمْ",
+        "meaning": "ve kimi de"
+      },
+      {
+        "text": "سَابِقٌ",
+        "meaning": "öne geçendir"
+      },
+      {
+        "text": "بِالْخَيْرَاتِ",
+        "meaning": "hayırlarda"
+      },
+      {
+        "text": "بِاِذْنِ",
+        "meaning": "izniyle"
+      },
+      {
+        "text": "اللّٰهِۜ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "işte budur"
+      },
+      {
+        "text": "هُوَ",
+        "meaning": "O"
+      },
+      {
+        "text": "الْفَضْلُ",
+        "meaning": "lutuf"
+      },
+      {
+        "text": "الْكَب۪يرُۜ",
+        "meaning": "büyük"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra bu Kitap'ı kullarımızdan seçtiğimiz kimselere miras bırakmışızdır. Onlardan kimi kendine yazık eder, kimi orta davranır, kimi de, Allah'ın izniyle, iyiliklere koşar. İşte büyük lütuf budur."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 33,
+    "transliteration": "Cennâtu ‘adnin yedḣulûnehâ yuhallevne fîhâ min esâvira min żehebin velu/lu-â(en)(s) ve libâsuhum fîhâ harîr(un)",
+    "words": [
+      {
+        "text": "جَنَّاتُ",
+        "meaning": "cennetleri"
+      },
+      {
+        "text": "عَدْنٍ",
+        "meaning": "Adn"
+      },
+      {
+        "text": "يَدْخُلُونَهَا",
+        "meaning": "oraya girerler"
+      },
+      {
+        "text": "يُحَلَّوْنَ",
+        "meaning": "takınırlar"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "orada"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "اَسَاوِرَ",
+        "meaning": "bilezikler"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "ذَهَبٍ",
+        "meaning": "altından"
+      },
+      {
+        "text": "وَلُؤْلُؤً۬اۚ",
+        "meaning": "ve inci(ler)"
+      },
+      {
+        "text": "وَلِبَاسُهُمْ",
+        "meaning": "ve giysileri"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "orada"
+      },
+      {
+        "text": "حَر۪يرٌ",
+        "meaning": "ipektir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Bunlar, Adn cennetlerine girerler. Orada altın bilezikler ve incilerle süslenirler, oradaki elbiseleri de ipektir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 34,
+    "transliteration": "Ve kâlû-lhamdu li(A)llâhi-lleżî eżhebe ‘annâ-lhazen(e)(s) inne rabbenâ leġafûrun şekûr(un)",
+    "words": [
+      {
+        "text": "وَقَالُوا",
+        "meaning": "ve dediler ki"
+      },
+      {
+        "text": "الْحَمْدُ",
+        "meaning": "hamdolsun"
+      },
+      {
+        "text": "لِلّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "الَّذ۪ٓي",
+        "meaning": null
+      },
+      {
+        "text": "اَذْهَبَ",
+        "meaning": "gideren"
+      },
+      {
+        "text": "عَنَّا",
+        "meaning": "bizden"
+      },
+      {
+        "text": "الْحَزَنَۜ",
+        "meaning": "tasayı"
+      },
+      {
+        "text": "اِنَّ",
+        "meaning": "doğrusu"
+      },
+      {
+        "text": "رَبَّنَا",
+        "meaning": "Rabbimiz"
+      },
+      {
+        "text": "لَغَفُورٌ",
+        "meaning": "çok bağışlayandır"
+      },
+      {
+        "text": "شَكُورٌۙ",
+        "meaning": "çok karşılık verendir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Derler ki: \"Bizden üzüntüyü gideren Allah'a hamdolsun. Doğrusu Rabbimiz bağışlayandır, şükrün karşılığını verendir.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 35,
+    "transliteration": "Elleżî ehallenâ dâra-lmukâmeti min fadlihi lâ yemessunâ fîhâ nesabun velâ yemessunâ fîhâ luġûb(un)",
+    "words": [
+      {
+        "text": "اَلَّذ۪ٓي",
+        "meaning": "O (Rab) ki"
+      },
+      {
+        "text": "اَحَلَّنَا",
+        "meaning": "bizi kondurdu"
+      },
+      {
+        "text": "دَارَ",
+        "meaning": "yurda"
+      },
+      {
+        "text": "الْمُقَامَةِ",
+        "meaning": "durulacak"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "فَضْلِه۪ۚ",
+        "meaning": "lutfuyla"
+      },
+      {
+        "text": "لَا",
+        "meaning": "asla"
+      },
+      {
+        "text": "يَمَسُّنَا",
+        "meaning": "bize dokunmaz"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "orada"
+      },
+      {
+        "text": "نَصَبٌ",
+        "meaning": "bir yorgunluk"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve ne de"
+      },
+      {
+        "text": "يَمَسُّنَا",
+        "meaning": "bize dokunmaz"
+      },
+      {
+        "text": "ف۪يهَا",
+        "meaning": "orada"
+      },
+      {
+        "text": "لُغُوبٌ",
+        "meaning": "bir usanç"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "\"Bizi lütfuyla, temelli kalınacak cennete O yerleştirdi. Orada bize ne bir yorgunluk gelecek ve ne de usanç gelecektir.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 36,
+    "transliteration": "Velleżîne keferû lehum nâru cehenneme lâ yukdâ ‘aleyhim feyemûtû velâ yuḣaffefu ‘anhum min ‘ażâbihâ(c) keżâlike neczî kulle kefûr(in)",
+    "words": [
+      {
+        "text": "وَالَّذ۪ينَ",
+        "meaning": "ve"
+      },
+      {
+        "text": "كَفَرُوا",
+        "meaning": "inkar edenler"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onlara vardır"
+      },
+      {
+        "text": "نَارُ",
+        "meaning": "ateşi"
+      },
+      {
+        "text": "جَهَنَّمَۚ",
+        "meaning": "cehennem"
+      },
+      {
+        "text": "لَا",
+        "meaning": null
+      },
+      {
+        "text": "يُقْضٰى",
+        "meaning": "hükmedilmez"
+      },
+      {
+        "text": "عَلَيْهِمْ",
+        "meaning": "onlara"
+      },
+      {
+        "text": "فَيَمُوتُوا",
+        "meaning": "ölsünler"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يُخَفَّفُ",
+        "meaning": "hafifletilmez"
+      },
+      {
+        "text": "عَنْهُمْ",
+        "meaning": "onlardan"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "عَذَابِهَاۜ",
+        "meaning": "onun azabı"
+      },
+      {
+        "text": "كَذٰلِكَ",
+        "meaning": "işte böyle"
+      },
+      {
+        "text": "نَجْز۪ي",
+        "meaning": "cezalandırırız"
+      },
+      {
+        "text": "كُلَّ",
+        "meaning": "her"
+      },
+      {
+        "text": "كَفُورٍۚ",
+        "meaning": "nankörü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnkar edenlere cehennem ateşi vardır. Ölümlerine hükmedilmez ki ölsünler; kendilerinden cehennemin azabı da hafifletilmez. Her inkarcıyı böylece cezalandırırız."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 37,
+    "transliteration": "Vehum yastariḣûne fîhâ rabbenâ aḣricnâ na’mel sâlihan ġayra-lleżî kunnâ na’mel(u)(c) eve lem nu’ammirkum mâ yeteżekkeru fîhi men teżekkera vecâekumu-nneżîr(u)(s) feżûkû femâ lizzâlimîne min nasîr(in)",
+    "words": [
+      {
+        "text": "وَهُمْ",
+        "meaning": "ve onlar"
+      },
+      {
+        "text": "يَصْطَرِخُونَ",
+        "meaning": "feryadederler"
+      },
+      {
+        "text": "ف۪يهَاۚ",
+        "meaning": "orada"
+      },
+      {
+        "text": "رَبَّنَٓا",
+        "meaning": "Rabbimiz"
+      },
+      {
+        "text": "اَخْرِجْنَا",
+        "meaning": "bizi çıkar"
+      },
+      {
+        "text": "نَعْمَلْ",
+        "meaning": "yapalım"
+      },
+      {
+        "text": "صَالِحًا",
+        "meaning": "iyi işler"
+      },
+      {
+        "text": "غَيْرَ",
+        "meaning": "başka olarak"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": null
+      },
+      {
+        "text": "كُنَّا",
+        "meaning": "olduğumuz"
+      },
+      {
+        "text": "نَعْمَلُۜ",
+        "meaning": "yapmış"
+      },
+      {
+        "text": "اَوَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "نُعَمِّرْكُمْ",
+        "meaning": "sizi yaşatmadık mı?"
+      },
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "يَتَذَكَّرُ",
+        "meaning": "öğüt alacağı kadar"
+      },
+      {
+        "text": "ف۪يهِ",
+        "meaning": "orada"
+      },
+      {
+        "text": "مَنْ",
+        "meaning": "kimsenin"
+      },
+      {
+        "text": "تَذَكَّرَ",
+        "meaning": "öğüt alacak"
+      },
+      {
+        "text": "وَجَٓاءَكُمُ",
+        "meaning": "ve size geldi"
+      },
+      {
+        "text": "النَّذ۪يرُۜ",
+        "meaning": "uyarıcı"
+      },
+      {
+        "text": "فَذُوقُوا",
+        "meaning": "öyle ise (azabı) tadın"
+      },
+      {
+        "text": "فَمَا",
+        "meaning": "artık yoktur"
+      },
+      {
+        "text": "لِلظَّالِم۪ينَ",
+        "meaning": "zalimlerin"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "نَص۪يرٍ۟",
+        "meaning": "yardımcısı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Orada; \"Rabbimiz! Bizi çıkar; yaptığımızdan başka, yararlı iş işleyelim\" diye bağrışırlar. O zaman onlara şöyle deriz: \"Öğüt alacak kişinin öğüt alabileceği kadar bir süre sizi yaşatmadık mi? Size uyarıcı da gelmişti. Artık azabı tadınız, zalimlerin yardımcısı olmaz.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 38,
+    "transliteration": "İnna(A)llâhe ‘âlimu ġaybi-ssemâvâti vel-ard(i)(c) innehu ‘alîmun biżâti-ssudûr(i)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "عَالِمُ",
+        "meaning": "bilendir"
+      },
+      {
+        "text": "غَيْبِ",
+        "meaning": "gaybını"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "göklerin"
+      },
+      {
+        "text": "وَالْاَرْضِۜ",
+        "meaning": "ve yerin"
+      },
+      {
+        "text": "اِنَّهُ",
+        "meaning": "şüphesiz O"
+      },
+      {
+        "text": "عَل۪يمٌ",
+        "meaning": "bilir"
+      },
+      {
+        "text": "بِذَاتِ",
+        "meaning": "özünü"
+      },
+      {
+        "text": "الصُّدُورِ",
+        "meaning": "göğüslerin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah şüphesiz, göklerin ve yerin gaybını bilir. Doğrusu O kalplerde olanı bilendir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 39,
+    "transliteration": "Huve-lleżî ce’alekum ḣalâ-ife fî-l-ard(i)(c) femen kefera fe’aleyhi kufruh(u)(s) velâ yezîdu-lkâfirîne kufruhum ‘inde rabbihim illâ maktâ(en)(s) velâ yezîdu-lkâfirîne kufruhum illâ ḣasârâ(n)",
+    "words": [
+      {
+        "text": "هُوَ",
+        "meaning": "O'dur"
+      },
+      {
+        "text": "الَّذ۪ي",
+        "meaning": null
+      },
+      {
+        "text": "جَعَلَكُمْ",
+        "meaning": "sizi yapan"
+      },
+      {
+        "text": "خَلَٓائِفَ",
+        "meaning": "halifeler (yöneticiler)"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْاَرْضِۜ",
+        "meaning": "yeryüzünde"
+      },
+      {
+        "text": "فَمَنْ",
+        "meaning": "artık kim"
+      },
+      {
+        "text": "كَفَرَ",
+        "meaning": "nankörlük ederse"
+      },
+      {
+        "text": "فَعَلَيْهِ",
+        "meaning": "kendi zararınadır"
+      },
+      {
+        "text": "كُفْرُهُۜ",
+        "meaning": "nankörlüğü"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "يَز۪يدُ",
+        "meaning": "artırmaz"
+      },
+      {
+        "text": "الْكَافِر۪ينَ",
+        "meaning": "kafirlerin"
+      },
+      {
+        "text": "كُفْرُهُمْ",
+        "meaning": "küfrü"
+      },
+      {
+        "text": "عِنْدَ",
+        "meaning": "yanında"
+      },
+      {
+        "text": "رَبِّهِمْ",
+        "meaning": "Rableri"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka bir şey"
+      },
+      {
+        "text": "مَقْتًاۚ",
+        "meaning": "gazabdan"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve ne de"
+      },
+      {
+        "text": "يَز۪يدُ",
+        "meaning": "artırmaz"
+      },
+      {
+        "text": "الْكَافِر۪ينَ",
+        "meaning": "kafirlerin"
+      },
+      {
+        "text": "كُفْرُهُمْ",
+        "meaning": "küfrü"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka bir şey"
+      },
+      {
+        "text": "خَسَارًا",
+        "meaning": "ziyandan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sizleri yeryüzüne de hakim kılan O'dur. İnkar edenin inkarı kendi aleyhinedir. İnkarcıların inkarı, Rableri katında yalnız kendilerine olan gazabı arttırır. İnkarcıların inkarı, hüsrandan başka birşey arttırmaz."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 40,
+    "transliteration": "Kul eraeytum şurakâekumu-lleżîne ted’ûne min dûni(A)llâhi erûnî mâżâ ḣalekû mine-l-ardi em lehum şirkun fî-ssemâvâti em âteynâhum kitâben fehum ‘alâ beyyinetin minh(u)(c) bel in ya’idu-zzâlimûne ba’duhum ba’dan illâ ġurûrâ(n)",
+    "words": [
+      {
+        "text": "قُلْ",
+        "meaning": "de ki"
+      },
+      {
+        "text": "اَرَاَيْتُمْ",
+        "meaning": "siz gördünüz mü?"
+      },
+      {
+        "text": "شُرَكَٓاءَكُمُ",
+        "meaning": "ortaklarınızı"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": null
+      },
+      {
+        "text": "تَدْعُونَ",
+        "meaning": "yalvardığınız"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "دُونِ",
+        "meaning": "başka"
+      },
+      {
+        "text": "اللّٰهِۜ",
+        "meaning": "Allah'tan"
+      },
+      {
+        "text": "اَرُون۪ي",
+        "meaning": "bana gösterin"
+      },
+      {
+        "text": "مَاذَا",
+        "meaning": "hangi şeyi?"
+      },
+      {
+        "text": "خَلَقُوا",
+        "meaning": "yarattılar"
+      },
+      {
+        "text": "مِنَ",
+        "meaning": "-den"
+      },
+      {
+        "text": "الْاَرْضِ",
+        "meaning": "yer-"
+      },
+      {
+        "text": "اَمْ",
+        "meaning": "yoksa"
+      },
+      {
+        "text": "لَهُمْ",
+        "meaning": "onların var (mı?)"
+      },
+      {
+        "text": "شِرْكٌ",
+        "meaning": "ortaklıkları"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "السَّمٰوَاتِۚ",
+        "meaning": "göklerde"
+      },
+      {
+        "text": "اَمْ",
+        "meaning": "yoksa"
+      },
+      {
+        "text": "اٰتَيْنَاهُمْ",
+        "meaning": "biz onlara verdik de"
+      },
+      {
+        "text": "كِتَابًا",
+        "meaning": "bir Kitap"
+      },
+      {
+        "text": "فَهُمْ",
+        "meaning": "onlar da"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": "üzerindeler"
+      },
+      {
+        "text": "بَيِّنَتٍ",
+        "meaning": "bir delil"
+      },
+      {
+        "text": "مِنْهُۚ",
+        "meaning": "ondan"
+      },
+      {
+        "text": "بَلْ",
+        "meaning": "hayır"
+      },
+      {
+        "text": "اِنْ",
+        "meaning": null
+      },
+      {
+        "text": "يَعِدُ",
+        "meaning": "va'detmiyorlar"
+      },
+      {
+        "text": "الظَّالِمُونَ",
+        "meaning": "o zalimler"
+      },
+      {
+        "text": "بَعْضُهُمْ",
+        "meaning": "birbirlerine"
+      },
+      {
+        "text": "بَعْضًا",
+        "meaning": "birbirlerine"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka bir şey"
+      },
+      {
+        "text": "غُرُورًا",
+        "meaning": "aldatmakdan"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Allah'ı bırakıp da taptığınız putlarınıza hiç baktınız mı? Bana gösterin, onlar yerden hangi şeyi yarattılar?\" Yoksa onların Allah'la ortaklığı göklerde midir? Yoksa Biz onlara kitap verdik de ondaki delillere mi dayanırlar? Hayır; zalimler, birbirlerine sadece aldatıcı söz söylerler."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 41,
+    "transliteration": "İnna(A)llâhe yumsiku-ssemâvâti vel-arda en tezûlâ(c) vele-in zâletâ in emsekehumâ min ehadin min ba’dih(i)(c) innehu kâne halîmen ġafûrâ(n)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "يُمْسِكُ",
+        "meaning": "tutmaktadır"
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "gökleri"
+      },
+      {
+        "text": "وَالْاَرْضَ",
+        "meaning": "ve yeri"
+      },
+      {
+        "text": "اَنْ",
+        "meaning": null
+      },
+      {
+        "text": "تَزُولَاۚ",
+        "meaning": "yıkılmamaları için"
+      },
+      {
+        "text": "وَلَئِنْ",
+        "meaning": "andolsun"
+      },
+      {
+        "text": "زَالَتَٓا",
+        "meaning": "ikisi yıkılsa"
+      },
+      {
+        "text": "اِنْ",
+        "meaning": null
+      },
+      {
+        "text": "اَمْسَكَهُمَا",
+        "meaning": "onları tutamaz"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiç"
+      },
+      {
+        "text": "اَحَدٍ",
+        "meaning": "kimse"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "بَعْدِه۪ۜ",
+        "meaning": "ondan sonra"
+      },
+      {
+        "text": "اِنَّهُ",
+        "meaning": "şüphesiz O"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": null
+      },
+      {
+        "text": "حَل۪يمًا",
+        "meaning": "halimdir"
+      },
+      {
+        "text": "غَفُورًا",
+        "meaning": "çok bağışlayandır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu, zeval bulmasın diye gökleri ve yeri tutan Allah'tır. Eğer onlar zevale uğrarsa O'ndan başka, and olsun ki onları kimse tutamaz. O, şüphesiz Halim'dir, bağışlayandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 42,
+    "transliteration": "Veaksemû bi(A)llâhi cehde eymânihim le-in câehum neżîrun leyekûnunne ehdâ min ihdâ-l-umem(i)(s) felemmâ câehum neżîrun mâ zâdehum illâ nufûrâ(n)",
+    "words": [
+      {
+        "text": "وَاَقْسَمُوا",
+        "meaning": "ve yemin ettiler"
+      },
+      {
+        "text": "بِاللّٰهِ",
+        "meaning": "Allah'a"
+      },
+      {
+        "text": "جَهْدَ",
+        "meaning": "bütün gücüyle"
+      },
+      {
+        "text": "اَيْمَانِهِمْ",
+        "meaning": "yeminlerinin"
+      },
+      {
+        "text": "لَئِنْ",
+        "meaning": "andolsun eğer"
+      },
+      {
+        "text": "جَٓاءَهُمْ",
+        "meaning": "kendilerine gelirse"
+      },
+      {
+        "text": "نَذ۪يرٌ",
+        "meaning": "bir uyarıcı (peygamber)"
+      },
+      {
+        "text": "لَيَكُونُنَّ",
+        "meaning": "olacaklarına"
+      },
+      {
+        "text": "اَهْدٰى",
+        "meaning": "daha çok doğru yolda"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "اِحْدَى",
+        "meaning": "herbir"
+      },
+      {
+        "text": "الْاُمَمِۚ",
+        "meaning": "milletten"
+      },
+      {
+        "text": "فَلَمَّا",
+        "meaning": "fakat"
+      },
+      {
+        "text": "جَٓاءَهُمْ",
+        "meaning": "gelince"
+      },
+      {
+        "text": "نَذ۪يرٌ",
+        "meaning": "uyarıcı"
+      },
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "زَادَهُمْ",
+        "meaning": "onların arttırmadı"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başka bir şey"
+      },
+      {
+        "text": "نُفُورًاۙ",
+        "meaning": "nefretten"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kendilerine bir uyarıcı gelince, ümmetler içinde en doğru yolda gidenlerden biri olacaklarına, and olsun ki, bütün güçleriyle Allah'a yemin etmişlerdi; fakat kendilerine uyarıcının gelmesi, yeryüzünde büyüklük taslamak ve kötü düzen kurmak ile uğraştıklarından sadece nefretlerini arttırdı. Oysa pis pis kurulan kötü tuzağa ancak sahibi düşer. Öncekilere uygulanagelen yasayı görmezler mi? Sen Allah'ın yasasında bir değişiklik bulamazsın. Sen Allah'ın yasasında bir başkalaşma da bulamazsın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 43,
+    "transliteration": "İstikbâran fî-l-ardi vemekra-sseyyi-/(i)(c) velâ yahîku-lmekru-sseyyi-u illâ bi-ehlih(i)(c) fehel yenzurûne illâ sunnete-l-evvelîn(e)(c) felen tecide lisunneti(A)llâhi tebdîlâ(en)(s) velen tecide lisunneti(A)llâhi tahvîlâ(n)",
+    "words": [
+      {
+        "text": "اِسْتِكْبَارًا",
+        "meaning": "büyüklük taslama(larını)"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْاَرْضِ",
+        "meaning": "yeryüzünde"
+      },
+      {
+        "text": "وَمَكْرَ",
+        "meaning": "ve tuzak(lar) kurma(larını artırdı)"
+      },
+      {
+        "text": "السَّيِّئِۜ",
+        "meaning": "kötü"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "oysa"
+      },
+      {
+        "text": "يَح۪يقُ",
+        "meaning": "dolanmaz"
+      },
+      {
+        "text": "الْمَكْرُ",
+        "meaning": "tuzak"
+      },
+      {
+        "text": "السَّيِّئُ",
+        "meaning": "kötü"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başkasına"
+      },
+      {
+        "text": "بِاَهْلِه۪ۜ",
+        "meaning": "sahibi(nden)"
+      },
+      {
+        "text": "فَهَلْ",
+        "meaning": "-mı?"
+      },
+      {
+        "text": "يَنْظُرُونَ",
+        "meaning": "bekliyorlar"
+      },
+      {
+        "text": "اِلَّا",
+        "meaning": "başkasını-"
+      },
+      {
+        "text": "سُنَّتَ",
+        "meaning": "yasasından"
+      },
+      {
+        "text": "الْاَوَّل۪ينَۚ",
+        "meaning": "öncekilerin"
+      },
+      {
+        "text": "فَلَنْ",
+        "meaning": "halbuki"
+      },
+      {
+        "text": "تَجِدَ",
+        "meaning": "bulamazsın"
+      },
+      {
+        "text": "لِسُنَّتِ",
+        "meaning": "yasasında"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "تَبْد۪يلًاۚ",
+        "meaning": "bir değişme"
+      },
+      {
+        "text": "وَلَنْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "تَجِدَ",
+        "meaning": "bulamazsın"
+      },
+      {
+        "text": "لِسُنَّتِ",
+        "meaning": "yasasında"
+      },
+      {
+        "text": "اللّٰهِ",
+        "meaning": "Allah'ın"
+      },
+      {
+        "text": "تَحْو۪يلًا",
+        "meaning": "bir sapma"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kendilerine bir uyarıcı gelince, ümmetler içinde en doğru yolda gidenlerden biri olacaklarına, and olsun ki, bütün güçleriyle Allah'a yemin etmişlerdi; fakat kendilerine uyarıcının gelmesi, yeryüzünde büyüklük taslamak ve kötü düzen kurmak ile uğraştıklarından sadece nefretlerini arttırdı. Oysa pis pis kurulan kötü tuzağa ancak sahibi düşer. Öncekilere uygulanagelen yasayı görmezler mi? Sen Allah'ın yasasında bir değişiklik bulamazsın. Sen Allah'ın yasasında bir başkalaşma da bulamazsın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 44,
+    "transliteration": "Eve lem yesîrû fî-l-ardi feyenzurû keyfe kâne ‘âkibetu-lleżîne min kablihim vekânû eşedde minhum kuvve(ten)(c) vemâ kâna(A)llâhu liyu’cizehu min şey-in fî-ssemâvâti velâ fî-l-ard(i)(c) innehu kâne ‘alîmen kadîrâ(n)",
+    "words": [
+      {
+        "text": "اَوَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَس۪يرُوا",
+        "meaning": "hiç gez(ip dolaş)madılar mı?"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْاَرْضِ",
+        "meaning": "yeryüzünde"
+      },
+      {
+        "text": "فَيَنْظُرُوا",
+        "meaning": "görsünler"
+      },
+      {
+        "text": "كَيْفَ",
+        "meaning": "nasıl"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": "olduğunu"
+      },
+      {
+        "text": "عَاقِبَةُ",
+        "meaning": "sonunun"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimselerin"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": null
+      },
+      {
+        "text": "قَبْلِهِمْ",
+        "meaning": "kendilerinden önceki"
+      },
+      {
+        "text": "وَكَانُٓوا",
+        "meaning": "onlar idiler"
+      },
+      {
+        "text": "اَشَدَّ",
+        "meaning": "daha güçlü"
+      },
+      {
+        "text": "مِنْهُمْ",
+        "meaning": "bunlardan"
+      },
+      {
+        "text": "قُوَّةًۜ",
+        "meaning": "kuvvet bakımından"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve yoktur"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": null
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah'ı"
+      },
+      {
+        "text": "لِيُعْجِزَهُ",
+        "meaning": "engelleyecek"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "شَيْءٍ",
+        "meaning": "şey"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "السَّمٰوَاتِ",
+        "meaning": "göklerde"
+      },
+      {
+        "text": "وَلَا",
+        "meaning": "ve yoktur"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْاَرْضِۜ",
+        "meaning": "yerde"
+      },
+      {
+        "text": "اِنَّهُ",
+        "meaning": "şüphesiz O"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": null
+      },
+      {
+        "text": "عَل۪يمًا",
+        "meaning": "bilendir"
+      },
+      {
+        "text": "قَد۪يرًا",
+        "meaning": "güçlüdür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yeryüzünde gezip, kendilerinden öncekilerin sonlarının nasıl olduğunu görmezler mi? Onlar, kendilerinden daha kuvvetliydiler. Göklerde ve yerde Allah'ı aciz bırakabilecek yoktur. Şüphesiz O bilendir, Kadir olandır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 35,
+    "ayet": 45,
+    "transliteration": "Velev yu-âḣiżu(A)llâhu-nnâse bimâ kesebû mâ terake ‘alâ zahrihâ min dâbbetin velâkin yu-aḣḣiruhum ilâ ecelin musemmâ(en)(s) fe-iżâ câe eceluhum fe-inna(A)llâhe kâne bi’ibâdihi basîrâ(n)",
+    "words": [
+      {
+        "text": "وَلَوْ",
+        "meaning": "ve eğer"
+      },
+      {
+        "text": "يُؤَاخِذُ",
+        "meaning": "cezalandıracak olsaydı"
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "النَّاسَ",
+        "meaning": "insanları"
+      },
+      {
+        "text": "بِمَا",
+        "meaning": "yüzünden"
+      },
+      {
+        "text": "كَسَبُوا",
+        "meaning": "yaptıkları işler"
+      },
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "تَرَكَ",
+        "meaning": "bırakmazdı"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": "üzerinde (yeryüzünde)"
+      },
+      {
+        "text": "ظَهْرِهَا",
+        "meaning": "onun sırtı"
+      },
+      {
+        "text": "مِنْ",
+        "meaning": "hiçbir"
+      },
+      {
+        "text": "دَٓابَّةٍ",
+        "meaning": "canlı"
+      },
+      {
+        "text": "وَلٰكِنْ",
+        "meaning": "fakat"
+      },
+      {
+        "text": "يُؤَخِّرُهُمْ",
+        "meaning": "onları erteliyor"
+      },
+      {
+        "text": "اِلٰٓى",
+        "meaning": "kadar"
+      },
+      {
+        "text": "اَجَلٍ",
+        "meaning": "bir süreye"
+      },
+      {
+        "text": "مُسَمًّىۚ",
+        "meaning": "belirtilmiş"
+      },
+      {
+        "text": "فَاِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "جَٓاءَ",
+        "meaning": "geldiği"
+      },
+      {
+        "text": "اَجَلُهُمْ",
+        "meaning": "süreleri"
+      },
+      {
+        "text": "فَاِنَّ",
+        "meaning": "kuşkusuz"
+      },
+      {
+        "text": "اللّٰهَ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "كَانَ",
+        "meaning": null
+      },
+      {
+        "text": "بِعِبَادِه۪",
+        "meaning": "kullarını"
+      },
+      {
+        "text": "بَص۪يرًا",
+        "meaning": "görmektedir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah insanları işlediklerine karşılık hemen yakalayıverseydi, yeryüzünde bir canlı bırakmaması gerekirdi. Ama onları belli bir süreye kadar erteler. Süreleri gelince gereğini yapar. Doğrusu Allah kullarını görmektedir."
+        }
+      }
+    }
+  }
+]

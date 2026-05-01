@@ -1,0 +1,258 @@
+[
+  {
+    "sure": 95,
+    "ayet": 1,
+    "transliteration": "Ve-ttîni ve-zzeytûn(i)",
+    "words": [
+      {
+        "text": "وَالتّ۪ينِ",
+        "meaning": "incire andolsun"
+      },
+      {
+        "text": "وَالزَّيْتُونِۙ",
+        "meaning": "ve zeytine"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İncir ve zeytine and olsun,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 2,
+    "transliteration": "Ve tûri sînîn(e)",
+    "words": [
+      {
+        "text": "وَطُورِ",
+        "meaning": "ve dağına"
+      },
+      {
+        "text": "س۪ين۪ينَۙ",
+        "meaning": "sina"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun Sina dağına,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 3,
+    "transliteration": "Ve hâżâ-lbeledi-l-emîn(i)",
+    "words": [
+      {
+        "text": "وَهٰذَا",
+        "meaning": "ve bu"
+      },
+      {
+        "text": "الْبَلَدِ",
+        "meaning": "Şehre (andolsun)"
+      },
+      {
+        "text": "الْاَم۪ينِۙ",
+        "meaning": "güvenli"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun bu güvenli Mekke şehrine ki:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 4,
+    "transliteration": "Lekad ḣalaknâ-l-insâne fî ahseni takvîm(in)",
+    "words": [
+      {
+        "text": "لَقَدْ",
+        "meaning": "andolsun"
+      },
+      {
+        "text": "خَلَقْنَا",
+        "meaning": "biz yarattık"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insanı"
+      },
+      {
+        "text": "ف۪ٓي",
+        "meaning": null
+      },
+      {
+        "text": "اَحْسَنِ",
+        "meaning": "en güzel"
+      },
+      {
+        "text": "تَقْو۪يمٍۘ",
+        "meaning": "biçimde"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Biz insanı en güzel şekilde yarattık,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 5,
+    "transliteration": "Śumme radednâhu esfele sâfilîn(e)",
+    "words": [
+      {
+        "text": "ثُمَّ",
+        "meaning": "sonra"
+      },
+      {
+        "text": "رَدَدْنَاهُ",
+        "meaning": "onu çevirdik"
+      },
+      {
+        "text": "اَسْفَلَ",
+        "meaning": "aşağıların"
+      },
+      {
+        "text": "سَافِل۪ينَۙ",
+        "meaning": "aşağısına"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sonra onu aşağıların en aşağısı kıldık."
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 6,
+    "transliteration": "İllâ-lleżîne âmenû ve ’amilû-ssâlihâti felehum ecrun ġayru memnûn(in)",
+    "words": [
+      {
+        "text": "اِلَّا",
+        "meaning": "yalnız hariç"
+      },
+      {
+        "text": "الَّذ۪ينَ",
+        "meaning": "kimseler"
+      },
+      {
+        "text": "اٰمَنُوا",
+        "meaning": "inanan(lar)"
+      },
+      {
+        "text": "وَعَمِلُوا",
+        "meaning": "ve yapanlar"
+      },
+      {
+        "text": "الصَّالِحَاتِ",
+        "meaning": "iyi işler"
+      },
+      {
+        "text": "فَلَهُمْ",
+        "meaning": "onlar için vardır"
+      },
+      {
+        "text": "اَجْرٌ",
+        "meaning": "bir mükafat"
+      },
+      {
+        "text": "غَيْرُ",
+        "meaning": "olmayan"
+      },
+      {
+        "text": "مَمْنُونٍۜ",
+        "meaning": "kesintisi"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yalnız, inanıp yararlı iş işleyenler bunun dışındadır. Onlara kesintisiz ecir vardır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 7,
+    "transliteration": "Femâ yukeżżibuke ba’du bi-ddîn(i)",
+    "words": [
+      {
+        "text": "فَمَا",
+        "meaning": "nedir?"
+      },
+      {
+        "text": "يُكَذِّبُكَ",
+        "meaning": "sana yalanlatan"
+      },
+      {
+        "text": "بَعْدُ",
+        "meaning": "bundan sonra"
+      },
+      {
+        "text": "بِالدّ۪ينِۜ",
+        "meaning": "dini"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyken, sana dini yalan saydırtan nedir?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 95,
+    "ayet": 8,
+    "transliteration": "Eleysa(A)llâhu bi-ahkemi-lhâkimîn(e)",
+    "words": [
+      {
+        "text": "اَلَيْسَ",
+        "meaning": "değil midir?"
+      },
+      {
+        "text": "اللّٰهُ",
+        "meaning": "Allah"
+      },
+      {
+        "text": "بِاَحْكَمِ",
+        "meaning": "en iyi hüküm vereni"
+      },
+      {
+        "text": "الْحَاكِم۪ينَ",
+        "meaning": "hüküm verenlerin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Allah, hükmedenlerin en iyi hükmedeni değil midir?"
+        }
+      }
+    }
+  }
+]

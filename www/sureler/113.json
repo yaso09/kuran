@@ -1,0 +1,169 @@
+[
+  {
+    "sure": 113,
+    "ayet": 1,
+    "transliteration": "Kul e’ûżu birabbi-lfelak(i)",
+    "words": [
+      {
+        "text": "قُلْ",
+        "meaning": "de ki"
+      },
+      {
+        "text": "اَعُوذُ",
+        "meaning": "sığınırım ben"
+      },
+      {
+        "text": "بِرَبِّ",
+        "meaning": "Rabbe"
+      },
+      {
+        "text": "الْفَلَقِۙ",
+        "meaning": "karanlığı yarıp sabahı ortaya çıkaran"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 113,
+    "ayet": 2,
+    "transliteration": "Min şerri mâ ḣalak(e)",
+    "words": [
+      {
+        "text": "مِنْ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "شَرِّ",
+        "meaning": "şerri-"
+      },
+      {
+        "text": "مَا",
+        "meaning": "şeylerin"
+      },
+      {
+        "text": "خَلَقَۙ",
+        "meaning": "yarattığı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 113,
+    "ayet": 3,
+    "transliteration": "Vemin şerri ġâsikin iżâ vekab(e)",
+    "words": [
+      {
+        "text": "وَمِنْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "شَرِّ",
+        "meaning": "şerrinden"
+      },
+      {
+        "text": "غَاسِقٍ",
+        "meaning": "gecenin"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "وَقَبَۙ",
+        "meaning": "karanlığı çöktüğü"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 113,
+    "ayet": 4,
+    "transliteration": "Vemin şerri-nneffâśâti fî-l’ukad(i)",
+    "words": [
+      {
+        "text": "وَمِنْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "شَرِّ",
+        "meaning": "şerrinden"
+      },
+      {
+        "text": "النَّفَّاثَاتِ",
+        "meaning": "üfleyenlerin"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْعُقَدِۙ",
+        "meaning": "düğümlere"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+        }
+      }
+    }
+  },
+  {
+    "sure": 113,
+    "ayet": 5,
+    "transliteration": "Vemin şerri hâsidin iżâ hased(e)",
+    "words": [
+      {
+        "text": "وَمِنْ",
+        "meaning": "ve"
+      },
+      {
+        "text": "شَرِّ",
+        "meaning": "şerrinden"
+      },
+      {
+        "text": "حَاسِدٍ",
+        "meaning": "hasedcinin"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "حَسَدَ",
+        "meaning": "hased ettiği"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,327 @@
+[
+  {
+    "sure": 100,
+    "ayet": 1,
+    "transliteration": "Vel-’âdiyâti dabhâ(n)",
+    "words": [
+      {
+        "text": "وَالْعَادِيَاتِ",
+        "meaning": "andolsun koşanlara (atlara)"
+      },
+      {
+        "text": "ضَبْحًاۙ",
+        "meaning": "soluk soluğa"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun Allah yolunda koştukça koşanlara;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 2,
+    "transliteration": "Fel-mûriyâti kadhâ(n)",
+    "words": [
+      {
+        "text": "فَالْمُورِيَاتِ",
+        "meaning": "(tırnaklarıyla) ateş çıkaranlara"
+      },
+      {
+        "text": "قَدْحًاۙ",
+        "meaning": "çarparak"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "And olsun kıvılcımlar saçanlara;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 3,
+    "transliteration": "Fel-muġîrâti subhâ(n)",
+    "words": [
+      {
+        "text": "فَالْمُغ۪يرَاتِ",
+        "meaning": "akın edenlere"
+      },
+      {
+        "text": "صُبْحًاۙ",
+        "meaning": "sabahleyin"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sabah sabah akına çıkanlara;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 4,
+    "transliteration": "Fe-eśerne bihi nak’â(n)",
+    "words": [
+      {
+        "text": "فَاَثَرْنَ",
+        "meaning": "toz koparanlara"
+      },
+      {
+        "text": "بِه۪",
+        "meaning": "onunla (ayaklarıyla)"
+      },
+      {
+        "text": "نَقْعًاۙ",
+        "meaning": "toz"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ve tozu dumana katanlara;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 5,
+    "transliteration": "Fe-vesatne bihi cem’â(n)",
+    "words": [
+      {
+        "text": "فَوَسَطْنَ",
+        "meaning": "derken dalanlara"
+      },
+      {
+        "text": "بِه۪",
+        "meaning": "onunla"
+      },
+      {
+        "text": "جَمْعًاۙ",
+        "meaning": "bir topluluğa"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Düşman topluluğunun içine dalanlara ki:"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 6,
+    "transliteration": "İnne-l-insâne lirabbihi lekenûd(un)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "الْاِنْسَانَ",
+        "meaning": "insan"
+      },
+      {
+        "text": "لِرَبِّه۪",
+        "meaning": "Rabbine karşı"
+      },
+      {
+        "text": "لَكَنُودٌۚ",
+        "meaning": "çok nankördür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsan gerçekten Rabbine karşı pek nankördür."
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 7,
+    "transliteration": "Ve-innehu ‘alâ żâlike leşehîd(un)",
+    "words": [
+      {
+        "text": "وَاِنَّهُ",
+        "meaning": "ve elbette o da"
+      },
+      {
+        "text": "عَلٰى",
+        "meaning": null
+      },
+      {
+        "text": "ذٰلِكَ",
+        "meaning": "buna"
+      },
+      {
+        "text": "لَشَه۪يدٌۚ",
+        "meaning": "şahiddir"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu kendisi de bunların hepsine şahittir."
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 8,
+    "transliteration": "Ve-innehu lihubbi-lḣayri leşedîd(un)",
+    "words": [
+      {
+        "text": "وَاِنَّهُ",
+        "meaning": "doğrusu o"
+      },
+      {
+        "text": "لِحُبِّ",
+        "meaning": "sevgisine"
+      },
+      {
+        "text": "الْخَيْرِ",
+        "meaning": "mal"
+      },
+      {
+        "text": "لَشَد۪يدٌۜ",
+        "meaning": "aşırı düşkündür"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Gerçekten mala da pek düşkündür."
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 9,
+    "transliteration": "Efelâ ya’lemu iżâ bu’śira mâ fî-lkubûr(i)",
+    "words": [
+      {
+        "text": "اَفَلَا",
+        "meaning": null
+      },
+      {
+        "text": "يَعْلَمُ",
+        "meaning": "bilmez mi?"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": "zaman"
+      },
+      {
+        "text": "بُعْثِرَ",
+        "meaning": "dışarı atıldığı"
+      },
+      {
+        "text": "مَا",
+        "meaning": "olanlar"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الْقُبُورِۙ",
+        "meaning": "kabirlerde"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsan, kabirlerde bulunanların çıkarılacağı ve kalblerde olanların ortaya konulacağı bir zamanın geleceğini bilmez mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 10,
+    "transliteration": "Ve hussile mâ fî-ssudûr(i)",
+    "words": [
+      {
+        "text": "وَحُصِّلَ",
+        "meaning": "ve devşirildiği (zaman)"
+      },
+      {
+        "text": "مَا",
+        "meaning": "bulunanlar"
+      },
+      {
+        "text": "فِي",
+        "meaning": null
+      },
+      {
+        "text": "الصُّدُورِۙ",
+        "meaning": "göğüslerde"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "İnsan, kabirlerde bulunanların çıkarılacağı ve kalblerde olanların ortaya konulacağı bir zamanın geleceğini bilmez mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 100,
+    "ayet": 11,
+    "transliteration": "İnne rabbehum bihim yevme-iżin leḣabîr(un)",
+    "words": [
+      {
+        "text": "اِنَّ",
+        "meaning": "şüphesiz"
+      },
+      {
+        "text": "رَبَّهُمْ",
+        "meaning": "Rabbleri"
+      },
+      {
+        "text": "بِهِمْ",
+        "meaning": "onları"
+      },
+      {
+        "text": "يَوْمَئِذٍ",
+        "meaning": "o gün"
+      },
+      {
+        "text": "لَخَب۪يرٌ",
+        "meaning": "mutlaka haber almıştır"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu Rableri o gün onların her şeyinden haberdardır."
+        }
+      }
+    }
+  }
+]

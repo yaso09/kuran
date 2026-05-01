@@ -1,0 +1,327 @@
+[
+  {
+    "sure": 93,
+    "ayet": 1,
+    "transliteration": "Ve-dduhâ",
+    "words": [
+      {
+        "text": "وَالضُّحٰىۙ",
+        "meaning": "kuşluk vaktine andolsun"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Kuşluk vaktine and olsun;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 2,
+    "transliteration": "Velleyli iżâ secâ",
+    "words": [
+      {
+        "text": "وَالَّيْلِ",
+        "meaning": "ve geceye andolsun"
+      },
+      {
+        "text": "اِذَا",
+        "meaning": null
+      },
+      {
+        "text": "سَجٰىۙ",
+        "meaning": "sakinleşen"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Sükun erdiği zaman geceye and olsun ki,"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 3,
+    "transliteration": "Mâ vedde’ake rabbuke vemâ kalâ",
+    "words": [
+      {
+        "text": "مَا",
+        "meaning": null
+      },
+      {
+        "text": "وَدَّعَكَ",
+        "meaning": "seni bırakmadı"
+      },
+      {
+        "text": "رَبُّكَ",
+        "meaning": "Rabbin"
+      },
+      {
+        "text": "وَمَا",
+        "meaning": "ve"
+      },
+      {
+        "text": "قَلٰىۜ",
+        "meaning": "darılmadı"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rabbin seni ne bıraktı ve ne de sana darıldı."
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 4,
+    "transliteration": "Velel-âḣiratu ḣayrun leke mine-l-ûlâ",
+    "words": [
+      {
+        "text": "وَلَلْاٰخِرَةُ",
+        "meaning": "ve sonu"
+      },
+      {
+        "text": "خَيْرٌ",
+        "meaning": "iyi olacaktır"
+      },
+      {
+        "text": "لَكَ",
+        "meaning": "senin için"
+      },
+      {
+        "text": "مِنَ",
+        "meaning": "-nden"
+      },
+      {
+        "text": "الْاُو۫لٰىۜ",
+        "meaning": "ilki-"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Doğrusu ahiret senin için dünyadan daha hayırlıdır."
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 5,
+    "transliteration": "Ve lesevfe yu’tîke rabbuke feterdâ",
+    "words": [
+      {
+        "text": "وَلَسَوْفَ",
+        "meaning": "ve yakında"
+      },
+      {
+        "text": "يُعْط۪يكَ",
+        "meaning": "sana verecektir"
+      },
+      {
+        "text": "رَبُّكَ",
+        "meaning": "Rabbin"
+      },
+      {
+        "text": "فَتَرْضٰىۜ",
+        "meaning": "ve sen razı olacaksın"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Rabbin şüphesiz sana verecek ve sen de hoşnut olacaksın."
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 6,
+    "transliteration": "Elem yecidke yetîmen fe-âvâ",
+    "words": [
+      {
+        "text": "اَلَمْ",
+        "meaning": null
+      },
+      {
+        "text": "يَجِدْكَ",
+        "meaning": "seni bulmadı mı?"
+      },
+      {
+        "text": "يَت۪يمًا",
+        "meaning": "yetim"
+      },
+      {
+        "text": "فَاٰوٰىۖ",
+        "meaning": "ve barındırmadı mı?"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Seni öksüz bulup da barındırmadı mı?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 7,
+    "transliteration": "Ve vecedeke dâllen fehedâ",
+    "words": [
+      {
+        "text": "وَوَجَدَكَ",
+        "meaning": "ve seni bulmadı mı?"
+      },
+      {
+        "text": "ضَٓالًّا",
+        "meaning": "şaşırmış"
+      },
+      {
+        "text": "فَهَدٰىۖ",
+        "meaning": "ve yola iletmedi mi?"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Seni şaşırmış bulup, doğru yola eriştirmedi mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 8,
+    "transliteration": "Ve vecedeke ‘â-ilen fe-aġnâ",
+    "words": [
+      {
+        "text": "وَوَجَدَكَ",
+        "meaning": "ve seni bulmadı mı?"
+      },
+      {
+        "text": "عَٓائِلًا",
+        "meaning": "fakir"
+      },
+      {
+        "text": "فَاَغْنٰىۜ",
+        "meaning": "zengin etmedi mi?"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Seni fakir bulup zenginleştirmedi mi?"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 9,
+    "transliteration": "Fe-emmâ-lyetîme felâ tekhar",
+    "words": [
+      {
+        "text": "فَاَمَّا",
+        "meaning": "öyleyse"
+      },
+      {
+        "text": "الْيَت۪يمَ",
+        "meaning": "öksüzü"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": "sakın"
+      },
+      {
+        "text": "تَقْهَرْۜ",
+        "meaning": "ezme"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Öyleyse sakın öksüze kötü muamele etme;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 10,
+    "transliteration": "Ve emmâ-ssâ-ile felâ tenher",
+    "words": [
+      {
+        "text": "وَاَمَّا",
+        "meaning": "ve sakın"
+      },
+      {
+        "text": "السَّٓائِلَ",
+        "meaning": "dilenciyi"
+      },
+      {
+        "text": "فَلَا",
+        "meaning": null
+      },
+      {
+        "text": "تَنْهَرْۜ",
+        "meaning": "azarlama"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Ve sakın bir şey isteyeni azarlama;"
+        }
+      }
+    }
+  },
+  {
+    "sure": 93,
+    "ayet": 11,
+    "transliteration": "Ve emmâ bini’meti rabbike fehaddiś",
+    "words": [
+      {
+        "text": "وَاَمَّا",
+        "meaning": "ve"
+      },
+      {
+        "text": "بِنِعْمَةِ",
+        "meaning": "ni'metini"
+      },
+      {
+        "text": "رَبِّكَ",
+        "meaning": "Rabbinin"
+      },
+      {
+        "text": "فَحَدِّثْ",
+        "meaning": "anlat"
+      }
+    ],
+    "translations": {
+      "tr": {
+        "diyanet_isleri": {
+          "name": "Diyanet İşleri",
+          "text": "Yalnızca Rabbinin nimetini anlat."
+        }
+      }
+    }
+  }
+]
