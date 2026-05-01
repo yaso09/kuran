@@ -181,26 +181,26 @@ async function populateReciters() {
     try {
         const res = await fetch('okumalar/okumalar.json?t=' + Date.now());
         const data = await res.json();
-        
+
         const mainSelect = DOM.reciterSelect;
         const readingSelect = DOM.readingReciterSelect;
-        
+
         if (mainSelect && readingSelect && data) {
             mainSelect.innerHTML = '';
             readingSelect.innerHTML = '';
-            
+
             for (const [key, name] of Object.entries(data)) {
                 const opt1 = document.createElement('option');
                 opt1.value = key;
                 opt1.innerText = name;
                 mainSelect.appendChild(opt1);
-                
+
                 const opt2 = document.createElement('option');
                 opt2.value = key;
                 opt2.innerText = name;
                 readingSelect.appendChild(opt2);
             }
-            
+
             // Eğer state.reciter önceden ayarlanmışsa (örn gamadi), seçimi koru
             if (data[state.reciter]) {
                 mainSelect.value = state.reciter;
@@ -227,16 +227,16 @@ async function populateTranslations() {
             const trTranslations = data[0].translations?.tr || {};
             const select = DOM.translationSelect;
             if (!select) return;
-            
+
             select.innerHTML = ''; // Clear hardcoded and old options
-            
+
             for (const [key, value] of Object.entries(trTranslations)) {
                 const option = document.createElement('option');
                 option.value = key;
                 option.innerText = value.name || key;
                 select.appendChild(option);
             }
-            
+
             // Re-set selection if it was lost
             if (trTranslations[state.translation]) {
                 select.value = state.translation;
@@ -268,8 +268,10 @@ function initMealUpload() {
                     DOM.settingsModal.style.display = 'flex';
                     await loadSettingsData(fileManagerPort);
                     initSettingsTabs();
-                    renderManagedRepos();
-                    loadRepoItems();
+                    try {
+                        renderManagedRepos();
+                        loadRepoItems();
+                    } catch (e) { }
                 } catch (e) {
                     console.error("Ayarlar açılırken hata:", e);
                     // Hata olsa bile modalı göster ki kullanıcı kapatabilsin veya diğer sekmelere bakabilsin
@@ -346,7 +348,7 @@ function initMealUpload() {
 function initSettingsTabs() {
     const tabs = document.querySelectorAll('.settings-tab-btn');
     const contents = document.querySelectorAll('.settings-tab-content');
-    
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const target = tab.dataset.tab;
@@ -355,7 +357,7 @@ function initSettingsTabs() {
                 t.style.borderBottom = '3px solid transparent';
             });
             contents.forEach(c => c.style.display = 'none');
-            
+
             tab.classList.add('active');
             tab.style.borderBottom = '3px solid #7b2a1a';
             document.getElementById(target).style.display = 'block';
@@ -393,7 +395,7 @@ async function loadRepoItems() {
     }
 
     DOM.repoItemsList.innerHTML = '<li style="padding:20px; text-align:center; color:#888;">Depolar taranıyor...</li>';
-    
+
     let hasItems = false;
     const tempItems = [];
 
@@ -403,21 +405,22 @@ async function loadRepoItems() {
         try {
             const apiUrl = `https://api.github.com/repos/${repo}/contents/extras`;
             const res = await fetch(apiUrl);
-            
+
             if (!res.ok) {
                 const errorText = res.status === 404 ? "Klasör bulunamadı (/extras)" : `Hata: ${res.status}`;
                 errorMessages.push(`<li style="padding:10px; color:#721c24; background:#f8d7da; border-bottom:1px solid #f5c6cb; font-size:0.8rem;">❌ <b>${repo}:</b> ${errorText}</li>`);
-                continue; 
-            }
+                continue;
+            } else {
 
-            const files = await res.json();
-            if (!Array.isArray(files)) continue;
+                const files = await res.json();
+                if (!Array.isArray(files)) continue;
 
-            const filteredFiles = files.filter(f => f.name && (f.name.endsWith('.meal') || f.name.endsWith('.kiraat') || f.name.endsWith('.tefsir')));
-            
-            for (const file of filteredFiles) {
-                tempItems.push({ ...file, repo });
-                hasItems = true;
+                const filteredFiles = files.filter(f => f.name && (f.name.endsWith('.meal') || f.name.endsWith('.kiraat') || f.name.endsWith('.tefsir')));
+
+                for (const file of filteredFiles) {
+                    tempItems.push({ ...file, repo });
+                    hasItems = true;
+                }
             }
         } catch (e) {
             errorMessages.push(`<li style="padding:10px; color:#721c24; background:#f8d7da; border-bottom:1px solid #f5c6cb; font-size:0.8rem;">⚠️ <b>${repo}:</b> Bağlantı hatası</li>`);
@@ -425,18 +428,18 @@ async function loadRepoItems() {
     }
 
     DOM.repoItemsList.innerHTML = errorMessages.join('') + (tempItems.length === 0 && errorMessages.length === 0 ? '<li style="padding:20px; text-align:center; color:#888;">Şu an için indirilebilir içerik bulunamadı.</li>' : '');
-    
+
     if (tempItems.length > 0) {
         tempItems.forEach(file => {
-        const li = document.createElement('li');
-        li.style.cssText = 'display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; align-items:center; font-size:0.85rem; transition: background 0.2s;';
-        li.onmouseover = () => li.style.background = '#f9f9f9';
-        li.onmouseout = () => li.style.background = 'transparent';
-        
-        const type = file.name.endsWith('.meal') ? 'Meal' : (file.name.endsWith('.kiraat') ? 'Kıraat' : 'Tefsir');
-        const color = type === 'Meal' ? '#632314' : (type === 'Kıraat' ? '#2b3a42' : '#3b422b');
-        
-        li.innerHTML = `
+            const li = document.createElement('li');
+            li.style.cssText = 'display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; align-items:center; font-size:0.85rem; transition: background 0.2s;';
+            li.onmouseover = () => li.style.background = '#f9f9f9';
+            li.onmouseout = () => li.style.background = 'transparent';
+
+            const type = file.name.endsWith('.meal') ? 'Meal' : (file.name.endsWith('.kiraat') ? 'Kıraat' : 'Tefsir');
+            const color = type === 'Meal' ? '#632314' : (type === 'Kıraat' ? '#2b3a42' : '#3b422b');
+
+            li.innerHTML = `
             <div style="flex:1; overflow:hidden;">
                 <div style="display:flex; align-items:center;">
                     <span style="background:${color}; color:white; padding:2px 6px; border-radius:3px; font-size:0.65rem; margin-right:8px; font-weight:bold;">${type}</span>
@@ -446,26 +449,26 @@ async function loadRepoItems() {
             </div>
             <button class="repo-install-btn" style="background:#2b422b; color:white; border:none; border-radius:4px; padding:6px 12px; cursor:pointer; font-size:0.75rem; font-weight:bold;">Yükle</button>
         `;
-        
-        li.querySelector('.repo-install-btn').onclick = (e) => installFromRepo(file.download_url, file.name, e.target);
-        DOM.repoItemsList.appendChild(li);
-    });
-}
+
+            li.querySelector('.repo-install-btn').onclick = (e) => installFromRepo(file.download_url, file.name, e.target);
+            DOM.repoItemsList.appendChild(li);
+        });
+    }
 }
 
 async function installFromRepo(url, fileName, btn) {
     const oldText = btn.innerText;
     btn.innerText = "⏳ İndiriliyor...";
     btn.disabled = true;
-    
+
     try {
         const response = await fetch(url);
         const blob = await response.blob();
         const file = new File([blob], fileName);
-        
+
         const isDesktop = urlParams.get('device') === 'desktop';
         const fileManagerPort = urlParams.get('port');
-        
+
         if (isDesktop && fileManagerPort) {
             const formData = new FormData();
             formData.append('file', file);
@@ -550,7 +553,7 @@ async function loadSettingsData(port) {
     await populateReciters();
 
     // Önbelleği temizle ve varsa açık sureyi tazele
-    state.surahCache = {}; 
+    state.surahCache = {};
     if (state.currentSurah) {
         loadSurah(state.currentSurah);
     }
