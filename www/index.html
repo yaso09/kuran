@@ -13,10 +13,28 @@
     <script src="moment-timezone.min.js"></script>
     <script src="adhan.js"></script>
     <script src="cordova.js"></script>
+    <script src="extractMeal.js"></script>
+    <script src="extractKiraat.js"></script>
+    <script src="extractTefsir.js"></script>
     <script src="mobileFileManager.js"></script>
 </head>
 
 <body>
+    <!-- Mobil Sticky Ezan Şeridi -->
+    <div id="mobileEzanBar" class="mobile-ezan-bar">
+        <div class="ezan-bar-current">
+            <span class="ezan-bar-icon">🕌</span>
+            <span id="ezanBarCurrentName">—</span>
+            <span id="ezanBarCurrentTime"></span>
+        </div>
+        <div class="ezan-bar-next">
+            <span id="ezanBarNextLabel">Sonraki:</span>
+            <span id="ezanBarNextName"></span>
+            <span id="ezanBarCountdown"></span>
+        </div>
+        <button id="ezanNotifToggle" class="ezan-notif-btn" title="Ezan Bildirimleri">🔔</button>
+    </div>
+
     <div class="app-container">
         <!-- Sidebar: Juz & Surah List -->
         <aside class="sidebar">
@@ -34,7 +52,9 @@
             </div>
             <div class="sidebar-controls">
                 <input type="text" id="searchInput" placeholder="Arama yapın...">
-                <button id="settingsOpenBtn" style="display: none; margin-top: 10px; width: 100%; padding: 8px; background-color: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer;">⚙️ Ayarlar / İçerik Yönetimi</button>
+                <button id="settingsOpenBtn"
+                    style="display: none; margin-top: 10px; width: 100%; padding: 8px; background-color: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer;">⚙️
+                    Ayarlar / İçerik Yönetimi</button>
             </div>
             <ul id="juzList" class="main-list">
                 <!-- Juzlar js ile doldurulacak -->
@@ -193,41 +213,58 @@
     </div>
 
     <!-- Ayarlar Modal -->
-    <div id="settingsModal" class="modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
-        <div class="modal-content" style="background-color: #fdfdfd; color: #222; margin: auto; padding: 0; border: none; width: 90%; max-width: 700px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); overflow: hidden;">
+    <div id="settingsModal" class="modal"
+        style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div class="modal-content"
+            style="background-color: #fdfdfd; color: #222; margin: auto; padding: 0; border: none; width: 90%; max-width: 700px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); overflow: hidden;">
             <!-- Modal Header -->
-            <div style="background: #3a2e22; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div
+                style="background: #3a2e22; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
                 <h2 style="margin: 0; font-size: 1.2rem;">⚙️ Ayarlar ve İçerik Yönetimi</h2>
-                <button id="closeSettingsModal" style="background: none; border: none; font-size: 28px; cursor: pointer; color: white; line-height: 1;">&times;</button>
+                <button id="closeSettingsModal"
+                    style="background: none; border: none; font-size: 28px; cursor: pointer; color: white; line-height: 1;">&times;</button>
             </div>
 
             <!-- Tab Navigation -->
             <div style="display: flex; background: #f4ebd8; border-bottom: 1px solid #ddd;">
-                <button class="settings-tab-btn active" data-tab="repo-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid #7b2a1a;">🌐 Market</button>
-                <button class="settings-tab-btn" data-tab="content-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">📚 İçerik</button>
-                <button class="settings-tab-btn" data-tab="general-tab" style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">⚙️ Genel</button>
+                <button class="settings-tab-btn active" data-tab="repo-tab"
+                    style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid #7b2a1a;">🌐
+                    Market</button>
+                <button class="settings-tab-btn" data-tab="content-tab"
+                    style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">📚
+                    İçerik</button>
+                <button class="settings-tab-btn" data-tab="general-tab"
+                    style="flex: 1; padding: 12px; border: none; background: none; cursor: pointer; font-weight: bold; border-bottom: 3px solid transparent;">⚙️
+                    Genel</button>
             </div>
-            
+
             <div style="padding: 20px; max-height: 70vh; overflow-y: auto;">
                 <!-- TAB 1: Eklenti Deposu (Market) -->
                 <div id="repo-tab" class="settings-tab-content">
-                    <div style="margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+                    <div
+                        style="margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
                         <h3 style="margin-top: 0;">📦 Depo Yönetimi</h3>
                         <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-                            <input type="text" id="repoUrlInput" placeholder="GitHub Repo (örn: yaso09/kuran)" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
-                            <button id="addRepoBtn" style="padding: 10px 20px; background-color: #2b422b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Ekle</button>
+                            <input type="text" id="repoUrlInput" placeholder="GitHub Repo (örn: yaso09/kuran)"
+                                style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                            <button id="addRepoBtn"
+                                style="padding: 10px 20px; background-color: #2b422b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Ekle</button>
                         </div>
-                        <ul id="managedReposList" style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
+                        <ul id="managedReposList"
+                            style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
                             <!-- Ekli depolar js ile buraya gelecek -->
                         </ul>
                     </div>
 
                     <div style="background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                             <h3 style="margin: 0;">🛒 Mevcut İçerikler</h3>
-                            <button id="refreshRepoBtn" style="padding: 6px 12px; background: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Yenile</button>
+                            <button id="refreshRepoBtn"
+                                style="padding: 6px 12px; background: #4a4a4a; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">Yenile</button>
                         </div>
-                        <ul id="repoItemsList" style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
+                        <ul id="repoItemsList"
+                            style="list-style: none; padding: 0; margin: 0; border: 1px solid #f0f0f0; border-radius: 6px;">
                             <li style="padding: 20px; text-align: center; color: #888;">Depolar taranıyor...</li>
                         </ul>
                     </div>
@@ -238,40 +275,97 @@
                     <div style="margin-bottom: 25px;">
                         <h3 style="display: flex; justify-content: space-between; align-items: center;">
                             📖 Mealler
-                            <button id="uploadMealBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #632314; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                            <button id="uploadMealBtn"
+                                style="font-size: 0.8rem; padding: 6px 12px; background: #632314; color: white; border: none; border-radius: 4px; cursor: pointer;">+
+                                Yükle</button>
                         </h3>
-                        <ul id="settingsMealsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <ul id="settingsMealsList"
+                            style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
                         <input type="file" id="mealFileInput" accept=".meal" style="display: none;">
                     </div>
 
                     <div style="margin-bottom: 25px;">
                         <h3 style="display: flex; justify-content: space-between; align-items: center;">
                             🎙️ Kıraatlar
-                            <button id="uploadKiraatBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #2b3a42; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                            <button id="uploadKiraatBtn"
+                                style="font-size: 0.8rem; padding: 6px 12px; background: #2b3a42; color: white; border: none; border-radius: 4px; cursor: pointer;">+
+                                Yükle</button>
                         </h3>
-                        <ul id="settingsKiraatsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <ul id="settingsKiraatsList"
+                            style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
                         <input type="file" id="kiraatFileInput" accept=".kiraat" style="display: none;">
                     </div>
 
                     <div style="margin-bottom: 25px;">
                         <h3 style="display: flex; justify-content: space-between; align-items: center;">
                             📚 Tefsirler
-                            <button id="uploadTefsirBtn" style="font-size: 0.8rem; padding: 6px 12px; background: #3b422b; color: white; border: none; border-radius: 4px; cursor: pointer;">+ Yükle</button>
+                            <button id="uploadTefsirBtn"
+                                style="font-size: 0.8rem; padding: 6px 12px; background: #3b422b; color: white; border: none; border-radius: 4px; cursor: pointer;">+
+                                Yükle</button>
                         </h3>
-                        <ul id="settingsTefsirsList" style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
+                        <ul id="settingsTefsirsList"
+                            style="list-style: none; padding: 0; border: 1px solid #eee; border-radius: 6px;"></ul>
                         <input type="file" id="tefsirFileInput" accept=".tefsir" style="display: none;">
                     </div>
                 </div>
 
                 <!-- TAB 3: Genel Ayarlar -->
                 <div id="general-tab" class="settings-tab-content" style="display: none;">
-                    <div style="margin-bottom: 20px;">
-                        <h3>🎨 Görünüm</h3>
+
+                    <!-- Varsayılan Konum -->
+                    <div
+                        style="margin-bottom: 20px; background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
+                        <h3 style="margin-top:0;">📍 Varsayılan Konum</h3>
+                        <p style="font-size:0.85rem; color:#666; margin-bottom:10px;">
+                            Canlı konum kapalıyken namaz vakitlerinde kullanılacak konum.
+                            Şu an: <strong id="settingsDefaultLocationLabel">İstanbul (varsayılan)</strong>
+                        </p>
+                        <div style="display:flex; gap:8px; margin-bottom:8px;">
+                            <input type="text" id="settingsDefaultCityInput"
+                                placeholder="Şehir ara (ör: Bursa, Ankara...)"
+                                style="flex:1; padding:8px 10px; border:1px solid #ddd; border-radius:6px; font-size:0.9rem;">
+                            <button id="settingsDefaultCitySearchBtn"
+                                style="padding:8px 14px; background:#8b4513; color:white; border:none; border-radius:6px; cursor:pointer;">🔍</button>
+                        </div>
+                        <div id="settingsDefaultCityResults"
+                            style="display:none; border:1px solid #ddd; border-radius:6px; max-height:180px; overflow-y:auto; margin-bottom:8px;">
+                        </div>
+                        <button id="settingsResetDefaultLocation"
+                            style="font-size:0.8rem; background:none; border:1px solid #ccc; border-radius:4px; padding:5px 10px; cursor:pointer; color:#666;">Varsayılanı
+                            Sıfırla (İstanbul)</button>
+                    </div>
+
+                    <!-- Bildirimler -->
+                    <div
+                        style="margin-bottom: 20px; background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
+                        <h3 style="margin-top:0;">🔔 Ezan Bildirimleri</h3>
+                        <p style="font-size:0.85rem; color:#666; margin-bottom:12px;">
+                            Ezan vakti geldiğinde bildirim almak için etkinleştirin.
+                        </p>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="settingsNotifToggle">
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span id="settingsNotifStatus"
+                                style="font-size:0.9rem; color:#551508; font-weight:600;">Kapalı</span>
+                        </div>
+                        <p id="settingsNotifPermInfo"
+                            style="font-size:0.8rem; color:#888; margin-top:8px; display:none;">
+                            Tarayıcı/sistem bildirim izni gereklidir.
+                        </p>
+                    </div>
+
+                    <div
+                        style="margin-bottom: 20px; background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
+                        <h3 style="margin-top:0;">🎨 Görünüm</h3>
                         <p style="font-size: 0.9rem; color: #666;">Yazı boyutu ve tema ayarları yakında eklenecek.</p>
                     </div>
-                    <div>
-                        <h3>🔄 Sistem</h3>
-                        <button id="guiUpdateBtn" style="width: 100%; padding: 12px; background: #4a4a4a; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Uygulamayı İnternetten Güncelle</button>
+                    <div style="background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
+                        <h3 style="margin-top:0;">🔄 Sistem</h3>
+                        <button id="guiUpdateBtn"
+                            style="width: 100%; padding: 12px; background: #4a4a4a; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Uygulamayı
+                            İnternetten Güncelle</button>
                     </div>
                 </div>
             </div>

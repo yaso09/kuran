@@ -7,131 +7,174 @@ const MobileFileManager = {
     // Directories
     dataDir: null,
 
-    init: function() {
+    init: function () {
         return new Promise((resolve, reject) => {
-            if (!window.cordova) return resolve();
-            
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, (fs) => {
-                this.dataDir = fs.root;
-                console.log("Mobile file system initialized:", fs.root.nativeURL);
-                this.ensureFolders().then(resolve).catch(reject);
-            }, reject);
+            if (!window.cordova) {
+                console.log("Not in Cordova environment, skipping file system init.");
+                return resolve();
+            }
+
+            // Runtime Permission Request for Android
+            if (window.cordova.platformId === 'android' && cordova.plugins && cordova.plugins.permissions) {
+                const permissions = cordova.plugins.permissions;
+
+                // Android 13+ (API 33+): READ/WRITE_EXTERNAL_STORAGE çalışmıyor,
+                // bunların yerine READ_MEDIA_* izinleri gerekiyor.
+                const sdkVersion = parseInt(device?.version) || 0;
+                const list = sdkVersion >= 33
+                    ? [permissions.READ_MEDIA_IMAGES, permissions.READ_MEDIA_AUDIO, permissions.READ_MEDIA_VIDEO]
+                    : [permissions.READ_EXTERNAL_STORAGE, permissions.WRITE_EXTERNAL_STORAGE];
+
+                permissions.requestPermissions(list, (status) => {
+                    if (!status.hasPermission) {
+                        console.warn("Storage permission denied by user.");
+                    }
+                    this.requestFS(resolve, reject);
+                }, () => {
+                    console.error("Error requesting permissions.");
+                    this.requestFS(resolve, reject);
+                });
+            } else {
+                this.requestFS(resolve, reject);
+            }
         });
     },
 
-    ensureFolders: async function() {
+    requestFS: function (resolve, reject) {
+        console.log("Requesting file system...");
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, (fs) => {
+            this.dataDir = fs.root;
+            console.log("Mobile file system initialized:", fs.root.nativeURL);
+            this.ensureFolders().then(() => {
+                console.log("Folders checked/created.");
+                resolve();
+            }).catch(e => {
+                console.error("Folder creation error:", e);
+                reject(e);
+            });
+        }, (err) => {
+            console.error("File system request failed:", err);
+            if (err.code === 1) {
+                alert("Dosya sistemine erişim izni alınamadı.");
+            } else {
+                alert("Dosya sistemi başlatılamadı: Hata Kodu " + err.code);
+            }
+            reject(err);
+        });
+    },
+
+    ensureFolders: async function () {
         await this.createDir("mealler");
         await this.createDir("tefsirler");
         await this.createDir("okumalar");
+        await this.createDir("risaleinur");
+        const surelerDir = await this.createDir("sureler");
+
+        // Bootstrap gerekli mi? Sure dosyaları veya juz.json eksikse
+        const entries = await this.readEntries(surelerDir);
+        let needsBootstrap = entries.length < 114;
+        if (!needsBootstrap) {
+            try { await this.readFile('juz.json'); }
+            catch (e) { needsBootstrap = true; }
+        }
+
+        if (needsBootstrap) {
+            console.log("Bootstrapping data files...");
+            await this.bootstrapSureler();
+        }
     },
 
-    createDir: function(name) {
+    bootstrapSureler: async function () {
+        // 1. Sure dosyaları (1-114)
+        for (let i = 1; i <= 114; i++) {
+            try {
+                const r = await fetch(`sureler/${i}.json`);
+                if (!r.ok) continue;
+                await this.writeFile(`sureler/${i}.json`, await r.text());
+            } catch (e) { console.error(`Bootstrap sure ${i} hata:`, e); }
+        }
+
+        // 2. Kök dizin statik dosyalar
+        for (const f of ['juz.json', 'number_of_verses_per_page.json', 'quran_index.json', 'quran_words.json', 'quran_verses.json']) {
+            try {
+                const r = await fetch(f);
+                if (!r.ok) continue;
+                await this.writeFile(f, await r.text());
+            } catch (e) { console.error(`Bootstrap ${f} hata:`, e); }
+        }
+
+        // 3. Risale-i Nur index
+        try {
+            const r = await fetch('risaleinur/index.json');
+            if (r.ok) await this.writeFile('risaleinur/index.json', await r.text());
+        } catch (e) { console.error('Bootstrap risaleinur/index.json hata:', e); }
+
+        // 4. okumalar/okumalar.json — www'den kopyala, yoksa varsayılan oluştur
+        try {
+            const r = await fetch('okumalar/okumalar.json');
+            if (r.ok) {
+                await this.writeFile('okumalar/okumalar.json', await r.text());
+            } else {
+                await this.writeFile('okumalar/okumalar.json',
+                    JSON.stringify({ "gamadi": "Saad al-Ghamidi", "muaykli": "Mahir el-Muaykli" }, null, 2));
+            }
+        } catch (e) {
+            await this.writeFile('okumalar/okumalar.json',
+                JSON.stringify({ "gamadi": "Saad al-Ghamidi", "muaykli": "Mahir el-Muaykli" }, null, 2));
+        }
+
+        // 5. tefsirler/tefsirler.json — www'den kopyala, yoksa boş oluştur
+        try {
+            const r = await fetch('tefsirler/tefsirler.json');
+            if (r.ok) {
+                await this.writeFile('tefsirler/tefsirler.json', await r.text());
+            } else {
+                await this.writeFile('tefsirler/tefsirler.json', '{}');
+            }
+        } catch (e) {
+            await this.writeFile('tefsirler/tefsirler.json', '{}');
+        }
+    },
+
+    readEntries: function (dirEntry) {
+        return new Promise((resolve, reject) => {
+            const reader = dirEntry.createReader();
+            reader.readEntries(resolve, reject);
+        });
+    },
+
+    createDir: function (name) {
         return new Promise((resolve, reject) => {
             this.dataDir.getDirectory(name, { create: true }, resolve, reject);
         });
     },
 
     // --- MEAL LOGIC ---
-    importMeal: async function(file) {
-        try {
-            const text = await file.text();
-            const lines = text.split(/\r?\n/).filter(line => line.trim());
-            if (lines.length === 0) throw new Error("Dosya boş.");
-
-            const headerParts = lines[0].split("|");
-            if (headerParts.length < 2) throw new Error("Geçersiz başlık formatı (dil|Ad).");
-
-            const lang = headerParts[0].trim();
-            const mealName = headerParts[1].trim();
-            const mealId = this.slugify(mealName);
-
-            const mealMap = {};
-            for (let i = 1; i < lines.length; i++) {
-                const parts = lines[i].split("|");
-                if (parts.length < 3) continue;
-                const sure = parts[0].trim();
-                const ayet = parts[1].trim();
-                const verseText = parts.slice(2).join("|").trim();
-                mealMap[`${sure}:${ayet}`] = verseText;
-            }
-
-            const mealData = {
-                id: mealId,
-                name: mealName,
-                lang: lang,
-                data: mealMap
-            };
-
-            await this.writeFile(`mealler/${mealId}.json`, JSON.stringify(mealData));
-            return { status: "success", name: mealName };
-        } catch (e) {
-            console.error("Meal import error:", e);
-            throw e;
+    importMeal: async function (file, onProgress) {
+        if (typeof extractMeal !== 'undefined') {
+            return await extractMeal.extract(file, this.dataDir, onProgress);
         }
+        throw new Error("extractMeal.js yüklenemedi.");
     },
 
     // --- KIRAAT LOGIC ---
-    importKiraat: function(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = async () => {
-                const blob = new Blob([reader.result], { type: file.type });
-                const tempFile = "temp_kiraat.zip";
-                
-                try {
-                    await this.writeFile(tempFile, blob);
-                    const source = this.dataDir.nativeURL + tempFile;
-                    const destination = this.dataDir.nativeURL + "okumalar/";
-                    
-                    zip.unzip(source, destination, (status) => {
-                        if (status === 0) {
-                            // After unzip, we should have a folder. 
-                            // But zip plugin unzips everything into destination.
-                            // We need to find the recitation.json to know the ID.
-                            this.processKiraatUnzip(destination).then(resolve).catch(reject);
-                        } else {
-                            reject("Unzip failed: " + status);
-                        }
-                    });
-                } catch (e) {
-                    reject(e);
-                }
-            };
-            reader.readAsArrayBuffer(file);
-        });
-    },
-
-    processKiraatUnzip: async function(okumalarPath) {
-        // This part is tricky because we need to move files to the right subfolder
-        // For simplicity in this version, we expect the ZIP to contain a folder or recitation.json
-        // Let's assume the user knows the structure for now or we improve later.
-        return { status: "success" };
+    importKiraat: async function (file, onProgress) {
+        if (typeof extractKiraat !== 'undefined') {
+            return await extractKiraat.extract(file, this.dataDir, onProgress);
+        }
+        throw new Error("extractKiraat.js yüklenemedi.");
     },
 
     // --- TEFSIR LOGIC ---
-    importTefsir: function(file) {
-        // Similar to kiraat but to tefsirler/ folder
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = async () => {
-                const blob = new Blob([reader.result], { type: file.type });
-                const tempFile = "temp_tefsir.zip";
-                await this.writeFile(tempFile, blob);
-                
-                const source = this.dataDir.nativeURL + tempFile;
-                const destination = this.dataDir.nativeURL + "tefsirler/";
-                
-                zip.unzip(source, destination, (status) => {
-                    if (status === 0) resolve({ status: "success" });
-                    else reject("Unzip failed");
-                });
-            };
-            reader.readAsArrayBuffer(file);
-        });
+    importTefsir: async function (file, onProgress) {
+        if (typeof extractTefsir !== 'undefined') {
+            return await extractTefsir.extract(file, this.dataDir, onProgress);
+        }
+        throw new Error("extractTefsir.js yüklenemedi.");
     },
 
     // --- UTILS ---
-    slugify: function(text) {
+    slugify: function (text) {
         return text.toString().toLowerCase()
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove accents
             .replace(/\s+/g, '_')           // replace spaces with _
@@ -141,19 +184,26 @@ const MobileFileManager = {
             .replace(/-+$/, '');            // trim - from end
     },
 
-    writeFile: function(path, content) {
+    writeFile: function (path, content) {
         return new Promise((resolve, reject) => {
             this.dataDir.getFile(path, { create: true }, (fileEntry) => {
                 fileEntry.createWriter((fileWriter) => {
-                    fileWriter.onwriteend = resolve;
                     fileWriter.onerror = reject;
-                    fileWriter.write(content);
+                    // Önce truncate, sonra yaz — aksi hâlde eski içerik kalıntısı JSON'u bozar
+                    fileWriter.onwriteend = () => {
+                        fileWriter.onwriteend = resolve;
+                        const blob = (content instanceof Blob)
+                            ? content
+                            : new Blob([content], { type: 'application/json' });
+                        fileWriter.write(blob);
+                    };
+                    fileWriter.truncate(0);
                 }, reject);
             }, reject);
         });
     },
 
-    readFile: function(path) {
+    readFile: function (path) {
         return new Promise((resolve, reject) => {
             this.dataDir.getFile(path, {}, (fileEntry) => {
                 fileEntry.file((file) => {
@@ -166,7 +216,7 @@ const MobileFileManager = {
         });
     },
 
-    listDir: function(path) {
+    listDir: function (path) {
         return new Promise((resolve, reject) => {
             this.dataDir.getDirectory(path, {}, (dirEntry) => {
                 const reader = dirEntry.createReader();
@@ -175,19 +225,32 @@ const MobileFileManager = {
         });
     },
 
-    deleteFolder: function(path) {
+    deleteFolder: function (path) {
         return new Promise((resolve, reject) => {
             this.dataDir.getDirectory(path, {}, (dirEntry) => {
                 dirEntry.removeRecursively(resolve, reject);
             }, reject);
         });
     },
-    
-    deleteFile: function(path) {
+
+    deleteFile: function (path) {
         return new Promise((resolve, reject) => {
             this.dataDir.getFile(path, {}, (fileEntry) => {
                 fileEntry.remove(resolve, reject);
             }, reject);
         });
+    },
+
+    uploadItem: async function (file, onProgress) {
+        const name = file.name.toLowerCase();
+        if (name.endsWith('.meal')) {
+            return await this.importMeal(file, onProgress);
+        } else if (name.endsWith('.kiraat')) {
+            return await this.importKiraat(file, onProgress);
+        } else if (name.endsWith('.tefsir')) {
+            return await this.importTefsir(file, onProgress);
+        } else {
+            throw new Error("Desteklenmeyen dosya türü. Sadece .meal, .kiraat ve .tefsir dosyaları yüklenebilir.");
+        }
     }
 };

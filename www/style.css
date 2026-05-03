@@ -1,3 +1,156 @@
+/* ===== Mobil Sticky Ezan Şeridi ===== */
+.mobile-ezan-bar {
+    display: none;
+    /* Sadece mobilde görünür */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #3a2e22 0%, #551508 100%);
+    color: white;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
+    font-family: var(--tr-font, Georgia, serif);
+    min-height: 46px;
+}
+
+@media (max-width: 768px) {
+    .mobile-ezan-bar {
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 46px;
+        /* Sticky bar yüksekliği kadar boşluk */
+    }
+}
+
+.ezan-bar-current {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    padding-right: 10px;
+}
+
+.ezan-bar-icon {
+    font-size: 1rem;
+}
+
+.ezan-bar-current span:not(.ezan-bar-icon) {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#ezanBarCurrentName {
+    color: #ffd700;
+}
+
+#ezanBarCurrentTime {
+    opacity: 0.85;
+    margin-left: 2px;
+}
+
+.ezan-bar-next {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    overflow: hidden;
+}
+
+#ezanBarNextLabel {
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+#ezanBarNextName {
+    font-weight: 700;
+    color: #ffd700;
+    flex-shrink: 0;
+}
+
+#ezanBarCountdown {
+    opacity: 0.9;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ezan-notif-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    padding: 3px 7px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.ezan-notif-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.ezan-notif-btn.active {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #ffd700;
+}
+
+/* ===== Toggle Switch ===== */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 26px;
+    transition: 0.3s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+    background-color: #8b4513;
+}
+
+.toggle-switch input:checked+.toggle-slider:before {
+    transform: translateX(22px);
+}
+
 @font-face {
     font-family: 'ShaikhHamdullah';
     src: url('ShaikhHamdullahMushaf.ttf') format('truetype');
@@ -1297,8 +1450,14 @@ body {
     border-bottom: 1px solid rgba(0, 242, 255, 0.2);
 }
 
-.gamer-theme .sidebar-header h1 { color: #00f2ff; text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
-.gamer-theme .sidebar-header p { color: #aaa; }
+.gamer-theme .sidebar-header h1 {
+    color: #00f2ff;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.gamer-theme .sidebar-header p {
+    color: #aaa;
+}
 
 .gamer-theme .sidebar-controls input {
     background: #111;
@@ -1307,9 +1466,12 @@ body {
     border-radius: 4px;
 }
 
-.gamer-theme .sidebar-tab { color: #888; }
-.gamer-theme .sidebar-tab.active { 
-    color: #00f2ff; 
+.gamer-theme .sidebar-tab {
+    color: #888;
+}
+
+.gamer-theme .sidebar-tab.active {
+    color: #00f2ff;
     background: rgba(0, 242, 255, 0.1);
     border-bottom-color: #00f2ff;
     text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
@@ -1318,16 +1480,28 @@ body {
 .gamer-theme .juz-header {
     background: rgba(30, 30, 45, 0.6);
     color: #ccc;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-.gamer-theme .surah-item:hover { background: rgba(0, 242, 255, 0.1); color: #00f2ff; }
-.gamer-theme .surah-item.active { background: rgba(0, 242, 255, 0.2); color: #00f2ff; border-left: 3px solid #00f2ff; }
+
+.gamer-theme .surah-item:hover {
+    background: rgba(0, 242, 255, 0.1);
+    color: #00f2ff;
+}
+
+.gamer-theme .surah-item.active {
+    background: rgba(0, 242, 255, 0.2);
+    color: #00f2ff;
+    border-left: 3px solid #00f2ff;
+}
 
 .gamer-theme .content-header {
     background: rgba(20, 20, 30, 0.8);
     border-bottom: 1px solid rgba(0, 242, 255, 0.1);
 }
-.gamer-theme .content-header h2 { color: #00f2ff; }
+
+.gamer-theme .content-header h2 {
+    color: #00f2ff;
+}
 
 .gamer-theme .verse-item {
     background: rgba(20, 20, 30, 0.5);
@@ -1335,22 +1509,35 @@ body {
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .gamer-theme .verse-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-color: rgba(0, 242, 255, 0.3);
 }
+
 .gamer-theme .verse-item.playing {
     background: rgba(0, 242, 255, 0.05);
     border-color: #00f2ff;
     box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
 }
 
-.gamer-theme .arabic-text { color: #fff; text-shadow: 0 0 1px rgba(255,255,255,0.5); }
-.gamer-theme .transliteration { color: #00f2ff; opacity: 0.8; }
-.gamer-theme .translation-text { color: #ccc; }
+.gamer-theme .arabic-text {
+    color: #fff;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
 
-.gamer-theme .audio-btn, .gamer-theme .audio-controls button {
+.gamer-theme .transliteration {
+    color: #00f2ff;
+    opacity: 0.8;
+}
+
+.gamer-theme .translation-text {
+    color: #ccc;
+}
+
+.gamer-theme .audio-btn,
+.gamer-theme .audio-controls button {
     background: #1a1a2e;
     color: #00f2ff;
     border: 1px solid #00f2ff;
@@ -1360,7 +1547,9 @@ body {
     letter-spacing: 1px;
     transition: all 0.2s;
 }
-.gamer-theme .audio-btn:hover, .gamer-theme .audio-controls button:hover {
+
+.gamer-theme .audio-btn:hover,
+.gamer-theme .audio-controls button:hover {
     background: #00f2ff;
     color: #000;
     box-shadow: 0 0 10px #00f2ff;
@@ -1372,12 +1561,34 @@ body {
     box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
     color: #fff;
 }
-.gamer-theme .close-modal { color: #00f2ff; }
-.gamer-theme .modal-translations li { border-bottom-color: #222; }
-.gamer-theme .modal-translations li strong { color: #00f2ff; }
-.gamer-theme .tafsir-body { background: #111; border-color: #333; color: #ccc; }
 
-.gamer-theme ::-webkit-scrollbar-track { background: #050507; }
-.gamer-theme ::-webkit-scrollbar-thumb { background: #1a1a2e; border: 1px solid #00f2ff33; }
-.gamer-theme ::-webkit-scrollbar-thumb:hover { background: #00f2ff33; }
+.gamer-theme .close-modal {
+    color: #00f2ff;
+}
 
+.gamer-theme .modal-translations li {
+    border-bottom-color: #222;
+}
+
+.gamer-theme .modal-translations li strong {
+    color: #00f2ff;
+}
+
+.gamer-theme .tafsir-body {
+    background: #111;
+    border-color: #333;
+    color: #ccc;
+}
+
+.gamer-theme ::-webkit-scrollbar-track {
+    background: #050507;
+}
+
+.gamer-theme ::-webkit-scrollbar-thumb {
+    background: #1a1a2e;
+    border: 1px solid #00f2ff33;
+}
+
+.gamer-theme ::-webkit-scrollbar-thumb:hover {
+    background: #00f2ff33;
+}

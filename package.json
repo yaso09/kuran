@@ -19,7 +19,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "install:python": "python -m pip install -r requirements.txt",
+    "install": "npm install express && npm install fs-extra && python -m pip install -r requirements.txt && cd mobile && npm install && npx cordova platform add android",
     "dev": "node index.js",
     "dev:desktop": "npm run gen_risale_index && python desktop/main.py --dev",
     "dev:mobile": "npm run gen_risale_index && node dev_mobile.js",

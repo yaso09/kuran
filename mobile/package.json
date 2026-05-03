@@ -1,6 +1,6 @@
 {
   "name": "com.yasireymen.kuran",
-  "displayName": "Kuran",
+  "displayName": "Kur'an-ı Kerim",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
@@ -14,9 +14,13 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^15.0.0",
+    "cordova-plugin-android-permissions": "^1.1.5",
+    "cordova-plugin-background-mode": "^0.7.2",
+    "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-file": "^8.1.3",
     "cordova-plugin-geolocation": "^5.0.0",
-    "cordova-plugin-zip": "^3.1.0"
+    "cordova-plugin-zip": "^3.1.0",
+    "npx": "^10.2.2"
   },
   "cordova": {
     "plugins": {
@@ -26,7 +30,13 @@
       "cordova-plugin-zip": {},
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
-      }
-    }
+      },
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-background-mode": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

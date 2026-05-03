@@ -1,3 +1,24 @@
+const isMobile = !!window.cordova;
+
+/**
+ * Mobilde Cordova FileSystem API, masaüstünde fetch ile dosya okur.
+ * Cordova WebView'da file:// URL'lerine fetch() ile erişilemez;
+ * bu yüzden tüm dosya okuma işlemleri bu fonksiyon üzerinden yapılmalı.
+ */
+async function mobileReadFile(relativePath) {
+    if (isMobile && typeof MobileFileManager !== 'undefined' && MobileFileManager.dataDir) {
+        try {
+            return await MobileFileManager.readFile(relativePath);
+        } catch (e) {
+            console.log(`File not found in persistent storage, falling back to fetch: ${relativePath}`);
+        }
+    }
+    // Masaüstü / tarayıcı veya mobilde dosyayı bulamazsak: fetch ile oku (bundle'dan)
+    const res = await fetch(relativePath + '?t=' + Date.now());
+    if (!res.ok) throw new Error(`fetch hata: ${relativePath} (${res.status})`);
+    return await res.text();
+}
+
 const state = {
     juzList: [],
     surahs: [],
@@ -132,7 +153,25 @@ const DOM = {
     repoItemsList: document.getElementById('repoItemsList'),
     repoUrlInput: document.getElementById('repoUrlInput'),
     addRepoBtn: document.getElementById('addRepoBtn'),
-    managedReposList: document.getElementById('managedReposList')
+    managedReposList: document.getElementById('managedReposList'),
+
+    // Mobile Ezan Bar DOM
+    mobileEzanBar: document.getElementById('mobileEzanBar'),
+    ezanBarCurrentName: document.getElementById('ezanBarCurrentName'),
+    ezanBarCurrentTime: document.getElementById('ezanBarCurrentTime'),
+    ezanBarNextName: document.getElementById('ezanBarNextName'),
+    ezanBarCountdown: document.getElementById('ezanBarCountdown'),
+    ezanNotifToggle: document.getElementById('ezanNotifToggle'),
+
+    // Settings Default Location DOM
+    settingsDefaultLocationLabel: document.getElementById('settingsDefaultLocationLabel'),
+    settingsDefaultCityInput: document.getElementById('settingsDefaultCityInput'),
+    settingsDefaultCitySearchBtn: document.getElementById('settingsDefaultCitySearchBtn'),
+    settingsDefaultCityResults: document.getElementById('settingsDefaultCityResults'),
+    settingsResetDefaultLocation: document.getElementById('settingsResetDefaultLocation'),
+    settingsNotifToggle: document.getElementById('settingsNotifToggle'),
+    settingsNotifStatus: document.getElementById('settingsNotifStatus'),
+    settingsNotifPermInfo: document.getElementById('settingsNotifPermInfo')
 };
 
 
@@ -177,10 +216,18 @@ async function handleHash() {
     }
 }
 
+// Mobilde persistent storage'dan, masaüstünde www'den okumak için yardımcı fonksiyon
+function getMobileBasePath() {
+    if (isMobile && typeof MobileFileManager !== 'undefined' && MobileFileManager.dataDir) {
+        return MobileFileManager.dataDir.nativeURL;
+    }
+    return '';
+}
+
 async function populateReciters() {
     try {
-        const res = await fetch('okumalar/okumalar.json?t=' + Date.now());
-        const data = await res.json();
+        const text = await mobileReadFile('okumalar/okumalar.json');
+        const data = JSON.parse(text);
 
         const mainSelect = DOM.reciterSelect;
         const readingSelect = DOM.readingReciterSelect;
@@ -191,17 +238,14 @@ async function populateReciters() {
 
             for (const [key, name] of Object.entries(data)) {
                 const opt1 = document.createElement('option');
-                opt1.value = key;
-                opt1.innerText = name;
+                opt1.value = key; opt1.innerText = name;
                 mainSelect.appendChild(opt1);
 
                 const opt2 = document.createElement('option');
-                opt2.value = key;
-                opt2.innerText = name;
+                opt2.value = key; opt2.innerText = name;
                 readingSelect.appendChild(opt2);
             }
 
-            // Eğer state.reciter önceden ayarlanmışsa (örn gamadi), seçimi koru
             if (data[state.reciter]) {
                 mainSelect.value = state.reciter;
                 readingSelect.value = state.reciter;
@@ -221,15 +265,14 @@ async function populateReciters() {
 
 async function populateTranslations() {
     try {
-        const res = await fetch('sureler/1.json?t=' + Date.now());
-        const data = await res.json();
+        const text = await mobileReadFile('sureler/1.json');
+        const data = JSON.parse(text);
         if (data && data.length > 0) {
             const trTranslations = data[0].translations?.tr || {};
             const select = DOM.translationSelect;
             if (!select) return;
 
-            select.innerHTML = ''; // Clear hardcoded and old options
-
+            select.innerHTML = '';
             for (const [key, value] of Object.entries(trTranslations)) {
                 const option = document.createElement('option');
                 option.value = key;
@@ -237,7 +280,6 @@ async function populateTranslations() {
                 select.appendChild(option);
             }
 
-            // Re-set selection if it was lost
             if (trTranslations[state.translation]) {
                 select.value = state.translation;
             } else {
@@ -258,7 +300,6 @@ function initMealUpload() {
     const urlParams = new URLSearchParams(window.location.search);
     const isDesktop = urlParams.get('device') === 'desktop';
     const fileManagerPort = urlParams.get('port');
-    const isMobile = !!window.cordova;
 
     if ((isDesktop && fileManagerPort) || isMobile) {
         if (DOM.settingsOpenBtn && DOM.settingsModal) {
@@ -268,13 +309,13 @@ function initMealUpload() {
                     DOM.settingsModal.style.display = 'flex';
                     await loadSettingsData(fileManagerPort);
                     initSettingsTabs();
+                    initDefaultLocationSettings();
                     try {
                         renderManagedRepos();
                         loadRepoItems();
                     } catch (e) { }
                 } catch (e) {
                     console.error("Ayarlar açılırken hata:", e);
-                    // Hata olsa bile modalı göster ki kullanıcı kapatabilsin veya diğer sekmelere bakabilsin
                     DOM.settingsModal.style.display = 'flex';
                 }
             });
@@ -312,12 +353,20 @@ function initMealUpload() {
                     if (isMobile) {
                         try {
                             if (typeof MobileFileManager !== 'undefined') {
-                                await MobileFileManager.uploadItem(file);
+                                const btn = type === 'meal' ? DOM.uploadMealBtn : (type === 'kiraat' ? DOM.uploadKiraatBtn : DOM.uploadTefsirBtn);
+                                const originalText = btn.innerText;
+                                btn.disabled = true;
+
+                                await MobileFileManager.uploadItem(file, (progress) => {
+                                    btn.innerText = `⏳ %${progress}`;
+                                });
+
                                 alert("Başarıyla yüklendi!");
                                 window.location.reload();
                             }
                         } catch (err) {
                             alert("Mobil yükleme hatası: " + err.message);
+                            window.location.reload();
                         }
                     } else {
                         // Desktop Browser Fallback (send raw bytes)
@@ -461,13 +510,15 @@ async function installFromRepo(url, fileName, btn) {
     btn.innerText = "⏳ İndiriliyor...";
     btn.disabled = true;
 
+    // urlParams initMealUpload() içinde lokal — burada yeniden oluştur
+    const urlParams = new URLSearchParams(window.location.search);
+    const isDesktop = urlParams.get('device') === 'desktop';
+    const fileManagerPort = urlParams.get('port');
+
     try {
         const response = await fetch(url);
         const blob = await response.blob();
         const file = new File([blob], fileName);
-
-        const isDesktop = urlParams.get('device') === 'desktop';
-        const fileManagerPort = urlParams.get('port');
 
         if (isDesktop && fileManagerPort) {
             const formData = new FormData();
@@ -500,8 +551,8 @@ async function installFromRepo(url, fileName, btn) {
 async function loadSettingsData(port) {
     // Mealler
     try {
-        const res = await fetch('sureler/1.json?t=' + Date.now());
-        const data = await res.json();
+        const text = await mobileReadFile('sureler/1.json');
+        const data = JSON.parse(text);
         const trTranslations = data[0].translations?.tr || {};
         DOM.settingsMealsList.innerHTML = '';
         for (const [key, value] of Object.entries(trTranslations)) {
@@ -511,14 +562,17 @@ async function loadSettingsData(port) {
             li.querySelector('button').onclick = () => deleteItem('meal', key, port);
             DOM.settingsMealsList.appendChild(li);
         }
+        if (Object.keys(trTranslations).length === 0) {
+            DOM.settingsMealsList.innerHTML = '<li style="padding:8px; color:#888;">Henüz meal yüklenmemiş.</li>';
+        }
     } catch (e) {
-        DOM.settingsMealsList.innerHTML = '<li>Yüklenirken hata oluştu.</li>';
+        DOM.settingsMealsList.innerHTML = `<li>Yüklenirken hata: ${e.message || e}</li>`;
     }
 
     // Kıraatlar
     try {
-        const res = await fetch('okumalar/okumalar.json?t=' + Date.now());
-        const data = await res.json();
+        const text = await mobileReadFile('okumalar/okumalar.json');
+        const data = JSON.parse(text);
         DOM.settingsKiraatsList.innerHTML = '';
         for (const [key, name] of Object.entries(data)) {
             const li = document.createElement('li');
@@ -527,14 +581,17 @@ async function loadSettingsData(port) {
             li.querySelector('button').onclick = () => deleteItem('kiraat', key, port);
             DOM.settingsKiraatsList.appendChild(li);
         }
+        if (Object.keys(data).length === 0) {
+            DOM.settingsKiraatsList.innerHTML = '<li style="padding:8px; color:#888;">Henüz kıraat yüklenmemiş.</li>';
+        }
     } catch (e) {
-        DOM.settingsKiraatsList.innerHTML = '<li>Yüklenirken hata oluştu.</li>';
+        DOM.settingsKiraatsList.innerHTML = `<li>Yüklenirken hata: ${e.message || e}</li>`;
     }
 
     // Tefsirler
     try {
-        const res = await fetch('tefsirler/tefsirler.json?t=' + Date.now());
-        const data = await res.json();
+        const text = await mobileReadFile('tefsirler/tefsirler.json');
+        const data = JSON.parse(text);
         DOM.settingsTefsirsList.innerHTML = '';
         for (const [key, name] of Object.entries(data)) {
             const li = document.createElement('li');
@@ -543,8 +600,11 @@ async function loadSettingsData(port) {
             li.querySelector('button').onclick = () => deleteItem('tefsir', key, port);
             DOM.settingsTefsirsList.appendChild(li);
         }
+        if (Object.keys(data).length === 0) {
+            DOM.settingsTefsirsList.innerHTML = '<li style="padding:8px; color:#888;">Henüz tefsir yüklenmemiş.</li>';
+        }
     } catch (e) {
-        DOM.settingsTefsirsList.innerHTML = '<li>Yüklenirken hata oluştu.</li>';
+        DOM.settingsTefsirsList.innerHTML = `<li>Yüklenirken hata: ${e.message || e}</li>`;
     }
 
     // Global UI listelerini yenile
@@ -561,32 +621,72 @@ async function loadSettingsData(port) {
 
 async function deleteItem(type, id, port) {
     if (!confirm('Bu öğeyi silmek istediğinize emin misiniz?')) return;
-    try {
-        const res = await fetch(`http://localhost:${port}/delete_item`, {
-            method: 'POST',
-            body: JSON.stringify({ type, id })
-        });
-        const data = await res.json();
-        if (data.status === 'success') {
+
+    if (window.cordova && typeof MobileFileManager !== 'undefined') {
+        try {
+            if (type === 'meal') {
+                const surelerDir = await MobileFileManager.createDir('sureler');
+                const entries = await MobileFileManager.readEntries(surelerDir);
+                const jsonFiles = entries.filter(e => e.isFile && e.name.endsWith('.json'));
+                for (const fileEntry of jsonFiles) {
+                    const content = await new Promise((res, rej) => {
+                        fileEntry.file(f => { const r = new FileReader(); r.onloadend = () => res(r.result); r.onerror = rej; r.readAsText(f); }, rej);
+                    });
+                    let data = JSON.parse(content); let modified = false;
+                    for (const verse of data) {
+                        if (verse.translations?.tr?.[id]) { delete verse.translations.tr[id]; modified = true; }
+                    }
+                    if (modified) {
+                        await new Promise((res, rej) => {
+                            fileEntry.createWriter(fw => {
+                                fw.onerror = rej;
+                                fw.onwriteend = () => { fw.onwriteend = res; fw.write(new Blob([JSON.stringify(data)], { type: 'application/json' })); };
+                                fw.truncate(0);
+                            }, rej);
+                        });
+                    }
+                }
+            } else if (type === 'kiraat') {
+                await MobileFileManager.deleteFolder('okumalar/' + id);
+                try {
+                    const json = await MobileFileManager.readFile('okumalar/okumalar.json');
+                    const data = JSON.parse(json); delete data[id];
+                    await MobileFileManager.writeFile('okumalar/okumalar.json', JSON.stringify(data, null, 2));
+                } catch (e) { }
+            } else if (type === 'tefsir') {
+                await MobileFileManager.deleteFolder('tefsirler/' + id);
+                try {
+                    const json = await MobileFileManager.readFile('tefsirler/tefsirler.json');
+                    const data = JSON.parse(json); delete data[id];
+                    await MobileFileManager.writeFile('tefsirler/tefsirler.json', JSON.stringify(data, null, 2));
+                } catch (e) { }
+            }
+            alert('Silindi.');
             window.location.reload();
-        } else {
-            alert('Silme hatası: ' + data.message);
+        } catch (e) {
+            alert('Mobil silme hatası: ' + e);
         }
-    } catch (e) {
-        alert('Bağlantı hatası: ' + e);
+        return;
     }
+
+    try {
+        const res = await fetch(`http://localhost:${port}/delete_item`, { method: 'POST', body: JSON.stringify({ type, id }) });
+        const data = await res.json();
+        if (data.status === 'success') { window.location.reload(); }
+        else { alert('Silme hatası: ' + data.message); }
+    } catch (e) { alert('Bağlantı hatası: ' + e); }
 }
 
 async function loadQuranSearchIndex() {
     try {
-        const [resIdx, resWords, resVerses] = await Promise.all([
-            fetch('quran_index.json'),
-            fetch('quran_words.json'),
-            fetch('quran_verses.json')
+        const [idxText, wordsText, versesText] = await Promise.all([
+            mobileReadFile('quran_index.json'),
+            mobileReadFile('quran_words.json'),
+            mobileReadFile('quran_verses.json')
         ]);
-        state.quranIndex = await resIdx.json();
-        state.quranWords = await resWords.json();
-        state.quranVerses = await resVerses.json();
+        state.quranIndex = JSON.parse(idxText);
+        state.quranWords = JSON.parse(wordsText);
+        state.quranVerses = JSON.parse(versesText);
     } catch (e) {
         console.error("Quran indexleri yüklenemedi", e);
     }
@@ -594,8 +694,8 @@ async function loadQuranSearchIndex() {
 
 async function loadQuranPages() {
     try {
-        const res = await fetch('number_of_verses_per_page.json');
-        state.quranPages = await res.json();
+        const text = await mobileReadFile('number_of_verses_per_page.json');
+        state.quranPages = JSON.parse(text);
     } catch (e) {
         console.error("Quran sayfaları yüklenemedi", e);
     }
@@ -603,8 +703,8 @@ async function loadQuranPages() {
 
 async function loadRisaleData() {
     try {
-        const res = await fetch('risaleinur/index.json');
-        state.risaleIndex = await res.json();
+        const text = await mobileReadFile('risaleinur/index.json');
+        state.risaleIndex = JSON.parse(text);
     } catch (e) {
         console.error("Risale indexi yüklenemedi", e);
     }
@@ -612,17 +712,18 @@ async function loadRisaleData() {
 
 async function loadTafsirList() {
     try {
-        const res = await fetch('tefsirler/tefsirler.json?t=' + Date.now());
-        state.tafsirler = await res.json();
+        const text = await mobileReadFile('tefsirler/tefsirler.json');
+        state.tafsirler = JSON.parse(text);
     } catch (e) {
         console.error("Tefsir listesi yüklenemedi", e);
+        state.tafsirler = {};
     }
 }
 
 async function loadJuzData() {
     try {
-        const res = await fetch('juz.json');
-        state.juzList = await res.json();
+        const text = await mobileReadFile('juz.json');
+        state.juzList = JSON.parse(text);
     } catch (e) {
         console.error('Juz verisi yüklenemedi:', e);
     }
@@ -694,16 +795,8 @@ function setupEventListeners() {
         }
     });
 
-    // Mobile specific setup
-    document.addEventListener('deviceready', async () => {
-        console.log("Cordova deviceready fired");
-        if (typeof MobileFileManager !== 'undefined') {
-            await MobileFileManager.init();
-        }
-        initMealUpload();
-        initPrayerTimes();
-        handleHash();
-    }, false);
+    // Mobile specific setup: MobileFileManager.init() + init() dosya sonundaki
+    // deviceready bloğunda çağrılıyor.
 
     // PyWebView API event check
     window.addEventListener('pywebviewready', function () {
@@ -1046,8 +1139,9 @@ async function loadSurah(index, startVerse = 1, endVerse = 'son') {
         DOM.homeView.style.display = 'none';
         DOM.versesContainer.style.display = 'block';
         DOM.versesContainer.innerHTML = '<p style="padding: 20px; color: #5d4f3b;">Yükleniyor...</p>';
-        const res = await fetch(`sureler/${index}.json`);
-        let data = await res.json();
+
+        const text = await mobileReadFile(`sureler/${index}.json`);
+        let data = JSON.parse(text);
 
         // Filter by verse range
         data = data.filter(v => {
@@ -1148,7 +1242,11 @@ function playVerse(index) {
     const surahPadded = String(state.currentSurah).padStart(3, '0');
     const versePadded = String(verseData.ayet).padStart(3, '0');
 
-    const src = `okumalar/${state.reciter}/${surahPadded}/${versePadded}.mp3`;
+    let basePath = '';
+    if (isMobile && typeof MobileFileManager !== 'undefined' && MobileFileManager.dataDir) {
+        basePath = MobileFileManager.dataDir.nativeURL;
+    }
+    const src = `${basePath}okumalar/${state.reciter}/${surahPadded}/${versePadded}.mp3`;
 
     state.audioPlayer.src = src;
     state.currentAudioVerse = index;
@@ -1180,8 +1278,8 @@ async function openVerseDetail(surahId, verseNum) {
     // Eğer o surenin verisi hali hazırda yoksa veya farklı bir sureyse yükle
     if (state.currentSurah !== surahId) {
         try {
-            const res = await fetch(`sureler/${surahId}.json`);
-            const data = await res.json();
+            const text = await mobileReadFile(`sureler/${surahId}.json`);
+            const data = JSON.parse(text);
             verseData = data.find(v => parseInt(v.ayet) === parseInt(verseNum));
         } catch (e) {
             console.error("Sure verisi yüklenemedi", e);
@@ -1241,9 +1339,7 @@ async function openVerseDetail(surahId, verseNum) {
 async function loadTafsirContent(surahId, verseId, tafsirFolder) {
     DOM.tafsirContent.innerHTML = '<p style="font-style: italic; color: #5d4f3b;">Tefsir yükleniyor...</p>';
     try {
-        const res = await fetch(`tefsirler/${tafsirFolder}/${surahId}/${verseId}.htm`);
-        if (!res.ok) throw new Error('Not found');
-        const htmlText = await res.text();
+        const htmlText = await mobileReadFile(`tefsirler/${tafsirFolder}/${surahId}/${verseId}.htm`);
         DOM.tafsirContent.innerHTML = htmlText;
     } catch (e) {
         DOM.tafsirContent.innerHTML = '<p style="color:#b83318; font-weight: bold;">Bu ayet için bu tefsirde (veya seçilen kaynakta) kayıt bulunamadı.</p>';
@@ -1326,8 +1422,7 @@ async function loadRisaleChapter(bookPath, fileName, title) {
         DOM.versesContainer.style.display = 'block';
         DOM.versesContainer.innerHTML = '<p style="padding: 20px; color: #5d4f3b;">Yükleniyor...</p>';
 
-        const res = await fetch(`risaleinur/${encodeURIComponent(bookPath)}/${encodeURIComponent(fileName)}`);
-        const html = await res.text();
+        const html = await mobileReadFile(`risaleinur/${encodeURIComponent(bookPath)}/${encodeURIComponent(fileName)}`);
 
         DOM.currentSurahTitle.innerText = title;
         DOM.closeSurahBtn.style.display = 'inline-block';
@@ -1505,30 +1600,310 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
-window.onload = init;
+if (window.cordova) {
+    document.addEventListener('deviceready', async () => {
+        if (typeof MobileFileManager !== 'undefined') {
+            await MobileFileManager.init();
+        }
+        await init();
+    }, false);
+} else {
+    window.onload = init;
+}
 
 /* Prayer Times Functionality */
-function initPrayerTimes() {
-    // Default coordinates (Istanbul)
-    const defaultCoords = { latitude: 41.0082, longitude: 28.9784, city: "İstanbul" };
 
-    if (navigator.geolocation) {
-        const useLocation = confirm("Namaz vakitlerini otomatik hesaplamak için konum bilgisini kullanmak istiyor musunuz?");
-        if (useLocation) {
-            navigator.geolocation.getCurrentPosition(position => {
-                updatePrayerTimes(position.coords.latitude, position.coords.longitude, "Konumunuz");
-            }, error => {
-                console.warn("Konum alınamadı, varsayılan (İstanbul) kullanılıyor:", error);
-                updatePrayerTimes(defaultCoords.latitude, defaultCoords.longitude, defaultCoords.city);
-            });
-        } else {
-            updatePrayerTimes(defaultCoords.latitude, defaultCoords.longitude, defaultCoords.city);
+// Bildirim için zamanlayıcı referansları
+let _prayerNotifTimers = [];
+
+function getDefaultLocation() {
+    try {
+        const stored = localStorage.getItem('kuran_default_location');
+        if (stored) return JSON.parse(stored);
+    } catch (e) { }
+    return { latitude: 41.0082, longitude: 28.9784, city: "İstanbul" };
+}
+
+function saveDefaultLocation(lat, lng, city) {
+    localStorage.setItem('kuran_default_location', JSON.stringify({ latitude: lat, longitude: lng, city }));
+}
+
+function requestNotificationPermission(callback) {
+    if (!('Notification' in window)) {
+        if (callback) callback(false);
+        return;
+    }
+    if (Notification.permission === 'granted') {
+        if (callback) callback(true);
+        return;
+    }
+    Notification.requestPermission().then(perm => {
+        if (callback) callback(perm === 'granted');
+    });
+}
+
+function areNotificationsEnabled() {
+    return localStorage.getItem('kuran_notif_enabled') === 'true';
+}
+
+function schedulePrayerNotifications(prayerTimes, times) {
+    // Eski zamanlayıcıları temizle
+    _prayerNotifTimers.forEach(t => clearTimeout(t));
+    _prayerNotifTimers = [];
+
+    if (!areNotificationsEnabled()) return;
+    if (!('Notification' in window) || Notification.permission !== 'granted') return;
+
+    const now = new Date();
+    times.forEach(t => {
+        const pTime = t.time;
+        if (!pTime) return;
+        const diff = pTime.getTime() - now.getTime();
+        // Sadece gelecekteki vakitler için (0–24 saat içinde)
+        if (diff > 0 && diff < 24 * 60 * 60 * 1000) {
+            const timer = setTimeout(() => {
+                try {
+                    const notif = new Notification(`🕌 ${t.name} Vakti`, {
+                        body: `${t.name} vakti girdi. Hayırlı namazlar! 🤲`,
+                        icon: 'muslim-icon_quran.png',
+                        badge: 'muslim-icon_quran.png',
+                        tag: `prayer-${t.id}`,
+                        silent: false
+                    });
+                    setTimeout(() => notif.close(), 10000);
+                } catch (e) {
+                    console.error('Bildirim gönderilemedi:', e);
+                }
+            }, diff);
+            _prayerNotifTimers.push(timer);
         }
-    } else {
-        updatePrayerTimes(defaultCoords.latitude, defaultCoords.longitude, defaultCoords.city);
+    });
+}
+
+function updateEzanBar(currentPrayer, nextPrayer, times, prayerTimes) {
+    if (!DOM.ezanBarCurrentName) return;
+
+    const currentT = times.find(t => t.id === currentPrayer);
+    const nextT = times.find(t => t.id === nextPrayer);
+
+    DOM.ezanBarCurrentName.innerText = currentT ? currentT.name : '—';
+    DOM.ezanBarCurrentTime.innerText = currentT ? moment(currentT.time).format('HH:mm') : '';
+
+    if (nextT) {
+        DOM.ezanBarNextName.innerText = nextT.name;
+        const now = moment();
+        const next = moment(nextT.time);
+        if (next.isBefore(now)) next.add(1, 'day');
+        const diff = next.diff(now);
+        const dur = moment.duration(diff);
+        const h = Math.floor(dur.asHours());
+        const m = dur.minutes();
+        const s = dur.seconds();
+        let str = '';
+        if (h > 0) str += `${h}s `;
+        str += `${m}d ${s}sn`;
+        DOM.ezanBarCountdown.innerText = str;
+    }
+}
+
+function syncNotifUI() {
+    const enabled = areNotificationsEnabled();
+    const denied = ('Notification' in window) && Notification.permission === 'denied';
+
+    // Settings toggle
+    if (DOM.settingsNotifToggle) {
+        DOM.settingsNotifToggle.checked = enabled;
+    }
+    if (DOM.settingsNotifStatus) {
+        DOM.settingsNotifStatus.innerText = denied ? 'İzin Reddedildi' : (enabled ? 'Açık' : 'Kapalı');
+        DOM.settingsNotifStatus.style.color = denied ? '#721c24' : (enabled ? '#2b422b' : '#551508');
+    }
+    if (DOM.settingsNotifPermInfo) {
+        DOM.settingsNotifPermInfo.style.display = denied ? 'block' : 'none';
+        DOM.settingsNotifPermInfo.innerText = denied ? '⚠️ Bildirim izni reddedildi. Lütfen tarayıcı/sistem ayarlarından izin verin.' : '';
     }
 
-    // Refresh every second for live countdown
+    // Mobile bar button
+    if (DOM.ezanNotifToggle) {
+        if (enabled) {
+            DOM.ezanNotifToggle.classList.add('active');
+            DOM.ezanNotifToggle.title = 'Bildirimler Açık';
+        } else {
+            DOM.ezanNotifToggle.classList.remove('active');
+            DOM.ezanNotifToggle.title = 'Bildirimleri Etkinleştir';
+        }
+    }
+}
+
+function toggleNotifications() {
+    const current = areNotificationsEnabled();
+    const next = !current;
+    if (next) {
+        requestNotificationPermission(granted => {
+            if (granted) {
+                localStorage.setItem('kuran_notif_enabled', 'true');
+                // Mevcut vakitler için yeniden zamanla
+                if (state.lastCoords) {
+                    updatePrayerTimes(state.lastCoords.lat, state.lastCoords.lng, state.lastCoords.label);
+                }
+            } else {
+                localStorage.setItem('kuran_notif_enabled', 'false');
+            }
+            syncNotifUI();
+        });
+    } else {
+        localStorage.setItem('kuran_notif_enabled', 'false');
+        _prayerNotifTimers.forEach(t => clearTimeout(t));
+        _prayerNotifTimers = [];
+        syncNotifUI();
+    }
+}
+
+function initDefaultLocationSettings() {
+    // Label'ı güncelle
+    const def = getDefaultLocation();
+    if (DOM.settingsDefaultLocationLabel) {
+        DOM.settingsDefaultLocationLabel.innerText = `${def.city} (${def.latitude.toFixed(2)}, ${def.longitude.toFixed(2)})`;
+    }
+
+    // Şehir arama
+    if (DOM.settingsDefaultCitySearchBtn) {
+        DOM.settingsDefaultCitySearchBtn.onclick = async () => {
+            const q = DOM.settingsDefaultCityInput.value.trim();
+            if (!q) return;
+            DOM.settingsDefaultCitySearchBtn.innerText = '⏳';
+            try {
+                const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(q)}&limit=8`);
+                const data = await res.json();
+                DOM.settingsDefaultCityResults.innerHTML = data.slice(0, 8).map(r => {
+                    const name = r.display_name.split(',')[0].trim();
+                    const detail = r.display_name.split(',').slice(1, 3).join(',').trim();
+                    return `<div class="location-result-item" onclick="setDefaultLocation(${r.lat}, ${r.lon}, '${name.replace(/'/g, "\\'")}')">
+                        <span class="location-name">${name}</span>
+                        <span class="location-detail">${detail}</span>
+                    </div>`;
+                }).join('');
+                DOM.settingsDefaultCityResults.style.display = data.length ? 'block' : 'none';
+            } catch (e) {
+                alert('Arama hatası: ' + e.message);
+            } finally {
+                DOM.settingsDefaultCitySearchBtn.innerText = '🔍';
+            }
+        };
+        DOM.settingsDefaultCityInput.onkeydown = (e) => {
+            if (e.key === 'Enter') DOM.settingsDefaultCitySearchBtn.click();
+        };
+    }
+
+    if (DOM.settingsResetDefaultLocation) {
+        DOM.settingsResetDefaultLocation.onclick = () => {
+            localStorage.removeItem('kuran_default_location');
+            if (DOM.settingsDefaultLocationLabel) DOM.settingsDefaultLocationLabel.innerText = 'İstanbul (varsayılan)';
+            if (DOM.settingsDefaultCityResults) DOM.settingsDefaultCityResults.style.display = 'none';
+            if (DOM.settingsDefaultCityInput) DOM.settingsDefaultCityInput.value = '';
+            alert('Varsayılan konum İstanbul olarak sıfırlandı.');
+        };
+    }
+
+    // Bildirim toggle (settings)
+    if (DOM.settingsNotifToggle) {
+        DOM.settingsNotifToggle.onchange = () => toggleNotifications();
+    }
+
+    syncNotifUI();
+}
+
+window.setDefaultLocation = function (lat, lon, label) {
+    saveDefaultLocation(parseFloat(lat), parseFloat(lon), label);
+    if (DOM.settingsDefaultLocationLabel) {
+        DOM.settingsDefaultLocationLabel.innerText = `${label} (${parseFloat(lat).toFixed(2)}, ${parseFloat(lon).toFixed(2)})`;
+    }
+    if (DOM.settingsDefaultCityResults) DOM.settingsDefaultCityResults.style.display = 'none';
+    if (DOM.settingsDefaultCityInput) DOM.settingsDefaultCityInput.value = label;
+
+    // Konum kapalıysa hemen uygula
+    const storedChoice = localStorage.getItem('kuran_use_location');
+    if (storedChoice !== 'true') {
+        updatePrayerTimes(parseFloat(lat), parseFloat(lon), label);
+        localStorage.setItem('kuran_last_coords', JSON.stringify({ lat: parseFloat(lat), lng: parseFloat(lon), label }));
+    }
+    alert(`Varsayılan konum "${label}" olarak ayarlandı.`);
+};
+
+function initPrayerTimes() {
+    const def = getDefaultLocation();
+    const defaultCoords = { latitude: def.latitude, longitude: def.longitude, city: def.city };
+
+    const startWithDefault = () => {
+        updatePrayerTimes(defaultCoords.latitude, defaultCoords.longitude, defaultCoords.city);
+    };
+
+    // Mobile bar bildirim butonu
+    if (DOM.ezanNotifToggle) {
+        DOM.ezanNotifToggle.onclick = () => toggleNotifications();
+    }
+
+    syncNotifUI();
+
+    if (navigator.geolocation) {
+        const storedChoice = localStorage.getItem('kuran_use_location');
+        const storedLastCoords = localStorage.getItem('kuran_last_coords');
+
+        if (storedLastCoords && !storedChoice) {
+            const lc = JSON.parse(storedLastCoords);
+            updatePrayerTimes(lc.lat, lc.lng, lc.label);
+        }
+
+        let useLocation = false;
+        if (storedChoice === 'true') {
+            useLocation = true;
+        } else if (storedChoice === 'false') {
+            useLocation = false;
+        } else {
+            const shouldAsk = !isMobile;
+            useLocation = shouldAsk ? confirm("Namaz vakitlerini otomatik hesaplamak için konum bilgisini kullanmak istiyor musunuz?") : true;
+            localStorage.setItem('kuran_use_location', useLocation ? 'true' : 'false');
+        }
+
+        if (useLocation) {
+            if (DOM.prayerLocation) DOM.prayerLocation.innerText = "Konum alınıyor...";
+
+            navigator.geolocation.getCurrentPosition(position => {
+                updatePrayerTimes(position.coords.latitude, position.coords.longitude, "Mevcut Konum");
+                localStorage.setItem('kuran_last_coords', JSON.stringify({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    label: "Mevcut Konum"
+                }));
+            }, error => {
+                console.warn("Konum alınamadı, varsayılan kullanılıyor:", error);
+                if (storedLastCoords) {
+                    const lc = JSON.parse(storedLastCoords);
+                    updatePrayerTimes(lc.lat, lc.lng, lc.label);
+                } else {
+                    startWithDefault();
+                }
+                if (isMobile) {
+                    let msg = "Konum bilgisi alınamadı.";
+                    if (error.code === 1) msg = "Konum izni reddedildi.";
+                    else if (error.code === 3) msg = "Konum alma zaman aşımına uğradı.";
+                    console.error(msg, error);
+                }
+            }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 600000 });
+        } else {
+            // Konum kapalı: kayıtlı son konum > varsayılan konum > İstanbul
+            if (storedLastCoords) {
+                const lc = JSON.parse(storedLastCoords);
+                updatePrayerTimes(lc.lat, lc.lng, lc.label);
+            } else {
+                startWithDefault();
+            }
+        }
+    } else {
+        startWithDefault();
+    }
+
+    // Her saniye geri sayım güncelle
     setInterval(() => {
         if (state.lastCoords) {
             updatePrayerTimes(state.lastCoords.lat, state.lastCoords.lng, state.lastCoords.label);
@@ -1644,6 +2019,15 @@ function updatePrayerTimes(lat, lng, label) {
             DOM.nextPrayerTime.innerText = "Yarınki İmsak vaktine hazırlanılıyor...";
         }
     }
+
+    // Mobil Ezan Şeridini Güncelle
+    updateEzanBar(currentPrayer, nextPrayer, times, prayerTimes);
+
+    // Bildirimleri Zamanla (sadece ilk çağrıda veya gün değişiminde – her saniye değil)
+    if (!state._lastNotifScheduleMinute || state._lastNotifScheduleMinute !== new Date().getMinutes()) {
+        schedulePrayerNotifications(prayerTimes, times);
+        state._lastNotifScheduleMinute = new Date().getMinutes();
+    }
 }
 
 
@@ -1708,9 +2092,8 @@ async function renderReadingPage() {
     const sureNums = [...new Set(page.map(v => v.sure))];
     const fetchPromises = sureNums.map(sureNo => {
         if (!state.surahCache[sureNo]) {
-            return fetch(`sureler/${sureNo}.json`)
-                .then(r => r.json())
-                .then(data => { state.surahCache[sureNo] = data; })
+            return mobileReadFile(`sureler/${sureNo}.json`)
+                .then(text => { state.surahCache[sureNo] = JSON.parse(text); })
                 .catch(() => { state.surahCache[sureNo] = []; });
         }
         return Promise.resolve();
@@ -1762,8 +2145,8 @@ async function renderReadingPage() {
                 };
 
                 if (!state.surahCache[1]) {
-                    fetch('sureler/1.json').then(r => r.json()).then(data => {
-                        state.surahCache[1] = data;
+                    mobileReadFile('sureler/1.json').then(text => {
+                        state.surahCache[1] = JSON.parse(text);
                         renderBesmele();
                     }).catch(() => { besmeleDiv.textContent = 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ'; });
                 } else {
